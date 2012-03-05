@@ -1,0 +1,29 @@
+#%Module1.0#####################################################################
+##
+## stajichlab modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tstajichlab - Gives access to all the stajich lab modules"
+}
+
+module-whatis	"stajichlab modules for the lab"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+append-path    MODULEPATH 	/usr/local/Modules/3.2.9/bioinfo/stajichlab
+module		use		/usr/local/Modules/versions
+
+#module load stajichlab-perl
+#module load stajichlab-python
+#module load maker
+#module load velvet-contrib
+#module load velvet/1.2.02-openmp-maxk71
+#module load gmap
+#module load flash
+#module load fasta

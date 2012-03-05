@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## Cufflinks modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tcufflinks - Adds cufflinks to your path"
+}
+
+module-whatis	"cufflinks-1.3.0"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/cufflinks/1.3.0
+
+module		use		/usr/local/Modules/versions
+

@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## trinity-rnaseq modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\ttrinity-rnaseq - Adds trinity RNA-Seq assembler to your path"
+}
+
+module-whatis	"trinity-rnaseq 2012-01-25"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/stajichlab/trinity-rnaseq/r2012-01-25
+module		use		/usr/local/Modules/versions

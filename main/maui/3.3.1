@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## maui modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tmaui - Adds maui to your path"
+}
+
+module-whatis	"maui-3.3.1"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/maui/3.3.1/bin
+
+module		use		/usr/local/Modules/versions
+

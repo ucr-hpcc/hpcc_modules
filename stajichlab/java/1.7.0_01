@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## JAVA JDK modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tJava- Adds java to your path"
+}
+
+module-whatis	"oracle-jdk1.7.0_01"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path	PATH	/usr/local/java/oracle-jdk1.7.0_01/bin
+module		use		/usr/local/Modules/versions

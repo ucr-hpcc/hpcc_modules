@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## guidance modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+       puts stderr "\tguidance- Adds guidance to your path"
+}
+
+module-whatis	"guidance 1.1 for alignment trimming"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/stajichlab/guidance/1.1/www/Guidance
+module		use		/usr/local/Modules/versions

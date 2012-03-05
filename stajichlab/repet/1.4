@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## repet modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\trepet- Adds REPET package to your path"
+}
+
+module-whatis	"repet 1.4"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/stajichlab/repet/1.4/bin
+setenv REPET_PATH	/opt/stajichlab/repet/1.4
+setenv REPET_JOBS	MySQL
+setenv REPET_QUEUE	PBS
+prepend-path	PYTHONPATH	/opt/stajichlab/repet/1.4
+module		use		/usr/local/Modules/versions

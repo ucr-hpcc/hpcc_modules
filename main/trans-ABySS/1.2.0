@@ -1,0 +1,27 @@
+#%Module1.0#####################################################################
+##
+## trans-ABySS modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\ttrans-ABySS - Adds bowtie2 to your path"
+}
+
+module-whatis	"trans-ABySS-1.2.0"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+set	transabyss_path /opt/trans-ABySS/1.2.0
+
+prepend-path    PATH   		${transabyss_path}/utilities
+prepend-path    PATH   		${transabyss_path}/wrappers
+
+module		use		/usr/local/Modules/versions
+
+prepend-path    TRANSABYSS_PATH ${transabyss_path}
+prepend-path    PERL5LIB        ${transabyss_path}/wrappers
+prepend-path    PYTHONPATH	${transabyss_path}

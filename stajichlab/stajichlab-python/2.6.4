@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## stajichlab-pytohon modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tstajichlab-python- Adds Stajich Lab python Modules to your path"
+}
+
+module-whatis	"stajichlab-python-2012-02"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/stajichlab/stajichlab-python/bin
+prepend-path	PYTHONPATH	/opt/stajichlab/stajichlab-python/lib/python2.6/site-packages
+prepend-path	MANPATH		/opt/stajichlab/stajichlab-python/man
+
+module		use		/usr/local/Modules/versions

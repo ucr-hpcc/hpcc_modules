@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## MAKER modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tMAKER- Adds MAKER to your path"
+}
+
+module-whatis	"maker-live"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path	PATH	/opt/stajichlab/maker/live/bin
+prepend-path	PERL5LIB	/opt/stajichlab/maker/live/lib
+module		use		/usr/local/Modules/versions
