@@ -20,3 +20,8 @@ set	datarootdir	${prefix}/share
 prepend-path	PATH	/opt/stajichlab/maker/840/bin
 prepend-path	PERL5LIB	/opt/stajichlab/maker/840/lib
 module		use		/usr/local/Modules/versions
+module load stajichlab-perl
+module load snap
+module load augustus
+module load ncbi-blast
+#module load genemark
