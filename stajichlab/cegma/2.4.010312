@@ -18,6 +18,9 @@ set	datarootdir	${prefix}/share
 
 prepend-path	PATH	/opt/stajichlab/cegma/2.4.010312/bin
 module		use		/usr/local/Modules/versions
+setenv CEGMA /opt/stajichlab/cegma/2.4.010312
+#setenv CEGMATMP /scratch
+append-path	PERL5LIB	/opt/stajichlab/cegma/2.4.0.010312/lib
 module load geneid
 module load wise
 module load 
