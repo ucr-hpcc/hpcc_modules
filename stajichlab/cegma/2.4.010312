@@ -22,4 +22,4 @@ setenv CEGMA /opt/stajichlab/cegma/2.4.010312
 prepend-path	PERL5LIB	/opt/stajichlab/cegma/2.4.010312/lib/
 module load geneid
 module load wise
-module load 
+module load ncbi-blast
