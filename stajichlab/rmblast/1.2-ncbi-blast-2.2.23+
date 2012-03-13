@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## rmblast modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\trmblast- Adds rmblast and related exes to your path"
+}
+
+module-whatis	"rmblast 1.2-ncbi-blast-2.2.23+"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/stajichlab/1.2-ncbi-blast-2.2.23+/bin
+prepend-path	LD_LIBRARY_PATH /opt/stajichlab/1.2-ncbi-blast-2.2.23+/lib
+module		use		/usr/local/Modules/versions
