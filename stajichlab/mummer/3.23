@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## RECON modulefile
+## mummer modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tRECON- Adds RECON to your path"
+       puts stderr "\tMummer - Adds mummer and associated tools to your path"
 }
 
-module-whatis	"RECON 1.07"
+module-whatis	"MUMmer Aligner"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -16,5 +16,5 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path	PATH	/opt/stajichlab/RECON/1.07/bin
+prepend-path	PATH	/opt/stajichlab/mummer/3.23/bin
 module		use		/usr/local/Modules/versions
