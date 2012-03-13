@@ -18,3 +18,5 @@ set	datarootdir	${prefix}/share
 
 prepend-path	PATH	/opt/stajichlab/cndsrc/2010.10.11/bin
 module		use		/usr/local/Modules/versions
+
+module load snap
