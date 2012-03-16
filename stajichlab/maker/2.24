@@ -24,5 +24,5 @@ module load stajichlab-perl
 module load snap
 module load augustus
 module load ncbi-blast
-module load genemark
+module load genemarkHMM
 module load RepeatMasker
