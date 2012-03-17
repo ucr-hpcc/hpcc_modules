@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## pindel modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tpindel - Adds pindel to your path"
+}
+
+module-whatis	"pindel 0.2.4o"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/stajichlab/pindel/0.2.4o/bin
+module		use		/usr/local/Modules/versions
+module load samtools
