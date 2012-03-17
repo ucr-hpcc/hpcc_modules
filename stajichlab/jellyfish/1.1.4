@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## jellyfish modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tjellyfish - Adds jellyfish to your path"
+}
+
+module-whatis	"jellyfish 1.1.4"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	LD_LIBRARY_PATH	/opt/stajichlab/jellyfish/1.1.4/lib
+prepend-path	MANPATH	/opt/stajichlab/jellyfish/1.1.4/share/man
+prepend-path	PATH	/opt/stajichlab/jellyfish/1.1.4/bin
+
+module		use		/usr/local/Modules/versions
