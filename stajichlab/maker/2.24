@@ -27,3 +27,4 @@ module load augustus
 module load ncbi-blast
 module load genemarkHMM
 module load RepeatMasker
+module load exonerate
