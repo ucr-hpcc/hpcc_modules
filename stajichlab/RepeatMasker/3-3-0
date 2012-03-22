@@ -19,4 +19,4 @@ set	datarootdir	${prefix}/share
 prepend-path	PATH	/opt/stajichlab/RepeatMasker/3-3-0
 module		use		/usr/local/Modules/versions
 module load rmblast
-module load wublast
+module load wu-blast
