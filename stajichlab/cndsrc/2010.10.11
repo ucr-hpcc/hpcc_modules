@@ -20,5 +20,5 @@ prepend-path	PATH	/opt/stajichlab/cndsrc/2010.10.11/bin
 module		use		/usr/local/Modules/versions
 
 module load snap
-module load wu-blast
 module load RepeatMasker
+#module load kentsrc
