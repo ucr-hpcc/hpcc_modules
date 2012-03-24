@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## EVidenceModeler modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tEVidenceModeler - Adds EVidenceModeler env variables and exes to your path"
+}
+
+module-whatis	"EVidenceModeler live"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/stajichlab/EVidenceModeler/live/bin
+prepend-path	PATH	/opt/stajichlab/EVidenceModeler/live/scripts
+prepend-path	PERL5LIB	/opt/stajichlab/EVidenceModeler/live/PerlLib
+setenv	EVM_HOME	/opt/stajichlab/EVidenceModeler/live
+module		use		/usr/local/Modules/versions
