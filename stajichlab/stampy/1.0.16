@@ -16,5 +16,6 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path	PATH	/opt/stajichlab/stampy/1.0.16/bin
+prepend-path	PATH	/opt/stajichlab/stampy/1.0.16
+prepend-path	PYTHONPATH	/opt/stajichlab/stampy/1.0.16
 module		use		/usr/local/Modules/versions
