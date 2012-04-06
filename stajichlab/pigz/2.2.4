@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## pigz modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tpigz - Adds parallel gzip application to your path"
+}
+
+module-whatis	"pigz 2.2.4"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/stajichlab/pigz/2.2.4/bin
+prepend-path	MANPATH	/opt/stajichlab/pigz/2.2.4/share/man
+module		use		/usr/local/Modules/versions
