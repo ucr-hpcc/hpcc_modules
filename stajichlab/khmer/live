@@ -17,4 +17,5 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 prepend-path	PATH	/opt/stajichlab/khmer/khmer/scripts
+setenv	KHMERROOT	/opt/stajichlab/khmer/khmer
 module		use		/usr/local/Modules/versions
