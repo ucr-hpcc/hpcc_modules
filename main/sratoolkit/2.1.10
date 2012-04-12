@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## sratoolkit modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tsratoolkit - Adds sratoolkit to your path"
+}
+
+module-whatis	"sratoolkit-2.1.10"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/stajichlab/sratoolkit/2.1.10/bin
+module		use		/usr/local/Modules/versions
+
