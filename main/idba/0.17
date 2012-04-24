@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## IDBA modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tIDBA- Adds idba assembler to your path"
+}
+
+module-whatis	"idba-0.17"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path    PATH   		/opt/idba/0.17/bin
+
+module		use		/usr/local/Modules/versions
+
