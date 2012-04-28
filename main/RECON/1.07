@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## sratoolkit modulefile
+## RECON modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tsratoolkit - Adds sratoolkit to your path"
+        puts stderr "\tRECON- Adds RECON to your path"
 }
 
-module-whatis	"sratoolkit-2.1.10"
+module-whatis	"RECON 1.07"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -16,7 +16,5 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-
-prepend-path    PATH   		/opt/sratoolkit/2.1.10/bin
+prepend-path	PATH	/opt/RECON/1.07/bin
 module		use		/usr/local/Modules/versions
-

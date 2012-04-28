@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## sratoolkit modulefile
+## breakdancer modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tsratoolkit - Adds sratoolkit to your path"
+       puts stderr "\tbreakdancer- Adds breakdancer to your path"
 }
 
-module-whatis	"sratoolkit-2.1.10"
+module-whatis	"BreakDancer 1.1 2011_02_21 - Breakpoints from NGS"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -16,7 +16,5 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-
-prepend-path    PATH   		/opt/sratoolkit/2.1.10/bin
+prepend-path	PATH	/opt/BreakDancer/1.1_2011_02_21/bin
 module		use		/usr/local/Modules/versions
-

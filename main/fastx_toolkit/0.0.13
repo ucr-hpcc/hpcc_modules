@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## sratoolkit modulefile
+## fastx_toolkit modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tsratoolkit - Adds sratoolkit to your path"
+        puts stderr "\tfastx_toolkit - Adds fastx_toolkit to your path"
 }
 
-module-whatis	"sratoolkit-2.1.10"
+module-whatis	"fastx_toolkit-0.0.13"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -16,7 +16,6 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+prepend-path	PATH	/opt/fastx_toolkit/0.0.13/bin
 
-prepend-path    PATH   		/opt/sratoolkit/2.1.10/bin
 module		use		/usr/local/Modules/versions
-
