@@ -21,3 +21,8 @@ prepend-path	PATH	/opt/stajichlab/PASA/live/scripts
 prepend-path	PERL5LIB	/opt/stajichlab/PASA/live/PerlLib
 setenv	PASAHOME	/opt/stajichlab/PASA/live
 module		use		/usr/local/Modules/versions
+
+module load cdbyank
+module load stajichlab
+module load stajichlab-perl
+module load mysql
