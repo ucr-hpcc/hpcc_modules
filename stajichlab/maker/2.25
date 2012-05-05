@@ -20,12 +20,12 @@ set	datarootdir	${prefix}/share
 prepend-path	PATH	/opt/stajichlab/maker/2.25/bin
 prepend-path	PERL5LIB	/opt/stajichlab/maker/2.25/lib
 module		use		/usr/local/Modules/versions
+
+module load stajichlab
 module load stajichlab-perl
 module load snap
 module load augustus
-module load ncbi-blast
 module load genemarkHMM
 module load RepeatMasker
 module load exonerate
-module load wu-blast
-
+module load ncbi-blast
