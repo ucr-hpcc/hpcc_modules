@@ -16,5 +16,5 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path	PATH	/opt/mrbayes/3.2.1-noapi-64
+prepend-path	PATH	/opt/mrbayes/3.2.1-nompi-64
 module		use		/usr/local/Modules/versions
