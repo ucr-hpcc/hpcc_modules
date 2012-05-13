@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tquake - Adds quake to your path"
 }
 
-module-whatis	"quake 0.3.0"
+module-whatis	"quake-0.3.0"
 
 # for Tcl script use only
 set	version		3.2.9
