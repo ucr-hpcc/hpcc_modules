@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## hmmer modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\thmmer - Adds hmmer to your path"
+
+}
+
+module-whatis	"hmmer-3.0-mpi"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/stajichlab/hmmer/3.0-mpi/bin
+prepend-path	MANPATH /opt/stajichlab/hmmer/3.0-mpi/share/man
+module		use		/usr/local/Modules/versions
