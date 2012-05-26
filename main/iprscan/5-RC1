@@ -21,4 +21,4 @@ prepend-path    PATH   		/opt/iprscan/5-RC1
 module		use		/usr/local/Modules/versions
 
 module load java
-
+module load coils
