@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tkentsrc - Adds kentsrc to your path"
 }
 
-module-whatis	"kentsrc live"
+module-whatis	"kentsrc-live"
 
 # for Tcl script use only
 set	version		3.2.9
