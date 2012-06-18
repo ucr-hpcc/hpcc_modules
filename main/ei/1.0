@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## ei modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tei - Fast compound search tool"
+}
+
+module-whatis	"ei-1.0"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/ei/1.0/bin
+prepend-path	 PYTHONPATH	/opt/ei/1.0/lib/python2.6/site-packages
+
+module		use		/usr/local/Modules/versions
+
