@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## fastx_toolkit modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tfastx_toolkit - Adds fastx_toolkit to your path"
+}
+
+module-whatis	"fastx_toolkit-0.0.13.2"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/fastx_toolkit/0.0.13.2/bin
+
+module		use		/usr/local/Modules/versions
