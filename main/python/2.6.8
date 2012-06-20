@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## Python2.6 modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tpython2 - Adds python2.6 to your path"
+}
+
+module-whatis	"python-2.6.8"
+
+# for Tcl script use only
+set	version		2.6.8
+set	prefix		/usr/local/Modules/2.6.8
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/Python/2.6.8/bin
+prepend-path    MANPATH  	/opt/Python/2.6.8/share/man
+
+module		use		/usr/local/Modules/versions
+
