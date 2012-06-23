@@ -19,7 +19,7 @@ set	datarootdir	${prefix}/share
 # Load a prereq
 module load lastz/1.03.02
 
-prepend-path    PATH   		/opt/yasra/2.31
+prepend-path    PATH   		/opt/yasra/2.31/bin
 
 module		use		/usr/local/Modules/versions
 
