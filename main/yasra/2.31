@@ -16,6 +16,9 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+# Load a prereq
+module load lastz/1.03.02
+
 prepend-path    PATH   		/opt/yasra/2.31
 
 module		use		/usr/local/Modules/versions
