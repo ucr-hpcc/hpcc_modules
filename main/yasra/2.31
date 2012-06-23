@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## YASRA modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tYASRA - Adds YASRA to your path"
+}
+
+module-whatis	"YASRA-2.31"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path    PATH   		/opt/yasra/2.31
+
+module		use		/usr/local/Modules/versions
+
