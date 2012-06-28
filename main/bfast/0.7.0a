@@ -8,7 +8,7 @@ proc ModulesHelp { } {
        puts stderr "\tbfast- Adds bfast readmapper to your path"
 }
 
-module-whatis	"bfast 0.7.0a"
+module-whatis	"bfast-0.7.0a"
 
 # for Tcl script use only
 set	version		3.2.9
