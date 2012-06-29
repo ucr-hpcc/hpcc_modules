@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## Targetp modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tTargetp - Adds Targetp 1.1b to your path"
+}
+
+module-whatis	"targetp-1.1b"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/targetp/1.1b
+prepend-path    MANPATH  	/opt/targetp/1.1b
+
+module		use		/usr/local/Modules/versions
+
