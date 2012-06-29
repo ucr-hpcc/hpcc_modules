@@ -17,6 +17,6 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 prepend-path    PATH   		/opt/signalp/4.0
-prepend-path	MANPATH	/opt/signalp/4.0/share/man
+prepend-path	MANPATH		/opt/signalp/4.0
 module		use		/usr/local/Modules/versions
 
