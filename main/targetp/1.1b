@@ -16,6 +16,9 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+# Dependencies
+module load chlorop/1.1
+module load signalp/4.0
 
 prepend-path    PATH   		/opt/targetp/1.1b
 prepend-path    MANPATH  	/opt/targetp/1.1b
