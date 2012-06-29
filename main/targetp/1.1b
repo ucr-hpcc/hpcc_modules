@@ -1,11 +1,11 @@
 #%Module1.0#####################################################################
 ##
-## Targetp modulefile
+## TargetP modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tTargetp - Adds Targetp 1.1b to your path"
+        puts stderr "\tTargetP - Adds Targetp 1.1b to your path"
 }
 
 module-whatis	"targetp-1.1b"
