@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## R modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds R to your path"
+}
+
+module-whatis	"R-2.15.1"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/R/2.15.1/bin
+
+module		use		/usr/local/Modules/versions
+
