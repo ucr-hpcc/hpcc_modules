@@ -18,6 +18,7 @@ set	datarootdir	${prefix}/share
 
 
 prepend-path    PATH   		/opt/R/2.15.0/bin
+prepend-path	MANPATH		/opt/R/2.15.0/share/man
 
 module		use		/usr/local/Modules/versions
 
