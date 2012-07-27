@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## Less Code Highlighting modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tLess Code Highlighting - Enable code highlighting for less"
+}
+
+module-whatis	"Less Code Highlighting"
+
+# for Tcl script use only
+set	version		2.7.3
+set	prefix		/usr/local/Modules/2.7.3
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+setenv		LESSOPEN	"| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+setenv		LESS		" -R "
+
+module		use		/usr/local/Modules/versions
+
