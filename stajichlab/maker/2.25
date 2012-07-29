@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tMAKER- Adds MAKER to your path"
 }
 
-module-whatis	"maker 2.25"
+module-whatis	"maker-2.25"
 
 # for Tcl script use only
 set	version		3.2.9
