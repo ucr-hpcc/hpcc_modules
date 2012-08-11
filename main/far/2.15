@@ -4,7 +4,6 @@
 ##
 proc ModulesHelp { } {
         global version prefix
-
         puts stderr "\tFAR- Adds flexible adaptor removal to your path"
 }
 
