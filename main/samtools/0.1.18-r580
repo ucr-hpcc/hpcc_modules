@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## samtools modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tsamtools - Adds samtools to your path"
+}
+
+module-whatis	"samtools-0.1.18-r580"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/samtools/0.1.18-r580/bin
+prepend-path	MANPATH		/opt/samtools/0.1.18-r580/man
+
+module		use		/usr/local/Modules/versions
+
