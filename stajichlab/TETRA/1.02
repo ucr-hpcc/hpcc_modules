@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## TETRA modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+       puts stderr "\tTETRA- Adds TETRA to your path"
+}
+
+module-whatis	"TETRA-1.02"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/stajichlab/TETRA/1.02/bin
+prepend-path	LD_LIBRARY_PATH	/opt/stajichlab/TETRA/1.02/lib
+module		use		/usr/local/Modules/versions
