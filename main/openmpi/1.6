@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## mafft modulefile
+## mpiblas modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-       puts stderr "\tmafft- Adds mafft to your path"
+        puts stderr "\topenmpi - openmpi 1.6"
 }
 
-module-whatis	"mafft-6.864"
+module-whatis	"openmpi-1.6"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -16,6 +16,8 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path	PATH	/opt/stajichlab/mafft/6.864/bin
-prepend-path	MANPATH	/opt/stajichlab/mafft/6.864/share/man
+
+prepend-path    PATH   		/opt/openmpi/1.6/bin
+
 module		use		/usr/local/Modules/versions
+

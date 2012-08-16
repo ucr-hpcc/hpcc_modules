@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## mafft modulefile
+## tRNAscan modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-       puts stderr "\tmafft- Adds mafft to your path"
+        puts stderr "\ttRNAscan- Adds tRNAscan to your path"
 }
 
-module-whatis	"mafft-6.864"
+module-whatis	"tRNAscan-SE-1.3.1"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -16,6 +16,8 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path	PATH	/opt/stajichlab/mafft/6.864/bin
-prepend-path	MANPATH	/opt/stajichlab/mafft/6.864/share/man
+prepend-path	PERL5LIB	/opt/tRNAscan-SE/1.3.1/bin
+prepend-path	MANPATH	/opt/tRNAscan-SE/1.3.1/man
+prepend-path	PATH	/opt/tRNAscan-SE/1.3.1/bin
+
 module		use		/usr/local/Modules/versions
