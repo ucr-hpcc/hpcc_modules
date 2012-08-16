@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## WoLFPSORT modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tWoLFPSORT - Adds WoLFPSORT 0.2 to your path"
+}
+
+module-whatis	"WoLFPSORT-0.2"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/wolfpsort/0.2/bin
+prepend-path    MANPATH  	/opt/wolfpsort/0.2/share/man
+
+module		use		/usr/local/Modules/versions
+
