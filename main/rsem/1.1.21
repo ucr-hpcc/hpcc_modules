@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## rsem smodulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\trsem - Adds rsem 1.1.21 to your path"
+}
+
+module-whatis	"rsem-1.1.21"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/rsem/1.1.21
+
+module		use		/usr/local/Modules/versions

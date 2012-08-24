@@ -20,6 +20,8 @@ prepend-path	PATH	/opt/cegma/2.4.010312/bin
 module		use		/usr/local/Modules/versions
 setenv CEGMA /opt/cegma/2.4.010312
 prepend-path	PERL5LIB	/opt/cegma/2.4.010312/lib/
+
 module load geneid
 module load wise
 module load ncbi-blast
+module load hmmer/3.0
