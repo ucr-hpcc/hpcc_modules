@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## R modulefile
+## QT modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\t - Adds R to your path"
+        puts stderr "\tQT - Adds QT 4.8.2 to your path"
 }
 
-module-whatis	"R-2.15.0"
+module-whatis	"libqt-4.8.2"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -17,11 +17,9 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		/opt/R/2.15.0/bin
-prepend-path	MANPATH		/opt/R/2.15.0/share/man
-prepend-path    CPATH       /opt/R/2.15.0/lib64/R/include
-prepend-path    LIBRARY_PATH /opt/R/2.15.0/lib64/R/lib
-
+prepend-path    PATH   		/opt/qt/4.8.2/bin
+prepend-path    CPATH       /opt/qt/4.8.2/include
+prepend-path    LIBRARY_PATH /opt/qt/4.8.2/lib
 
 module		use		/usr/local/Modules/versions
 
