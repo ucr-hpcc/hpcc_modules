@@ -17,5 +17,6 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 module          load    java/1.6.0_29
+module load bowtie
 prepend-path	PATH	/opt/trinity-rnaseq/r2012-06-08
 module		use		/usr/local/Modules/versions
