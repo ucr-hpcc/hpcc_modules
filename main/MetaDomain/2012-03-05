@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## MetaDomain modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tMetaDomain - Adds MetaDomain to your path for protein hmm searches of short-read data"
+}
+
+module-whatis	"MetaDomain-2012-03-05"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/MetaDomain/2012-03-05/bin
+module		use		/usr/local/Modules/versions
+
