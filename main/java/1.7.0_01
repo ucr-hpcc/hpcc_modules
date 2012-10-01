@@ -5,7 +5,7 @@
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tJava- Adds java to your path"
+        puts stderr "\tJava- Adds java 7 to your path"
 }
 
 module-whatis	"oracle-jdk1.7.0_01"
@@ -17,5 +17,6 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path	PATH	/usr/local/java/oracle-jdk1.7.0_01/bin
-module		use		/usr/local/Modules/versions
+prepend-path     PATH     /usr/local/java/oracle-jdk1.7.0_01/bin
+prepend-path     MANPATH  /usr/local/java/oracle-jdk1.7.0_01/man
+module           use      /usr/local/Modules/versions
