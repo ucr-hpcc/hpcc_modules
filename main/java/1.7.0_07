@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tJava- Adds java 7 to your path"
 }
 
-module-whatis	"oracle-jdk1.7.0_01"
+module-whatis	"oracle-jdk1.7.0_07"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -17,6 +17,6 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path     PATH     /usr/local/java/oracle-jdk1.7.0_01/bin
-prepend-path     MANPATH  /usr/local/java/oracle-jdk1.7.0_01/man
+prepend-path     PATH     /opt/java/jdk1.7.0_07/bin
+prepend-path     MANPATH  /opt/java/jdk1.7.0_07/man
 module           use      /usr/local/Modules/versions
