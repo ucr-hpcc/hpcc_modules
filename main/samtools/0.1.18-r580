@@ -19,6 +19,8 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH   		/opt/samtools/0.1.18-r580/bin
 prepend-path	MANPATH		/opt/samtools/0.1.18-r580/man
+prepend-path    LIBRARY_PATH /opt/samtools/0.1.18-r580/lib
+prepend-path    CPATH       /opt/samtools/0.1.18-r580/include
 
 module		use		/usr/local/Modules/versions
 
