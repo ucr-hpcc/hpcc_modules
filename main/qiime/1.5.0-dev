@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## qiime modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tqiime- Adds qiime and scripts to your path"
+}
+
+module-whatis	"qiime-1.5.0-dev"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/qiime/1.5.0-dev/bin
+setenv RDP_JAR_PATH	/opt/qiime/1.5.0-dev/app/rdp_classifier-2.0.1.jar
+module		use		/usr/local/Modules/versions
