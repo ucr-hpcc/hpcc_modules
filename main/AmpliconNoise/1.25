@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## AmpliconNoise modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tAmpliconNoise - Adds AmpliconNoise software your path"
+}
+
+module-whatis	"AmpliconNoise-1.25"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/AmpliconNoise/1.25/bin
+module		use		/usr/local/Modules/versions
