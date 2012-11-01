@@ -17,5 +17,5 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 prepend-path	PATH	/opt/qiime/1.5.0-dev/bin
-setenv RDP_JAR_PATH	/opt/qiime/1.5.0-dev/app/rdp_classifier-2.0.1.jar
+setenv RDP_JAR_PATH	/opt/qiime/1.5.0-dev/app/rdp_classifier.jar
 module		use		/usr/local/Modules/versions
