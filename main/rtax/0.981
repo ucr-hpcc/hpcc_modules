@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## rtax modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\trtax - Adds rtax software your path"
+}
+
+module-whatis	"rtax-0.981"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/rtax/0.981/bin
+module		use		/usr/local/Modules/versions
