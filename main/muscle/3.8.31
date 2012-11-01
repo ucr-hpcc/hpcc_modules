@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## muscle modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tmuscle - Adds muscle to your path"
+}
+
+module-whatis	"muscle-3.8.31"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/muscle/3.8.31/bin
+module		use		/usr/local/Modules/versions

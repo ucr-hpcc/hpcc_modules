@@ -17,5 +17,18 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 prepend-path	PATH	/opt/qiime/1.5.0-dev/bin
-setenv RDP_JAR_PATH	/opt/qiime/1.5.0-dev/app/rdp_classifier.jar
 module		use		/usr/local/Modules/versions
+setenv RDP_JAR_PATH	/opt/qiime/1.5.0-dev/app/rdp_classifier.jar
+
+module load java
+module load AmpliconNoise
+module load cd-hit
+module load mothur
+module load ChimeraSlayer
+module load clearcut
+module load infernal/1.0.2
+module load RAxML/7.3.2
+module load pplacer
+module load ParsInsert
+module load rtax
+module load muscle
