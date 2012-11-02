@@ -21,6 +21,8 @@ module		use		/usr/local/Modules/versions
 setenv RDP_JAR_PATH	/opt/qiime/1.5.0-dev/app/rdp_classifier.jar
 
 module load java
+module load stajichlab
+module load stajichlab-python
 module load AmpliconNoise
 module load cd-hit/3.1.1
 module load mothur
