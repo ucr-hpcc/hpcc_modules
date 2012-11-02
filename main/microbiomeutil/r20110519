@@ -17,9 +17,9 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		/opt/microbiomutil/r20110519/ChimeraSlayer
-prepend-path    PATH   		/opt/microbiomutil/r20110519/NAST-iEr
-prepend-path    PATH   		/opt/microbiomutil/r20110519/TreeChopper
+prepend-path    PATH   		/opt/microbiomeutil/r20110519/ChimeraSlayer
+prepend-path    PATH   		/opt/microbiomeutil/r20110519/NAST-iEr
+prepend-path    PATH   		/opt/microbiomeutil/r20110519/TreeChopper
 
 module		use		/usr/local/Modules/versions
 
