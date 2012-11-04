@@ -19,3 +19,4 @@ set	datarootdir	${prefix}/share
 setenv	GATKDIR	/opt/GATK/1.6-7-g2be5704
 setenv	GATK	/opt/GATK/1.6-7-g2be5704/GenomeAnalysisTK.jar
 module		use		/usr/local/Modules/versions
+module load java

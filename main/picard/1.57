@@ -18,3 +18,4 @@ set	datarootdir	${prefix}/share
 
 setenv	PICARD	/usr/local/java/common/lib/picard-tools-1.57/
 module		use		/usr/local/Modules/versions
+module load java
