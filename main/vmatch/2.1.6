@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## varscan modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tAdds vmatch 2.1.6 to your path"
+}
+
+module-whatis	"vmatch 2.1.6"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/vmatch-2.1.6
+module		use		/usr/local/Modules/versions
