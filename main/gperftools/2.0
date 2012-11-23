@@ -17,7 +17,10 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		/opt/gperftools/2.0/bin
+prepend-path    PATH          /opt/gperftools/2.0/bin
+prepend-path    CPATH         /opt/gperftools/2.0/include
+prepend-path    LIBRARY_PATH  /opt/gperftools/2.0/lib
+prepend-path    MANPATH       /opt/gperftools/2.0/share
 
 module		use		/usr/local/Modules/versions
 
