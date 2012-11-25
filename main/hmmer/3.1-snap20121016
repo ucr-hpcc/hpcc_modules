@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\thmmer - Adds hmmer 3.1 -- this is for use with Dfam (nhmmer especially)"
 }
 
-module-whatis	"hmmer-3.1-snap20120830"
+module-whatis	"hmmer-3.1-snap20121016"
 
 # for Tcl script use only
 set	version		2.7.3
@@ -17,6 +17,6 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path	PATH	/opt/stajichlab/hmmer/3.1-snap20120830/bin   	
+prepend-path	PATH	/opt/stajichlab/hmmer/3.1-snap20121016/bin
 module			use		/usr/local/Modules/versions
 
