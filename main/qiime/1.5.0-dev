@@ -38,3 +38,4 @@ module load uclust
 module load FastTree/2.1.4
 module load stajichlab
 module load stajichlab-python
+module load ncbi-blast/2.2.22
