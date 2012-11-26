@@ -24,6 +24,7 @@ prepend-path	PYTHONPATH	/opt/qiime/1.5.0-dev/lib
 module load java
 module load AmpliconNoise
 module load cd-hit/3.1.1
+module load cdbfasta/0.99
 module load mothur
 module load microbiomeutil
 module load clearcut
