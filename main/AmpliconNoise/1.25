@@ -17,6 +17,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 prepend-path	PATH	/opt/AmpliconNoise/1.25/bin
+prepend-path	PATH	/opt/AmpliconNoise/1.25/Scripts
 setenv	PYRO_LOOKUP_FILE	/opt/AmpliconNoise/1.25/Data/LookUp_E123.dat
 setenv	SEQ_LOOKUP_FILE	/opt/AmpliconNoise/1.25/Data/Tran.dat
 module		use		/usr/local/Modules/versions
