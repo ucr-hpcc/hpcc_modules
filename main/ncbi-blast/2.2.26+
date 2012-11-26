@@ -1,14 +1,15 @@
 #%Module1.0#####################################################################
 ##
 ## ncbi-blast modulefile
+## THIS IS NCBI BLAST+  NOT LEGACY - eg THERE IS NO BLASTALL EXE
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tncbi-blast- Adds ncbi-blast and related exes to your path"
+        puts stderr "\tncbi-blast- Adds ncbi-blast+ and related exes to your path"
 }
 
-module-whatis	"ncbi-blast 2.2.26+"
+module-whatis	"ncbi-blast-2.2.26+"
 
 # for Tcl script use only
 set	version		3.2.9

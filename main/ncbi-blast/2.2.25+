@@ -1,6 +1,7 @@
 #%Module1.0#####################################################################
 ##
 ## ncbi-blast modulefile
+## THIS IS NCBI BLAST+  NOT LEGACY - eg THERE IS NO BLASTALL EXE
 ##
 proc ModulesHelp { } {
         global version prefix
@@ -17,4 +18,5 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 prepend-path	PATH	/opt/ncbi-blast-2.2.25+/bin
+prepend-path	LD_LIBRARY_PATH	/opt/ncbi-blast/2.2.26+/lib
 module		use		/usr/local/Modules/versions
