@@ -32,7 +32,7 @@ module load infernal/1.0.2
 module load RAxML/7.3.2
 module load pplacer
 module load ParsInsert
-module load rtax
+module load rtax/0.982
 module load muscle/3.8.31
 module load usearch
 module load uclust
