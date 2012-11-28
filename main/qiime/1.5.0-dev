@@ -23,7 +23,7 @@ set	datarootdir	${prefix}/share
 module          use             /usr/local/Modules/versions
 
 prepend-path    PATH    /opt/qiime/1.5.0-dev/bin
-setenv RDP_JAR_PATH     /opt/RDP/Classifiers/rdp_classifier_2.5
+setenv RDP_JAR_PATH     /opt/RDP/Classifiers/rdp_classifier_2.5/rdp_classifier-2.5.jar
 prepend-path    PYTHONPATH      /opt/qiime/1.5.0-dev/lib
 
 # module load stajichlab
