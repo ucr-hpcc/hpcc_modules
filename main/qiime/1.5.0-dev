@@ -25,16 +25,16 @@ prepend-path    PYTHONPATH      /opt/qiime/1.5.0-dev/lib
 module-log debug stderr
 module-log verb stderr
 
-module load stajichlab 
-module load stajichlab-python
+#module load stajichlab 
+#module load stajichlab-python
 
-module load java/1.6.0_29
-module load AmpliconNoise/1.25 
-module load cd-hit/3.1.1 
-module load cdbfasta/0.99 
-module load mothur/1.25.0
-module load microbiomeutil/r20110519
-#module load clearcut 
+#module load java/1.6.0_29
+#module load AmpliconNoise/1.25 
+#module load cd-hit/3.1.1 
+#module load cdbfasta/0.99 
+#module load mothur/1.25.0
+#module load microbiomeutil/r20110519
+#module load clearcut/1.0.9
 #module load infernal/1.0.2 
 #module load RAxML/7.3.2 
 #module load pplacer
