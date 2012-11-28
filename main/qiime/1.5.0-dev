@@ -9,36 +9,40 @@ proc ModulesHelp { } {
 }
 
 module-whatis	"qiime-1.5.0-dev"
-module-verbosity yes
 
 # for Tcl script use only
 set	version		3.2.9
 set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
-module		use		/usr/local/Modules/versions
+
+module          use             /usr/local/Modules/versions
+
+prepend-path    PATH    /opt/qiime/1.5.0-dev/bin
+setenv RDP_JAR_PATH     /opt/qiime/1.5.0-dev/app/rdp_classifier.jar
+prepend-path    PYTHONPATH      /opt/qiime/1.5.0-dev/lib
+
+module-log debug stderr
+module-log verb stderr
 
 module load stajichlab 
 module load stajichlab-python
 
-prepend-path	PATH	/opt/qiime/1.5.0-dev/bin
-setenv RDP_JAR_PATH	/opt/qiime/1.5.0-dev/app/rdp_classifier.jar
-prepend-path	PYTHONPATH	/opt/qiime/1.5.0-dev/lib
-
-module load java 
+#module load java 
 module load AmpliconNoise/1.25 
 module load cd-hit/3.1.1 
 module load cdbfasta/0.99 
-module load mothur 
-module load microbiomeutil 
-module load clearcut 
-module load infernal/1.0.2 
-module load RAxML/7.3.2 
-module load pplacer
-module load ParsInsert 
-module load rtax/0.982 
+#module load mothur 
+#module load microbiomeutil 
+#module load clearcut 
+#module load infernal/1.0.2 
+#module load RAxML/7.3.2 
+#module load pplacer
+#module load ParsInsert 
+#module load rtax/0.982 
 #module load muscle/3.8.31 
 #module load uclust usearch/5.2.32
 #module load FastTree/2.1.3 
 #module load ncbi-blast/2.2.22
+
 
