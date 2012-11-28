@@ -9,6 +9,7 @@ proc ModulesHelp { } {
 }
 
 module-whatis	"qiime-1.5.0-dev"
+module-verbosity yes
 
 # for Tcl script use only
 set	version		3.2.9
@@ -21,24 +22,7 @@ module		use		/usr/local/Modules/versions
 setenv RDP_JAR_PATH	/opt/qiime/1.5.0-dev/app/rdp_classifier.jar
 prepend-path	PYTHONPATH	/opt/qiime/1.5.0-dev/lib
 
-#module load java
-#module load AmpliconNoise/1.25
-#module load cd-hit/3.1.1
-#module load cdbfasta/0.99
-#module load mothur
-#module load microbiomeutil
-#module load clearcut
-#module load infernal/1.0.2
-#module load RAxML/7.3.2
-#module load pplacer
-#module load ParsInsert
-#module load rtax/0.982
-#module load muscle/3.8.31
-#module load usearch
-#module load uclust
-#module load FastTree/2.1.3
-#module load stajichlab
-#module load stajichlab-python
-
-module load ncbi-blast/2.2.22
+module load java AmpliconNoise/1.25 cd-hit/3.1.1 cdbfasta/0.99 mothur microbiomeutil clearcut \
+ infernal/1.0.2 RAxML/7.3.2 pplacer ParsInsert rtax/0.982 muscle/3.8.31 uclust usearch \
+ FastTree/2.1.3 stajichlab stajichlab-python ncbi-blast/2.2.22
 
