@@ -16,6 +16,7 @@ set	version		3.2.9
 set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
+module		use		/usr/local/Modules/versions
 
 module load stajichlab 
 module load stajichlab-python
@@ -41,5 +42,4 @@ module load uclust usearch/5.2.32
 module load FastTree/2.1.3 
 module load ncbi-blast/2.2.22
 
-module		use		/usr/local/Modules/versions
 
