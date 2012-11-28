@@ -25,8 +25,8 @@ prepend-path	PATH	/opt/qiime/1.5.0-dev/bin
 setenv RDP_JAR_PATH	/opt/qiime/1.5.0-dev/app/rdp_classifier.jar
 prepend-path	PYTHONPATH	/opt/qiime/1.5.0-dev/lib
 
-#module load java 
-#module load AmpliconNoise/1.25 
+module load java 
+module load AmpliconNoise/1.25 
 #module load cd-hit/3.1.1 
 #module load cdbfasta/0.99 
 #module load mothur 
