@@ -29,8 +29,8 @@ module load java
 module load AmpliconNoise/1.25 
 module load cd-hit/3.1.1 
 module load cdbfasta/0.99 
-module load mothur 
-module load microbiomeutil 
+#module load mothur 
+#module load microbiomeutil 
 module load clearcut 
 module load infernal/1.0.2 
 module load RAxML/7.3.2 
