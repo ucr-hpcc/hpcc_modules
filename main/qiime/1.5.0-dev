@@ -28,12 +28,12 @@ module-log verb stderr
 module load stajichlab 
 module load stajichlab-python
 
-module load java 
+module load java/1.6.0_29
 module load AmpliconNoise/1.25 
 module load cd-hit/3.1.1 
 module load cdbfasta/0.99 
-module load mothur 
-module load microbiomeutil 
+module load mothur/1.25.0
+module load microbiomeutil/r20110519
 #module load clearcut 
 #module load infernal/1.0.2 
 #module load RAxML/7.3.2 
