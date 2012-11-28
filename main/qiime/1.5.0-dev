@@ -31,8 +31,8 @@ module load cd-hit/3.1.1
 module load cdbfasta/0.99 
 #module load mothur 
 #module load microbiomeutil 
-module load clearcut 
-module load infernal/1.0.2 
+#module load clearcut 
+#module load infernal/1.0.2 
 module load RAxML/7.3.2 
 #module load pplacer
 #module load ParsInsert rtax/0.982 muscle/3.8.31 uclust usearch 
