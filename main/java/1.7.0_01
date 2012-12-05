@@ -17,6 +17,9 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path     PATH     /usr/local/java/oracle-jdk1.7.0_01/bin
-prepend-path     MANPATH  /usr/local/java/oracle-jdk1.7.0_01/man
+prepend-path     PATH     /opt/java/jdk1.7.0_09/bin
+prepend-path     MANPATH  /opt/java/jdk1.7.0_09/man
+prepend-path     CPATH    /opt/java/jdk1.7.0_09/include
+prepend-path     LIBRARY_PATH /opt/java/jdk1.7.0_09/lib
+
 module           use      /usr/local/Modules/versions
