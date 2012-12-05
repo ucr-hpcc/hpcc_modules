@@ -1,6 +1,6 @@
 #%Module1.0#####################################################################
 ##
-## GATK-lite modulefile
+## GATK modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tGATK- Adds GATK ENV variable to your path"
 }
 
-module-whatis	"GATK-1.6-7-g2be5704"
+module-whatis	"GATK-lite-2.2-16-g2cc9ef8"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -16,7 +16,7 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-setenv	GATKDIR	/opt/GATK-lite/1.6-7-g2be5704
-setenv	GATK	/opt/GATK-lite/1.6-7-g2be5704/GenomeAnalysisTK.jar
+setenv	GATKDIR	/opt/GATK-lite/2.2-16-g2cc9ef8
+setenv	GATK	/opt/GATK-lite/2.2-16-g2cc9ef8/GenomeAnalysisTKLite.jar
 module		use		/usr/local/Modules/versions
 module load java
