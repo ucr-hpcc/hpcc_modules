@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tJava- Adds java 7 to your path"
 }
 
-module-whatis	"oracle-jdk1.7.0_07"
+module-whatis	"oracle-jdk1.7.0_09"
 
 # for Tcl script use only
 set	version		3.2.9
