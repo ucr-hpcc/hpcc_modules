@@ -19,4 +19,8 @@ set	datarootdir	${prefix}/share
 
 prepend-path     PATH     /opt/java/jdk1.7.0_07/bin
 prepend-path     MANPATH  /opt/java/jdk1.7.0_07/man
+prepend-path     CPATH    /opt/java/jdk1.7.0_07/include
+prepend-path     LIBRARY_PATH /opt/java/jdk1.7.0_07/lib
+
+
 module           use      /usr/local/Modules/versions

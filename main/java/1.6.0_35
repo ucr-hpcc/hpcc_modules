@@ -17,6 +17,8 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path	PATH    /opt/java/jdk1.6.0_35/bin
-prepend-path    MANPATH /opt/java/jdk1.6.0_35/man
-module          use     /usr/local/Modules/versions
+prepend-path	 PATH     /opt/java/jdk1.6.0_35/bin
+prepend-path     MANPATH  /opt/java/jdk1.6.0_35/man
+prepend-path     CPATH    /opt/java/jdk1.6.0_35/include
+prepend-path     LIBRARY_PATH /opt/java/jdk1.6.0_35/lib
+module           use     /usr/local/Modules/versions

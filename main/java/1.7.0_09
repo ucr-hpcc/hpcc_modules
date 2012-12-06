@@ -5,10 +5,10 @@
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tJava- Adds java 6 to your path"
+        puts stderr "\tJava- Adds java 7 to your path"
 }
 
-module-whatis	"oracle-jdk1.6.0_29"
+module-whatis	"oracle-jdk1.7.0_09"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -17,9 +17,9 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path     PATH     /opt/java/jdk1.6.0_29/bin
-prepend-path     MANPATH  /opt/java/jdk1.6.0_29/man
-prepend-path     CPATH    /opt/java/jdk1.6.0_29/include
-prepend-path     LIBRARY_PATH /opt/java/jdk1.6.0_29/lib
+prepend-path     PATH     /opt/java/jdk1.7.0_09/bin
+prepend-path     MANPATH  /opt/java/jdk1.7.0_09/man
+prepend-path     CPATH    /opt/java/jdk1.7.0_09/include
+prepend-path     LIBRARY_PATH /opt/java/jdk1.7.0_09/lib
 
 module           use      /usr/local/Modules/versions
