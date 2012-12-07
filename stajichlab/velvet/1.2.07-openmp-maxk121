@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tvelvet- Adds velvet to your path"
 }
 
-module-whatis	"velvet 1.2.07 +openmp +maxkmer121"
+module-whatis	"velvet-1.2.07 +openmp +maxkmer121"
 
 # for Tcl script use only
 set	version		3.2.9
