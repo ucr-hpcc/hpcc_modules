@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## cortex modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tcortex - Adds cortex to your path"
+}
+
+module-whatis	"cortex-0.04c-beta"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/cortex/0.04c-beta/bin
+module		use		/usr/local/Modules/versions
