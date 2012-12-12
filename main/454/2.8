@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## 454 modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t454 - Adds 454 assembler and tools your path"
+}
+
+module-whatis	"454-2.8"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/454/2.8/bin
+module		use		/usr/local/Modules/versions
