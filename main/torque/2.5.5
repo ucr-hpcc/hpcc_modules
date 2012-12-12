@@ -1,0 +1,27 @@
+#%Module1.0#####################################################################
+##
+## Python3 modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tTorque - Adds Torque 2.5.5 to your path"
+}
+
+module-whatis	"torque-2.5.5"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		 /opt/torque-2.5.5/bin:/opt/torque-2.5.5/sbin
+prepend-path    MANPATH  	 /opt/torque-2.5.5/man
+prepend-path    CPATH        /opt/torque-2.5.5/include
+prepend-path    LIBRARY_PATH /opt/torque-2.5.5/lib
+
+
+module		use		/usr/local/Modules/versions
+
