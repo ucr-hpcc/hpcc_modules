@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tSOAPdenovo - Adds SOAPdenovo to your path"
 }
 
-module-whatis	"SOAPdenovo 1.05"
+module-whatis	"SOAPdenovo-1.05"
 
 # for Tcl script use only
 set	version		3.2.9

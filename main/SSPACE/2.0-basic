@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## velvet modulefile
+## SSPACE modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tvelvet- Adds velvet to your path"
+        puts stderr "\tSSPACE - Adds SSPACE to your path"
 }
 
-module-whatis	"velvet-1.2.07 +openmp +longsequences +maxk71"
+module-whatis	"SSPACE-2.0-basic"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -16,5 +16,8 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path	PATH	/opt/stajichlab/velvet/1.2.07-openmp-longseq-maxk71/bin
+
+prepend-path    PATH   		/opt/SSPACE/2.0-basic
+prepend-path    PATH   		/opt/SSPACE/2.0-basic/bin
+
 module		use		/usr/local/Modules/versions

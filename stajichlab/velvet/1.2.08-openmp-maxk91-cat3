@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tvelvet- Adds velvet to your path"
 }
 
-module-whatis	"velvet-1.2.07 +openmp +longsequences +maxk71"
+module-whatis	"velvet-1.2.08 +openmp +cat3 +maxk91"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -16,5 +16,5 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path	PATH	/opt/stajichlab/velvet/1.2.07-openmp-longseq-maxk71/bin
+prepend-path	PATH	/opt/stajichlab/velvet/1.2.08-openmp-maxk91-cat3/bin
 module		use		/usr/local/Modules/versions
