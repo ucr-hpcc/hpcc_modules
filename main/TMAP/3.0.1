@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## Python3 modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tTMAP - Adds TMAP 3.0.1 to your path"
+}
+
+module-whatis	"TMAP-3.0.1"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9/opt/TMAP/3.0.1/bin
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		 /opt/TMAP/3.0.1/bin
+
+
+module		use		/usr/local/Modules/versions
+
