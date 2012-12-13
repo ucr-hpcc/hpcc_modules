@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## picard modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tpicard- Adds picard ENV variable to your path"
+}
+
+module-whatis	"picard-1.81"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+setenv	PICARD	/usr/local/java/common/lib/picard-tools-1.81
+module		use		/usr/local/Modules/versions
+module load java
