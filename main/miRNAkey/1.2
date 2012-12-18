@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## boost modulefile
+## Python3 modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tboost- Adds boost folders to your env"
+        puts stderr "\tTorque - Adds Torque 2.5.5 to your path"
 }
 
-module-whatis	"boost-1.50.0"
+module-whatis	"torque-2.5.5"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -16,6 +16,13 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path	LD_LIBRARY_PATH	/opt/boost/1.50.0/lib
-prepend-path	BOOST_LIBS	/opt/boost/1.50.0/lib
+
+module load java
+module load bwa
+module load fastx_toolkit
+
+prepend-path    PATH   		 /opt/miRNAkey/1.2:/opt/miRNAkey/1.2/pipeline
+
+
 module		use		/usr/local/Modules/versions
+
