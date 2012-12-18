@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## bedtools modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tbedtools - Adds bedtools to your path"
+}
+
+module-whatis	"bedtools-2.17.0-25-g7b42b3b"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/bedtools/2.17.0-25-g7b42b3b/bin
+module		use		/usr/local/Modules/versions
