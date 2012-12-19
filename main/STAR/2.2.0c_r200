@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## STAR modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tSTAR - For SPliced Transcript Alignments and Reconstruction"
+}
+
+module-whatis	"STAR-2.2.0c_r200"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/STAR/2.2.0c_r200/bin
+module		use		/usr/local/Modules/versions
+
