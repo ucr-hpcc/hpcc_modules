@@ -18,3 +18,7 @@ set	datarootdir	${prefix}/share
 
 prepend-path	PATH	/opt/sga/0.9.37/bin
 module		use		/usr/local/Modules/versions
+
+module load ABYSS
+module load stajichlab
+module load stajichlab-python
