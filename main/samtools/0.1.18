@@ -17,11 +17,10 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		/opt/samtools/0.1.18
-prepend-path    PATH   		/opt/samtools/0.1.18/misc
-prepend-path    PATH   		/opt/samtools/0.1.18/bcftools
-prepend-path    LIBRARY_PATH /opt/samtools/0.1.18
-prepend-path    CPATH /opt/samtools/0.1.18
+prepend-path    PATH   		/opt/samtools/0.1.18/bin
+prepend-path    LIBRARY_PATH /opt/samtools/0.1.18/lib
+prepend-path    CPATH /opt/samtools/0.1.18/include
+prepend-path    MANPATH /opt/samtools/0.1.18/share
 
 
 module		use		/usr/local/Modules/versions
