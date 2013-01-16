@@ -20,7 +20,7 @@ set	datarootdir	${prefix}/share
 prepend-path    PATH   		/opt/samtools/0.1.18/bin
 prepend-path    LIBRARY_PATH /opt/samtools/0.1.18/lib
 prepend-path    CPATH /opt/samtools/0.1.18/include
-prepend-path    MANPATH /opt/samtools/0.1.18/share
+prepend-path    MANPATH /opt/samtools/0.1.18/share/man
 
 
 module		use		/usr/local/Modules/versions
