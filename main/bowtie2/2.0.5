@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## samtools modulefile
+## Bowtie2 modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tsamtools - Adds samtools to your path"
+        puts stderr "\tbowtie2 - Adds bowtie2 to your path"
 }
 
-module-whatis	"samtools-0.1.18"
+module-whatis	"Bowtie2-2.0.5"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -17,11 +17,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		/opt/samtools/0.1.18/bin
-prepend-path    LIBRARY_PATH /opt/samtools/0.1.18/lib
-prepend-path    CPATH /opt/samtools/0.1.18/include
-prepend-path    MANPATH /opt/samtools/0.1.18/share/man
-
+prepend-path    PATH   		/opt/bowtie2/2.0.5
 
 module		use		/usr/local/Modules/versions
 
