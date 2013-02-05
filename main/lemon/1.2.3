@@ -1,0 +1,25 @@
+#%Module1.0#####################################################################
+##
+## Lemon modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tLemon - Adds Lemon to your path"
+}
+
+module-whatis	"lemon-1.2.3"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/lemon/1.2.3/bin
+prepend-path    CPATH       /opt/lemon/1.2.3/include
+prepend-path    LIBRARY_PATH /opt/lemon/1.2.3/lib
+
+module		use		/usr/local/Modules/versions
+
