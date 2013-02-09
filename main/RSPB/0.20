@@ -18,6 +18,7 @@ set	datarootdir	${prefix}/share
 
 
 prepend-path    PATH   		/opt/rspb/0.20
+module load ncbi-blast
 
 module		use		/usr/local/Modules/versions
 
