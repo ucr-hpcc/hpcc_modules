@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## Bowtie2 modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tbowtie2 - Adds bowtie2 to your path"
+}
+
+module-whatis	"Bowtie2-2.0.5"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/bowtie2/2.0.6
+prepend-path    PATH   		/opt/bowtie2/2.0.6/scripts
+
+module		use		/usr/local/Modules/versions
+
