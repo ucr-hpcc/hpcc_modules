@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## BUCKy modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tBUCKy - Adds bucky, for genetree/species tree reconiliation o your path"
+}
+
+module-whatis	"BUCKy-1.4.2"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path    PATH   		/opt/BUCKy/1.4.2/bin
+module		use		/usr/local/Modules/versions
+
