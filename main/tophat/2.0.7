@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## RAPB modulefile
+## TopHat modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tRSPB - Adds RSPB to your path"
+        puts stderr "\tTopHat - Adds TopHat to your path"
 }
 
-module-whatis	"RSPB-0.20"
+module-whatis	"tophat-2.0.5"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -17,9 +17,9 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		/opt/rspb/0.20
-module load ncbi-blast
-module load muscle
+prepend-path    PATH   		/opt/tophat/2.0.7/bin
 
 module		use		/usr/local/Modules/versions
 
+module load bowtie2
+module load samtools

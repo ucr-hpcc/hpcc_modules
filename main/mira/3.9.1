@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## RAPB modulefile
+## Mira modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tRSPB - Adds RSPB to your path"
+        puts stderr "\tMira - Adds Mira to your path"
 }
 
-module-whatis	"RSPB-0.20"
+module-whatis	"mira-3.9.1"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -17,9 +17,6 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		/opt/rspb/0.20
-module load ncbi-blast
-module load muscle
-
+prepend-path    PATH   		/opt/mira/3.9.1/bin
+prepend-path    PATH   		/opt/mira/3.9.1/scripts
 module		use		/usr/local/Modules/versions
-
