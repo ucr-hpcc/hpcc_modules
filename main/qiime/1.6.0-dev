@@ -1,0 +1,47 @@
+#%Module1.0#####################################################################
+##
+## qiime modulefile
+##
+module-log debug stdout
+module-log verb stdout
+module-trace on
+
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tqiime- Adds qiime and scripts to your path"
+}
+
+module-whatis	"qiime-1.6.0-dev"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+module          use             /usr/local/Modules/versions
+
+prepend-path    PATH    /opt/qiime/1.6.0-dev/bin
+setenv RDP_JAR_PATH     /opt/RDP/Classifiers/rdp_classifier_2.5/rdp_classifier-2.5.jar
+prepend-path    PYTHONPATH      /opt/qiime/1.6.0-dev/lib
+
+# module load stajichlab
+# module load stajichlab-python
+# module load java/1.6.0_29
+# module load AmpliconNoise/1.25
+# module load cd-hit/3.1.1
+# module load cdbfasta/0.99
+# module load mothur/1.25.0
+# module load microbiomeutil/r20110519
+# module load clearcut/1.0.9
+# module load infernal/1.0.2
+# module load RAxML/7.3.2
+# module load pplacer/1.1.alpha13
+# module load ParsInsert
+# module load rtax/0.982
+# module load muscle/3.8.31
+# module load uclust
+# module load usearch/5.2.32
+# module load FastTree/2.1.3
+# module load ncbi-blast/2.2.22
