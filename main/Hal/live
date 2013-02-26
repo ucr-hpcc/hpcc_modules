@@ -1,0 +1,31 @@
+#%Module1.0#####################################################################
+##
+## hal modulefile
+##
+module-log debug stdout
+module-log verb stdout
+module-trace on
+
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tHal- Adds Hal to your path"
+}
+
+module-whatis	"Hal-live"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+module          use             /usr/local/Modules/versions
+
+prepend-path    PATH    /opt/Hal/live
+prepend-path	PERL5LIB	/opt/Hal/live/modules
+
+module load stajichlab
+module load stajichlab-perl
+module load probcons
+module load ncbi-blast
