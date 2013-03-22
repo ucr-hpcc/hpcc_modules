@@ -19,5 +19,5 @@ set	datarootdir	${prefix}/share
 module          load    java
 module load bowtie
 module load samtools
-prepend-path	PATH	/opt/trinity-rnaseq/r20
+prepend-path	PATH	/opt/trinity-rnaseq/r2013-02-25
 module		use		/usr/local/Modules/versions
