@@ -25,3 +25,4 @@ prepend-path    MANPATH /opt/samtools/0.1.18/share/man
 
 module		use		/usr/local/Modules/versions
 
+
