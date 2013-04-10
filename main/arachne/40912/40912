@@ -1,0 +1,28 @@
+#%Module1.0#####################################################################
+##
+## samtools modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tarachne - Adds arachne to your path"
+}
+
+module-whatis	"arachne"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH         /opt/arachne/40912/bin
+prepend-path    LIBRARY_PATH /opt/arachne/40912/lib
+prepend-path    CPATH        /opt/arachne/40912/include
+prepend-path    MANPATH      /opt/arachne/40912/share/man
+
+
+module		use		/usr/local/Modules/versions
+
+
