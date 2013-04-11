@@ -5,10 +5,10 @@
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tsamtools - Adds samtools to your path"
+        puts stderr "\tarachne - Adds arachne to your path"
 }
 
-module-whatis	"samtools-0.1.18"
+module-whatis	"arachne"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -17,10 +17,10 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		/opt/samtools/0.1.18/bin
-prepend-path    LIBRARY_PATH /opt/samtools/0.1.18/lib
-prepend-path    CPATH /opt/samtools/0.1.18/include
-prepend-path    MANPATH /opt/samtools/0.1.18/share/man
+prepend-path    PATH         /opt/arachne/40912/bin
+prepend-path    LIBRARY_PATH /opt/arachne/40912/lib
+prepend-path    CPATH        /opt/arachne/40912/include
+prepend-path    MANPATH      /opt/arachne/40912/share/man
 
 
 module		use		/usr/local/Modules/versions
