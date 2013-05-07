@@ -17,7 +17,11 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		/opt/openmpi/1.6/bin
+prepend-path    PATH   		    /opt/openmpi/1.6/bin
+prepend-path    CPATH           /opt/openmpi/1.6/include
+prepend-path    LIBRARY_PATH    /opt/openmpi/1.6/lib
+prepend-path    LD_LIBRARY_PATH /opt/openmpi/1.6/lib
+prepend-path    MANPATH         /opt/openmpi/1.6/share/man
 
 module		use		/usr/local/Modules/versions
 
