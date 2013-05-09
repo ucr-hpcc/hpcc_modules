@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## FigTree modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tFigTree Adds figtree to your path"
+}
+
+module-whatis	"figtree-1.4.0"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+
+prepend-path	PATH	/opt/FigTree/1.4.0/bin
+module		use		/usr/local/Modules/versions
