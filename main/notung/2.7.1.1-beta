@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## Notung modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tnotung - Adds notung tree reconcilliation to your path"
+}
+
+module-whatis	"notung-2.7.1.1-beta"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/notung/2.7.1.1-beta
+set NOTUNGJAR /opt/notung/2.7.1.1-beta/Notung.jar
+module		use		/usr/local/Modules/versions
