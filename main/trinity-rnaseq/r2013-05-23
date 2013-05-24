@@ -21,4 +21,6 @@ module load bowtie
 module load samtools
 module load gmap
 prepend-path	PATH	/opt/trinity-rnaseq/r2013-05-23
+prepend-path	PATH	/opt/trinity-rnaseq/r2013-05-23/util
+
 module		use		/usr/local/Modules/versions
