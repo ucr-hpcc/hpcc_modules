@@ -22,5 +22,5 @@ module load samtools
 module load gmap
 prepend-path	PATH	/opt/trinity-rnaseq/r2013-05-23
 prepend-path	PATH	/opt/trinity-rnaseq/r2013-05-23/util
-
+setenv TRINITY_HOME /opt/trinity-rnaseq/r2013-05-23
 module		use		/usr/local/Modules/versions
