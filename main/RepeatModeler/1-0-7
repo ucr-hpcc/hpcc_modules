@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tRepeatModeler - Adds RepeatModeler software your path"
 }
 
-module-whatis	"RepeatModeler 1-0-5"
+module-whatis	"RepeatModeler 1-0-7"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -16,7 +16,7 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path	PATH	/opt/RepeatModeler/1-0-5
+prepend-path	PATH	/opt/RepeatModeler/1-0-7
 module		use		/usr/local/Modules/versions
 
 module load repeat-masker
