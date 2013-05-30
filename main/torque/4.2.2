@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## RAxML modulefile
+## Python3 modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tRAxML - Adds RAxML 7.3.2 to your path"
+        puts stderr "\tTorque - Adds Torque 4.2.2 to your path"
 }
 
-module-whatis	"RAxML-7.3.2"
+module-whatis	"torque-4.2.2"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -17,7 +17,11 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		/opt/RAxML/7.3.2
+prepend-path    PATH		/opt/torque/4.2.2/bin:/opt/torque/4.2.2/sbin
+prepend-path    MANPATH		/opt/torque/4.2.2/man
+prepend-path    CPATH		/opt/torque/4.2.2/include
+prepend-path    LIBRARY_PATH	/opt/torque/4.2.2/lib
+
 
 module		use		/usr/local/Modules/versions
 

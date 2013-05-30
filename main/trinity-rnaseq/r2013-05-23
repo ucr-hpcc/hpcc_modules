@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\ttrinity-rnaseq - Adds trinity RNA-Seq assembler to your path"
 }
 
-module-whatis	"trinity-rnaseq-r2013-02-25"
+module-whatis	"trinity-rnaseq-r2013-05-23"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -19,6 +19,8 @@ set	datarootdir	${prefix}/share
 module          load    java
 module load bowtie
 module load samtools
-prepend-path	PATH	/opt/trinity-rnaseq/r2013-02-25
-setenv TRINITY_HOME /opt/trinity-rnaseq/r2013-02-25
+module load gmap
+prepend-path	PATH	/opt/trinity-rnaseq/r2013-05-23
+prepend-path	PATH	/opt/trinity-rnaseq/r2013-05-23/util
+setenv TRINITY_HOME /opt/trinity-rnaseq/r2013-05-23
 module		use		/usr/local/Modules/versions
