@@ -1,0 +1,27 @@
+#%Module1.0#####################################################################
+##
+## mpiblas modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\topenmpi - openmpi 1.6.4 compiled against torque 4.2.2"
+}
+
+module-whatis	"openmpi-1.6.4-torque-4.2.2"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/openmpi/1.6.4-torque-4.2.2/bin
+prepend-path    CPATH           /opt/openmpi/1.6.4-torque-4.2.2/include
+prepend-path    LIBRARY_PATH    /opt/openmpi/1.6.4-torque-4.2.2/lib
+prepend-path    LD_LIBRARY_PATH /opt/openmpi/1.6.4-torque-4.2.2/lib
+prepend-path    MANPATH         /opt/openmpi/1.6.4-torque-4.2.2/share/man
+
+module		use		/usr/local/Modules/versions
+
