@@ -21,6 +21,7 @@ prepend-path    PATH   		 /opt/R-2.13.0/bin
 prepend-path	MANPATH		 /opt/R-2.13.0/share/man
 prepend-path    CPATH        /opt/R-2.13.0/lib64/R/include
 prepend-path    LIBRARY_PATH /opt/R-2.13.0/lib64/R/lib
+prepend-path    LD_LIBRARY_PATH /opt/R-2.13.0/lib64/R/lib
 
 module		use		/usr/local/Modules/versions
 
