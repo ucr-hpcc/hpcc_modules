@@ -17,11 +17,12 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH		/opt/torque/4.2.2/bin:/opt/torque/4.2.2/sbin
-prepend-path    MANPATH		/opt/torque/4.2.2/man
-prepend-path    CPATH		/opt/torque/4.2.2/include
-prepend-path    LIBRARY_PATH	/opt/torque/4.2.2/lib
+prepend-path    PATH		 /opt/torque/4.2.2/bin:/opt/torque/4.2.2/sbin
+prepend-path    MANPATH		 /opt/torque/4.2.2/share/man
+prepend-path    CPATH		 /opt/torque/4.2.2/include
+prepend-path    LIBRARY_PATH	 /opt/torque/4.2.2/lib
+prepend-path    LD_LIBRARY_PATH	 /opt/torque/4.2.2/lib
 
 
-module		use		/usr/local/Modules/versions
+module		use		 /usr/local/Modules/versions
 
