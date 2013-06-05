@@ -23,7 +23,7 @@ setenv	PASAHOME	/opt/stajichlab/PASA/live
 setenv	PASA_HOME	/opt/stajichlab/PASA/live
 module		use		/usr/local/Modules/versions
 
-module load stajichlab
-module load stajichlab-perl
-module load cdbfasta
-module load mysql
+#module load stajichlab
+#module load stajichlab-perl
+#module load cdbfasta
+#module load mysql
