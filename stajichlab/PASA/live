@@ -18,6 +18,7 @@ set	datarootdir	${prefix}/share
 
 prepend-path	PATH	/opt/stajichlab/PASA/live/bin
 prepend-path	PATH	/opt/stajichlab/PASA/live/scripts
+prepend-path	PATH	/opt/stajichlab/PASA/live/seqclean/seqclean
 prepend-path	PERL5LIB	/opt/stajichlab/PASA/live/PerlLib
 setenv	PASAHOME	/opt/stajichlab/PASA/live
 setenv	PASA_HOME	/opt/stajichlab/PASA/live
