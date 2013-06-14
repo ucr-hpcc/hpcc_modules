@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## JAVA JDK modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tPCFP- Adds PCFP 12.21.2012 to your Java class path"
+}
+
+module-whatis	"pcfp-12.21.2012"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prereq           java/1.6.0_43
+prepend-path     CLASSPATH /opt/java/jdk1.6.0_43/packages/pcfp/12.21.2012/build/:/opt/java/jdk1.6.0_43/packages/pcfp/12.21.2012/lib/jchem.jar
+
+module           use       /usr/local/Modules/versions
