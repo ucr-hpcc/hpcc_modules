@@ -16,7 +16,9 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+module load boost/1.51.0
 prereq           boost/1.51.0
+
 prepend-path     CPATH             /opt/openbabel/2.3.2/include
 prepend-path     LIBRARY_PATH      /opt/openbabel/2.3.2/lib
 prepend-path     PATH              /opt/openbabel/2.3.2/bin
