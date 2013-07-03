@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tTopHat - Adds TopHat to your path"
 }
 
-module-whatis	"tophat-2.0.6"
+module-whatis	"tophat-2.0.8b"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -17,7 +17,8 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		/opt/tophat/2.0.6/bin
+prepend-path    PATH   		/opt/tophat/2.0.8b/bin
+
 module		use		/usr/local/Modules/versions
 
 module load bowtie2

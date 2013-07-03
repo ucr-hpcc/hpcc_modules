@@ -16,6 +16,11 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+module load gmap/2013-05-09
+prereq      gmap/2013-05-09
+module load fasta/36.3.5c
+prereq      fasta/36.3.5c
+
 prepend-path     PATH              /opt/PASA/20130605/bin
 prepend-path     PERL5LIB           /opt/perl/5.10.1/packages/share/perl/5.10.1/Mail
 
