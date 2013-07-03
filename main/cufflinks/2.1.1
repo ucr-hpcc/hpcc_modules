@@ -16,6 +16,8 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+module load samtools
+module load boost/1.47.0
 
 prepend-path    PATH   		/opt/cufflinks/2.1.1/bin
 module		use		/usr/local/Modules/versions
