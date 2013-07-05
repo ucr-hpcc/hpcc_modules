@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tBoost- Adds Boost 1.47.0 to your path"
 }
 
-module-whatis	"boost-1.51.0"
+module-whatis	"boost-1.47.0"
 
 # for Tcl script use only
 set	version		3.2.9
