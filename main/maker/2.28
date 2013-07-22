@@ -18,7 +18,9 @@ set	datarootdir	${prefix}/share
 
 module load openmpi/1.6.4-torque-4.2.2
 
-prepend-path     PATH              /opt/perl/5.10.1/packages/bin
-prepend-path     PERL5LIB          /opt/perl/5.10.1/packages/lib/perl:/opt/perl/5.10.1/packages/lib/perl5:/opt/perl/5.10.1/packages/share/perl/5.10.1
+prepend-path     PATH              /opt/maker/2.28/bin:/opt/perl/5.10.1/packages/bin
+prepend-path     LD_LIBRARY_PATH   /perl/lib/auto/Parallel/Application/MPI
+prepend-path     PERL5LIB          /opt/maker/2.28/lib:/opt/maker/2.28/perl/lib:/opt/perl/5.10.1/packages/lib/perl:/opt/perl/5.10.1/packages/lib/perl5:/opt/perl/5.10.1/packages/share/perl/5.10.1
+prepend-path     MANPATH           /opt/maker/2.28/perl/man
 
 module           use      /usr/local/Modules/versions
