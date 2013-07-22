@@ -20,7 +20,9 @@ set	datarootdir	${prefix}/share
 prepend-path    PATH   		    /opt/openmpi/1.6.4/bin
 prepend-path    CPATH           /opt/openmpi/1.6.4/include
 prepend-path    LIBRARY_PATH    /opt/openmpi/1.6.4/lib
+prepend-path    LIBRARY_PATH    /opt/openmpi/1.6.4/lib/openmpi
 prepend-path    LD_LIBRARY_PATH /opt/openmpi/1.6.4/lib
+prepend-path    LD_LIBRARY_PATH /opt/openmpi/1.6.4/lib/openmpi
 prepend-path    MANPATH         /opt/openmpi/1.6.4/share/man
 
 module		use		/usr/local/Modules/versions

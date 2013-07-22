@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## MISO modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tMISO - Adds MISO to your path"
+}
+
+module-whatis	"MISO-0.5.0"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/MISO/0.5.0/bin
+prepend-path	LD_LIBRARY_PATH	/opt/MISO/0.5.0/lib
+prepend-path	PYTHONPATH	/opt/MISO/0.5.0/lib/python2.7/site-packages
+
+module		use		/usr/local/Modules/versions
