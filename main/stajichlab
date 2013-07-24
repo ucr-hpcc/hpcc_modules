@@ -16,7 +16,7 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-append-path    MODULEPATH 	/usr/local/Modules/3.2.9/bioinfo/stajichlab
+prepend-path    MODULEPATH 	/usr/local/Modules/3.2.9/bioinfo/stajichlab
 module		use		/usr/local/Modules/versions
 
 #module load stajichlab-perl
