@@ -16,12 +16,12 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-
-prepend-path    PATH   		    /opt/mpich2/3.0.4/bin
+# Set Env Vars for MPICH and MPIEXEC
+prepend-path    PATH   		    /opt/mpich2/3.0.4/mpiexec/0.84/bin:/opt/mpich2/3.0.4/bin
 prepend-path    CPATH           /opt/mpich2/3.0.4/include
 prepend-path    LIBRARY_PATH    /opt/mpich2/3.0.4/lib
 prepend-path    LD_LIBRARY_PATH /opt/mpich2/3.0.4/lib
-prepend-path    MANPATH         /opt/mpich2/3.0.4/share/man
+prepend-path    MANPATH         /opt/mpich2/3.0.4/mpiexec/0.84/man:/opt/mpich2/3.0.4/share/man
 
 module		use		/usr/local/Modules/versions
 
