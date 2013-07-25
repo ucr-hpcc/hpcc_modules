@@ -1,0 +1,26 @@
+#%Module1.0#####################################################################
+##
+## mpiblas modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tMVAPICH2 - Adds MVAPICH2 1.9 to your path"
+}
+
+module-whatis	"mvapich2-1.9"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path    PATH   		    /opt/mvapich2/1.9/bin:/opt/mvapich2/1.9/libexec/mvapich2
+prepend-path    CPATH           /opt/mvapich2/1.9/include
+prepend-path    LIBRARY_PATH    /opt/mvapich2/1.9/lib
+prepend-path    LD_LIBRARY_PATH /opt/mvapich2/1.9/lib
+prepend-path    MANPATH         /opt/mvapich2/1.9/share/man
+
+module		use		/usr/local/Modules/versions
+
