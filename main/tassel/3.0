@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## JAVA JDK modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tTassel - Adds Tassel 3.0 to your path"
+}
+
+module-whatis	"tassel-3.0"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path     PATH     /opt/tassel/3.0
+
+module           use      /usr/local/Modules/versions
