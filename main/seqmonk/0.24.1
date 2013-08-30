@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## JAVA JDK modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tSeqMonk - Adds SeqMonk 0.24.1 to your path"
+}
+
+module-whatis	"seqmonk-0.24.1"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path     PATH              /opt/seqmonk/0.24.1/
+prepend-path     CLASSPATH         /opt/seqmonk/0.24.1/Jama-1.0.2.jar:/opt/seqmonk/0.24.1/sam-1.32.jar 
+
+module           use      /usr/local/Modules/versions
