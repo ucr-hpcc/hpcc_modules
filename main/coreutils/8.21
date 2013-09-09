@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## JAVA JDK modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tCore Utils- Adds coreutils 8.21 to your path"
+}
+
+module-whatis	"coreutils-8.21"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path     PATH              /opt/coreutils/8.21/bin
+prepend-path     MANPATH           /opt/coreutils/8.21/share/man
+
+module           use      /usr/local/Modules/versions
