@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## r8s modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tr8s - Adds r8s for phylogenetic tree dating"
+}
+
+module-whatis	"r8s-1.8"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/r8s/1.8/bin
+module		use		/usr/local/Modules/versions
