@@ -8,7 +8,7 @@ proc ModulesHelp { } {
        puts stderr "\tmafft- Adds mafft to your path"
 }
 
-module-whatis	"mafft-7.029-with-extensions"
+module-whatis	"mafft-7.058-with-extensions"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -16,7 +16,7 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path	PATH	/opt/mafft/7.029-with-extensions/bin
-prepend-path	MANPATH	/opt/mafft/7.029-with-extensions/share/man
+prepend-path	PATH	/opt/mafft/7.058-with-extensions/bin
+prepend-path	MANPATH	/opt/mafft/7.058-with-extensions/share/man
 
 module		use		/usr/local/Modules/versions
