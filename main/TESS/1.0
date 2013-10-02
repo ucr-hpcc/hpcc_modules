@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## mafft modulefile
+## TESS modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-       puts stderr "\tmafft- Adds mafft to your path"
+        puts stderr "\tTESS Adds tessWms for WeightMatrix alignment for promoter analysis"
 }
 
-module-whatis	"mafft-7.029-with-extensions"
+module-whatis	"TESS-1.0"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -16,7 +16,5 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path	PATH	/opt/mafft/7.029-with-extensions/bin
-prepend-path	MANPATH	/opt/mafft/7.029-with-extensions/share/man
-
+prepend-path	PATH	/opt/TESS/1.0/bin
 module		use		/usr/local/Modules/versions
