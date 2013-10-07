@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## novocraft modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tnovocraft - Adds novoalign, novoindex, novosort and related exes to your path"
+}
+
+module-whatis	"novocraft-3.01.02"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/novocraft/3.01.02/bin
+module		use		/usr/local/Modules/versions
