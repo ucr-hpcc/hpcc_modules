@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## lumpy modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tlumpy - Adds lumpy SV tool to your path"
+}
+
+module-whatis	"lumpy-1.0.4"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/lumpy/1.0.4/bin
+module		use		/usr/local/Modules/versions
