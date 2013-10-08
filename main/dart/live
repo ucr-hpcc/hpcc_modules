@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## dart modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tdart - Adds dart tools into your path"
+}
+
+module-whatis	"dart-live"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/dart/live/bin
+module		use		/usr/local/Modules/versions
