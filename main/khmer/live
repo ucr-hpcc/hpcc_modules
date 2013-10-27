@@ -18,6 +18,7 @@ set	datarootdir	${prefix}/share
 
 prepend-path	PATH	/opt/khmer/live/scripts
 prepend-path	PATH	/opt/khmer/live/sandbox
+prepend-path	PATH	/opt/khmer/live/bin
 setenv	KHMERROOT	/opt/khmer/live
 prepend-path PYTHONPATH /opt/khmer/screed-0.7.1/lib/python2.7/site-packages
 prepend-path PYTHONPATH /opt/khmer/live/lib/python2.7/site-packages
