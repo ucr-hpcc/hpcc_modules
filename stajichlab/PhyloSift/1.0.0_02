@@ -9,7 +9,7 @@ proc ModulesHelp { } {
 
 }
 
-module-whatis	"PhyloSift-live"
+module-whatis	"PhyloSift-1.0.0_02"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -17,7 +17,7 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path	PATH	/opt/stajichlab/PhyloSift/live/bin
+prepend-path	PATH	/opt/stajichlab/PhyloSift/1.0.0_02/bin
 module		use		/usr/local/Modules/versions
 
 module load stajichlab
