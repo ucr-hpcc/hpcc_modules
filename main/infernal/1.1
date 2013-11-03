@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tinfernal - Adds infernal multiple aligner to your path"
 }
 
-module-whatis	"infernal-1.1rc1"
+module-whatis	"infernal-1.1"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -16,5 +16,6 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path	PATH	/opt/infernal/1.1rc1-mpi/bin
+prepend-path	PATH	/opt/infernal/1.1/bin
+prepend-path	MANPATH	/opt/infernal/1.1/share/man
 module		use		/usr/local/Modules/versions
