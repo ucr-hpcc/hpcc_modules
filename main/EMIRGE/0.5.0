@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tEMIRGE - Adds emirge.py to your path"
+}
+
+module-whatis	"emirge-0.5.0"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/EMIRGE/0.5.0/bin
+prepend-path PYTHONPATH /opt/EMIRGE/0.5.0/lib/python2.7/site-packages
+module		use		/usr/local/Modules/versions
