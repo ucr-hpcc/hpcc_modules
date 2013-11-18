@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## infernal modulefile
+## pysam modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tinfernal - Adds infernal multiple aligner to your path"
+        puts stderr "\tpysam - Adds pysam library to your python path"
 }
 
-module-whatis	"infernal-1.1rc1"
+module-whatis	"pysam-0.7.5"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -16,6 +16,5 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path	PATH	/opt/infernal/1.1rc1/bin
-prepend-path	MANPATH	/opt/infernal/1.1rc1/share/man
+prepend-path PYTHONPATH /opt/pysam/0.7.5/lib/python2.7/site-packages
 module		use		/usr/local/Modules/versions
