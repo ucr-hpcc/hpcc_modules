@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## newick utils modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+       puts stderr "\tnewick_utils - Adds newick_utils for tree processing to your path"
+}
+
+module-whatis	"newick_utils-1.6"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/newick_utilsi/1.6/bin
+prepend-path    LD_LIBRARY_PATH	/opt/newick_utilsi/1.6/lib
+module		use		/usr/local/Modules/versions
