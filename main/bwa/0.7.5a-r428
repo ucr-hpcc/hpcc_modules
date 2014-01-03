@@ -17,7 +17,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		/opt/bwa/0.7.5a-r427/bin
+prepend-path    PATH   		/opt/bwa/0.7.5a-r428/bin
 prepend-path	MANPATH	/opt/bwa/0.7.5a-r428/man
 module		use		/usr/local/Modules/versions
 
