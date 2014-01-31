@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## Shuffle modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tShuffle - Adds Shuffle to your path"
+}
+
+module-whatis	"shuffle-1.02"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/shuffle/1.02
+
+module		use		/usr/local/Modules/versions
+
