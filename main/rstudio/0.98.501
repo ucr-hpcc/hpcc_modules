@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## PHYLIP modulefile
+## rstudio smodulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tPHYLIP- Adds phylip phylogenetics exes to your path"
+        puts stderr "\Rstudio - Adds Rstudio 0.98.501 to your path"
 }
 
-module-whatis	"phylip-3.695"
+module-whatis	"rstudio-0.98.501"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -16,5 +16,8 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path	PATH	/opt/phylip/3.695/bin
+prepend-path     PATH	           /opt/rstudio/0.98.501/bin
+prepend-path     LD_LIBRARY_PATH   /opt/rstudio/0.98.501/bin
+prepend-path     R_LIBS_SITE       /opt/rstudio/0.98.501/R
+
 module		use		/usr/local/Modules/versions
