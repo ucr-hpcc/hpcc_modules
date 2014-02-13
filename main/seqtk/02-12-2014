@@ -17,7 +17,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH         /opt/seqtk/1.12
+prepend-path    PATH         /opt/seqtk/02-12-2014
 
 module		use		/usr/local/Modules/versions
 
