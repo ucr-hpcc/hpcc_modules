@@ -1,0 +1,28 @@
+#%Module1.0#####################################################################
+##
+## samtools modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tstacks - Adds stacks to your path"
+}
+
+module-whatis	"stacks-1.12"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH         /opt/stacks/1.12/bin
+prepend-path    LIBRARY_PATH /opt/stacks/1.12/lib
+prepend-path    CPATH        /opt/stacks/1.12/include
+prepend-path    MANPATH      /opt/stacks/1.12/share/man
+
+
+module		use		/usr/local/Modules/versions
+
+
