@@ -1,0 +1,27 @@
+#%Module1.0#####################################################################
+##
+## perl 5.16.3 modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tperl - Adds perl 5.10.1 packages to your path"
+}
+
+module-whatis	"perl-5.10.1"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/perl/5.10.1/packages/bin
+prepend-path    LIBRARY_PATH /opt/perl/5.10.1/lib
+prepend-path    LD_LIBRARY_PATH /opt/perl/5.10.1/lib
+prepend-path    MANPATH  	/opt/perl/5.10.1/man
+prepend-path	PERL5LIB	/opt/perl/5.10.1/packages/lib/perl5
+setenv		INSTALL_BASE	/opt/perl/5.10.1/packages
+module		use		/usr/local/Modules/versions
+
