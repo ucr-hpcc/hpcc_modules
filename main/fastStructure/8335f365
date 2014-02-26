@@ -17,7 +17,8 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		/opt/fastStructure/8335f365
+prepend-path    PATH   		      /opt/fastStructure/8335f365
+prepend-path    LD_LIBRARY_PATH  /opt/fastStructure/8335f365
 
 module		use		/usr/local/Modules/versions
 
