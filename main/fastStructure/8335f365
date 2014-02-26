@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## Structure modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tfastStructure - Adds fastStructure, git revision 8335f365, to your path"
+}
+
+module-whatis	"fastStructure-8335f365"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/fastStructure/8335f365
+
+module		use		/usr/local/Modules/versions
+
