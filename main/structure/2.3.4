@@ -16,7 +16,7 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-puts stderr "In order to use structure, you must copy mainparams and extraparams from /opt/structure/2.3.4 to your working directory and set your parameters accordingly."
+puts stderr "Structure requires  mainparams and extraparams in your working directory in order to function.\nYou may copy the generic templates from /opt/structure/2.3.4 or create your own."
 prepend-path    PATH   		/opt/structure/2.3.4
 
 module		use		/usr/local/Modules/versions
