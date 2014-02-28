@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## snap modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+       puts stderr "\tsnap- Adds snap for gene prediction to your path"
+}
+
+module-whatis	"snap-2013-11-29"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/snap/2013-11-29/bin
+setenv	ZOE /opt/snap/2013-11-29/bin
+module		use		/usr/local/Modules/versions
