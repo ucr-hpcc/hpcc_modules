@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## vim modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tvim- Adds vim to your path"
+}
+
+module-whatis	"vim-7.4"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/vim/7.4/bin
+prepend-path    PATH        /opt/vim/7.4/share/man:/opt/vim/7.4/share/man/man1
+module		use		/usr/local/Modules/versions
+
