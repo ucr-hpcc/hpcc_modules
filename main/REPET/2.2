@@ -19,5 +19,11 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH   		/opt/REPET/2.2/bin
 
+prepend-path   REPET_PATH /opt/REPET/2.2
+
+module load ncbi-blast/2.2.29+
+module load hmmer/3.1b1
+module load censor/4.2
+
 module		use		/usr/local/Modules/versions
 
