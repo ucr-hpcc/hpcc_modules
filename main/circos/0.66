@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## circos modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tcircos - Adds circos to your path"
+}
+
+module-whatis	"circos-0.66"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/circos/0.66/bin
+
+module		use		/usr/local/Modules/versions
+module load perl
+
