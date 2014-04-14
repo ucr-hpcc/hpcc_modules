@@ -17,7 +17,7 @@ set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
 # Set iigb_modules directory
-set     iigb_modules    [format "/opt/%s/%s/%d.x/%s/pkgs" [exec uname -s | awk {{print tolower($0)}}] [string trim [exec cat /etc/issue | awk {{print tolower($1)}}] '\n'] [exec cat /etc/issue | awk {{print $3}}] [exec arch]]
+set     iigb_modules    [format "/opt/%s/%s/%d.x/%s/pkgs" [exec uname -s | awk {{print tolower($0)}}] [string trim [exec cat /etc/issue | awk {{print tolower($1)}}] '\n'] [exec cat /etc/issue | awk {{print $3}} | cut -d. -f1] [exec arch]]
 if { [ file exists ${iigb_modules}] } {
         #puts stderr "Module directory found: ${iigb_modules}"
         set modules_dir /usr/share/modules/versions
