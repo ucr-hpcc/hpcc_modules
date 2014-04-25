@@ -1,0 +1,37 @@
+#%Module1.0#####################################################################
+##
+## R modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds R 3 to your path"
+}
+
+module-whatis   "R-3.0.2"
+
+# for Tcl script use only
+set     version         3.2.9
+set     prefix          /usr/share/modules/Modules/3.2.9
+set     exec_prefix     ${prefix}
+set     datarootdir     ${prefix}/share
+
+# Set iigb_modules directory
+set     iigb_modules    [format "/opt/%s/%s/%d.x/%s/pkgs" [exec uname -s | awk {{print tolower($0)}}] [string trim [exec cat /etc/issue | awk {{print tolower($1)}}] '\n'] [exec cat /etc/issue | awk {{print $3}} | cut -d. -f1] [exec arch]]
+if { [ file exists ${iigb_modules}] } {
+        #puts stderr "Module directory found: ${iigb_modules}"
+        set modules_dir /usr/share/modules/versions
+} else {
+        #puts stderr "Module directory does not exist: ${iigb_modules}\n Defaulting to /opt"
+        set iigb_modules /opt
+        set modules_dir /usr/local/Modules/versions
+}
+
+prepend-path    PATH            ${iigb_modules}/R/3.0.2/bin
+prepend-path    MANPATH         ${iigb_modules}/R/3.0.2/share/man
+prepend-path    CPATH           ${iigb_modules}/R/3.0.2/lib64/R/include
+prepend-path    LIBRARY_PATH    ${iigb_modules}/R/3.0.2/lib64/R/lib
+prepend-path    LD_LIBRARY_PATH ${iigb_modules}/R/3.0.2/lib64/R/lib
+
+module          use             ${modules_dir}
+
