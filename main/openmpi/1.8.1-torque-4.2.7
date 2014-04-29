@@ -1,0 +1,27 @@
+#%Module1.0#####################################################################
+##
+## OpenMPI modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\topenmpi - openmpi 1.8.1 compiled against torque 4.2.7"
+}
+
+module-whatis	"openmpi-1.8.1-torque-4.2.7"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		     /opt/openmpi/1.8.1-torque-4.2.7/bin
+prepend-path    CPATH            /opt/openmpi/1.8.1-torque-4.2.7/include
+prepend-path    LIBRARY_PATH     /opt/openmpi/1.8.1-torque-4.2.7/lib
+prepend-path    LD_LIBRARY_PATH  /opt/openmpi/1.8.1-torque-4.2.7/lib:/opt/openmpi/1.8.1-torque-4.2.7/lib/openmpi
+prepend-path    MANPATH          /opt/openmpi/1.8.1-torque-4.2.7/share/man
+
+module		use		/usr/local/Modules/versions
+
