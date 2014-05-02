@@ -23,8 +23,8 @@ module load signalp/4.1
 module load tmhmm
 module load ncbi-blast
 setenv TRINOTATE_HOME	/opt/trinotate/r20131110
-prepend-path	PATH	$TRINOTATE_HOME
-prepend-path	PATH	$TRINOTATE_HOME/util
-prepend-path	CLASSPATH	$TRINOTATE_HOME/java
-preped-path	PERL5LIB	$TRINOTATE_HOME/PerlLib
+prepend-path	PATH	/opt/trinotate/r20131110
+prepend-path	PATH	/opt/trinotate/r20131110/util
+prepend-path	CLASSPATH	/opt/trinotate/r20131110/java
+preped-path	PERL5LIB	/opt/trinotate/r20131110/PerlLib
 module		use		/usr/local/Modules/versions
