@@ -26,5 +26,5 @@ setenv TRINOTATE_HOME	/opt/trinotate/r20131110
 prepend-path	PATH	/opt/trinotate/r20131110
 prepend-path	PATH	/opt/trinotate/r20131110/util
 prepend-path	CLASSPATH	/opt/trinotate/r20131110/java
-preped-path	PERL5LIB	/opt/trinotate/r20131110/PerlLib
+prepend-path	PERL5LIB	/opt/trinotate/r20131110/PerlLib
 module		use		/usr/local/Modules/versions
