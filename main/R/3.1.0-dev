@@ -17,7 +17,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		/opt/R/3.1.0-dev"/bin
+prepend-path    PATH   		/opt/R/3.1.0-dev/bin
 prepend-path	MANPATH		/opt/R/3.1.0-dev/share/man
 prepend-path    CPATH       /opt/R/3.1.0-dev/lib64/R/include
 prepend-path    LIBRARY_PATH /opt/R/3.1.0-dev/lib64/R/lib
