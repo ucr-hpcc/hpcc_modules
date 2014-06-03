@@ -17,7 +17,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    LIBRARY_PATH /opt/intel/mkl/10.0.3.020/lib/em64t
+prepend-path    LD_LIBRARY_PATH /opt/intel/mkl/10.0.3.020/lib/em64t
 prepend-path    CPATH        /opt/intel/mkl/10.0.3.020/include
 prepend-path    MANPATH      /opt/intel/mkl/10.0.3.020/man
 
