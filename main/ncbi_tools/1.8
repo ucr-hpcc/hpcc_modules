@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## ncbi_tools modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tncbi_tools - Adds ncbi_tools for data format conversion to your path"
+}
+
+module-whatis	"ncbi_tools-1.8"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/ncbi_tools/1.8/bin
+module		use		/usr/local/Modules/versions
