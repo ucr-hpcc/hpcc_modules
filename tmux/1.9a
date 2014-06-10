@@ -1,0 +1,26 @@
+#%Module1.0#####################################################################
+##
+## tmux modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds tmux 1.9a to your path"
+}
+
+module-whatis   "tmux-1.9a"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set     version         3.2.9
+set     prefix          ${modules_dir}/${version}
+set     exec_prefix     ${prefix}
+set     datarootdir     ${prefix}/share
+
+prepend-path    PATH            ${iigb_modules}/tmux/1.9a/bin
+prepend-path    MANPATH         ${iigb_modules}/tmux/7.4/1.9a/share/man
+
+module          use             ${modules_dir}
+
