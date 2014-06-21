@@ -27,19 +27,10 @@ set     prefix          ${modules_dir}/${version}
 set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
-prepend-path    PATH   		/opt/linux/debian/7.x/x86_64/pkgs/perl/5.14/packages/bin
-prepend-path    LIBRARY_PATH /opt/linux/debian/7.x/x86_64/pkgs/perl/5.14/lib
-prepend-path    LD_LIBRARY_PATH /opt/linux/debian/7.x/x86_64/pkgs/perl/5.14/lib
-prepend-path    MANPATH  	/opt/linux/debian/7.x/x86_64/pkgs/perl/5.14/man
-prepend-path	PERL5LIB	/opt/linux/debian/7.x/x86_64/pkgs/perl/5.14/packages/lib/perl5:/opt/linux/debian/7.x/x86_64/pkgs/perl/5.14/packages/lib/site_perl
-setenv		INSTALL_BASE	/opt/linux/debian/7.x/x86_64/pkgs/perl/5.14/packages
-
-
-prepend-path    PATH            ${iigb_modules}/hmmer/3.1b1/bin
-prepend-path    MANPATH         ${iigb_modules}/hmmer/3.1b1/share/man
-prepend-path    CPATH           ${iigb_modules}/hmmer/3.1b1/include
-prepend-path    LIBRARY_PATH    ${iigb_modules}/hmmer/3.1b1/lib
-prepend-path    LD_LIBRARY_PATH ${iigb_modules}/hmmer/3.1b1/lib
+prepend-path    PATH   		${iigb_modules}/perl/5.14/packages/bin
+prepend-path    MANPATH  	${iigb_modules}/perl/5.14/packages/man
+prepend-path	PERL5LIB	${iigb_modules}/perl/5.14/packages/lib/perl5:${iigb_modules}/perl/5.14/packages/lib/site_perl
+setenv		INSTALL_BASE	${iigb_modules}/perl/5.14/packages
 
 module          use             ${modules_dir}
 
