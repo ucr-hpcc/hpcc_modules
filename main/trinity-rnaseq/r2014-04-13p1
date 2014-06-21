@@ -16,10 +16,10 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module          load    java/1.7.0_17
-module load bowtie2
-module load samtools
-module load gmap
+#module          load    java/1.7.0_17
+#module load bowtie2
+#module load samtools
+#module load gmap
 prepend-path	PATH	/opt/trinity-rnaseq/r2014-04-13p1
 prepend-path	PATH	/opt/trinity-rnaseq/r2014-04-13p1/util
 prepend-path	CLASSPATH	/opt/trinity-rnaseq/r2014-04-13p1/Analysis/Trinotate/java

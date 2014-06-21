@@ -1,14 +1,15 @@
 #%Module1.0#####################################################################
 ##
-## InterProScan modulefile
+## sequin modulefile
+## 
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tInterProScan - Adds InterProScan (iprscan) to your path"
+        puts stderr "\tsequin - Adds sequin to your path"
 }
 
-module-whatis	"iprscan-5-RC4"
+module-whatis	"sequin-13.05"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -16,8 +17,5 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path    PATH   		/opt/iprscan/5-RC4
+prepend-path	PATH	/opt/sequin/13.05
 module		use		/usr/local/Modules/versions
-
-module load java
-module load coils

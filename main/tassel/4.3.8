@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## deconseq modulefile
+## Tassel modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tdeconseq - Adds deconseq to your path"
+        puts stderr "\tTassel - Adds Tassel 4.3.8 to your path"
 }
 
-module-whatis	"deconseq-0.4.1"
+module-whatis	"tassel-4.3.8"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -16,6 +16,8 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path	PERL5LIB /opt/deconseq/0.4.1/lib
-prepend-path	PATH	/opt/deconseq/0.4.1/bin
-module		use		/usr/local/Modules/versions
+module load java
+
+prepend-path     PATH     /opt/tassel/4.3.8
+
+module           use      /usr/local/Modules/versions

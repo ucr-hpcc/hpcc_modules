@@ -1,0 +1,26 @@
+#%Module1.0#####################################################################
+##
+## samtools modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tintel-fce - Adds intel-fce 10.1.015 to your path"
+}
+
+module-whatis	"intel-fce-10.1.015"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH         /opt/intel/fce/10.1.015/bin
+prepend-path    LIBRARY_PATH /opt/intel/fce/10.1.015/lib
+prepend-path    CPATH        /opt/intel/fce/10.1.015/include
+prepend-path    MANPATH      /opt/intel/fce/10.1.015/man
+
+module		use		/usr/local/Modules/versions
+

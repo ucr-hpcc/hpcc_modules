@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## cafe modulefile
+## NAMD2 modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tcafe - Adds cafe for gene family size change evaluation"
+        puts stderr "\tNAMD - Adds NAMD 2.9 to your path"
 }
 
-module-whatis	"cafe-3.0"
+module-whatis	"namd-2.9"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -16,5 +16,7 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path	PATH	/opt/cafe/3.0/bin
-module		use		/usr/local/Modules/versions
+prepend-path    PATH   	    /opt/NAMD/2.9-openmpi-1.8.1/bin
+
+module	        use	        /usr/local/Modules/versions
+

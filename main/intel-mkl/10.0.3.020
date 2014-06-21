@@ -1,0 +1,25 @@
+#%Module1.0#####################################################################
+##
+## samtools modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tintel-mkl - Adds intel-mkl 10.0.3.020 to your path"
+}
+
+module-whatis	"intel-mkl-10.0.3.020"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    LD_LIBRARY_PATH /opt/intel/mkl/10.0.3.020/lib/em64t
+prepend-path    CPATH        /opt/intel/mkl/10.0.3.020/include
+prepend-path    MANPATH      /opt/intel/mkl/10.0.3.020/man
+
+module		use		/usr/local/Modules/versions
+
