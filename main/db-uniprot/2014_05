@@ -16,7 +16,7 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-set	        UNIPROT_DB	/srv/projects/db/uniprot/2014_05
+setenv      UNIPROT_DB	  /srv/projects/db/uniprot/2014_05
 
 module		use		/usr/local/Modules/versions
 

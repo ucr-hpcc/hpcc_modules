@@ -17,7 +17,7 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-set	        NCBI_DB	/srv/projects/db/ncbi/preformatted/20140623
+setenv      NCBI_DB	    /srv/projects/db/ncbi/preformatted/20140623
 
 module		use		/usr/local/Modules/versions
 
