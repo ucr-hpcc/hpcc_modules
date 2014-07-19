@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## zorro modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tzorro - Adds zorro alignment masker to your path"
+}
+
+module-whatis	"zorro-2013-04-25"
+
+# for Tcl script use only
+set	version		2.7.3
+set	prefix		/usr/local/Modules/2.7.3
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path	PATH	/opt/zorro/2013-04-25/bin
+module			use		/usr/local/Modules/versions
+
