@@ -17,5 +17,6 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 prepend-path	PATH	/opt/repeat-masker/4-0-2
+prepend-path	PERL5LIB	/opt/repeat-masker/4-0-2
 module		use		/usr/local/Modules/versions
 
