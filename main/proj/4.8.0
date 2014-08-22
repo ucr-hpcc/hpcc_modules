@@ -21,6 +21,6 @@ prepend-path     CPATH             /opt/proj/4.8.0/include
 prepend-path     LIBRARY_PATH      /opt/proj/4.8.0/lib
 prepend-path     PATH              /opt/proj/4.8.0/bin
 prepend-path     LD_LIBRARY_PATH   /opt/proj/4.8.0/lib
-prepend-path     MAN_PATH          /opt/proj/4.8.0/shared/man
+prepend-path     MANPATH          /opt/proj/4.8.0/shared/man
 
 module           use      /usr/local/Modules/versions
