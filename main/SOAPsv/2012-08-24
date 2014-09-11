@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## SOAPsv modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+       puts stderr "\tSOAPsv - Adds SOAPsv to your path"
+}
+
+module-whatis	"SOAPsv-2012-08-24"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	    /opt/SOAPsv/2012-08-24/bin
+module		use		        /usr/local/Modules/versions
