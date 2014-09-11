@@ -1,0 +1,25 @@
+#%Module1.0#####################################################################
+##
+## GDAL modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tGDAL- Adds Gdal 1.11.0 to your path"
+}
+
+module-whatis	"gdal-1.11.0"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+module load proj
+prepend-path     CPATH             /opt/gdal/1.11.0/include
+prepend-path     LIBRARY_PATH      /opt/gdal/1.11.0/lib
+prepend-path     PATH              /opt/gdal/1.11.0/bin
+prepend-path     LD_LIBRARY_PATH   /opt/gdal/1.11.0/lib
+
+module           use      /usr/local/Modules/versions

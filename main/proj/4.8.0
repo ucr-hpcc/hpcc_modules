@@ -1,0 +1,26 @@
+#%Module1.0#####################################################################
+##
+## Proj modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tProj- Adds Proj 4.8.0 to your path"
+}
+
+module-whatis	"proj-4.8.0"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path     CPATH             /opt/proj/4.8.0/include
+prepend-path     LIBRARY_PATH      /opt/proj/4.8.0/lib
+prepend-path     PATH              /opt/proj/4.8.0/bin
+prepend-path     LD_LIBRARY_PATH   /opt/proj/4.8.0/lib
+prepend-path     MANPATH          /opt/proj/4.8.0/shared/man
+
+module           use      /usr/local/Modules/versions
