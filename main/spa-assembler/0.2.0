@@ -17,7 +17,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 module load boost
-prepend-path	PATH	/opt/spa-assembler/0.2.0/bin
+prepend-path	PATH	/opt/spa-assembler/0.2.0/bin:/opt/spa-assembler/0.2.0/script
 prepend-path	LD_LIBRARY_PATH	/opt/spa-assembler/0.2.0/lib
 setenv SPA_SCRIPT /opt/spa-assembler/0.2.0/script
 setenv SPA_BIN /opt/spa-assembler/0.2.0/bin
