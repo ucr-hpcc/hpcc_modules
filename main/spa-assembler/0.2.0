@@ -19,4 +19,8 @@ set	datarootdir	${prefix}/share
 module load boost
 prepend-path	PATH	/opt/spa-assembler/0.2.0/bin
 prepend-path	LD_LIBRARY_PATH	/opt/spa-assembler/0.2.0/lib
+setenv SPA_SCRIPT /opt/spa-assembler/0.2.0/script
+setenv SPA_BIN /opt/spa-assembler/0.2.0/bin
+setenv FGS /opt/spa-assembler/0.2.0/3rd/FragGeneScan1.16
+setenv MGA /opt/spa-assembler/0.2.0/3rd/mga_ia64
 module		use		/usr/local/Modules/versions
