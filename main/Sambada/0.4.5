@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## Sambada modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tSambada - Adds Sambada 0.4.5 to your path"
+}
+
+module-whatis   "Sambada-0.4.5"
+
+# for Tcl script use only
+set     version         3.2.9
+set     prefix          /usr/local/Modules/3.2.9
+set     exec_prefix     ${prefix}
+set     datarootdir     ${prefix}/share
+
+module load proj
+prepend-path     PATH              /opt/Sambada/0.4.5/bin
+
+module           use      /usr/local/Modules/versions
