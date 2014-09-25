@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## LFMM modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tLFMM - Adds LFMM 1.2 to your path"
+}
+
+module-whatis   "LFMM-1.2"
+
+# for Tcl script use only
+set     version         3.2.9
+set     prefix          /usr/local/Modules/3.2.9
+set     exec_prefix     ${prefix}
+set     datarootdir     ${prefix}/share
+
+module load proj
+prepend-path     PATH              /opt/LFMM/1.2/bin
+
+module           use      /usr/local/Modules/versions
