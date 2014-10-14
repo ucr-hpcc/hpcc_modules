@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## MaSuRCA modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tMaSuRCA- Adds MaSuRCA to your path"
+}
+
+module-whatis	"MaSuRCA-2.3.2"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/MaSuRCA/2.3.2/CA/Linux-amd64/bin
+prepend-path	PATH	/opt/MaSuRCA/2.3.2/bin
+prepend-path	LD_LIBRARY_PATH	/opt/MaSuRCA/2.3.2/lib
+prepend-path	MANPATH	/opt/MaSuRCA/2.3.2/share/man
+
+module		use		/usr/local/Modules/versions
