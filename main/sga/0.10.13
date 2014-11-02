@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## sga modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tsga - Adds sga assembler in your path"
+}
+
+module-whatis	"sga-0.10.13"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/sga/0.10.13/bin
+module		use		/usr/local/Modules/versions
+
+module load ABYSS
+module load stajichlab
+module load stajichlab-python
