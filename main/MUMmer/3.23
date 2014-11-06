@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## MUMmer modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tMUMmer- Adds MUMmer assembly quality assessment tool to your path"
+}
+
+module-whatis	"MUMmer-3.23"
+
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/MUMmer/3.23
+module		use		/usr/local/Modules/versions
