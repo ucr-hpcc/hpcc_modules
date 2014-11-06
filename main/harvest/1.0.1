@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## harvest modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tharest - Adds harvest your path"
+}
+
+module-whatis	"harvest-1.0.1"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path    PATH   		/opt/harvest/1.0.1/bin
+module		use		/usr/local/Modules/versions
+
