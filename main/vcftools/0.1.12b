@@ -17,6 +17,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 prepend-path	PATH	/opt/vcftools/0.1.12b/bin
+prepend-path	MANPATH	/opt/vcftools/0.1.12b/share/man
 prepend-path	PERL5LIB	/opt/vcftools/0.1.12b/lib/perl5/site_perl
 module		use		/usr/local/Modules/versions
 module load tabix
