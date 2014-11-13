@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## mosaik modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tmosaik - Adds MOSAIK to your path"
+}
+
+module-whatis	"mosaik-2.2.3"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/mosaik/2.2.3/bin
+
+module		use		/usr/local/Modules/versions
+
