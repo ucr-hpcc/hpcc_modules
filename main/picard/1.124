@@ -10,8 +10,8 @@ proc ModulesHelp { } {
 
 module-whatis   "picard-1.124"
 
-set      iigb_modules    $::env(IIGB_MODULES)
-set      modules_dir     $::env(MODULES_DIR)
+#set      iigb_modules    $::env(IIGB_MODULES)
+#set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
 set     version         3.2.9
@@ -21,9 +21,9 @@ set     datarootdir     ${prefix}/share
 
 module load java
 module load samtools 
-setenv          PICARD         ${iigb_modules}/picard/1.124/lib/picard.jar
-setenv          PICARDDIR         ${iigb_modules}/picard/1.124/lib
-prepend-path    CLASSPATH      ${iigb_modules}/picard/1.124/lib
+setenv          PICARD         /opt/picard/1.124/lib/picard.jar
+setenv          PICARDDIR      /opt/picard/1.124/lib
+prepend-path    CLASSPATH      /opt/picard/1.124/lib
 
-module          use             ${modules_dir}
+module          use             /usr/local/Modules/3.2.9
 
