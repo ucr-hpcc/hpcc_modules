@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## SOAP2denovo modulefile
+## SOAPdenovo2 modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tSOAP2denovo - Adds SOAP2denovo to your path"
+        puts stderr "\tSOAPdenovo2 - Adds SOAPdenovo2 to your path"
 }
 
-module-whatis	"SOAP2denovo-2.04-240"
+module-whatis	"SOAPdenovo2-2.04-240"
 
 # for Tcl script use only
 set	version		3.2.9
