@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## GATK modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tGATK- Adds GATK ENV variable to your path"
+}
+
+module-whatis	"GATK-3.3.0"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+module load java
+
+setenv	GATKDIR	/opt/GATK/3.3.0
+setenv	GATK	/opt/GATK/3.3.0/GenomeAnalysisTK.jar
+module	use		/usr/local/Modules/versions
