@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## sequin modulefile
+## 
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tsequin - Adds sequin to your path"
+}
+
+module-whatis	"sequin-13.70"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/sequin/13.70
+module		use		/usr/local/Modules/versions
