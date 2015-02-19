@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## GDAL modulefile
+## fastq-tools modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tGDAL- Adds Gdal 1.11.0 to your path"
+        puts stderr "\tfastq-tools - Adds fastq-tools 0.7 to your path"
 }
 
-module-whatis	"gdal-1.11.0"
+module-whatis	"fastq-tools-0.7"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -16,5 +16,6 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path     PATH              /opt/gdal/1.11.0/bin
+prepend-path    PATH            /opt/fastq-tools/0.7/bin                                   
+prepend-path    MANPATH         /opt/fastq-tools/0.7/share/man
 module           use      /usr/local/Modules/versions
