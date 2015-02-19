@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## InterProScan modulefile
+## Ruby 2.0.0 modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tInterProScan - Adds InterProScan (iprscan) to your path"
+        puts stderr "\truby - Adds ruby to your path"
 }
 
-module-whatis	"iprscan-4.8"
+module-whatis	"ruby-2.0.0"
 
 # for Tcl script use only
 set	version		3.2.9
@@ -17,7 +17,8 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		/opt/iprscan/4.8/bin
-prepend-path	LD_LIBRARY_PATH	/opt/iprscan/4.8/lib
+prepend-path    PATH   		/opt/ruby/2.0.0/bin
+prepend-path    MANPATH  	/opt/ruby/2.0.0/share/man
+
 module		use		/usr/local/Modules/versions
 
