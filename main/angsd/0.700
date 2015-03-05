@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## angsd modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tangsd Adds angsd for analysis of ngs data"
+}
+
+module-whatis	"angsd-0.700"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/angsd/0.700/bin
+module		use		/usr/local/Modules/versions
