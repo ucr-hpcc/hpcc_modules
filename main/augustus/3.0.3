@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## augustus modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+       puts stderr "\taugustus - Adds augustus to your path"
+}
+
+module-whatis	"augustus for gene prediction"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/augustus/3.0.3/bin
+module		use		/usr/local/Modules/versions
+
