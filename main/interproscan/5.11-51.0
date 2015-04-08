@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## interproscan modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tinterproscan - Adds interproscan 5.10-50.0 to your path"
+}
+
+module-whatis	"interproscan-5.11-51.0"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path    PATH   		/opt/interproscan/5.11-51.0
+prepend-path    LD_LIBRARY_PATH /opt/interproscan/5.11-51.0/lib
+module		use		/usr/local/Modules/versions
+
