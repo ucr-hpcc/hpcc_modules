@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## InterProScan modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tInterProScan - Adds InterProScan (iprscan) to your path"
+}
+
+module-whatis	"iprscan-5.9-50.0"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path    PATH   		/opt/iprscan/5.10-50.0
+module		use		/usr/local/Modules/versions
+
+module load java
