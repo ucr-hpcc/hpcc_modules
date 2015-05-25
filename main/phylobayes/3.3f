@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## phylobayes modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tphylobayes - Adds phylobayes tools to your path"
+}
+
+module-whatis	"phylobayes-3.3f"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		/opt/phylobayes/3.3f/bin
+module		use		/usr/local/Modules/versions
+
