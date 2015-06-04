@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## DALIGNER modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tDIALIGNER - Adds DIALIGNER to your path"
+}
+
+module-whatis	"DIALIGNER-2014-12-01"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/stajichlab/DALIGNER/2014-12-01/bin
+
+module		use		/usr/local/Modules/versions
