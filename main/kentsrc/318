@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## kentsrc modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tkentsrc - Adds kentsrc to your path"
+}
+
+module-whatis	"kentsrc-318"
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	PATH	/opt/kentsrc/318/bin
+prepend-path	PATH	/opt/kentsrc/318/bin/scripts
+prepend-path	PERL5LIB	/opt/kentsrc/318/bin/scripts
+module		use		/usr/local/Modules/versions
