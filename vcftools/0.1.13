@@ -1,0 +1,29 @@
+#%Module1.0#####################################################################
+##
+## vcftools modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tvcftools - Adds vcftools to your path"
+}
+
+module-whatis	"vcftools-0.1.13"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+
+prepend-path    PATH            ${iigb_modules}/vcftools/0.1.13/bin
+prepend-path    MANPATH		${iigb_modules}/vcftools/0.1.13/share/man
+prepend-path    PERL5LIB	${iigb_modules}/vcftools/0.1.13/lib/perl5/site_perl
+
+module		use		${modules_dir}
+module load tabix

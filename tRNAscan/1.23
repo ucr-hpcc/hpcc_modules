@@ -1,0 +1,28 @@
+#%Module1.0#####################################################################
+##
+## tRNAscan modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\ttRNAscan- Adds tRNAscan to your path"
+}
+
+module-whatis   "tRNAscan-SE-1.23"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set version     3.2.9
+set prefix      /usr/local/Modules/3.2.9
+set exec_prefix ${prefix}
+set datarootdir ${prefix}/share
+
+prepend-path    PATH        ${iigb_modules}/tRNAscan-SE/1.23/bin
+prepend-path    PERL5LIB    ${iigb_modules}/tRNAscan-SE/1.23/bin
+prepend-path    PERL5LIB    ${iigb_modules}/tRNAscan-SE/1.23/lib
+prepend-path    MANPATH     ${iigb_modules}/tRNAscan-SE/1.23/man
+
+module          use         ${modules_dir}
+

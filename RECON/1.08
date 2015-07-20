@@ -1,0 +1,28 @@
+#%Module1.0#####################################################################
+##
+## RECON modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tRECON- Adds RECON to your path"
+}
+
+module-whatis	"RECON-1.08"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+
+prepend-path    PATH            ${iigb_modules}/RECON/1.08/scripts
+prepend-path    PATH            ${iigb_modules}/RECON/1.08/bin
+
+module		use		${modules_dir}
+

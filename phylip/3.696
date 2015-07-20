@@ -1,0 +1,25 @@
+#%Module1.0#####################################################################
+##
+## phylip modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tphylip - Adds PHYLIP phylogenetic tools to your path"
+}
+
+module-whatis	"phylip-3.696"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH            ${iigb_modules}/phylip/3.696/bin
+
+module		use		${modules_dir}
