@@ -7,7 +7,7 @@ proc ModulesHelp { } {
 
         puts stderr "\tplink - Adds plink to your path"
 }
-
+# from https://www.cog-genomics.org/plink2/#recent
 module-whatis	"plink-1.90b3v"
 
 set      iigb_modules    $::env(IIGB_MODULES)
