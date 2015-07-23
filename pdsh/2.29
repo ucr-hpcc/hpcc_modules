@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## OpenBabel modulefile
+## pdsh modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tOpen Babel- Adds OpenBabel 2.3.2 to your path"
+        puts stderr "\tpdsh - Adds pdsh 2.29 to your path"
 }
 
-module-whatis   "openbabel-2.3.2"
+module-whatis   "pdsh-2.29"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,18 +19,8 @@ set prefix      ${modules_dir}/${version}
 set exec_prefix ${prefix}
 set datarootdir ${prefix}/share
 
-#module load boost/1.51.0
-#prereq           boost/1.51.0
-module load python/2.7.5
-prereq           python/2.7.5
-
-prepend-path     C_INCLUDE_PATH     ${iigb_modules}/openbabel/2.3.2/include
-prepend-path     CPLUS_INCLUDE_PATH ${iigb_modules}/openbabel/2.3.2/include
-prepend-path     LIBRARY_PATH       ${iigb_modules}/openbabel/2.3.2/lib
-prepend-path     PATH               ${iigb_modules}/openbabel/2.3.2/bin
-prepend-path     LD_LIBRARY_PATH    ${iigb_modules}/openbabel/2.3.2/lib
-prepend-path     MANPATH            ${iigb_modules}/openbabel/2.3.2/share/man
-prepend-path     PYTHONPATH         ${iigb_modules}/openbabel/2.3.2/lib
-prepend-path     CLASSPATH          ${iigb_modules}/openbabel/2.3.2/lib/openbabel.jar
+prepend-path     PATH               ${iigb_modules}/pdsh/2.29/bin:${iigb_modules}/pdsh/2.29/sbin
+prepend-path     LD_LIBRARY_PATH    ${iigb_modules}/pdsh/2.29/lib
+prepend-path     MANPATH            ${iigb_modules}/pdsh/2.29/man
 
 module           use      ${modules_dir}
