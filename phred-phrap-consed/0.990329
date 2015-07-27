@@ -19,7 +19,7 @@ set prefix      /usr/local/Modules/3.2.9
 set exec_prefix ${prefix}
 set datarootdir ${prefix}/share
 
-prepend-path    PATH    ${iigb_modules}/phred-phrap-consed
+prepend-path    PATH    ${iigb_modules}/phred-phrap-consed/0.990329
 
 module          use     ${modules_dir}
 
