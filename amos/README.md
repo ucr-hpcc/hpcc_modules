@@ -1,6 +1,7 @@
 # Install
 ## Download
 Download source:
+> [AMOS Source](http://sourceforge.net/projects/amos/files/ 'AMOS Source')
 
 ## Prep
 Edit file:
