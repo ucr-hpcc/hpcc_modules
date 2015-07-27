@@ -1,0 +1,26 @@
+#%Module1.0#####################################################################
+##
+## AMOS modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tAMOS- Adds AMOS to your path"
+}
+
+module-whatis   "AMOS 3.1.0"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set version     3.2.9
+set prefix      /usr/local/Modules/3.2.9
+set exec_prefix ${prefix}
+set datarootdir ${prefix}/share
+
+prepend-path    PATH        ${iigb_modules}/amos/3.1.0/bin
+prepend-path    PERL5LIB    ${iigb_modules}/amos/3.1.0/lib
+
+module          use         ${modules_dir}
+
