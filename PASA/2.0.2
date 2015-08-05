@@ -1,0 +1,32 @@
+#%Module1.0#####################################################################
+##
+## PASA modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tGAL- Adds GAL to your path"
+}
+
+module-whatis	"PASA-2.0.2"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+module load gmap
+prereq      gmap
+module load fasta
+prereq      fasta
+
+setenv          PASAHOME      ~/.pasa
+prepend-path    PATH          ${iigb_modules}/PASA/2.0.2/bin
+prepend-path    PERL5LIB      ${iigb_modules}/PASA/2.0.2/PerlLib
+
+module		use           ${modules_dir}
+
