@@ -39,9 +39,18 @@ vim arch/Linux-x86_64.fftw     # fix library name and path to files
 vim arch/Linux-x86_64.tcl      # fix library version and path to TCL files
 ```
 
-Compile:
+Compile for CPU installs:
 ```
 ./config Linux-x86_64-g++ --charm-arch mpi-linux-amd64-mpicxx
+cd Linux-x86_64-g++
+make -j 8
+```
+
+Compile for GPU installs:
+The only changes to the build process needed are to add --with-cuda and --cuda-prefix to the NAMD config command line
+```
+./config Linux-x86_64-g++ --with-fftw3 --with-cuda --cuda-prefix=/usr/local/cuda --charm-arch mpi-linux-amd64-mpicxx
+cd cd Linux-x86_64-g++
 make -j 8
 ```
 
