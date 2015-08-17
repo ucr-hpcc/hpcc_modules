@@ -21,6 +21,7 @@ set	datarootdir	${prefix}/share
 
 
 prepend-path    PATH            ${iigb_modules}/miranda/3.3a/bin
+prepend-path    MANPATH         ${iigb_modules}/miranda/3.3a/share/man
 
 module		use		${modules_dir}
 
