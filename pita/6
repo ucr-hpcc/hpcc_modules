@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## maui modulefile
+## PITA modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tmiranda - Adds miranda to your path"
+        puts stderr "\tPITA - Adds PITA to your path"
 }
 
-module-whatis	"miranda-3.3a"
+module-whatis	"pita-6"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,8 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/miranda/3.3a/bin
-prepend-path    MANPATH         ${iigb_modules}/miranda/3.3a/share/man
+prepend-path    PATH            ${iigb_modules}/pita/6/
 
 module		use		${modules_dir}
 
