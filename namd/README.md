@@ -61,12 +61,33 @@ qsub -I
 cd $SRCDIR/NAMD_2.10_Source/Linux-x86_64-g++
 mpirun ./namd2 src/alanin
 ```
-> OR
+OR
 ```
 qsub -I -l nodes=4:ppn=8,mem=16gb,walltime=01:00:00
 cd /rhome/jhayes/iigb/torque/mpi/namd_test/NAMD_test_biocluster
 mpirun --mca btl ^tcp namd2 run.conf &> run_bio.log
 ```
+For GPU tests this must also be done from within a job running under Torque:
+
+1. Submit job to the GPU queue. Interactive flag not needed, more cores could be requested, memory should also be requested as well as an appropriate walltime:
+   ```qsub -I -l nodes=1:ppn=12 -W x=GRES:gpu@2 -q gpu```
+   If interactive then run the following, otherwise this would be executed in a script that was previously submitted:
+   ```
+   module load namd/2.10_gpu
+   mpirun --mca btl ^tcp namd2 +devices 0,1 run.conf &> run_bio_cuda_mpi_dev.log
+   ```
+2. Here is another example using the maximum cpus and gpus on a single node. This example may be the most optimal, however you will have to run some of your own benchmarks to determine if the multi node option will scale:
+   ```
+   qsub -I -l nodes=1:ppn=34 -W x=GRES:gpu@4 -q gpu
+   module load namd/2.10_gpu
+   mpirun --mca btl ^tcp namd2 +devices 0,1,2,3 run.conf &> run_bio_cuda_mpi_dev.log
+   ```
+3. Here is yet another example of saturating the entire GPU queue (2 Nodes, 64 CPUs, 8 GPUs):
+   ```
+   qsub -I -l nodes=2:ppn=34 -W x=GRES:gpu@8 -q gpu
+   module load namd/2.10_gpu
+   mpirun --mca btl ^tcp namd2 +devices 0,1,2,3 run.conf &> run_bio_cuda_mpi_dev.log
+   ```
 
 ## Install
 Copy files to proper install path:
