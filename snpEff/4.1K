@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## maui modulefile
+## snpEff modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tVAAST - Adds VAAST to your path"
+        puts stderr "\tsnpEff - Adds snpEff env vars for JAR files to your environment"
 }
 
-module-whatis	"VAAST-2.1.6"
+module-whatis	"snpEff-4.1K"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,12 +19,8 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module      load  perl
-module      switch perl/5.22.0
-
-prepend-path    PATH            ${iigb_modules}/VAAST/2.1.6/bin
-prepend-path    PERL5LIB        ${iigb_modules}/VAAST/2.1.6/lib
-prepend-path	PATH		${iigb_modules}/VAAST/2.1.6/bin/vaast_tools
+setenv	SNPEFFJAR	${iigb_modules}/snpEff/4.1K/snpEff.jar
+setenv	SNPSIFTJAR	${iigb_modules}/snpEff/4.1K/SnpSift.jar
 
 module		use		${modules_dir}
 

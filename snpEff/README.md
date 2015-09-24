@@ -14,7 +14,7 @@ cd snpEff
 
 ## Install
 ```
-mv snpEff $MODULEDIR/4.1G
+mv snpEff $MODULEDIR/4.1K
 ```
 
 ## Cleanup
