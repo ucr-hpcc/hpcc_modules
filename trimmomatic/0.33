@@ -21,6 +21,7 @@ set	datarootdir	${prefix}/share
 
 module load java
 
+setenv	TRIMMOMATIC	${iigb_modules}/trimmomatic/0.33/bin/trimmomatic.jar
 prepend-path    PATH            ${iigb_modules}/trimmomatic/0.33/bin
 
 module		use		${modules_dir}
