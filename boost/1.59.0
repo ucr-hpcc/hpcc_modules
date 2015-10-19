@@ -19,8 +19,10 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-setenv	BOOSTDIR	${iigb_modules}/boost/1.59.0/
+setenv	BOOSTDIR	${iigb_modules}/boost/1.59.0
+
 prepend-path	LD_LIBRARY_PATH	${BOOSTDIR}/lib	
+prepend-path	LIBRARY_PATH	${BOOSTDIR}/lib
 
 module		use		${modules_dir}
 
