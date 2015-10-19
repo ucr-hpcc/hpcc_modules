@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 setenv	BOOSTDIR	${iigb_modules}/boost/1.44.0/
-prepend-path	LD_LIBRARY_PATH	${BOOSTDIR}/lib	
+prepend-path	LD_LIBRARY_PATH	${iigb_modules}/boost/1.44.0/
 
 module		use		${modules_dir}
 
