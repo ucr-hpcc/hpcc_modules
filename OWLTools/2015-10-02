@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## maui modulefile
+## OWLTools modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\ttrimmomatic - Adds trimmomatic to your path"
+        puts stderr "\tOWLTools - Adds owltools to your path"
 }
 
-module-whatis	"trimmomatic-0.33"
+module-whatis	"OWLTools-2015-10-02"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,10 +19,6 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module load java
-
-setenv	TRIMMOMATIC	${iigb_modules}/trimmomatic/0.33/bin/trimmomatic.jar
-prepend-path    PATH            ${iigb_modules}/trimmomatic/0.33/bin
+prepend-path    PATH            ${iigb_modules}/OWLTools/2015-10-02
 
 module		use		${modules_dir}
-

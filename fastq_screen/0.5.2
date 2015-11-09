@@ -5,10 +5,10 @@
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\ttrimmomatic - Adds trimmomatic to your path"
+        puts stderr "\tfastq_screen - Adds fastq_screen to your path"
 }
 
-module-whatis	"trimmomatic-0.33"
+module-whatis	"fastq_screen-0.5.2"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,10 +19,8 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module load java
 
-setenv	TRIMMOMATIC	${iigb_modules}/trimmomatic/0.33/bin/trimmomatic.jar
-prepend-path    PATH            ${iigb_modules}/trimmomatic/0.33/bin
+prepend-path    PATH            ${iigb_modules}/fastq_screen/0.5.2
 
 module		use		${modules_dir}
 

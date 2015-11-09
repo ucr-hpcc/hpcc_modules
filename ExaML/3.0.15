@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## maui modulefile
+## ExaML modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\ttrimmomatic - Adds trimmomatic to your path"
+        puts stderr "\tExaML - Adds ExaML for phylogenetic tree inference with MPI to your path"
 }
 
-module-whatis	"trimmomatic-0.33"
+module-whatis	"ExaML-3.0.15"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,10 +19,7 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module load java
 
-setenv	TRIMMOMATIC	${iigb_modules}/trimmomatic/0.33/bin/trimmomatic.jar
-prepend-path    PATH            ${iigb_modules}/trimmomatic/0.33/bin
+prepend-path    PATH            ${iigb_modules}/ExaML/3.0.15/bin
 
 module		use		${modules_dir}
-
