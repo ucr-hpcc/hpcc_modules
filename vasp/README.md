@@ -20,9 +20,16 @@ It should automatically create the other 2 libraries (assuming that the correspo
 I also built scalapack.
 
 ## Build
+Apply patches:
 ```
 tar -xf vasp.5.4.1.tar.gz
 cd vasp-5.4.1
+patch -p0 patch.5.4.1.08072015
+patch -p1 patch.5.4.1.27082015
+patch -p0 patch.5.4.1.06112015
+```
+Build VASP:
+```
 ln -s arch/makefile.include.linux_gfortran makefile.include
 vim makefile.include #Set LIBDIR
 make
