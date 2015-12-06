@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 prepend-path    LD_LIBRARY_PATH ${iigb_modules}/beagle-lib/2.1.2/lib
-setenv BEAGLE_CFLAGS -I${iigb_modules}/beagle-lib/2.1.2/libhmsbeagle-1
+setenv BEAGLE_CFLAGS -I${iigb_modules}/beagle-lib/2.1.2/include/libhmsbeagle-1
 setenv BEAGLE_LIBS "-L${iigb_modules}/beagle-lib/2.1.2/lib -lhmsbeagle -ldl"
 module		use		${modules_dir}
 
