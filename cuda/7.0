@@ -20,8 +20,8 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH              ${iigb_modules}/usr/local/cuda-7.0/bin:${iigb_modules}/usr/local/cuda-7.0/nvvm/bin
-prepend-path    LD_LIBRARY_PATH   ${iigb_modules}/usr/local/cuda-7.0/lib64:nvvm/lib64
+prepend-path    PATH              /usr/local/cuda-7.0/bin:/usr/local/cuda-7.0/nvvm/bin
+prepend-path    LD_LIBRARY_PATH   /usr/local/cuda-7.0/lib64:/usr/local/cuda-7.0/nvvm/lib64
 
 module		use		${modules_dir}
 
