@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## genemarkHMM modulefile
+## parallel modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tgenemarkHMM - Adds genemarkHMM to your path"
+        puts stderr "\tparallel - Adds parallel to your path"
 }
 
-module-whatis	"genemarkHMM-2.3e"
+module-whatis	"parallel-20151222"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,6 +19,8 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path    PATH            ${iigb_modules}/genemarkHMM/2.3e
+
+prepend-path    PATH            ${iigb_modules}/parallel/20151222/bin
+prepend-path	MANPATH		${iigb_modules}/parallel/20151222/share/man
 module		use		${modules_dir}
 
