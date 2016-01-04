@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\t - Sets ASTRL JAR path to your environment"
 }
 
-module-whatis   "ASTRAL-4.7.8"
+module-whatis   "ASTRAL-4.7.12"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,8 +20,8 @@ set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
 module load java
-setenv          ASTRALDIR	${iigb_modules}/ASTRAL/4.7.8
-setenv          ASTRALJAR	${iigb_modules}/ASTRAL/4.7.8/astral.jar
+setenv          ASTRALDIR	${iigb_modules}/ASTRAL/4.7.12
+setenv          ASTRALJAR	${iigb_modules}/ASTRAL/4.7.12/astral.jar
 
 module          use            ${modules_dir}
 

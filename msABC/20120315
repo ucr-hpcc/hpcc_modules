@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## genemarkHMM modulefile
+## maui modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tgenemarkHMM - Adds genemarkHMM to your path"
+        puts stderr "\tmsABC - Adds msABC apps to your path"
 }
 
-module-whatis	"genemarkHMM-2.3e"
+module-whatis	"msABC-20120315"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,6 +19,8 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path    PATH            ${iigb_modules}/genemarkHMM/2.3e
+
+prepend-path    PATH            ${iigb_modules}/msABC/20120315/bin
+
 module		use		${modules_dir}
 
