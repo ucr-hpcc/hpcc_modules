@@ -19,6 +19,8 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+module load perl
+
 prepend-path    PATH            ${iigb_modules}/trim_galore/0.4.1/
 
 module		use		${modules_dir}
