@@ -21,8 +21,8 @@ set	datarootdir	${prefix}/share
 
 
 prepend-path    PATH            ${iigb_modules}/phonopy/1.10.0/bin
-prepend-path    LIBRARY_PATH    ${iigb_modules}/phonopy/1.10.0/lib64
-prepend-path    LD_LIBRARY_PATH ${iigb_modules}/phonopy/1.10.0/lib64
+prepend-path    PYTHONPATH      ${iigb_modules}/phonopy/1.10.0/lib64
+
 
 module		use		${modules_dir}
 
