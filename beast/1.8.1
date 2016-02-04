@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## zorro modulefile
+## maui modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tzorro - Adds zorro to your path"
+        puts stderr "\tbeast - Adds beast to your path"
 }
 
-module-whatis	"zorro-2.2"
+module-whatis	"beast-1.8.1"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,7 +20,8 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/zorro/2.2
+prepend-path    PATH   		${iigb_modules}/beast/1.8.1/bin
+prepend-path    CLASSPATH       ${iigb_modules}/beast/1.8.1/lib
 
 module		use		${modules_dir}
 

@@ -1,0 +1,30 @@
+#%Module1.0#####################################################################
+##
+## PRIAM modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Sets PRIAM to your environment"
+}
+
+module-whatis   "PRIAM-aug-2010"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set     version         3.2.9
+set     prefix          ${modules_dir}/${version}
+set     exec_prefix     ${prefix}
+set     datarootdir     ${prefix}/share
+
+module load java
+
+prepend-path    PATH           ${iigb_modules}/PRIAM/aug-2010/bin
+setenv          PRIAM          ${iigb_modules}/PRIAM/aug-2010/lib/PRIAM_search.jar
+setenv          PRIAM_LIB      ${iigb_modules}/PRIAM/aug-2010/lib
+prepend-path    CLASSPATH      ${iigb_modules}/PRIAM/aug-2010/lib
+
+module          use            ${modules_dir}
+

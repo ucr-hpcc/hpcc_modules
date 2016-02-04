@@ -1,26 +1,25 @@
 #%Module1.0#####################################################################
 ##
-## zorro modulefile
+## PRIAM DB modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tzorro - Adds zorro to your path"
+        puts stderr "\tdb-priam - Sets PRIAM database path to PRIAM_DB environment variable"
 }
 
-module-whatis	"zorro-2.2"
+module-whatis	"db-priam"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
 set	version		3.2.9
-set	prefix		${modules_dir}/${version}
+set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+setenv      PRIAM_DB	    /srv/projects/db/PRIAM/PRIAM_MAR15
 
-prepend-path    PATH            ${iigb_modules}/zorro/2.2
-
-module		use		${modules_dir}
+module      use    ${modules_dir}
 

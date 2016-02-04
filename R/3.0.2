@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## maui modulefile
+## R modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\ttransdecoder - Adds transdecoder to your path"
+        puts stderr "\t - Adds R 3 to your path"
 }
 
-module-whatis   "transdecoder-2.0.1"
+module-whatis   "R-3.0.2"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,9 +19,8 @@ set     prefix          ${modules_dir}/${version}
 set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
+prepend-path    PATH            ${iigb_modules}/R/3.0.2/bin
 
-prepend-path    PATH            ${iigb_modules}/transdecoder/2.0.1/bin:${iigb_modules}/transdecoder/2.0.1/util:${iigb_modules}/transdecoder/2.0.1/util/bin:${iigb_modules}/transdecoder/2.0.1/transdecoder_plugins/cdhit
-prepend-path    PERL5LIB        ${iigb_modules}/transdecoder/2.0.1/PerlLib:${iigb_modules}/transdecoder/2.0.1/bin/PerlLib
-
+module          load            ggobi
 module          use             ${modules_dir}
 
