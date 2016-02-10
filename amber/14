@@ -20,9 +20,9 @@ set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
 setenv           AMBERHOME        ${iigb_modules}/amber/14
-prepend-path     PATH             ${AMBERHOME}/bin
-prepend-path     PYTHONPATH       ${AMBERHOME}/lib/python2.7/site-packages
-prepend-path     LD_LIBRARY_PATH  ${AMBERHOME}/lib
+prepend-path     PATH             ${iigb_modules}/amber/14/bin
+prepend-path     PYTHONPATH       ${iigb_modules}/amber/14/lib/python2.7/site-packages
+prepend-path     LD_LIBRARY_PATH  ${iigb_modules}/amber/14/lib
 
 module           use              ${modules_dir}
 
