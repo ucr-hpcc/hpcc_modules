@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## cuda modulefile
+## samtools modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tcuda - Adds cuda to your path"
+        puts stderr "\tsamtools- Adds samtools to your path"
 }
 
-module-whatis	"cuda-7.0"
+module-whatis	"samtools-1.3"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,8 +20,9 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH              /usr/local/cuda-7.0/bin:/usr/local/cuda-7.0/nvvm/bin
-prepend-path    LD_LIBRARY_PATH   /usr/local/cuda-7.0/lib64:/usr/local/cuda-7.0/nvvm/lib64:/usr/local/cuda-7.0/targets/x86_64-linux/lib
+prepend-path    PATH              ${iigb_modules}/samtools/1.3/bin
+prepend-path    LD_LIBRARY_PATH   ${iigb_modules}/samtools/1.3/htslib/lib
+prepend-path	MANPATH		  ${iigb_modules}/samtools/1.3/share/man
 
 module		use		${modules_dir}
 
