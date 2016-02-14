@@ -23,4 +23,6 @@ set	datarootdir	${prefix}/share
 prepend-path    PATH   		${iigb_modules}/TARGeT/2.10
 
 module		use		${modules_dir}
-
+module load treebest
+module load fasttree
+module load ncbi-blast
