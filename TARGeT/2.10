@@ -26,3 +26,5 @@ module		use		${modules_dir}
 module load treebest
 module load fasttree
 module load ncbi-blast
+module load mafft
+module load muscle
