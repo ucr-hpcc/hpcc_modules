@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tusearch - Adds usearch to your path"
 }
 
-module-whatis	"usearch-8.0.1623_32bit"
+module-whatis	"usearch-8.1.1861_32bit"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/usearch/8.0.1623_32bit/bin
-
+prepend-path    PATH            ${iigb_modules}/usearch/8.1.1861_32bit/bin
+prepend-path    PATH            ${iigb_modules}/usearch/8.1.1861_32bit/scripts
 module		use		${modules_dir}
 
