@@ -19,11 +19,11 @@ set prefix      ${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path    PATH   	        ${iigb_modules}/python/2.3.0/bin
-prepend-path    INCLUDE_PATH    ${iigb_modules}/python/2.3.0/include
-prepend-path    LD_LIBRARY_PATH ${iigb_modules}/python/2.3.0/lib
-prepend-path    MANPATH         ${iigb_modules}/python/2.3.0/share/man
-prepend-path	GEM_HOME        ${iigb_modules}/python/2.3.0/lib/ruby/2.3.0/
+prepend-path    PATH   	        ${iigb_modules}/ruby/2.3.0/bin
+prepend-path    INCLUDE_PATH    ${iigb_modules}/ruby/2.3.0/include
+prepend-path    LD_LIBRARY_PATH ${iigb_modules}/ruby/2.3.0/lib
+prepend-path    MANPATH         ${iigb_modules}/ruby/2.3.0/share/man
+prepend-path	GEM_HOME        ${iigb_modules}/ruby/2.3.0/lib/ruby/2.3.0/
 
 module		use		${modules_dir}
 
