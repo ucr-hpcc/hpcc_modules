@@ -21,7 +21,7 @@ set	datarootdir	${prefix}/share
 
 module load java 
 
-prepend-path    PATH   		${iigb_modules}/coevol/1.4b
+prepend-path    PATH   		${iigb_modules}/coevol/1.4b/exe_lin64
 
 module		use		${modules_dir}
 
