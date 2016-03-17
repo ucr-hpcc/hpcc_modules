@@ -19,7 +19,7 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-setenv          MANPATH    ${iigb_modules}/git/share/man
+prepend-path    MANPATH    ${iigb_modules}/git/share/man
 prepend-path    PATH       ${iigb_modules}/git/2.8.0/bin:${iigb_modules}/git/2.8.0/libexec
 prepend-path    PERL5LIB   ${iigb_modules}/git/2.8.0/lib
 
