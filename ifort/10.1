@@ -26,6 +26,8 @@ prepend-path    DYLD_LIBRARY_PATH  ${iigb_modules}/intel/fce/10.1.015/lib
 prepend-path    NLSPATH            ${iigb_modules}/intel/fce/10.1.015/lib/locale/en_US
 prepend-path    MANPATH            ${iigb_modules}/intel/fce/10.1.015/man
 prepend-path    INTEL_LICENSE_FILE ${iigb_modules}/intel/fce/10.1.015/licenses:${iigb_modules}/intel/licenses
+setenv          MKL_ROOT           ${iigb_modules}/intel/mkl/10.0.3.020
+setenv          MKLROOT           ${iigb_modules}/intel/mkl/10.0.3.020
 
 module		use		${modules_dir}
 
