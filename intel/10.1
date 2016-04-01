@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## ifort modulefile
+## intel modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tifort - Adds ifort to your path"
+        puts stderr "\tintel - Adds ifort and libs to your path"
 }
 
-module-whatis	"ifort-10.1"
+module-whatis	"intel-10"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -21,7 +21,7 @@ set	datarootdir	${prefix}/share
 
 
 prepend-path    PATH   		       ${iigb_modules}/intel/fce/10.1.015/bin
-prepend-path    LD_LIBRARY_PATH    ${iigb_modules}/intel/fce/10.1.015/lib
+prepend-path    LD_LIBRARY_PATH    ${iigb_modules}/intel/fce/10.1.015/lib:/opt/linux/centos/7.x/x86_64/pkgs/intel/mkl/10.0.3.020/lib/intel64
 prepend-path    DYLD_LIBRARY_PATH  ${iigb_modules}/intel/fce/10.1.015/lib
 prepend-path    NLSPATH            ${iigb_modules}/intel/fce/10.1.015/lib/locale/en_US
 prepend-path    MANPATH            ${iigb_modules}/intel/fce/10.1.015/man
