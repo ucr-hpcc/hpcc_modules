@@ -19,6 +19,7 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+mkdir -p ${USER}/.RepeatMaskerCache
 prepend-path    PATH            ${iigb_modules}/RepeatMasker/4-0-5
 
 module		use		${modules_dir}
