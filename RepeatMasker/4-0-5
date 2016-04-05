@@ -19,8 +19,7 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-set USER [id -u -n]
-mkdir -p ${USER}/.RepeatMaskerCache
+mkdir -p $::env(HOME)/.RepeatMaskerCache
 prepend-path    PATH            ${iigb_modules}/RepeatMasker/4-0-5
 
 module		use		${modules_dir}
