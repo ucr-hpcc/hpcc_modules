@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## Strcture modulefile
+## Structure modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tstrcture - Adds strcture to your path"
+        puts stderr "\tstructure - Adds structure to your path"
 }
 
-module-whatis	"strcture-2.3.4"
+module-whatis	"structure-2.3.4"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		${iigb_modules}/strcture/2.3.4/bin
+prepend-path    PATH   		${iigb_modules}/structure/2.3.4/bin
 
 module		use		${modules_dir}
 
