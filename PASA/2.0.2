@@ -25,7 +25,7 @@ module load fasta
 prereq      fasta
 
 setenv          PASAHOME      ~/.pasa
-prepend-path    PATH          ${iigb_modules}/PASA/2.0.2/bin
+prepend-path    PATH          ${iigb_modules}/PASA/2.0.2/bin:${iigb_modules}/PASA/2.0.2/seqclean/seqclean:${iigb_modules}/PASA/2.0.2/seqclean/seqclean/bin
 prepend-path    PERL5LIB      ${iigb_modules}/PASA/2.0.2/PerlLib
 
 module		use           ${modules_dir}
