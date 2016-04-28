@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## maui modulefile
+## xband modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tmaui - Adds maui to your path"
+        puts stderr "\txband - Adds xband to your path"
 }
 
-module-whatis	"maui-3.3.1"
+module-whatis	"xband-6.3"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,14 +19,8 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-# Setup xband to use home dir so that a TclIndex file can be created
-if {![info exists ~/.xband]} {
-    mkdir ~/.xband
-    ln -s ${iigb_modules}/xband/6.3/* ~/.xband/
-fi
-
 setenv          XBANDPATH   ~/.xband
-prepend-path    PATH   		${XBANDPATH}
+prepend-path    PATH   		~/.xband
 
 module		use		${modules_dir}
 
