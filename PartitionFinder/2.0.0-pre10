@@ -19,6 +19,6 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path    PATH	${iigb_modules}/ParitionFinder/2.0.0-pre10
+prepend-path    PATH	${iigb_modules}/PartitionFinder/2.0.0-pre10
 module		use		${modules_dir}
 
