@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\ttbl2asn - Adds tbl2asn to your path"
 }
 
-module-whatis   "tbl2asn-24.3"
+module-whatis   "tbl2asn-24.9"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,7 +20,7 @@ set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/tbl2asn/24.3/bin
+prepend-path    PATH            ${iigb_modules}/tbl2asn/24.9/bin
 
 module          use             ${modules_dir}
 
