@@ -20,7 +20,8 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/last/737/build
 prepend-path    PATH            ${iigb_modules}/last/737/scripts
+prepend-path    PATH            ${iigb_modules}/last/737/build
+prepend-path    PATH            ${iigb_modules}/last/737/bin
 module		use		${modules_dir}
 
