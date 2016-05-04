@@ -1,0 +1,29 @@
+#%Module1.0#####################################################################
+##
+## libPLL modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tlibPLL - Phylogenetic Likelihood Library to your library path"
+}
+
+module-whatis	"libPLL-1.0.11"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path	CPATH		${iigb_modules}/libpll/1.0.11/include	
+prepend-path	LIBRARY_PATH	${iigb_modules}/libpll/1.0.11/lib
+prepend-path	LD_LIBRARY_PATH	${iigb_modules}/libpll/1.0.11/lib
+prepend-path	LD_RUN_PATH	${iigb_modules}/libpll/1.0.11/lib
+prepend-path	PATH	${iigb_modules}/libpll/1.0.11/bin
+
+module		use		${modules_dir}
+
