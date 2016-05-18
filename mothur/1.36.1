@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## last modulefile
+## mothur modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tlast - Adds last to your path"
+        puts stderr "\tmothur - Adds mothur to your path"
 }
 
-module-whatis	"last-658"
+module-whatis	"mothur-1.36.1"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,7 +20,8 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/last/658/build
-prepend-path    PATH            ${iigb_modules}/last/658/scripts
+prepend-path    PATH            ${iigb_modules}/mothur/1.36.1
+prepend-path    PATH            ${iigb_modules}/mothur/1.36.1/blast
+
 module		use		${modules_dir}
 
