@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 prepend-path    PATH              ${iigb_modules}/lammps/16Feb16/bin:${iigb_modules}/lammps/16Feb16/python/examples
-prepend-path    LD_LIBRARY_PATH   ${iigb_modules}/lammps/16Feb16/lib
+prepend-path    LD_LIBRARY_PATH   ${iigb_modules}/lammps/16Feb16/lib64
 prepend-path    PYTHONPATH        ${iigb_modules}/lammps/16Feb16/python/build/lib
 
 module		use		${modules_dir}
