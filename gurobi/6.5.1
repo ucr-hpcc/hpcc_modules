@@ -1,0 +1,28 @@
+#%Module1.0#####################################################################
+##
+## Gurobi modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tGurobi- Adds Gurobi to your path"
+}
+
+module-whatis   "gurobi-6.5.1"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set version     3.2.9
+set prefix      ${modules_dir}/${version}
+set exec_prefix ${prefix}
+set datarootdir ${prefix}/share
+
+# User must set GRB_LICENSE_FILE
+setenv           GUROBI_HOME        ${iigb_modules}/gurobi/6.5.1
+prepend-path     PATH               ${iigb_modules}/gurobi/6.5.1/bin
+prepend-path     LD_LIBRARY_PATH    ${iigb_modules}/gurobi/6.5.1/lib
+
+module           use      ${modules_dir}
+
