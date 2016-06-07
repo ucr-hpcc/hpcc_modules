@@ -1,0 +1,28 @@
+#%Module1.0#####################################################################
+##
+## Structure modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tI-TASSER - Adds I-TASSER to your path"
+}
+
+module-whatis	"I-TASSER-4.4"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		${iigb_modules}/I-TASSER/4.4/I-TASSERmod/
+prepend-path    PATH   		${iigb_modules}/I-TASSER/4.4/bin/
+setenv          ITLIB       ${iigb_modules}/I-TASSER/4.4/ITLIB/
+
+module		use		${modules_dir}
+module load java
