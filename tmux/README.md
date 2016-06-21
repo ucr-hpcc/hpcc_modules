@@ -21,7 +21,6 @@ CPPFLAGS="-I$PKGDIR/$LIBEV_DIR/include" LDFLAGS="-static -L$PKGDIR/$LIBEV_DIR/in
 
 ## Install
 ```
-CPPFLAGS="-I$PKGDIR/$LIBEV_DIR/include" LDFLAGS="-static -L$PKGDIR/$LIBEV_DIR/include -L$PKGDIR/$LIBEV_DIR/lib" make
 cp tmux $PKGDIR/tmux/2.2
 ```
 
