@@ -1,7 +1,7 @@
 # tmux
 
 ## Prep
-tmux depends on [libevent 2.x](http://libevent.org/), this guide assumes [libevent version 2.0.22](../libevent/2.0.22) is already installed and configured.
+tmux depends on [libevent 2.x](http://libevent.org/), this guide assumes [libevent version 2.0.22](../libevent/) is already installed and configured.
 ```
 SRCDIR = /opt/linux/centos/7.x/x86_64/src
 PKGDIR = /opt/linux/centos/7.x/x86_64/pkgs
