@@ -3,9 +3,9 @@
 ## Prep
 tmux depends on [libevent 2.x](http://libevent.org/), this guide assumes [libevent version 2.0.22](../libevent/) is already installed and configured.
 ```
-SRCDIR = /opt/linux/centos/7.x/x86_64/src
-PKGDIR = /opt/linux/centos/7.x/x86_64/pkgs
-LIBEV_DIR = libevent/2.0.22
+SRCDIR=/opt/linux/centos/7.x/x86_64/src
+PKGDIR=/opt/linux/centos/7.x/x86_64/pkgs
+LIBEV_DIR=libevent/2.0.22
 cd $SRCDIR
 wget https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz
 tar -zxvf tmux-2.2.tar.gz
@@ -26,5 +26,7 @@ cp tmux $PKGDIR/tmux/2.2
 
 ## Cleanup
 ```
-Nothing special.
+cd $SRCDIR
+[ -d tmux ] || mkdir tmux
+mv tmux-2.2/ tmux-2.2.tar.gz tmux/
 ```
