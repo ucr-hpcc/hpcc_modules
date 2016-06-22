@@ -10,7 +10,8 @@ cd $SRCDIR
 wget https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz
 tar -zxvf tmux-2.2.tar.gz
 cd tmux-2.2
-mkdir $PKGDIR/tmux $PKGDIR/tmux/2.2
+[ -d $PKGDIR/tmux ] || mkdir $PKGDIR/tmux
+mkdir $PKGDIR/tmux/2.2
 ```
 
 ## Compile

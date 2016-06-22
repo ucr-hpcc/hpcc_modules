@@ -8,7 +8,8 @@ cd $SRCDIR
 wget http://busco.ezlab.org/files/BUSCO_v1.2.tar.gz
 tar -zxvf BUSCO_v1.2.tar.gz
 cd BUSCO_v1.2
-mkdir $PKGDIR $PKGDIR/1.2
+[ -d $PKGDIR ] || mkdir $PKGDIR
+mkdir $PKGDIR/1.2
 ```
 
 ## Compile
