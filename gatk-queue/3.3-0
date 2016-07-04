@@ -21,9 +21,9 @@ set	datarootdir	${prefix}/share
 
 module load java 
 
-setenv       GATKQUEUEDIR   ${iigb_modules}/gatk-queue/3.1-0
-setenv       GATKQUEUE      ${iigb_modules}/gatk-queue/3.1-0/Queue.jar
-prepend-path CLASSPATH      ${iigb_modules}/gatk-queue/3.1-0:${iigb_modules}/gatk-queue/3.1-0/resources
+setenv       GATKQUEUEDIR   ${iigb_modules}/gatk-queue/3.3-0
+setenv       GATKQUEUE      ${iigb_modules}/gatk-queue/3.3-0/Queue.jar
+prepend-path CLASSPATH      ${iigb_modules}/gatk-queue/3.3-0:${iigb_modules}/gatk-queue/3.3-0/resources
 
 module		use		${modules_dir}
 
