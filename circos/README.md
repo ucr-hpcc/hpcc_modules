@@ -21,7 +21,7 @@ Not needed, this software is a collection of Perl scripts.
 
 ## Install
 ```
-cp -r circos-0.69/ $PKGDIR/0.69/
+cp -r $SRCDIR/circos-0.69/ $PKGDIR/0.69/
 ```
 
 ## Cleanup
