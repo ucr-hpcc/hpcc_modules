@@ -5,10 +5,10 @@
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tgatk-queue - Adds gatk queue to your path"
+        puts stderr "\tgatk - Adds gatk to your path"
 }
 
-module-whatis	"gatk-queue-3.3-0"
+module-whatis	"gatk-3.6"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -21,9 +21,8 @@ set	datarootdir	${prefix}/share
 
 module load java 
 
-setenv       GATKQUEUEDIR   ${iigb_modules}/gatk-queue/3.3-0
-setenv       GATKQUEUE      ${iigb_modules}/gatk-queue/3.3-0/Queue.jar
-prepend-path CLASSPATH      ${iigb_modules}/gatk-queue/3.3-0:${iigb_modules}/gatk-queue/3.3-0/resources
+setenv  GATKDIR     ${iigb_modules}/gatk/3.6
+setenv  GATK        ${iigb_modules}/gatk/3.6/GenomeAnalysisTK.jar 
 
 module		use		${modules_dir}
 
