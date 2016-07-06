@@ -22,8 +22,7 @@ set datarootdir ${prefix}/share
 #module load boost/1.51.0
 #prereq           boost/1.51.0
 
-module unload perl
-module load perl/5.22.0
+module switch perl/5.22.0
 
 prepend-path     PATH               ${iigb_modules}/circos/0.69/bin
 
