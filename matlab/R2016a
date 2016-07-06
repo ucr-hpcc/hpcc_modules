@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## matlab modulefile
+## MATLAB modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tmatlab- Adds matlab to your path"
+        puts stderr "\tMATLAB- Adds MATLAB to your path"
 }
 
-module-whatis	"matlab-R2016a"
+module-whatis	"MATLAB-R2016a"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,9 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH              ${iigb_modules}/matlab/R2016a/bin
-prepend-path    LD_LIBRARY_PATH   ${iigb_modules}/matlab/R2016a/htslib/lib
-prepend-path	MANPATH		  ${iigb_modules}/matlab/R2016a/share/man
+prepend-path    PATH          ${iigb_modules}/MATLAB/R2016a/bin
 
 module		use		${modules_dir}
 
