@@ -5,7 +5,7 @@
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\t - Sets PeakAnnotator to your environment"
+        puts stderr "\t - Adds PeakAnnotator to your path"
 }
 
 module-whatis   "PeakAnnotator-1.4"
@@ -19,7 +19,7 @@ set     prefix          ${modules_dir}/${version}
 set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
-prepend-path    PATH          ${iigb_modules}/PeakAnnotator/1.4/
+prepend-path    PATH               ${iigb_modules}/PeakAnnotator/1.4/
 
 module          use            ${modules_dir}
 

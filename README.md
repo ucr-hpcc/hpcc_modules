@@ -1,5 +1,6 @@
 # Installing Software
-This will obviously need to be expanded.
+This is mainly the basic "configure, make, make install". However we do support all kinds of packaged software, so this is not always the case.
+For specific installation details please refer to the documentation prodvided by the software as well as the individual README.md files contained within the installed module, assuming that the softwere had been insatlled previously.
 
 However you can look at the openbabel module and see the example README.md:
 [Openbabel](openbabel "openbabel")

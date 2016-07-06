@@ -1,6 +1,6 @@
 #%Module1.0#####################################################################
 ##
-## maui modulefile
+## gatk-queue modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tgatk-queue - Adds gatk queue to your path"
 }
 
-module-whatis	"gatk-queue-3.3-0"
+module-whatis	"gatk-queue-3.6"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -21,9 +21,9 @@ set	datarootdir	${prefix}/share
 
 module load java 
 
-setenv       GATKQUEUEDIR   ${iigb_modules}/gatk-queue/3.3-0
-setenv       GATKQUEUE      ${iigb_modules}/gatk-queue/3.3-0/Queue.jar
-prepend-path CLASSPATH      ${iigb_modules}/gatk-queue/3.3-0:${iigb_modules}/gatk-queue/3.3-0/resources
+setenv       GATKQUEUEDIR   ${iigb_modules}/gatk-queue/3.6
+setenv       GATKQUEUE      ${iigb_modules}/gatk-queue/3.6/Queue.jar
+prepend-path CLASSPATH      ${iigb_modules}/gatk-queue/3.6:${iigb_modules}/gatk-queue/3.6/resources
 
 module		use		${modules_dir}
 
