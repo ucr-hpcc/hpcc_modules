@@ -24,7 +24,6 @@ set datarootdir ${prefix}/share
 
 module unload perl
 module load perl/5.22.0
-prereq           perl/5.22.0
 
 prepend-path     PATH               ${iigb_modules}/circos/0.69/bin
 
