@@ -25,7 +25,7 @@ Not needed.
 ```
 [ -d $PKGDIR ] || mkdir $PKGDIR
 [ -d $PKGDIR/ShortStack ] || mkdir $PKGDIR/ShortStack
-cp $SRCDIR/ShortStack-3.4/ShortStack $PKGDIR/3.4/
+cp -r $SRCDIR/ShortStack-3.4/* $PKGDIR/3.4/
 ```
 
 ## Cleanup
