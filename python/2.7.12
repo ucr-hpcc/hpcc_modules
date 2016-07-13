@@ -23,7 +23,7 @@ prepend-path    PATH   		    ${iigb_modules}/python/2.7.12/bin
 prepend-path    CPATH           ${iigb_modules}/python/2.7.12/include
 prepend-path    LD_LIBRARY_PATH ${iigb_modules}/python/2.7.12/lib
 prepend-path    MANPATH         ${iigb_modules}/python/2.7.12/share/man
-prepend-path	PYTHONPATH      ${iigb_modules}/python/2.7.12/lib/python3.4/site-packages:${iigb_modules}/python/2.7.12/lib64/python3.4/site-packages 
+prepend-path	PYTHONPATH      ${iigb_modules}/python/2.7.12/lib/python2.7/site-packages:${iigb_modules}/python/2.7.12/lib64/python2.7/site-packages 
 
 module		use		${modules_dir}
 
