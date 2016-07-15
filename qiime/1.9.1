@@ -24,6 +24,7 @@ if { [module-info mode load] || [module-info mode switch2] } {
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "deactivate;"
 }
+conflict        python
 
 module		use		${modules_dir}
 
