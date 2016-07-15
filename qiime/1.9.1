@@ -20,7 +20,6 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 conflict    python
-module load python/2.7.12
 
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "source ${iigb_modules}/python/2.7.12/qiime-env/bin/activate;"
