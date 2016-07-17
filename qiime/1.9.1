@@ -19,6 +19,14 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+# All python versions need to be unloaded
+conflict    python
+# For some reason the values in this module load overwirte the qiime-env activate script
+#module load python/2.7.12
+
+# Include python shared files from the generator of the qiime virtualenv
+prepend-path     LD_LIBRARY_PATH    ${iigb_modules}/python/2.7.12/lib
+
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "source ${iigb_modules}/python/2.7.12/qiime-env/bin/activate;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
