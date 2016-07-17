@@ -24,12 +24,12 @@ conflict    python
 # For some reason the values in this module load overwirte the qiime-env activate script
 #module load python/2.7.12
 ## RDP needs java installed
-#module load java
+module load java
 # Include python shared files from the generator of the qiime virtualenv
 prepend-path     LD_LIBRARY_PATH    ${iigb_modules}/python/2.7.12/lib
 
 # AMPLICON NOISE
-#prepend-path	PATH	${iigb_modules}/python/2.7.12/qiime-env/app/AmpliconNoise/bin:${iigb_modules}/python/2.7.12/qiime-env/app/AmpliconNoise/Scripts
+prepend-path	PATH	${iigb_modules}/python/2.7.12/qiime-env/app/AmpliconNoise/bin:${iigb_modules}/python/2.7.12/qiime-env/app/AmpliconNoise/Scripts
 setenv	PYRO_LOOKUP_FILE	${iigb_modules}/python/2.7.12/qiime-env/app/AmpliconNoise/Data/LookUp_E123.dat
 setenv	SEQ_LOOKUP_FILE	${iigb_modules}/python/2.7.12/qiime-env/app/AmpliconNoise/Data/Tran.dat
 
@@ -42,4 +42,5 @@ if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "deactivate;"
 }
 
+prepend-path	PATH	${iigb_modules}/python/2.7.12/qiime-env/bin
 module		use		${modules_dir}
