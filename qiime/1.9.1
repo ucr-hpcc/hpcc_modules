@@ -23,7 +23,8 @@ set	datarootdir	${prefix}/share
 conflict    python
 # For some reason the values in this module load overwirte the qiime-env activate script
 #module load python/2.7.12
-
+## RDP needs java installed
+module load java
 # Include python shared files from the generator of the qiime virtualenv
 prepend-path     LD_LIBRARY_PATH    ${iigb_modules}/python/2.7.12/lib
 
@@ -32,9 +33,7 @@ if { [module-info mode load] || [module-info mode switch2] } {
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "deactivate;"
 }
-module load java
 setenv	RDP_JAR_PATH	/bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/python/2.7.12/qiime-env/lib/java/rdp_classifier-2.2.jar
 setenv	SOURCETRACKER_PATH	/bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/python/2.7.12/qiime-env/app/sourcetracker
+
 module		use		${modules_dir}
-
-
