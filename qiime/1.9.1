@@ -33,7 +33,13 @@ if { [module-info mode load] || [module-info mode switch2] } {
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "deactivate;"
 }
-setenv	RDP_JAR_PATH	/bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/python/2.7.12/qiime-env/lib/java/rdp_classifier-2.2.jar
-setenv	SOURCETRACKER_PATH	/bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/python/2.7.12/qiime-env/app/sourcetracker
+
+# AMPLICON NOISE
+prepend-path	PATH	${iigb_modules}/python/2.7.12/qiime-env/app/AmpliconNoise/bin:${iigb_modules}/python/2.7.12/qiime-env/app/AmpliconNoise/Scripts
+setenv	PYRO_LOOKUP_FILE	${iigb_modules}/python/2.7.12/qiime-env/app/AmpliconNoise/Data/LookUp_E123.dat
+setenv	SEQ_LOOKUP_FILE	${iigb_modules}/python/2.7.12/qiime-env/app/AmpliconNoise/Data/Tran.dat
+
+setenv	RDP_JAR_PATH	${iigb_modules}/python/2.7.12/qiime-env/lib/java/rdp_classifier-2.2.jar
+setenv	SOURCETRACKER_PATH	${iigb_modules}/python/2.7.12/qiime-env/app/sourcetracker
 
 module		use		${modules_dir}
