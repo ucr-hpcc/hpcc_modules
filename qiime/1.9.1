@@ -26,6 +26,8 @@ conflict    python
 
 # Include python shared files from the generator of the qiime virtualenv
 prepend-path     LD_LIBRARY_PATH    ${iigb_modules}/python/2.7.12/lib
+# Define location of QIIME config file, can also be under user's HOME
+setenv           QIIME_CONFIG_FP    ${iigb_modules}/python/2.7.12/qiime-env/.qiime_config
 
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "source ${iigb_modules}/python/2.7.12/qiime-env/bin/activate;"
