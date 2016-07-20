@@ -24,6 +24,17 @@ source /opt/linux/centos/7.x/x86_64/pkgs/python/2.7.12/qiime-env/bin/activate
 pip install numpy
 pip install qiime
 ```
+per this error: https://groups.google.com/forum/#!topic/qiime-forum/oYRbAloXTrQ
+
+I had to edit:
+```
+/opt/linux/centos/7.x/x86_64/pkgs/python/2.7.12/qiime-env/lib/python2.7/site-packages/matplotlib/mpl-data/matplotlibrc
+backend: qt4agg 
+```
+to
+```
+backend: agg 
+```
 ##Module
 Add specialized block to activate/deactivate when qiime module is loaded/unloaded.
 As a environement module the virtualenv activate does not fully function for QIIME.
