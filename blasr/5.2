@@ -19,8 +19,8 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path    PATH            ${iigb_modules}/blasr/5.2:${iigb_modules}/blasr/5.2/utils
-prepend-path    LD_LIBRARY_PATH ${iigb_modules}/blasr/5.2/libcpp/alignment:${iigb_modules}/blasr/5.2/libcpp/pbdata:${iigb_modules}/blasr/5.2/libcpp/hdf
+prepend-path    PATH            ${iigb_modules}/blasr/5.2/bin
+prepend-path    LD_LIBRARY_PATH ${iigb_modules}/blasr/5.2/lib
 
 module		use		${modules_dir}
 
