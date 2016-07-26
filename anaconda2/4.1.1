@@ -22,11 +22,11 @@ set	datarootdir	${prefix}/share
 # All python versions need to be unloaded
 conflict    python
 
-if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "echo 'PYTHONPATH has been unset.'"
-} elseif { [module-info mode remove] && ![module-info mode switch3] } {
-    puts stdout ""
-}
+#if { [module-info mode load] || [module-info mode switch2] } {
+#    puts stdout "echo 'PYTHONPATH has been unset.'"
+#} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+#    puts stdout ""
+#}
 
 setenv      PYTHONPATH  ""
 
