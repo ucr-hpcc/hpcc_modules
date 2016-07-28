@@ -19,7 +19,9 @@ set     prefix          ${modules_dir}/${version}
 set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
-module load java
+# Unload java
+conflict    java
+module load java/8
 
 prepend-path    PATH           ${iigb_modules}/beagle/4.1/bin
 setenv          beagle          ${iigb_modules}/beagle/4.1/lib/beagle.23Jul16.fb0.jar
