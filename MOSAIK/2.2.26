@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tMOSAIK- Adds MOSAIK to your path"
 }
 
-module-whatis	"MOSAIK-5c25216"
+module-whatis	"MOSAIK-2.2.26"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH              ${iigb_modules}/MOSAIK/5c25216/bin
+prepend-path    PATH              ${iigb_modules}/MOSAIK/2.2.26/bin
 
 module		use		${modules_dir}
 
