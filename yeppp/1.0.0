@@ -22,6 +22,6 @@ set	datarootdir	${prefix}/share
 
 setenv	YEPPPLIBDIR	${iigb_modules}/yeppp/1.0.0/binaries/linux/x86_64
 setenv	YEPPPINCLUDEDIR	${iigb_modules}/yeppp/1.0.0/library/headers
-
+prepend-path	LD_LIBRARY_PATH	${iigb_modules}/yeppp/1.0.0/binaries/linux/x86_64
 module		use		${modules_dir}
 
