@@ -20,5 +20,6 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 setenv	ROOTSYS	${iigb_modules}/root/6.06.06
+prepend-path	LD_LIBRARY_PATH	${iigb_modules}/root/6.06.06/lib
 module		use		${modules_dir}
 
