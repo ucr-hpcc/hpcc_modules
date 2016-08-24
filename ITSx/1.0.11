@@ -19,7 +19,7 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-
+module load hmmer/3
 prepend-path    PATH            ${iigb_modules}/ITSx/1.0.11/bin
 module		use		${modules_dir}
 
