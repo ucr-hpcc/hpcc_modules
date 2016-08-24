@@ -1,4 +1,5 @@
-# homer 
+# SMALT
+SMALT - aligns DNA sequencing reads with a reference genome.
 http://www.sanger.ac.uk/science/tools/smalt-0
 ## Prep
 ```
