@@ -1,0 +1,27 @@
+#%Module1.0#####################################################################
+##
+## last modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tlast - Adds last to your path"
+}
+
+module-whatis	"last-755"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH            ${iigb_modules}/last/755/scripts
+prepend-path    PATH            ${iigb_modules}/last/755/build
+prepend-path    PATH            ${iigb_modules}/last/755/bin
+module		use		${modules_dir}
+
