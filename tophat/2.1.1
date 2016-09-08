@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## homer modulefile
+## tophat modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\t - Adds homer software to your environment."
+        puts stderr "\t - Adds tophat 2.1.1 to your path"
 }
 
-module-whatis   "homer-4.8"
+module-whatis   "tophat-2.1.1"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,12 +19,7 @@ set     prefix          ${modules_dir}/${version}
 set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
-# Load dependencies
-module load blat
-module load weblogo
+prepend-path    PATH            ${iigb_modules}/tophat/2.1.1/
 
-prepend-path    PATH           ${iigb_modules}/homer/4.8/bin
-prepend-path    PATH           ${iigb_modules}/homer/4.8
-
-module          use            ${modules_dir}
+module          use             ${modules_dir}
 
