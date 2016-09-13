@@ -19,6 +19,8 @@ set     prefix          ${modules_dir}/${version}
 set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
+module unload java
+module load java/8
 prepend-path    PATH               ${iigb_modules}/canu/ce77820/bin/
 
 module          use            ${modules_dir}
