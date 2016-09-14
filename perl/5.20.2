@@ -19,11 +19,11 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+conflict        perl
 prepend-path    PATH            ${iigb_modules}/perl/5.20.2/bin
 prepend-path    MANPATH         ${iigb_modules}/perl/5.20.2/man
 prepend-path    PERL5LIB        ${iigb_modules}/perl/5.20.2/lib/5.20.2:${iigb_modules}/perl/5.20.2/lib/site_perl/5.20.2:
 setenv          INSTALL_BASE    ${iigb_modules}/perl/5.20.2
-conflict        perl
 
 module		use		${modules_dir}
 
