@@ -19,7 +19,7 @@ set     prefix          ${modules_dir}/${version}
 set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
-module load java
+module load java/8
 module load samtools 
 prepend-path    PATH           ${iigb_modules}/picard/2.6.0/bin
 setenv          PICARD         ${iigb_modules}/picard/2.6.0/lib/picard.jar
