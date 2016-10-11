@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## maui modulefile
+## trim_galore modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tgenewise - Adds genewise to your path"
+        puts stderr "\ttrim_galore - Adds trim_galore to your path"
 }
 
-module-whatis	"genewise-2.4.1"
+module-whatis	"trim_galore-0.4.2"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,9 +19,9 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+module load perl
 
-prepend-path    PATH   		${iigb_modules}/genewise/2.4.1/bin
-setenv WISECONFIGDIR	${iigb_modules}/genewise/2.4.1/wisecfg
+prepend-path    PATH            ${iigb_modules}/trim_galore/0.4.2/
 
 module		use		${modules_dir}
 

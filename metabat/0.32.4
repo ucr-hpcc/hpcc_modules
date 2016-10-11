@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## maui modulefile
+## metabat modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tgenewise - Adds genewise to your path"
+        puts stderr "\tmetabat - Adds metabat to your path"
 }
 
-module-whatis	"genewise-2.4.1"
+module-whatis	"metabat-0.32.4"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,8 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		${iigb_modules}/genewise/2.4.1/bin
-setenv WISECONFIGDIR	${iigb_modules}/genewise/2.4.1/wisecfg
+prepend-path    PATH   		${iigb_modules}/metabat/0.32.4
 
 module		use		${modules_dir}
 
