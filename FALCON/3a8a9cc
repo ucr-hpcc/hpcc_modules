@@ -20,9 +20,9 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 # All python versions need to be unloaded
-conflict    python
+module unload python/2.7.5
 # For some reason the values in this module load overwirte the falcon-env activate script
-#module load python/2.7.12
+module load python/2.7.12
 
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "source ${iigb_modules}/python/2.7.12/falcon-env/bin/activate;"
@@ -30,5 +30,7 @@ if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "deactivate;"
 }
 
+prepend-path	PYTHONPATH	${iigb_modules}/python/2.7.12/falcon-env/lib/python2.7/site-packages:${iigb_modules}/python/2.7.12/falcon-env/lib64/python2.7/site-packages
 prepend-path	PATH	${iigb_modules}/python/2.7.12/falcon-env/bin
+
 module		use		${modules_dir}
