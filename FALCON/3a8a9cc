@@ -21,6 +21,7 @@ set	datarootdir	${prefix}/share
 
 # All python versions need to be unloaded
 module unload python/2.7.5
+conflict python/2.7.5
 # For some reason the values in this module load overwirte the falcon-env activate script
 module load python/2.7.12
 
