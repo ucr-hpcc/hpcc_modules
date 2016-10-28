@@ -22,6 +22,7 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH   		${iigb_modules}/itpp/4.3.1/bin
 prepend-path    CPLUS_INCLUDE_PATH  ${iigb_modules}/itpp/4.3.1/include
+prepend-path    LD_LIBRARY_PATH ${iigb_modules}/itpp/4.3.1/lib
 prepend-path    MANPATH         ${iigb_modules}/itpp/4.3.1/share/man
 
 module		use		${modules_dir}
