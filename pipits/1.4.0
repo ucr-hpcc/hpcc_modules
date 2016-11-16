@@ -23,7 +23,7 @@ prepend-path	PYTHONPATH	${iigb_modules}/pipits/1.4.0/lib/python2.7/site-packages
 prepend-path	PATH	${iigb_modules}/pipits/1.4.0/bin
 setenv 		PIPITS_UNITE_REFERENCE_DATA_CHIMERA	${iigb_modules}/pipits/1.4.0/refdb/uchime_reference_dataset_01.01.2016/uchime_reference_dataset_01.01.2016.fasta
 # this is also in /srv/projects/db/UNITE/v7.1/uchime_reference_dataset/uchime_reference_dataset_01.01.2016.fasta
-setenv 	       PIPITS_UNITE_RETRAINED_DIR=${iigb_modules}/pipits/1.4.0/refdb/UNITE_retrained
-setenv	       PIPITS_WARCUP_RETRAINED_DIR=${iigb_modules}/pipits/1.4.0/refdb/warcup_retrained_V2
-setenv	       PIPITS_RDP_CLASSIFIER_JAR=${iigb_modules}/pipits/1.4.0/classifier.jar
+setenv 	       PIPITS_UNITE_RETRAINED_DIR	${iigb_modules}/pipits/1.4.0/refdb/UNITE_retrained
+setenv	       PIPITS_WARCUP_RETRAINED_DIR	${iigb_modules}/pipits/1.4.0/refdb/warcup_retrained_V2
+setenv	       PIPITS_RDP_CLASSIFIER_JAR	${iigb_modules}/pipits/1.4.0/classifier.jar
 module		use		${modules_dir}
