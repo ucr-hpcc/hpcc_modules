@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tufits - Adds ufits ITS pipeline to your path"
 }
 
-module-whatis	"ufits-0.5.5"
+module-whatis	"ufits-0.5.6"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -25,6 +25,6 @@ module load ITSx
 module load hmmer
 module load fastx_toolkit
 
-#prepend-path	PYTHONPATH	${iigb_modules}/ufits/0.5.5/lib
-prepend-path	PATH	${iigb_modules}/ufits/0.5.5
+#prepend-path	PYTHONPATH	${iigb_modules}/ufits/0.5.6/lib
+prepend-path	PATH	${iigb_modules}/ufits/0.5.6
 module		use		${modules_dir}
