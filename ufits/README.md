@@ -5,17 +5,17 @@ https://github.com/nextgenusfs/ufits
 
 ## Prep
 ``` 
-wget https://github.com/nextgenusfs/ufits/archive/0.5.5.tar.gz
+wget https://github.com/nextgenusfs/ufits/archive/0.5.6.tar.gz
 ```
 
 ## Compile
 ```
-tar zxf 0.5.5.tar.gz
+tar zxf 0.5.6.tar.gz
 ```
 
 ## Install
 ```
-cd ufits-0.5.5
+cd ufits-0.5.6
 ./ufits install -i ITS LSU 16S COI
 ```
 
