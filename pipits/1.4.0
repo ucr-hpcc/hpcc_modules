@@ -1,11 +1,11 @@
 #%Module1.0#####################################################################
 ##
-## falcon modulefile
+## pipits modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tfalcon- Adds falcon to your path"
+        puts stderr "\tpipits - Adds pipits ITS pipeline"
 }
 
 module-whatis	"pipits-1.4.0"
