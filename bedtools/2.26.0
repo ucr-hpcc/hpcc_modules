@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tbedtools - Adds bedtools to your path"
 }
 
-module-whatis	"bedtools-2.25.0"
+module-whatis	"bedtools-2.26.0"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/bedtools/2.25.0/bin
+prepend-path    PATH            ${iigb_modules}/bedtools/2.26.0/bin
 
 module		use		${modules_dir}
 
