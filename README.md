@@ -28,3 +28,9 @@ These are the modules that are currently available on biocluster
 Module files now use environment variables to determine the path:
     IIGB_MODULES - Path dynamically built by /etc/profile.d/modules.sh at login to specify install path of modules.
     MODULESHOME - Path set by module system to specify home of module system.
+
+## Standards
+1. Symlinks can be used in order to catch alternative spellings of the same package
+2. Keep names of packages to all lowercase when possible
+3. Spaces are not allowed, underscores should be used in place of spaces for software module names
+4. Software that requires a common write location or uniqe config file should use environment variables to define these location[s]/config[s] which are set within the module
