@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tufits - Adds ufits ITS pipeline to your path"
 }
 
-module-whatis	"ufits-0.6.0"
+module-whatis	"ufits-0.6.1"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,11 +20,11 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-module load usearch/8
+module load usearch/9
 module load ITSx
 module load hmmer
 module load fastx_toolkit
+module load vsearch
 
-#prepend-path	PYTHONPATH	${iigb_modules}/ufits/0.6.0/lib
-prepend-path	PATH	${iigb_modules}/ufits/0.6.0
+prepend-path	PATH	${iigb_modules}/ufits/0.6.1
 module		use		${modules_dir}
