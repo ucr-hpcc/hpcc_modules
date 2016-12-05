@@ -22,7 +22,7 @@ set     datarootdir     ${prefix}/share
 module load java/8
 
 setenv          PILONDIR	${iigb_modules}/pilon/1.20
-setenv          PILON	${iigb_modules}/pilon/1.20
+setenv          PILON	${iigb_modules}/pilon/1.20/pilon-1.20.jar
 
 module          use            ${modules_dir}
 
