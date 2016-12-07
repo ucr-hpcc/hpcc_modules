@@ -1,5 +1,6 @@
-# NAMD
+# VSEARCH
 
+Drop in open source replacement for USEARCH - with most functionality implemented here
 ## Prep
 ```
 cd /opt/linux/centos/7.x/x86_64/pkgs/vsearch
@@ -17,7 +18,7 @@ tar zxf vsearch-2.3.2-linux-x86_64.tar.gz
 ## Install
 Copy files to proper install path:
 ```
-mv mv vsearch-2.3.2-linux-x86_64 2.3.2
+mv vsearch-2.3.2-linux-x86_64 2.3.2
 ```
 
 ## Cleanup
