@@ -38,6 +38,12 @@ module  load    mummer
 module  load    RAxML
 module  load    mafft
 module  load    trimal
+module  load    exonerate
+module  load    blat
+module  load    tRNAscan
+module  load    GAG
+module  load    proteinortho
+module  load    kent
 
 prepend-path    PATH        ${iigb_modules}/funannotate/0.4.0
 prepend-path    PATH        ${iigb_modules}/funannotate/0.4.0/bin
