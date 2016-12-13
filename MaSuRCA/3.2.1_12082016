@@ -19,7 +19,7 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-
+module load parallel
 prepend-path    PATH            ${iigb_modules}/MaSuRCA/3.2.1_12082016/bin
 prepend-path    PATH            ${iigb_modules}/MaSuRCA/3.2.1_12082016/CA/Linux-amd64/bin
 prepend-path	LD_RUN_PATH	${iigb_modules}/MaSuRCA/3.2.1_12082016/lib
