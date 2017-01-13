@@ -1,11 +1,11 @@
 #%Module1.0#####################################################################
 ##
-## maui modulefile
+## bamtools modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tbamtools - Adds bamtools to your path"
+        puts stderr "\tbamtools - Adds bamtools 2.4.0 to your path"
 }
 
 module-whatis	"bamtools-2.4.0"
@@ -21,9 +21,9 @@ set	datarootdir	${prefix}/share
 
 
 prepend-path    PATH            ${iigb_modules}/bamtools/2.4.0/bin
-prepend-path 	CPATH		${iigb_modules}/bamtools/2.4.0/include
-prepend-path 	LIBRARY_PATH	${iigb_modules}/bamtools/2.4.0/lib
-prepend-path    LD_LIBRARY_PATH	${iigb_modules}/bamtools/2.4.0/lib
+prepend-path    CPATH           ${iigb_modules}/bamtools/2.4.0/include
+prepend-path    LIBRARY_PATH    ${iigb_modules}/bamtools/2.4.0/lib
+prepend-path    LD_LIBRARY_PATH ${iigb_modules}/bamtools/2.4.0/lib
+setenv          BAMTOOLS_PATH   ${iigb_modules}/bamtools/2.4.0/bin
 
-module		use		${modules_dir}
-
+module  use     ${modules_dir}
