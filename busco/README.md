@@ -1,5 +1,6 @@
 # BUSCO
-
+Note this is now just a git checkout
+ - https://gitlab.com/ezlab/busco.git
 ## Prep
 ```
 SRCDIR=/opt/linux/centos/7.x/x86_64/src
