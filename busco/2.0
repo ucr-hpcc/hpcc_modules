@@ -24,7 +24,7 @@ module load hmmer
 module load augustus/3.2.2
 module load emboss
 
-prepend-path    PATH            ${iigb_modules}/busco/2.0/bin
+prepend-path    PATH            ${iigb_modules}/busco/2.0
 
 module		use		${modules_dir}
 
