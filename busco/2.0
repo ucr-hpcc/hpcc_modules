@@ -21,7 +21,7 @@ set	datarootdir	${prefix}/share
 
 module load ncbi-blast
 module load hmmer
-module load augustus
+module load augustus/3.2.2
 module load emboss
 
 prepend-path    PATH            ${iigb_modules}/busco/2.0/bin
