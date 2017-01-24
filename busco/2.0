@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tbusco - Adds BUSCO 1.2 to your path"
 }
 
-module-whatis	"busco-1.2"
+module-whatis	"busco-2.0"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -24,7 +24,7 @@ module load hmmer
 module load augustus
 module load emboss
 
-prepend-path    PATH            ${iigb_modules}/busco/1.2/bin
+prepend-path    PATH            ${iigb_modules}/busco/2.0/bin
 
 module		use		${modules_dir}
 
