@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## augustus modulefile
+## migrate modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\taugustus - Adds AUGUSTUS to your path"
+        puts stderr "\tmigrate-n - Adds migrate-n to your path"
 }
 
-module-whatis	"augustus-3.2.2"
+module-whatis	"migrate-n-4.2.8"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,10 +19,7 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module load lp_solve
+prepend-path    PATH    ${iigb_modules}/migrate-n/4.2.8/bin
+prepend-path    MANPATH ${iigb_modules}/migrate-n/4.2.8/man
 
-prepend-path    PATH                    ${iigb_modules}/augustus/3.2.2/bin:${iigb_modules}/augustus/3.2.2/scripts
-setenv          AUGUSTUS_CONFIG_PATH    ${iigb_modules}/augustus/3.2.2/config
-
-module  use     ${modules_dir}
-
+module use ${modules_dir}

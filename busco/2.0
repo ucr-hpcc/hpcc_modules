@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## augustus modulefile
+## BUSCO modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\taugustus - Adds AUGUSTUS to your path"
+        puts stderr "\tbusco - Adds BUSCO 1.2 to your path"
 }
 
-module-whatis	"augustus-3.2.2"
+module-whatis	"busco-2.0"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,10 +19,12 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module load lp_solve
+module load ncbi-blast
+module load hmmer
+module load augustus/3.2.2
+module load emboss
 
-prepend-path    PATH                    ${iigb_modules}/augustus/3.2.2/bin:${iigb_modules}/augustus/3.2.2/scripts
-setenv          AUGUSTUS_CONFIG_PATH    ${iigb_modules}/augustus/3.2.2/config
+prepend-path    PATH            ${iigb_modules}/busco/2.0
 
-module  use     ${modules_dir}
+module		use		${modules_dir}
 
