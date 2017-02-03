@@ -1,2 +1,2 @@
 #%Module3.2.9#################################################
-set     ModulesVersion     "1.8.4-torque-5.1.0"
+set     ModulesVersion     "2.0.1-slurm-16.05.4"
