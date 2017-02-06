@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## ufits modulefile
+## amptk modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tufits - Adds ufits ITS pipeline to your path"
+        puts stderr "\tufits - Adds amptk (formerly ufits) ITS pipeline to your path"
 }
 
-module-whatis	"ufits-0.8.5"
+module-whatis	"amptk-0.8.5"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -26,5 +26,5 @@ module load hmmer
 module load fastx_toolkit
 module load vsearch
 
-prepend-path	PATH	${iigb_modules}/ufits/0.8.5
+prepend-path	PATH	${iigb_modules}/amptk/0.8.5
 module		use		${modules_dir}
