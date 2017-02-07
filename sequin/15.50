@@ -22,4 +22,4 @@ set     datarootdir     ${prefix}/share
 
 prepend-path    PATH            ${iigb_modules}/sequin/15.50
 module          use             ${modules_dir}
-
+setenv	NCBI	${iigb_modules}/sequin/15.50
