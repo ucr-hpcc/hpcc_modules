@@ -34,6 +34,14 @@ backend: qt4agg
 to
 ```
 backend: agg 
+
+An alternative is to do 
+https://groups.google.com/forum/#!searchin/qiime-forum/.matplotlibrc/qiime-forum/6srHDScyh_0/CJeu_Xl4BgAJ
+and basically create a file
+~/.config/matplotlib/matplotlibrc
+
+and add the following:
+backend : agg
 ```
 ##Module
 Add specialized block to activate/deactivate when qiime module is loaded/unloaded.
