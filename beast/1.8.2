@@ -21,7 +21,8 @@ set	datarootdir	${prefix}/share
 
 
 prepend-path    PATH   		${iigb_modules}/beast/1.8.2/bin
-prepend-path    CLASSPATH       ${iigb_modules}/beast/1.8.2/lib
+prepend-path    CLASSPATH   ${iigb_modules}/beast/1.8.2/lib
+setenv          BEAST_LIB   ${iigb_modules}/beast/1.8.2/lib
 
 module		use		${modules_dir}
 

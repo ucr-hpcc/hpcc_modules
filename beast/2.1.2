@@ -20,8 +20,9 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   	        ${iigb_modules}/beast/2.1.2/bin
-prepend-path    CLASSPATH       ${iigb_modules}/beast/2.1.2/lib
+prepend-path    PATH   	    ${iigb_modules}/beast/2.1.2/bin
+prepend-path    CLASSPATH   ${iigb_modules}/beast/2.1.2/lib
+setenv          BEAST_LIB   ${iigb_modules}/beast/2.1.2/lib
 
 module		use		${modules_dir}
 
