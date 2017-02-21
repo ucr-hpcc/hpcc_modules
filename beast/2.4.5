@@ -23,5 +23,6 @@ module load java/8u25
 
 prepend-path    PATH        ${iigb_modules}/beast/2.4.5/bin
 prepend-path    CLASSPATH   ${iigb_modules}/beast/2.4.5/lib
+setenv          BEAST_LIB   ${iigb_modules}/beast/2.4.5/lib
 
 module use ${modules_dir}
