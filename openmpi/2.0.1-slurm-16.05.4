@@ -24,6 +24,7 @@ prepend-path    CPATH            ${iigb_modules}/openmpi/2.0.1-slurm-16.05.4/inc
 prepend-path    LIBRARY_PATH     ${iigb_modules}/openmpi/2.0.1-slurm-16.05.4/lib
 prepend-path    LD_LIBRARY_PATH  ${iigb_modules}/openmpi/2.0.1-slurm-16.05.4/lib:${iigb_modules}/openmpi/2.0.1-slurm-16.05.4/lib/openmpi
 prepend-path    MANPATH          ${iigb_modules}/openmpi/2.0.1-slurm-16.05.4/share/man
+setenv          LD_PRELOAD       ${iigb_modules}/openmpi/2.0.1-slurm-16.05.4/lib/libmpi.so
 
 module      use    ${modules_dir} 
 
