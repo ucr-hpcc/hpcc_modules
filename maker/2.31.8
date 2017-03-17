@@ -5,7 +5,7 @@
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tMAKER - Adds MAKER 2.28 tools to your paths"
+        puts stderr "\tMAKER - Adds MAKER 2.31.8 tools to your paths"
 }
 
 module-whatis   "MAKER-2.31.8"
@@ -20,8 +20,8 @@ set exec_prefix ${prefix}
 set datarootdir ${prefix}/share
 
 #module unload perl
-#module load perl/5.22.0
-module load openmpi/1.8.4-torque-5.1.0
+module load perl/5.24.0
+module load openmpi/2.0.1-slurm-16.05.4
 
 prepend-path     PATH              ${iigb_modules}/maker/2.31.8/bin
 prepend-path     PERL5LIB          ${iigb_modules}/maker/2.31.8/lib:${iigb_modules}/maker/2.31.8/perl/lib
@@ -32,7 +32,7 @@ prepend-path     MANPATH           ${iigb_modules}/maker/2.31.8/man
 module           use               ${modules_dir}
 
 module load ncbi-blast/2.2.26
-module load ncbi-blast/2.2.31+
+module load ncbi-blast/2.6.0+
 module load SNAP
 module load augustus/2.7
 module load RepeatMasker
