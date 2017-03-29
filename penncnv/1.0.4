@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## BUSCO modulefile
+## penncnv modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tbusco - Adds BUSCO 1.2 to your path"
+        puts stderr "\tpenncnv - Adds penncnv to your path"
 }
 
-module-whatis	"busco-2.0"
+module-whatis	"penncnv-1.0.4"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,12 +19,8 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module load ncbi-blast/2.6.0+
-module load hmmer/3
-module load augustus/3.2.2
-module load emboss
+prereq  perl/5.14.2
 
-prepend-path    PATH            ${iigb_modules}/busco/2.0
+prepend-path    PATH   	${iigb_modules}/penncnv/1.0.4
 
-module		use		${modules_dir}
-
+module use ${modules_dir}
