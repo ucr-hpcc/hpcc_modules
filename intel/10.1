@@ -20,8 +20,8 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		       ${iigb_modules}/intel/fce/10.1.015/bin
-prepend-path    LD_LIBRARY_PATH    ${iigb_modules}/intel/fce/10.1.015/lib:/opt/linux/centos/7.x/x86_64/pkgs/intel/mkl/10.0.3.020/lib/intel64
+prepend-path    PATH   		       ${iigb_modules}/intel/fce/10.1.015/bin:${iigb_modules}/intel/cce/10.1.015/bin
+prepend-path    LD_LIBRARY_PATH    ${iigb_modules}/intel/fce/10.1.015/lib:${iigb_modules}/intel/cce/10.1.015/lib:${iigb_modules}/intel/mkl/10.0.3.020/lib/intel64:
 prepend-path    DYLD_LIBRARY_PATH  ${iigb_modules}/intel/fce/10.1.015/lib
 prepend-path    NLSPATH            ${iigb_modules}/intel/fce/10.1.015/lib/locale/en_US
 prepend-path    MANPATH            ${iigb_modules}/intel/fce/10.1.015/man
