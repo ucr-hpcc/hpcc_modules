@@ -27,8 +27,8 @@ prepend-path     PATH              ${iigb_modules}/maker/2.31.8/bin
 prepend-path     PERL5LIB          ${iigb_modules}/maker/2.31.8/lib:${iigb_modules}/maker/2.31.8/perl/lib
 prepend-path     MANPATH           ${iigb_modules}/maker/2.31.8/man
 
-# Moved Slurm version of LD_PRELOAD to the OpenMPI module
-#prepend-path	LD_PRELOAD	 ${iigb_modules}/openmpi/1.8.4-torque-5.1.0/lib/libmpi.so
+# Moved OpenMPI LD_PRELOAD to here, since it is needed here and causes warnings elsewhere
+prepend-path	LD_PRELOAD	 ${iigb_modules}/openmpi/1.8.4-torque-5.1.0/lib/libmpi.so
 module           use               ${modules_dir}
 
 module load ncbi-blast/2.2.26
