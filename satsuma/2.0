@@ -19,7 +19,7 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path    PATH       ${iigb_modules}/satsuma/2.0
+prepend-path    PATH       ${iigb_modules}/satsuma/2.0/bin
 
 module		use		${modules_dir}
 
