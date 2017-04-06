@@ -20,6 +20,6 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 prepend-path    PATH       ${iigb_modules}/satsuma2/2016-11-22/bin
-
+setenv	SATSUMA2_PATH	${iigb_modules}/satsuma2/2016-11-22/bin
 module		use		${modules_dir}
 
