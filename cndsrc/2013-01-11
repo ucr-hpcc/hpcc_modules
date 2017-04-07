@@ -19,6 +19,8 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+module load blat
+module load mavid
 
 prepend-path    PATH   		${iigb_modules}/cndsrc/2013-01-11/bin
 module		use		${modules_dir}
