@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## maui modulefile
+## mavid modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tblat - Adds blat to your path"
+        puts stderr "\tmavid - Adds mavid tools to your path"
 }
 
-module-whatis	"blat-35"
+module-whatis	"mavid-2.0.4"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,7 +20,6 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		${iigb_modules}/blat/35/bin
-
+prepend-path    PATH   		${iigb_modules}/mavid/2.0.4/bin
 module		use		${modules_dir}
 
