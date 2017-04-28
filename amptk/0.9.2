@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## maui modulefile
+## amptk modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tcensor - Adds censor to your path"
+        puts stderr "\tufits - Adds amptk (formerly ufits) ITS pipeline to your path"
 }
 
-module-whatis	"censor-4.2"
+module-whatis	"amptk-0.9.2"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,8 +19,12 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module load ncbi-blast/2.2.26
-prepend-path    PATH            ${iigb_modules}/censor/4.2/bin:${iigb_modules}/censor/4.2/libexec
 
+module load usearch/9
+module load ITSx
+module load hmmer
+module load fastx_toolkit
+module load vsearch
+
+prepend-path	PATH	${iigb_modules}/amptk/0.9.2
 module		use		${modules_dir}
-
