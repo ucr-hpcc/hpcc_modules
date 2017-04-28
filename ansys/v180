@@ -1,0 +1,26 @@
+#%Module1.0#####################################################################
+##
+## ansys modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tansys- Adds ansys to your path"
+}
+
+module-whatis	"ansys-v180"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH              ${iigb_modules}/ansys/v180/Framework/bin:${iigb_modules}/ansys/v180/aisol/bin:${iigb_modules}/ansys/v180/CFX/bin:${iigb_modules}/ansys/v180/fluent/bin:${iigb_modules}/ansys/v180/CFD-Post/bin:${iigb_modules}/ansys/v180/TurboGrid/bin:${iigb_modules}/ansys/v180/polyflow/bin:${iigb_modules}/ansys/v180/RSM/bin:${iigb_modules}/ansys/v180/fensapice/bin:${iigb_modules}/ansys/v180/Icepak/bin:${iigb_modules}/ansys/v180/EKM/bin
+prepend-path    LD_LIBRARY_PATH   ${iigb_modules}/ansys/v180/aisol/lib:${iigb_modules}/ansys/v180/CFX/lib:${iigb_modules}/ansys/v180/fluent/lib:${iigb_modules}/ansys/v180/CFD-Post/lib:${iigb_modules}/ansys/v180/TurboGrid/lib
+
+module		use		${modules_dir}
