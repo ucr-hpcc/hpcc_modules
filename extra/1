@@ -19,5 +19,5 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module		use		${iigb_modules}/../easybuild/modules
+module		use		${iigb_modules}/../easybuild/modules/all
 #module		use		/opt/linux/centos/7.x/x86_64/easybuild/modules
