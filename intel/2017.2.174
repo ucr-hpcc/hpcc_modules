@@ -1,0 +1,33 @@
+#%Module1.0#####################################################################
+##
+## intel modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tintel - Adds ifort and libs to your path"
+}
+
+module-whatis	"intel-2017.2.174"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH   		       ${iigb_modules}/intel/mkl/2017.2.174/bin:${iigb_modules}/intel/mkl/2017.2.174/parallel_studio_xe_2017.2.050/bin:${iigb_modules}/intel/mkl/2017.2.174/parallel_studio_xe_2017.3.053/bin:${iigb_modules}/intel/mkl/2017.2.174/itac/2017.2.028/bin:${iigb_modules}/intel/mkl/2017.2.174/itac/2017.2.028/intel64/bin:${iigb_modules}/intel/mkl/2017.2.174/itac/2017.2.028/mic/bin:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/daal/bin:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/bin:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/ipp/bin:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/mpi/intel64/bin:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/mpi/mic/bin:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/mpirt/bin:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/tbb/bin:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/mkl/bin:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/mkl/benchmarks/hpcg/bin:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.2.174/linux/bin:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.2.174/linux/mkl/bin:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.2.174/linux/mkl/benchmarks/hpcg/bin:${iigb_modules}/intel/mkl/2017.2.174/debugger_2017/bin:${iigb_modules}/intel/mkl/2017.2.174/debugger_2017/mpm/mic/bin:${iigb_modules}/intel/mkl/2017.2.174/debugger_2017/mpm/intel64_igfx/bin:${iigb_modules}/intel/mkl/2017.2.174/debugger_2017/iga/bin:${iigb_modules}/intel/mkl/2017.2.174/debugger_2017/gdb/intel64/bin:${iigb_modules}/intel/mkl/2017.2.174/debugger_2017/gdb/intel64_mic/bin:${iigb_modules}/intel/mkl/2017.2.174/debugger_2017/gdb/targets/intel64/x200/bin:${iigb_modules}/intel/mkl/2017.2.174/debugger_2017/gdb/targets/intel64/linux/bin:${iigb_modules}/intel/mkl/2017.2.174/debugger_2017/gdb/targets/mic/bin:${iigb_modules}/intel/mkl/2017.2.174/debugger_2017/gdb/intel64_igfx/bin:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017/linux/bin:${iigb_modules}/intel/mkl/2017.2.174/clck/2017.2.019/bin:${iigb_modules}/intel/mkl/2017.2.174/clck/2017.2.019/provider/share/common/bin
+prepend-path    LD_LIBRARY_PATH    ${iigb_modules}/intel/mkl/2017.2.174/itac/2017.2.028/intel64/lib:${iigb_modules}/intel/mkl/2017.2.174/itac/2017.2.028/lib:${iigb_modules}/intel/mkl/2017.2.174/itac/2017.2.028/mic/lib:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/daal/lib:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/ipp/lib:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/mpi/intel64/lib:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/mpi/mic/lib:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/mpirt/lib:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/tbb/lib:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/mkl/lib:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/mkl/benchmarks/hpcg/bin/lib:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/compiler/lib:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.2.174/linux/tbb/lib:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.2.174/linux/mkl/lib:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.2.174/linux/mkl/benchmarks/hpcg/bin/lib:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.2.174/linux/compiler/lib:${iigb_modules}/intel/mkl/2017.2.174/vtune_amplifier_xe_2017.2.0.499904/backend/node_modules/ws/node_modules/options/lib:${iigb_modules}/intel/mkl/2017.2.174/vtune_amplifier_xe_2017.2.0.499904/backend/node_modules/ws/lib:${iigb_modules}/intel/mkl/2017.2.174/lib:${iigb_modules}/intel/mkl/2017.2.174/debugger_2017/mpm/mic/lib:${iigb_modules}/intel/mkl/2017.2.174/debugger_2017/python/intel64/lib:${iigb_modules}/intel/mkl/2017.2.174/debugger_2017/libipt/intel64/lib:${iigb_modules}/intel/mkl/2017.2.174/debugger_2017/iga/lib:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017/linux/lib:${iigb_modules}/intel/mkl/2017.2.174/clck/2017.2.019/provider/share/common/lib:${iigb_modules}/intel/mkl/2017.2.174/clck/2017.2.019/lib
+#prepend-path    DYLD_LIBRARY_PATH  ${iigb_modules}/intel/fce/10.1.015/lib
+#prepend-path    NLSPATH            ${iigb_modules}/intel/fce/10.1.015/lib/locale/en_US
+prepend-path    MANPATH            ${iigb_modules}/intel/mkl/2017.2.174/man:${iigb_modules}/intel/mkl/2017.2.174/inspector_2017.1.2.497970/man:${iigb_modules}/intel/mkl/2017.2.174/parallel_studio_xe_2017.3.053/man:${iigb_modules}/intel/mkl/2017.2.174/itac/2017.2.028/man:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/man:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/mpi/man:${iigb_modules}/intel/mkl/2017.2.174/vtune_amplifier_xe_2017.2.0.499904/man:${iigb_modules}/intel/mkl/2017.2.174/advisor_2017.1.2.501009/man:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017/linux/man:${iigb_modules}/intel/mkl/2017.2.174/documentation_2017/en/man:${iigb_modules}/intel/mkl/2017.2.174/documentation_2017/en/debugger/gdb-igfx/man:${iigb_modules}/intel/mkl/2017.2.174/documentation_2017/en/debugger/gdb-mic/man:${iigb_modules}/intel/mkl/2017.2.174/documentation_2017/en/debugger/gdb-ia/man:${iigb_modules}/intel/mkl/2017.2.174/documentation_2017/ja/man:${iigb_modules}/intel/mkl/2017.2.174/documentation_2017/ja/debugger/gdb-igfx/man:${iigb_modules}/intel/mkl/2017.2.174/documentation_2017/ja/debugger/gdb-mic/man:${iigb_modules}/intel/mkl/2017.2.174/documentation_2017/ja/debugger/gdb-ia/man
+#prepend-path    INTEL_LICENSE_FILE ${iigb_modules}/intel/fce/10.1.015/licenses:${iigb_modules}/intel/licenses
+#setenv          MKL_ROOT           ${iigb_modules}/intel/mkl/10.0.3.020
+#setenv          MKLROOT           ${iigb_modules}/intel/mkl/10.0.3.020
+
+module		use		${modules_dir}
+
