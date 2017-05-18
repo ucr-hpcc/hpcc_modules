@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 # note, no official version, calling it 1.0 arbitrarily
 #http://genomeannotation.github.io/GAG/
 
-module-whatis	"GAG-live"
+module-whatis	"GAG-2.0.1"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -22,6 +22,6 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		${iigb_modules}/GAG/live
+prepend-path    PATH   		${iigb_modules}/GAG/2.0.1
 module		use		${modules_dir}
 
