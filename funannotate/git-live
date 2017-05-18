@@ -41,7 +41,7 @@ module  load    trimal
 module  load    exonerate
 module  load    blat
 module  load    tRNAscan
-module  load    GAG/live
+module  load    GAG/2.0.1
 module  load    proteinortho
 module  load    kent
 module  load    signalp
