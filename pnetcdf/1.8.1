@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## netcdf-fortran modulefile
+## netcdf modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tnetcdf-fortran- Adds netcdf-fortran intel to your path"
+        puts stderr "\tpnetcdf- Adds parallel-netcdf to your path"
 }
 
-module-whatis	"netcdf-fortran-4.4.4_intel"
+module-whatis	"pnetcdf-1.8.1"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,9 +20,9 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH              ${iigb_modules}/netcdf-fortran/4.4.4_intel/bin
-prepend-path    LD_LIBRARY_PATH   ${iigb_modules}/netcdf-fortran/4.4.4_intel/lib
-prepend-path	MANPATH           ${iigb_modules}/netcdf-fortran/4.4.4_intel/share/man
+prepend-path    PATH              ${iigb_modules}/pnetcdf/1.8.1_intel/bin
+prepend-path    LD_LIBRARY_PATH   ${iigb_modules}/pnetcdf/1.8.1_intel/lib
+prepend-path	MANPATH           ${iigb_modules}/pnetcdf/1.8.1_intel/share/man
 
 module		use		${modules_dir}
 
