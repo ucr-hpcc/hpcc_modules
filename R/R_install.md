@@ -10,7 +10,7 @@
 ###############################
 
 ## (a) R/release
-srun --mem=10gb --cpus-per-task 1 --ntasks 1 --time 10:00:00 --pty bash -l
+```srun --mem=10gb --cpus-per-task 1 --ntasks 1 --time 10:00:00 --pty bash -l
 ssh pkgadmin@localhost
 cd /opt/linux/centos/7.x/x86_64/src
 ## Look up latest R version and download it
@@ -25,7 +25,8 @@ vim iigb_configure.sh
 make # takes 30 min
 make install # this creates dir /opt/R/3.1.0-release
 ldd /opt/R/3.4.0-release/lib64/R/lib/libR.so
-ldd /opt/R/3.4.0-release/lib64/R/lib/libRblas.so 
+ldd /opt/R/3.4.0-release/lib64/R/lib/libRblas.so
+```
 
 ## (b) R/dev
 srun --mem=10gb --cpus-per-task 1 --ntasks 1 --time 10:00:00 --pty bash -l
