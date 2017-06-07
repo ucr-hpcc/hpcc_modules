@@ -24,5 +24,6 @@ prepend-path     MANPATH          ${iigb_modules}/java/jdk1.6.0_43/man
 prepend-path     C_INCLUDE_PATH   ${iigb_modules}/java/jdk1.6.0_43/include
 prepend-path     LD_LIBRARY_PATH  ${iigb_modules}/java/jdk1.6.0_43/lib
 
-module           use              ${modules_dir}
+setenv           JAVA_HOME        ${iigb_modules}/java/jdk1.6.0_43
 
+module           use              ${modules_dir}
