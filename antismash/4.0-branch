@@ -34,4 +34,8 @@ module load prodigal/2.6.2
 module load fasttree/2.1.8
 module load meme
 
-echo "source ${iigb_modules}/antismash/4.0-branch/as4/bin/activate"
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "source ${iigb_modules}/antismash/4.0-branch/as4/bin/activate;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "deactivate;"
+}
