@@ -32,5 +32,6 @@ module load glimmerhmm/3.0.4
 module load diamond
 module load prodigal/2.6.2
 module load fasttree/2.1.8
+module load meme
 
-source ${iigb_modules}/antismash/4.0-branch/as4/bin/activate
+echo "source ${iigb_modules}/antismash/4.0-branch/as4/bin/activate"
