@@ -1,0 +1,31 @@
+#%Module1.0#####################################################################
+##
+## BUSCO modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tbusco - Adds BUSCO 3.0.1 to your path"
+}
+
+module-whatis	"busco-3.0.1"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+module load ncbi-blast/2.6.0+
+module load hmmer/3.1b2
+module load augustus/3.2.2
+module load emboss
+
+prepend-path    PATH            ${iigb_modules}/busco/3.0.1
+setenv          BUSCO_CONFIG_FILE    ~/busco3_config.ini
+
+module		use		${modules_dir}
+
