@@ -20,8 +20,8 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH              /opt/linux/centos/7.x/x86_64/pkgs/cuda8/bin
-prepend-path    LD_LIBRARY_PATH   /opt/linux/centos/7.x/x86_64/pkgs/cuda8/lib64
+prepend-path    PATH              /opt/linux/centos/7.x/x86_64/pkgs/cuda/8.0/bin
+prepend-path    LD_LIBRARY_PATH   /opt/linux/centos/7.x/x86_64/pkgs/cuda/8.0/lib64
 
 module		use		${modules_dir}
 
