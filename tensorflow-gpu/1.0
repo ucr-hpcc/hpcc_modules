@@ -21,7 +21,9 @@ set	datarootdir	${prefix}/share
 
 # All python versions need to be unloaded
 conflict    python
-# For some reason the values in this module load overwirte the qiime-env activate script
+
+module load cuda/8.0
+module load cuDNN/5.1
 
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "source ${iigb_modules}/python/2.7.13/tensorflow-env/bin/activate;"
