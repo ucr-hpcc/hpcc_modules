@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tTensorflow-gpu - Adds Tensorflow-gpu to your path"
 }
 
-module-whatis	"tensorflow-gpu-1.9.1"
+module-whatis	"tensorflow-gpu-1.0"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
