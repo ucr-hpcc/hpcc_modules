@@ -21,14 +21,15 @@ set datarootdir ${prefix}/share
 
 #module unload perl
 module load perl/5.24.0
-module load openmpi/2.0.1-slurm-16.05.4
+module unload openmpi
+module load mpich
 
 prepend-path     PATH              ${iigb_modules}/maker/2.31.8/bin
 prepend-path     PERL5LIB          ${iigb_modules}/maker/2.31.8/lib:${iigb_modules}/maker/2.31.8/perl/lib
 prepend-path     MANPATH           ${iigb_modules}/maker/2.31.8/man
 
 # Moved OpenMPI LD_PRELOAD to here, since it is needed here and causes warnings elsewhere
-prepend-path	LD_PRELOAD	 ${iigb_modules}/openmpi/1.8.4-torque-5.1.0/lib/libmpi.so
+prepend-path	LD_PRELOAD	 ${iigb_modules}/mpich/3.2/lib/libmpi.so
 module           use               ${modules_dir}
 
 module load ncbi-blast/2.2.26
