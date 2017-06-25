@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tdb-cazy Sets cazy database path to CAZY_DB environment variable"
 }
 
-module-whatis	"db-cazy-3.0"
+module-whatis	"db-cazy-5.0"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,8 +19,8 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-setenv      CAZY_FOLDER	/srv/projects/db/CAZY/CAZyDB/3.0
-setenv      CAZY_DB	/srv/projects/db/CAZY/CAZyDB/3.0/dbCAN-fam-HMMs.txt.v3
+setenv      CAZY_FOLDER	/srv/projects/db/CAZY/CAZyDB/5.0
+setenv      CAZY_DB	/srv/projects/db/CAZY/CAZyDB/5.0/dbCAN-fam-HMMs.txt.v5
 
 module      use    ${modules_dir}
 
