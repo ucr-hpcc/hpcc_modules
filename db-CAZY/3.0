@@ -1,0 +1,25 @@
+#%Module1.0#####################################################################
+##
+## CAZY database modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tdb-cazy Sets cazy database path to CAZY_DB environment variable"
+}
+
+module-whatis	"db-cazy-3.0"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+setenv      CAZY_DB	/srv/projects/db/CAZY/CAZyDB/dbCAN-fam-HMMs.txt.v3
+
+module      use    ${modules_dir}
+
