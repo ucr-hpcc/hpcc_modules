@@ -35,7 +35,7 @@ module load fasttree/2.1.8
 module load meme
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "source ${iigb_modules}/antismash/4.0-branch/as4/bin/activate;"
+    puts stdout "source ${iigb_modules}/antismash/4.0-branch/antismash-env/bin/activate;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "deactivate;"
 }
