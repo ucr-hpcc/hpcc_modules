@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## runBNG modulefile
+## bionano modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\trunBNG - Adds bioano-solve 83205ed to your path"
+        puts stderr "\tbionano - Adds bioano v5134 to your path"
 }
 
-module-whatis   "runBNG-83205ed"
+module-whatis   "bionano-v5134"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,11 +19,7 @@ set prefix      ${modules_dir}/${version}
 set exec_prefix ${prefix}
 set datarootdir ${prefix}/share
 
-module load bionano
-prereq           bionano
-module switch perl/5.16.3
-prereq           perl/5.16.3
-
-prepend-path     PATH     ${iigb_modules}/runBNG/83205ed/
+prepend-path     PATH     ${iigb_modules}/bionano/v5134/tools
+setenv           BIONANO  ${iigb_modules}/bionano/v5134/scripts
 
 module           use      ${modules_dir}
