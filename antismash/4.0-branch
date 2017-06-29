@@ -45,5 +45,8 @@ if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "deactivate;"
 }
 
+# PATH gets tash, so have to set this again
+prepend-path    PATH    ${iigb_modules}/antismash/4.0-branch/antismash-env/bin
+
 # Extend modules
 module		use		${modules_dir}
