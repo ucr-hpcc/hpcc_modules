@@ -20,9 +20,10 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/antismash/4.0-branch
+# All python versions need to be unloaded
+conflict    python
 
-module		use		${modules_dir}
+# Load deps
 module load muscle
 module load ncbi-blast/2.2.31+
 module load hmmer/2
@@ -34,8 +35,18 @@ module load prodigal/2.6.2
 module load fasttree/2.1.8
 module load meme
 
+# Set PATH
+prepend-path    PATH            ${iigb_modules}/antismash/4.0-branch
+
+# Activate virtualenv
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "source ${iigb_modules}/antismash/4.0-branch/antismash-env/bin/activate;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "deactivate;"
 }
+
+# PATH gets tash, so have to set this again
+prepend-path    PATH    ${iigb_modules}/antismash/4.0-branch/antismash-env/bin
+
+# Extend modules
+module		use		${modules_dir}
