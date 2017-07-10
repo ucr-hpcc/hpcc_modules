@@ -1,0 +1,32 @@
+#%Module1.0#####################################################################
+##
+## amptk modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tufits - Adds amptk (formerly ufits) ITS pipeline to your path"
+}
+
+module-whatis	"amptk-0.9.3"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+module load usearch/9
+module load ITSx
+module load hmmer
+module load fastx_toolkit
+module load vsearch
+module load samtools
+module load bedtools
+
+prepend-path	PATH	${iigb_modules}/amptk/0.9.3
+module		use		${modules_dir}

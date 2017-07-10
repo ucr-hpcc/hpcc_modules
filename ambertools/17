@@ -1,0 +1,31 @@
+#%Module1.0#####################################################################
+##
+## Ambertools17 modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds Ambertools17 to your path"
+}
+
+module-whatis   "ambertools-17"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set     version         3.2.9
+set     prefix          ${modules_dir}/${version}
+set     exec_prefix     ${prefix}
+set     datarootdir     ${prefix}/share
+
+conflict amber
+
+setenv           AMBER_PREFIX     ${iigb_modules}/ambertools/17
+setenv           AMBERHOME        ${iigb_modules}/ambertools/17
+
+prepend-path     PATH             ${iigb_modules}/ambertools/17/bin
+#prepend-path     PYTHONPATH       ${iigb_modules}/ambertools/17/lib/python/site-packages
+prepend-path     LD_LIBRARY_PATH  ${iigb_modules}/ambertools/17/lib
+
+module           use              ${modules_dir}
