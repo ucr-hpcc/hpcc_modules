@@ -28,6 +28,6 @@ if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "deactivate;"
 }
 
-prepend-path	PATH	${iigb_modules}/aTRAM/2.0/
+prepend-path	PATH	${iigb_modules}/aTRAM/2.0
 prepend-path    LIBRARY_PATH    ${iigb_modules}/aTRAM/2.0/lib
 module		use		${modules_dir}
