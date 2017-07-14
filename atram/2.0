@@ -1,0 +1,33 @@
+#%Module1.0#####################################################################
+##
+## aTRAM modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\taTRAM - Adds aTRAM 2.0 to your path"
+}
+
+module-whatis	"atram-2.0"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+# All python versions need to be unloaded
+conflict    python
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "source ${iigb_modules}/aTRAM/2.0/atram-env/bin/activate;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "deactivate;"
+}
+
+setenv	ATRAM_PATH	${iigb_modules}/aTRAM/2.0
+prepend-path	PATH	${iigb_modules}/aTRAM/2.0:${iigb_modules}/aTRAM/2.0/atram-env/bin
+module		use		${modules_dir}
