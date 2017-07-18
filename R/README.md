@@ -1,14 +1,11 @@
-#########################################
-## Install R from Source on Biocluster ##
-#########################################
+
+## Install R from Source on Biocluster
 ## Date: May 1, 2017
 ## Note: R-3.4.0_release and R-3.4.0_devel had to be installed separately at that time!
 ## Install steps for release are labelled (a) and for devel (b)
 
-###############################
-## (1) Install R from source ##
-###############################
 
+## (1) Install R from source
 ## (a) R/release
 ```srun --mem=10gb --cpus-per-task 1 --ntasks 1 --time 10:00:00 --pty bash -l
 ssh pkgadmin@localhost
@@ -52,9 +49,7 @@ ldd /opt/R/3.1.0-dev/lib64/R/lib/libR.so
 ldd /opt/R/3.1.0-dev/lib64/R/lib/libRblas.so 
 ```
 
-######################################
-## (2) Set proper group permissions ##
-######################################
+## (2) Set proper group permissions
 ## (a) R/release
 ## this needs to be done on biocluster directly
 ```ssh pkgadmin@localhost
@@ -65,9 +60,8 @@ cd /opt/R/3.4.0-release
 ```ssh pkgadmin@localhost
 cd /opt/R/3.4.0-dev
 ```
-###############################
+
 ## (3) Module system updates ##
-###############################
 ## Next two steps only required when you do things for the first time
 ```cd /rhome/tgirke/; mkdir git; cd git
 git clone git@github.com:ucr-bioinformatics/biocluster-modules.git
@@ -92,10 +86,8 @@ git add 3.4.0-dev
 git commit -am "3.4.0-dev"
 git push
 ```
-#########################################
-## (4) Install all previous R packages ##
-#########################################
 
+## (4) Install all previous R packages
 ## (a) R/release
 ```srun --mem=10gb --cpus-per-task 1 --ntasks 1 --time 10:00:00 --pty bash -l
 ssh pkgadmin@localhost
@@ -164,12 +156,17 @@ biocLite(pkgs) # Note: it was not necessary to run useDevel(devel=TRUE) to speci
 ```
 ## Follow steps under (4a) -> ...
 
-#################################################
 ## (5) Change default R to new release version ##
-#################################################
 ## Do after you have tested everything
 ```cd ~/git/biocluster-modules/main/R
 vim .version
 git commit -am "set R-3.4.0-release to default"
 git push
 ```
+## (6) Upgrading R Version on RStudio Server
+Modify paths in the following files:
+```/etc/rstudio/rserver.conf
+   /etc/rstudio/profiles``` #This only applies to the Pro version
+
+And lastly, and most important:
+```ln -s /opt/linux/centos/7.x/x86_64/pkgs/R/3.2.2/lib64/R/lib/* /lib64/```
