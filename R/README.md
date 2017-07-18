@@ -165,8 +165,8 @@ git push
 ```
 ## (6) Upgrading R Version on RStudio Server
 Modify paths in the following files:
-    /etc/rstudio/rserver.conf
-    /etc/rstudio/profiles #This only applies to the Pro version
+```/etc/rstudio/rserver.conf
+   /etc/rstudio/profiles``` #This only applies to the Pro version
 
 And lastly, and most important:
-    ln -s /opt/linux/centos/7.x/x86_64/pkgs/R/3.2.2/lib64/R/lib/* /lib64/
+```ln -s /opt/linux/centos/7.x/x86_64/pkgs/R/3.2.2/lib64/R/lib/* /lib64/```
