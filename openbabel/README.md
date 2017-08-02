@@ -5,15 +5,15 @@
 cd $SRCDIR
 wget http://hivelocity.dl.sourceforge.net/project/openbabel/openbabel/2.3.2/openbabel-2.3.2.tar.gz
 tar -zxvf openbabel-2.3.2.tar.gz
-cd openbabel-2.3.2
-mkdir build
-cd build
 ```
 
 ## Compile
 Be sure to module load the appropriate Python version:
 ```
-cmake ../openbabel-2.3.2 -DPYTHON_BINDINGS=ON
+cd openbabel-2.3.2
+mkdir build
+cd build
+cmake ../ -DPYTHON_BINDINGS=ON -DCMAKE_INSTALL_PREFIX:PATH=/opt/linux/centos/7.x/x86_64/pkgs/openbabel/2.3.2
 make -j2
 ```
 

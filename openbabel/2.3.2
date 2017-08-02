@@ -24,6 +24,8 @@ set datarootdir ${prefix}/share
 module load python/2.7.5
 prereq           python/2.7.5
 
+setenv           BABEL_DATADIR      ${iigb_modules}/openbabel/2.3.2/share/openbabel/2.3.2
+setenv           BABEL_LIBDIR       ${iigb_modules}/openbabel/2.3.2/lib/openbabel/2.3.2
 prepend-path     C_INCLUDE_PATH     ${iigb_modules}/openbabel/2.3.2/include
 prepend-path     CPLUS_INCLUDE_PATH ${iigb_modules}/openbabel/2.3.2/include
 prepend-path     LIBRARY_PATH       ${iigb_modules}/openbabel/2.3.2/lib
