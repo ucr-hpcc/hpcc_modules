@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tinterproscan - Adds interproscan to your path"
 }
 
-module-whatis	"interproscan-5.24-63.0"
+module-whatis	"interproscan-5.25-64.0"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
