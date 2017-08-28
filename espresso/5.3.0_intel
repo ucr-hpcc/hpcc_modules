@@ -20,7 +20,13 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		${iigb_modules}/espresso/5.3.0_intel
+prepend-path    PATH    ${iigb_modules}/espresso/5.3.0_intel
 
-module		use		${modules_dir}
+#module load intel/2017.4.196
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "source ${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/mkl/bin/mklvars.sh intel64;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    #puts stdout "deactivate;"
+}
 
+module use ${modules_dir}
