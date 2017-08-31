@@ -22,6 +22,7 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${iigb_modules}/oligoarray/2.1/
 module		use		${modules_dir}
+setenv          OLIGOARRAYDIR         ${iigb_modules}/oligoarray/2.1/
 
 module load oligoarrayaux
 module load ncbi-blast/2.2.26
