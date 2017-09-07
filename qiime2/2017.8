@@ -37,4 +37,7 @@ if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "source deactivate;"
 }
 
+# Add path manually, since source activate does not function within parent shell
+prepend-path    PATH    ${iigb_modules}/miniconda3/4.3.21/envs/qiime2-2017.8/bin
+
 module		use		${modules_dir}
