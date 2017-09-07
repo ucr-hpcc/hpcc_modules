@@ -32,7 +32,7 @@ setenv LC_ALL en_US.utf-8
 setenv LANG en_US.utf-8
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "source activate qiime2-2017.8;"
+    puts stdout "module load miniconda3/4.3.21; source activate qiime2-2017.8;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "source deactivate;"
 }
