@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH              ${iigb_modules}/miniconda/4.3.21/bin
+prepend-path    PATH              ${iigb_modules}/miniconda3/4.3.21/bin
 
 module		use		${modules_dir}
 
