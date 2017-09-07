@@ -27,7 +27,3 @@ module		use		${modules_dir}
 setenv          g09root    ${iigb_modules}/gaussian/9
 setenv          GAUSS_SCRDIR    /tmp/
 
-
-if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout ". $g09root/g09/bsd/g09.profile;"
-}
