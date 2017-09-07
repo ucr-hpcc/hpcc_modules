@@ -25,7 +25,7 @@ module		use		${modules_dir}
 
 
 setenv          g09root    ${iigb_modules}/gaussian/9
-setenv          GAUSS_SCRDIR    $HOME
+setenv          GAUSS_SCRDIR    ${HOME}
 
 
 if { [module-info mode load] || [module-info mode switch2] } {
