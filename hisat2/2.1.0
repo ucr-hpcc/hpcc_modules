@@ -1,0 +1,26 @@
+#%Module1.0#####################################################################
+##
+## hisat2 modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\thisat2 - Adds hisat2 to your path"
+}
+
+module-whatis	"hisat2-2.1.0"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH            ${iigb_modules}/hisat2/2.1.0
+
+module		use		${modules_dir}
+
