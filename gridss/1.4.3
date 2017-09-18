@@ -20,6 +20,8 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 setenv	GRIDSS_JAR	${iigb_modules}/gridss/1.4.3/gridss.jar
+module unload java
+module load java/8
 
 module		use		${modules_dir}
 
