@@ -21,6 +21,6 @@ set	datarootdir	${prefix}/share
 
 
 prepend-path    PATH            ${iigb_modules}/varscan/2.3.9/scripts
-setenv		VARSCANHOME	/opt/varscan/2.3.9
-setenv		VARSCANJAR	/opt/varscan/2.3.9/VarScan.jar
+setenv		VARSCANHOME	${iigb_modules}/2.3.9
+setenv		VARSCANJAR	${iigb_modules}/2.3.9/VarScan.jar
 module		use		${modules_dir}
