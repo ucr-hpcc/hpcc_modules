@@ -26,5 +26,6 @@ prepend-path    LIBRARY_PATH    ${iigb_modules}/R/3.4.0/lib64/R/lib
 prepend-path    LD_LIBRARY_PATH ${iigb_modules}/R/3.4.0/lib64/R/lib
 
 module          load            ggobi
+module          load            pandoc
 module          use             ${modules_dir}
 
