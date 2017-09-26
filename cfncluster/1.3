@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 # All python versions need to be unloaded
-module unload python
+conflict    python
 
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "source ${iigb_modules}/cfncluster/1.3/cfncluster-virtenv/bin/activate;"
