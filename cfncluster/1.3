@@ -1,0 +1,32 @@
+
+#%Module1.0#####################################################################
+##
+## cfncluster modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tcfncluster - loads cfncluster virtual enviornment and add it to your path"
+}
+
+module-whatis	"cfncluster-1.3"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+# All python versions need to be unloaded
+module unload python
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "source ${iigb_modules}/cfncluster/1.3/cfncluster-virtenv/bin/activate;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "deactivate;"
+}
+
+module		use		${modules_dir}
