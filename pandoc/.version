@@ -1,2 +1,2 @@
 #%Module3.2.9#################################################
-set     ModulesVersion     "ghc-8.2.1-x86_64"
+set     ModulesVersion     "1.17.0.3"
