@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/texlive/2017/bin
+prepend-path    PATH            ${iigb_modules}/texlive/2017/x86_64-linux/bin
 
 module		use		${modules_dir}
 
