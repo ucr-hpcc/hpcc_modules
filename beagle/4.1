@@ -21,6 +21,7 @@ set     datarootdir     ${prefix}/share
 
 # Unload java
 conflict    java
+module unload java
 module load java/8
 
 prepend-path    PATH           ${iigb_modules}/beagle/4.1/bin
