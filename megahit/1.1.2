@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\t - Adds megahit 1.06 to your path"
 }
 
-module-whatis   "megahit-1.1.1"
+module-whatis   "megahit-1.1.2"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,7 +19,7 @@ set     prefix          ${modules_dir}/${version}
 set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
-prepend-path    PATH            ${iigb_modules}/megahit/1.1.1/bin
+prepend-path    PATH            ${iigb_modules}/megahit/1.1.2/bin
 
 module          use             ${modules_dir}
 module load cuda
