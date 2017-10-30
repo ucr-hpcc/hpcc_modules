@@ -19,7 +19,8 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module load perl
+module unload perl
+module load perl/5.24.0
 module load velvet
 
 prepend-path    PATH            ${iigb_modules}/velvetoptimiser/2.2.5
