@@ -1,54 +1,27 @@
 #%Module1.0#####################################################################
-/0.5.1/0.8.2/g
 ##
-/0.5.1/0.8.2/g
 ## salmon modulefile
-/0.5.1/0.8.2/g
 ##
-/0.5.1/0.8.2/g
 proc ModulesHelp { } {
-/0.5.1/0.8.2/g
         global version prefix
-/0.5.1/0.8.2/g
 
-/0.5.1/0.8.2/g
         puts stderr "\tsalmon - Adds salmon to your path"
-/0.5.1/0.8.2/g
 }
-/0.5.1/0.8.2/g
 
-/0.5.1/0.8.2/g
-module-whatis	"salmon-0.5.1"
-/0.5.1/0.8.2/g
+module-whatis	"salmon-0.8.2"
 
-/0.5.1/0.8.2/g
 set      iigb_modules    $::env(IIGB_MODULES)
-/0.5.1/0.8.2/g
 set      modules_dir     $::env(MODULES_DIR)
-/0.5.1/0.8.2/g
 
-/0.5.1/0.8.2/g
 # for Tcl script use only
-/0.5.1/0.8.2/g
 set	version		3.2.9
-/0.5.1/0.8.2/g
 set	prefix		${modules_dir}/${version}
-/0.5.1/0.8.2/g
 set	exec_prefix	${prefix}
-/0.5.1/0.8.2/g
 set	datarootdir	${prefix}/share
-/0.5.1/0.8.2/g
 
-/0.5.1/0.8.2/g
 
-/0.5.1/0.8.2/g
-prepend-path    PATH                    ${iigb_modules}/salmon/0.5.1/bin
-/0.5.1/0.8.2/g
-prepend-path    LD_LIBRARY_PATH         ${iigb_modules}/salmon/0.5.1/lib
-/0.5.1/0.8.2/g
+prepend-path    PATH                    ${iigb_modules}/salmon/0.8.2/bin
+prepend-path    LD_LIBRARY_PATH         ${iigb_modules}/salmon/0.8.2/lib
 
-/0.5.1/0.8.2/g
 module		use		${modules_dir}
-/0.5.1/0.8.2/g
 
-/0.5.1/0.8.2/g
