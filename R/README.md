@@ -23,7 +23,24 @@ make -j 10
 make install
 ```
 
+After R is installed install the module.
+
+### Bioconductor
+Install Bioconductor as pkgadmin and with the correct version of R via module load.
+From within R run the following:
+```r
+source("https://bioconductor.org/biocLite.R")
+biocLite()
+Update all/some/none? [a/s/n]: a # Update all packages
+```
+#### Development (leading-edge)
+To enable the development version of Bioconductor run the following from within R:
+```r
+BiocInstaller::useDevel()
+```
+
 ### Packages
+#### Base
 Install all pckages that exist in previous version of R.
 First, become pkgadmin (sudo or ssh keys).
 Then access compute node and run the following:
