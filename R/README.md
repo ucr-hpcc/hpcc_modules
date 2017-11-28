@@ -58,6 +58,7 @@ q()
 ```
 ```bash
 module switch R/3.4.2
+module load nfcd #netcdf4, Rhdf5lib
 R
 ```
 ```r
@@ -66,29 +67,40 @@ source("http://bioconductor.org/biocLite.R")
 biocLite(pkgs) # will take some time...
 ```
 
-Double check what is still missing:
+Double check what is still missing and load/install dependencies to resolve issues:
 ```r
 pkgs2 <- rownames(installed.packages())
 missing <- pkgs[!pkgs %in% pkgs2] # Return names of packages that failed to install
 biocLite(missing) # Install those missing packages
 install.packages("/bigdata/girkelab/shared/modules_1.2.tar.gz", repos=NULL) # Maintained by Tyler
 
-pkgs <- readLines("/rhome/your_username/pkgs")
-source("http://bioconductor.org/biocLite.R")
-biocLite(pkgs) # will take some time...
-
-pkgs2 <- rownames(installed.packages())
-missing <- pkgs[!pkgs %in% pkgs2] # Return names of packages that failed to install
-biocLite(missing) # Install those missing packages
-install.packages("/bigdata/girkelab/shared/modules_1.2.tar.gz", repos=NULL) # Maintained by Tyler
 q()
 ```
 
+#### RGeos
+Currently the libgeos-dev package is only installed on Pigeon (epel?), thus install from pigeon:
+```r
+biocLite('rgeos')
+```
+
+#### rJava
+Set paths in order to install rJava (ie. LD_LIBRARY_PATH=/path/to/libjvm.so):
+```bash
+R CMD javareconf -e 
+```
+```r
+biocLite('rJava')
+```
+
 #### RPostgreSQL
-Some additional packages may be required for RPostgreSQL to install correctly:
+Additional header file (libpq-fe.h) required for RPostgreSQL to install correctly:
+```bash
+yum install postgresql-devel
+```
 ```r
 install.packages("RPostgreSQL")
-biocLite("GWASdata", "GWASTools", "rcdklibs", "RankProd", "xcms", "mzR", "rgeos", "ncdf4", "rJava")
+# Re install dependent packages (some not available?)
+biocLite(c("GWASdata", "GWASTools", "rcdklibs", "RankProd", "xcms", "mzR", "rgeos", "ncdf4", "rJava"))
 ```
 
 #### Github repositories
@@ -102,6 +114,7 @@ install_github("jalvesaq/VimCom")
 install_github("cran/setwidth")
 install_github("jalvesaq/colorout")
 install_github("cran/Geneland")
+install_github("RenvCheck", "ucr-bioinformatics")
 ```
 
 #### ChemmineOB
@@ -114,13 +127,13 @@ srun --p batch --mem=10gb --ntasks=10 --time=1-00:00:00 --pty bash -l
 module load openbabel
 wget www.bioconductor.org/packages/release/bioc/src/contrib/ChemmineOB_1.14.0.tar.gz
 R CMD INSTALL --configure-args='--with-openbabel-include=/opt/linux/centos/7.x/x86_64/pkgs/openbabel/2.3.2/include/openbabel-2.0 --with-
-openbabel-lib=/opt/linux/centos/7.x/x86_64/pkgs/openbabel/2.3.2/lib' ChemmineOB_1.14.0.tar.gz
+openbabel-lib=/opt/linux/centos/7.x/x86_64/pkgs/openbabel/2.3.2/lib' ChemmineOB_1.16.0.tar.gz
 ```
 
 #### Install Rmpi
 Download latest Rmpi version using wget. Make sure you have the proper R version loaded and then run the following:
 ```r
-R CMD INSTALL Rmpi_0.6-5.tar.gz --configure-args=--with-mpi=/opt/linux/centos/7.x/x86_64/pkgs/openmpi/2.0.1-slurm-16.05.4/
+R CMD INSTALL Rmpi_0.6-6.tar.gz --configure-args=--with-mpi=/opt/linux/centos/7.x/x86_64/pkgs/openmpi/2.0.1-slurm-16.05.4/
 ```
 
 ### Upgrading R Version on RStudio Server
