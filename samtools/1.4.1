@@ -23,6 +23,6 @@ set	datarootdir	${prefix}/share
 prepend-path    PATH              ${iigb_modules}/samtools/1.4.1/bin
 #prepend-path    LD_LIBRARY_PATH   ${iigb_modules}/samtools/1.4.1/htslib/lib
 prepend-path	MANPATH		  ${iigb_modules}/samtools/1.4.1/share/man
-
+setenv	SAMTOOLS_PATH	${iigb_modules}/samtools/1.4.1/bin
 module		use		${modules_dir}
 
