@@ -1,6 +1,6 @@
 #%Module1.0#####################################################################
 ##
-## HPCC Utils modulefilei  Loads a commmon bin for HPCC admin tools
+## HPCC Utils modulefilei  Loads a commmon bin for HPCC admin tools -
 ##
 proc ModulesHelp { } {
         global version prefix
