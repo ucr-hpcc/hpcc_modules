@@ -1,0 +1,26 @@
+#%Module1.0#####################################################################
+##
+## nQuire modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\nQuire - Adds nQuire to your path"
+}
+
+module-whatis	"nQuire-af0a7f0"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+##module  load    java/8u45
+
+prepend-path    PATH    ${iigb_modules}/nQuire/af0a7f0
+
+module  use ${modules_dir}
