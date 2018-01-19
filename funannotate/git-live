@@ -22,8 +22,10 @@ set	datarootdir	${prefix}/share
 prereq  python/2.7.5
 prereq  perl/5.20.2
 
-module  load    RepeatMasker/4-0-6
+module  load    RepeatMasker/4-0-7
+module  load    ncbi-rmblast
 module  load    augustus/3.2.2
+module  load    lp_solve
 module  load    EVM/1.1.1
 module  load    genemarkESET
 module  load    bamtools
@@ -41,7 +43,6 @@ module  load    trimal
 module  load    exonerate
 module  load    blat
 module  load    tRNAscan
-module  load    GAG/2.0.1
 module  load    proteinortho
 module  load    kent
 module  load    signalp
