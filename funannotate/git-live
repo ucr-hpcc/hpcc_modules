@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 prereq  python/2.7.5
-prereq  perl/5.20.2
+prereq  perl/5.22.0
 
 module  load    RepeatMasker/4-0-7
 module  load    ncbi-rmblast
