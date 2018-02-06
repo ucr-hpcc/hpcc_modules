@@ -38,6 +38,6 @@ if { [module-info mode load] || [module-info mode switch2] } {
 }
 
 # Add path manually, since source activate does not function within parent shell
-prepend-path    PATH    ${iigb_modules}/miniconda3/4.3.21/envs/qiime2-2017.12/bin
+prepend-path    PATH    ${iigb_modules}/miniconda3/4.3.31/envs/qiime2-2017.12/bin
 
 module		use		${modules_dir}
