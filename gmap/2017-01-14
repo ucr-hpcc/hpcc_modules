@@ -1,6 +1,6 @@
 #%Module1.0#####################################################################
 ##
-## maui modulefile
+## gmap modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
