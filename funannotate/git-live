@@ -58,7 +58,10 @@ module  load    trinity-rnaseq
 module  load    hisat2
 module  load    kallisto
 module  load    PASA
+module  load    eggnog-mapper
+
 prepend-path    PATH        ${iigb_modules}/funannotate/git-live
 prepend-path    PATH        ${iigb_modules}/funannotate/git-live/bin
+
 setenv	FUNANNOTATE_DB		${iigb_modules}/funannotate/git-live/DB
 module  use     ${modules_dir}
