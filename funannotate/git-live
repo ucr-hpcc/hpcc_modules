@@ -19,6 +19,12 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+module unload perl
+module unload perl
+module load perl/5.22.0
+module unload python
+module load python/2.7.5
+
 prereq  python/2.7.5
 prereq  perl/5.22.0
 
@@ -47,7 +53,11 @@ module  load    proteinortho
 module  load    kent
 module  load    signalp
 module  load    diamond
-
+module  load    fasta
+module  load    trinity-rnaseq
+module  load    hisat2
+module  load    kallisto
+module  load    PASA
 prepend-path    PATH        ${iigb_modules}/funannotate/git-live
 prepend-path    PATH        ${iigb_modules}/funannotate/git-live/bin
 setenv	FUNANNOTATE_DB		${iigb_modules}/funannotate/git-live/DB
