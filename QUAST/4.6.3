@@ -19,6 +19,9 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+module unload java
+module load java/7u40
+
 prepend-path    PATH	${iigb_modules}/QUAST/4.6.3
 module		use		${modules_dir}
 
