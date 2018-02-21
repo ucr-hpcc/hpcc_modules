@@ -5,7 +5,7 @@
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tslurm-drmaa - Adds maui to your path"
+        puts stderr "\tslurm-drmaa - Adds slurm-drmaa to your path"
 }
 
 module-whatis	"slurm-drmaa-1.2.0-dev.83fc288"
@@ -24,5 +24,6 @@ prepend-path    CPATH           ${iigb_modules}/slurm-drmaa/1.2.0-dev.83fc288/in
 prepend-path    LD_LIBRARY_PATH ${iigb_modules}/slurm-drmaa/1.2.0-dev.83fc288/lib
 
 setenv  SLURM_DRMAA_CONF    ${iigb_modules}/slurm-drmaa/1.2.0-dev.83fc288/etc/slurm_drmaa.conf
+setenv  DRMAA_LIBRARY_PATH  ${iigb_modules}/slurm-drmaa/1.2.0-dev.83fc288/lib/libdrmaa.so
 
 module use ${modules_dir}
