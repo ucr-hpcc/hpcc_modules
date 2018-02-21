@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/seqclean/2011-02-22
+prepend-path    PATH            ${iigb_modules}/seqclean/2011-02-22:${iigb_modules}/seqclean/2011-02-22/bin
 
 module		use		${modules_dir}
 
