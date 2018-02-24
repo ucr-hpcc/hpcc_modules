@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-module load usearch/9
+module load usearch/9.1.13_i86linux32
 module load ITSx
 module load hmmer
 module load fastx_toolkit
