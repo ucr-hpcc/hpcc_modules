@@ -19,6 +19,8 @@ set     prefix          ${modules_dir}/${version}
 set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
+module load extra
+module load GCCcore/4.9.3
 
 
 prepend-path    PATH            ${iigb_modules}/stacks/2.0/bin
