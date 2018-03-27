@@ -20,4 +20,5 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 module		use		${iigb_modules}/../easybuild/modules/all
+module		use		${iigb_modules}/pgi/17.10/modulefiles
 #module		use		/opt/linux/centos/7.x/x86_64/easybuild/modules
