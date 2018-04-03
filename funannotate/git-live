@@ -42,7 +42,7 @@ module  load    gmap
 module  load    bedtools
 module  load    tbl2asn
 module  load    braker
-module  load    mummer
+module  load    mummer/4.0
 module  load    RAxML
 module  load    mafft
 module  load    trimal
