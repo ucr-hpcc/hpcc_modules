@@ -33,5 +33,5 @@ if { [module-info mode load] || [module-info mode switch2] } {
         puts stdout ""
 }
 
-module		use		${modules_dir}
+setenv     INTEL_LICENSE_FILE     "28519@intel-lic"
 
