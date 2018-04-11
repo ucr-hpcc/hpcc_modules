@@ -32,7 +32,7 @@ module load miniconda2/4.4.10
 #setenv LANG en_US.utf-8
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3/4.4.10; source activate hpcc-base;"
+    puts stdout "module load miniconda2/4.4.10; source activate hpcc-base;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "source deactivate;"
 }
