@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## splitstree4 modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tsplitstree4 - Adds splitstree4 to your path"
+}
+
+module-whatis	"splitstree4-4.14.6"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path    PATH    ${iigb_modules}/splitstree4/4.14.6
+
+module use ${modules_dir}
