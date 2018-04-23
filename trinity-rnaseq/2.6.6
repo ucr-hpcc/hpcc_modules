@@ -23,6 +23,10 @@ module switch perl/5.22.0
 prereq perl/5.22.0
 module load java/8u25
 module load bowtie2
+module unload samtools
+module load samtools/1.6
+module load salmon
+module load jellyfish
 
 prepend-path    PATH            ${iigb_modules}/trinity-rnaseq/2.6.6
 prepend-path    PATH            ${iigb_modules}/trinity-rnaseq/2.6.6/util
