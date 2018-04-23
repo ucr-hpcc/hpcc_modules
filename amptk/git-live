@@ -28,5 +28,5 @@ module load vsearch
 module load samtools
 module load bedtools
 
-prepend-path	PATH	${iigb_modules}/amptk/git-live
+prepend-path	PATH	${iigb_modules}/amptk/git-live/bin
 module		use		${modules_dir}

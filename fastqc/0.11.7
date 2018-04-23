@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## minimap2 modulefile
+## fastqc modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tminimap2 - Adds minimap2 to your path"
+        puts stderr "\tfastqc - Adds fastqc to your path"
 }
 
-module-whatis	"minimap2-2.0"
+module-whatis	"fastqc-0.11.7"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,9 +19,8 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+#module load java 
 
-prepend-path    PATH            ${iigb_modules}/minimap2/2.0/bin
-prepend-path    MANPATH         ${iigb_modules}/minimap2/2.0/share/man
+prepend-path    PATH    ${iigb_modules}/fastqc/0.11.7
 
-module		use		${modules_dir}
-
+module use ${modules_dir}

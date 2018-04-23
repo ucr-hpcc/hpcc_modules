@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tminimap2 - Adds minimap2 to your path"
 }
 
-module-whatis	"minimap2-2.0"
+module-whatis	"minimap2-2.10"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,8 +20,8 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/minimap2/2.0/bin
-prepend-path    MANPATH         ${iigb_modules}/minimap2/2.0/share/man
+prepend-path    PATH            ${iigb_modules}/minimap2/2.10/bin
+prepend-path    MANPATH         ${iigb_modules}/minimap2/2.10/share/man
 
 module		use		${modules_dir}
 
