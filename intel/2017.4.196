@@ -27,6 +27,5 @@ prepend-path    MANPATH            ${iigb_modules}/intel/mkl/2017.2.174/man:${ii
 #prepend-path    INTEL_LICENSE_FILE ${iigb_modules}/intel/fce/10.1.015/licenses:${iigb_modules}/intel/licenses
 #setenv          MKL_ROOT           ${iigb_modules}/intel/mkl/10.0.3.020
 #setenv          MKLROOT           ${iigb_modules}/intel/mkl/10.0.3.020
-
-module		use		${modules_dir}
+setenv     INTEL_LICENSE_FILE     "28519@intel-lic"
 
