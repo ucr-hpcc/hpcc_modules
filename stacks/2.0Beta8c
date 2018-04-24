@@ -22,11 +22,6 @@ set     datarootdir     ${prefix}/share
 module load extra
 module load GCCcore/4.9.3
 
+prepend-path    PATH    ${iigb_modules}/stacks/2.0Beta8c/bin
 
-prepend-path    PATH            ${iigb_modules}/stacks/2.0Beta8c/bin
-#prepend-path    LIBRARY_PATH    ${iigb_modules}/stacks/2.0Beta8c/lib
-#prepend-path    CPATH           ${iigb_modules}/stacks/2.0Beta8c/include
-prepend-path    MANPATH         ${iigb_modules}/stacks/2.0Beta8c/share/man
-
-module          use             ${modules_dir}
-
+module use ${modules_dir}

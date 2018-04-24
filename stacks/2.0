@@ -1,6 +1,6 @@
 #%Module1.0#####################################################################
 ##
-## stacks modulefile
+## Stacks 2.0 modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tstacks - Adds stacks to your path"
 }
 
-module-whatis   "stacks-1.19"
+module-whatis   "stacks-2.0"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,6 +19,9 @@ set     prefix          ${modules_dir}/${version}
 set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
-prepend-path    PATH    ${iigb_modules}/stacks/1.19/bin
+module load extra
+module load GCCcore/6.3.0
+
+prepend-path    PATH    ${iigb_modules}/stacks/2.0/bin
 
 module use ${modules_dir}
