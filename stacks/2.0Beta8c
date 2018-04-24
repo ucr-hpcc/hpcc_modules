@@ -1,6 +1,6 @@
 #%Module1.0#####################################################################
 ##
-## Stacks 2.0 modulefile
+## Stacks 2.0Beta8c modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tstacks - Adds stacks to your path"
 }
 
-module-whatis   "stacks-2.0"
+module-whatis   "stacks-2.0Beta8c"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -23,10 +23,10 @@ module load extra
 module load GCCcore/4.9.3
 
 
-prepend-path    PATH            ${iigb_modules}/stacks/2.0/bin
-#prepend-path    LIBRARY_PATH    ${iigb_modules}/stacks/2.0/lib
-#prepend-path    CPATH           ${iigb_modules}/stacks/2.0/include
-prepend-path    MANPATH         ${iigb_modules}/stacks/2.0/share/man
+prepend-path    PATH            ${iigb_modules}/stacks/2.0Beta8c/bin
+#prepend-path    LIBRARY_PATH    ${iigb_modules}/stacks/2.0Beta8c/lib
+#prepend-path    CPATH           ${iigb_modules}/stacks/2.0Beta8c/include
+prepend-path    MANPATH         ${iigb_modules}/stacks/2.0Beta8c/share/man
 
 module          use             ${modules_dir}
 
