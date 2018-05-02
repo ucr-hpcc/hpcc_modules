@@ -19,6 +19,7 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+module load ruby/2.3.0
 
 prepend-path    PATH   		${iigb_modules}/flo/74d9f37
 setenv FLO_PATH ${iigb_modules}/flo/74d9f37
