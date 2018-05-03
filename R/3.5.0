@@ -1,0 +1,31 @@
+#%Module1.0#####################################################################
+##
+## R modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds R 3 to your path"
+}
+
+module-whatis   "R-3.5.0"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set     version         3.4.2
+set     prefix          ${modules_dir}/${version}
+set     exec_prefix     ${prefix}
+set     datarootdir     ${prefix}/share
+
+prepend-path    PATH            ${iigb_modules}/R/3.5.0/bin
+prepend-path    MANPATH         ${iigb_modules}/R/3.5.0/share/man
+prepend-path    CPATH           ${iigb_modules}/R/3.5.0/lib64/R/include
+prepend-path    LIBRARY_PATH    ${iigb_modules}/R/3.5.0/lib64/R/lib
+prepend-path    LD_LIBRARY_PATH ${iigb_modules}/R/3.5.0/lib64/R/lib
+
+module          load            ggobi
+module          load            pandoc
+module          use             ${modules_dir}
+
