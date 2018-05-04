@@ -86,6 +86,7 @@ biocLite('rgeos')
 #### rJava
 Set paths in order to install rJava (ie. LD_LIBRARY_PATH=/path/to/libjvm.so):
 ```bash
+module load java/8
 R CMD javareconf -e 
 ```
 ```r
