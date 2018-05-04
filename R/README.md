@@ -134,7 +134,8 @@ openbabel-lib=/opt/linux/centos/7.x/x86_64/pkgs/openbabel/2.3.2/lib' ChemmineOB_
 #### Install Rmpi
 Download latest Rmpi version using wget. Make sure you have the proper R version loaded and then run the following:
 ```r
-R CMD INSTALL Rmpi_0.6-6.tar.gz --configure-args=--with-mpi=/opt/linux/centos/7.x/x86_64/pkgs/openmpi/2.0.1-slurm-16.05.4/
+wget http://www.stats.uwo.ca/faculty/yu/Rmpi/download/linux/Rmpi_0.6-7.tar.gz
+R CMD INSTALL Rmpi_0.6-7.tar.gz --configure-args=--with-mpi=/opt/linux/centos/7.x/x86_64/pkgs/openmpi/2.0.1-slurm-16.05.4/
 ```
 
 ### Upgrading R Version on RStudio Server
