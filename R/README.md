@@ -116,6 +116,7 @@ install_github("cran/setwidth")
 install_github("jalvesaq/colorout")
 install_github("cran/Geneland")
 install_github("RenvCheck", "ucr-bioinformatics")
+devtools::install_github("cmap/cmapR")
 ```
 
 #### ChemmineOB
