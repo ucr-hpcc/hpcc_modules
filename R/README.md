@@ -138,6 +138,14 @@ wget http://www.stats.uwo.ca/faculty/yu/Rmpi/download/linux/Rmpi_0.6-7.tar.gz
 R CMD INSTALL Rmpi_0.6-7.tar.gz --configure-args=--with-mpi=/opt/linux/centos/7.x/x86_64/pkgs/openmpi/2.0.1-slurm-16.05.4/
 ```
 
+#### Install ChipSeek
+First get the units and udunits2 prereqs.
+```bash
+install.packages("udunits2",configure.args='--with-udunits2-include=/usr/include/udunits2')
+biocLite("ChIPseeker")
+```
+
+
 ### Upgrading R Version on RStudio Server
 Modify paths in the following files:
 ```
