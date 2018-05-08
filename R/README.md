@@ -117,6 +117,7 @@ install_github("jalvesaq/colorout")
 install_github("cran/Geneland")
 install_github("RenvCheck", "ucr-bioinformatics")
 install_github('Sage-Bionetworks/rSynapseClient', ref='develop')
+devtools::install_github("yduan004/drugbankR")
 install.packages("http://hartleys.github.io/QoRTs/QoRTs_LATEST.tar.gz",repos=NULL,type="source")
 devtools::install_github("cmap/cmapR")
 ```
