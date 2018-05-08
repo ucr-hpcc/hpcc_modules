@@ -25,5 +25,6 @@ module  load    mpich
 module  load    boost/1.64.0
 
 prepend-path    PATH    ${iigb_modules}/silix/1.2.9-mpich/bin
+prepend-path    MANPATH ${iigb_modules}/silix/1.2.9-mpich/share/man
 
 module use ${modules_dir}
