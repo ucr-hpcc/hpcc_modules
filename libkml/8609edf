@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## epsilon modulefile
+## libkml modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tepsilon - Adds epsilon to your path"
+        puts stderr "\tlibkml - Adds libkml to your path"
 }
 
-module-whatis	"epsilon-0.9.2"
+module-whatis	"libkml-8609edf"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,8 +19,8 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path    PATH                ${iigb_modules}/epsilon/0.9.2/bin
-prepend-path    CPATH               ${iigb_modules}/epsilon/0.9.2/include
-prepend-path    LD_LIBRARY_PATH     ${iigb_modules}/epsilon/0.9.2/lib
+prepend-path    CPLUS_INCLUDE_PATH  ${iigb_modules}/libkml/8609edf/include
+prepend-path    LD_LIBRARY_PATH     ${iigb_modules}/libkml/8609edf/lib
+prepend-path    PYTHONPATH          ${iigb_modules}/libkml/8609edf/lib/python2.7/site-packages
 
 module use ${modules_dir}
