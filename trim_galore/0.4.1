@@ -22,7 +22,9 @@ set	datarootdir	${prefix}/share
 module load perl
 module unload miniconda2
 module unload miniconda3
-module switch python/2.7.5
+module unload python
+module load python/2.7.5
+prereq python/2.7.5
 
 prepend-path    PATH            ${iigb_modules}/trim_galore/0.4.1/
 
