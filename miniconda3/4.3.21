@@ -19,8 +19,10 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+# All python versions need to be unloaded
+conflict    python
+conflict    anaconda
+conflict    miniconda
 
 prepend-path    PATH              ${iigb_modules}/miniconda3/4.3.21/bin
-
-module		use		${modules_dir}
 
