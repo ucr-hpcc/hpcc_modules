@@ -19,13 +19,7 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module unload perl
-module unload perl
-module load perl/5.22.0
-module unload python
-module load python/2.7.5
-
-prereq  python/2.7.5
+prereq  python/2.7.14
 prereq  perl/5.22.0
 
 module  load    RepeatMasker/4-0-7
