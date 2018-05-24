@@ -19,7 +19,8 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module switch perl/5.22.0
+module unload perl
+module load perl/5.22.0
 prereq perl/5.22.0
 module load java/8u25
 module load bowtie2
