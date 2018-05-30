@@ -21,6 +21,6 @@ set	datarootdir	${prefix}/share
 
 prereq          velvet/1.2.10
 
-prepend-path    PATH    ${iigb_modules}/oases/0.2.09
+prepend-path    PATH    ${iigb_modules}/oases/0.2.09:${iigb_modules}/oases/0.2.09/scripts
 
 module          use     ${modules_dir}
