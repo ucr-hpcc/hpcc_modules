@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## phobius modulefile
+## SPAdes modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tphobius - Adds phobius to your path"
+        puts stderr "\tSPAdes - Adds spades, spades.py to your path"
 }
 
-module-whatis	"phobius-3.1"
+module-whatis	"SPAdes-3.12.0"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,8 +19,7 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module load signalp
-prepend-path    PATH            ${iigb_modules}/phobius/1.01/bin
 
+prepend-path    PATH            ${iigb_modules}/SPAdes/3.12.0/bin
 module		use		${modules_dir}
 
