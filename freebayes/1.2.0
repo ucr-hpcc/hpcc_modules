@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tfreebayes - Adds freebayes to your path"
 }
 
-module-whatis   "freebayes-1.1.0"
+module-whatis   "freebayes-1.2.0"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,7 +20,7 @@ set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/freebayes/1.1.0/bin
+prepend-path    PATH            ${iigb_modules}/freebayes/1.2.0/bin
 
 module          use             ${modules_dir}
 
