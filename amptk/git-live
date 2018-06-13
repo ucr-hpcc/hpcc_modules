@@ -5,7 +5,7 @@
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tufits - Adds amptk (formerly ufits) ITS pipeline to your path"
+        puts stderr "\tamptk - Adds amptk (formerly ufits) ITS pipeline to your path"
 }
 
 module-whatis	"amptk-git-live"
