@@ -23,6 +23,6 @@ set     datarootdir     ${prefix}/share
 prepend-path    PATH            ${iigb_modules}/freebayes/1.2.0/scripts
 prepend-path    PATH            ${iigb_modules}/freebayes/1.2.0/bin
 prepend-path    PATH            ${iigb_modules}/freebayes/1.2.0/vcflib/bin
-prepend-path    PATH            ${iigb_modules}/freebayes/1.2.0/bamtools/bin
+prepend-path    LD_LIBRARY_PATH ${iigb_modules}/freebayes/1.2.0/lib/bamtools
 module          use             ${modules_dir}
 
