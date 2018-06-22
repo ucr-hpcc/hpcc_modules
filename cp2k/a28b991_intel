@@ -1,0 +1,38 @@
+#%Module1.0#####################################################################
+##
+## samtools modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tsamtools- Adds samtools to your path"
+}
+
+module-whatis	"samtools-1.8"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+module unload openmpi
+conflict openmpi
+module unload intel
+module load intel/2017.4.196
+prereq intel/2017.4.196
+
+prepend-path  PATH        ${iigb_modules}/cp2k/a28b991_intel/src/cp2k/exe/Linux-x86-64-intelx
+setenv        CP2K_PATH   ${iigb_modules}/cp2k/a28b991_intel/src/cp2k
+
+if { [module-info mode load] || [module-info mode switch2] } {
+        puts stdout "source ${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/bin/compilervars.sh intel64;"
+        puts stdout "source ${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/mkl/bin/mklvars.sh intel64;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+        puts stdout ""
+}
+
+module use ${modules_dir}
