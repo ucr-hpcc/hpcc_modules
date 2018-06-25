@@ -25,7 +25,8 @@ module unload intel
 module load intel/2017.4.196
 prereq intel/2017.4.196
 
-prepend-path  PATH        ${iigb_modules}/cp2k/a28b991_intel/src/cp2k/exe/Linux-x86-64-intelx
+
+prepend-path  PATH        ${iigb_modules}/cp2k/a28b991_intel/src/cp2k/exe/Linux-x86-64-intelx:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/bin:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/mkl/bin:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/mpi/intel64/bin
 setenv        CP2K_PATH   ${iigb_modules}/cp2k/a28b991_intel/src/cp2k
 
 if { [module-info mode load] || [module-info mode switch2] } {
