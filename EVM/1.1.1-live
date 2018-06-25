@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tEVidenceModeler - Adds EVM for gene prediction consensus calling to your path"
 }
 
-module-whatis	"EVidenceModeler-1.1.1"
+module-whatis	"EVidenceModeler-1.1.1-live"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,7 +19,8 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path    PATH            ${iigb_modules}/EVM/1.1.1
-setenv EVM_HOME ${iigb_modules}/EVM/1.1.1
+
+prepend-path    PATH            ${iigb_modules}/EVM/1.1.1-live
+setenv          EVM_HOME        ${iigb_modules}/EVM/1.1.1-live
 
 module  use     ${modules_dir}
