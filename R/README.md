@@ -161,4 +161,3 @@ Modify paths in the following files:
 And lastly, and most important:
 ```ln -s /opt/linux/centos/7.x/x86_64/pkgs/R/3.4.2/lib64/R/lib/* /lib64/```
 
-test
