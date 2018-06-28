@@ -23,3 +23,22 @@ scons -j 12 && scons install
 module load boost/1.64.0
 /rhome/USERNAME/bigdata/casm/bin/casm -h
 ```
+
+
+
+
+## non-scons install
+
+```bash
+USERNAME=$USER
+cd /rhome/USERNAME/bigdata
+module load python
+wget https://github.com/prisms-center/CASMcode/releases/download/v0.2.1/casm-v0.2.1.tar.gz
+mkdir /rhome/USERNAME/bigdata/casm-src
+tar -zxf casm-v0.2.1.tar.gz -C /rhome/USERNAME/bigdata/casm-src
+cd /rhome/USERNAME/bigdata/casm-src/casm-v0.2.1
+module load boost/1.64.0
+./configure --with-boost=/opt/linux/centos/7.x/x86_64/pkgs/boost/1.64.0/ --prefix=/rhome/USERNAME/bigdata/casm-bin
+make -j 8 && make install
+/rhome/USERNAME/bigdata/casm-bin/bin/casm
+```
