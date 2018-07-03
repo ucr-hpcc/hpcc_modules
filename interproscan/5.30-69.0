@@ -23,7 +23,7 @@ prepend-path    PATH            ${iigb_modules}/interproscan/5.30-69.0
 prepend-path    LD_LIBRARY_PATH ${iigb_modules}/interproscan/5.30-69.0/lib
 module		use		${modules_dir}
 
-module unload python
-module load python/3
 module load signalp
 module load java/8
+#technically we need to do module load python/3 but instead this is being done in .sh file so that 
+#python2 and python3 can coexist for tools which shell out this program (e.g. funannotate iprscan)
