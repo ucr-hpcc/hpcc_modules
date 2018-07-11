@@ -52,8 +52,6 @@ module  load    PASA
 module  load    eggnog-mapper
 module  load    minimap2
 module  load    etetoolkit
-module unload miniconda2
-module  load    miniconda3
 
 prepend-path    PATH        ${iigb_modules}/funannotate/git-live
 prepend-path    PATH        ${iigb_modules}/funannotate/git-live/bin
