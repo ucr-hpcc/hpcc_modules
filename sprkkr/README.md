@@ -13,6 +13,7 @@ mkdir $SRC_ROOT
 mv /wherever/the/source/code/lives/PUB7.7.1_170921_09h44.tar.gz $SRC_ROOT/
 cd $SRC_ROOT
 tar -xf PUB7.7.1_170921_09h44.tar.gz
+```
 
 ## Edit make.inc
 Here are the values used in the latested compilation:
