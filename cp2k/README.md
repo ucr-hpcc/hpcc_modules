@@ -10,7 +10,7 @@
 ## Compile
 First, you need to request an interactive job:
 ```bash
-srun -p short -c 4 --pty bash -l
+srun -p short -c 4 --license=intel:1 --pty bash -l
 ```
 
 Next, follow the installtion guides for all the dependencies (libint, libxc, and elpa) outlined [here](https://xconfigure.readthedocs.io/en/latest/cp2k/README/).
