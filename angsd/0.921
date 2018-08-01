@@ -19,6 +19,9 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+module unload htslib
+module load htslib
+prereq htslib
 
 prepend-path    PATH   		${iigb_modules}/angsd/0.921/bin
 
