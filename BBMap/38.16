@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## singularity modulefile
+## Hub modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tsingularity - Adds singularity to your path"
+        puts stderr "\t - Adds BBMap tools to your path"
 }
 
-module-whatis   "singularity-2.5.1"
+module-whatis   "BBMap-38.16"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,7 +19,7 @@ set     prefix          ${modules_dir}/${version}
 set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
-prepend-path    PATH            ${iigb_modules}/singularity/2.5.1/bin
-prepend-path    MANPATH         ${iigb_modules}/singularity/2.5.1/share/man
+prepend-path     PATH             ${iigb_modules}/BBMap/38.16
 
-module          use             ${modules_dir}
+module           use              ${modules_dir}
+

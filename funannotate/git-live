@@ -52,6 +52,7 @@ module  load    PASA
 module  load    eggnog-mapper
 module  load    minimap2
 module  load    etetoolkit
+module  load    python/2.7.14
 
 prepend-path    PATH        ${iigb_modules}/funannotate/git-live
 prepend-path    PATH        ${iigb_modules}/funannotate/git-live/bin
