@@ -1,4 +1,4 @@
-#INSTALL
+## INSTALL
 
 Download and convert the docker image to singularity.
 
@@ -19,7 +19,7 @@ module load singularity
 singularity run -B /bigdata /opt/linux/centos/7.x/x86_64/pkgs/chloroextractor/1.0.5/chloroextractorteam_chloroextractor-2018-07-11-d50410d78bf9.img $@
 ```
 
-#Running Chloroextractor
+## Running Chloroextractor
 
 ```bash
 module load chloroextractor/1.0.5
