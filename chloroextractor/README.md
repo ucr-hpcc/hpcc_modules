@@ -47,3 +47,5 @@ example bash submission script:
 module load chloroextractor/1.0.5
 ptx -1 SRR5216995_1M_1.fastq -2 SRR5216995_1M_2.fastq -d output
 ```
+
+# test
