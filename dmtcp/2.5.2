@@ -19,10 +19,7 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module load htslib/2.5.2
 prepend-path    PATH              ${iigb_modules}/dmtcp/2.5.2/bin
-#prepend-path    LD_LIBRARY_PATH   ${iigb_modules}/dmtcp/1.4.1/htslib/lib
-prepend-path	MANPATH		  ${iigb_modules}/dmtcp/2.5.2/share/man
-setenv	SAMTOOLS_PATH	${iigb_modules}/dmtcp/2.5.2/bin
-module		use		${modules_dir}
+prepend-path    LD_LIOBRARY_PATH  ${iigb_modules}/dmtcp/2.5.2/lib
+prepend-path    MANPATH           ${iigb_modules}/dmtcp/2.5.2/share/man
 
