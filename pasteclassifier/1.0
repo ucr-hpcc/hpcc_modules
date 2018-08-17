@@ -21,10 +21,11 @@ set	datarootdir	${prefix}/share
 
 conflict python
 conflict anaconda
-conflict miniconda
+conflict miniconda2
+conflict miniconda3
 
 module load ncbi-blast
-module load hmmer3
+module load hmmer
 module load trf
 
 prepend-path    PATH    ${iigb_modules}/pasteclassifier/1.0/bin
