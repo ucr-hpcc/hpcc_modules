@@ -100,3 +100,25 @@ ExaBayes_bipartitionBranchLengths.tmp
 
 ExaBayes_bipartitionStatistics.tmp 
 * contains statistics for each branch (specifically the ESS and PSRF)
+
+
+## Example submission script
+
+This is an exmaple submission script that runs Exabayes in mpi mode using the sample data set.
+
+```bash
+#!/bin/bash -l
+
+#SBATCH --nodes=4
+#SBATCH --ntasks=16
+#SBATCH --job-name="exabayes test mpi"
+#SBATCH -p short,intel
+
+#SBATCH --time=02:00:00
+
+
+module load exabayes
+
+mpirun -np 16 exabayes -f aln.phy -q aln.part -n myRun -s $RANDOM -c config.nex -R 4
+
+```
