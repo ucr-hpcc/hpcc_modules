@@ -23,12 +23,23 @@ set	datarootdir	${prefix}/share
 prepend-path    PATH   		       ${iigb_modules}/intel/2018/bin::${iigb_modules}/intel/2018/compilers_and_libraries_2018.0.128/linux/mkl/bin:${iigb_modules}/intel/2018/compilers_and_libraries_2018.0.128/linux/mpi/intel64/bin
 prepend-path    MANPATH            ${iigb_modules}/intel/2018/man/common
 
+set shell [module-info shell]
+
 if { [module-info mode load] || [module-info mode switch2] } {
+    if { $shell == "bash" } {
         puts stdout "source ${iigb_modules}/intel/2018/bin/compilervars.sh intel64;"
         puts stdout "source ${iigb_modules}/intel/2018/bin/iccvars.sh intel64;"
         puts stdout "source ${iigb_modules}/intel/2018/bin/ifortvars.sh intel64;"
         puts stdout "source ${iigb_modules}/intel/2018/compilers_and_libraries_2018.0.128/linux/mkl/bin/mklvars.sh intel64;"
         puts stdout "source ${iigb_modules}/intel/2018/compilers_and_libraries_2018.0.128/linux/mpi/intel64/bin/mpivars.sh intel64;"
+    }
+    if { $shell == "bash" } {
+        puts stdout "source ${iigb_modules}/intel/2018/bin/compilervars.csh intel64;"
+        puts stdout "source ${iigb_modules}/intel/2018/bin/iccvars.csh intel64;"
+        puts stdout "source ${iigb_modules}/intel/2018/bin/ifortvars.csh intel64;"
+        puts stdout "source ${iigb_modules}/intel/2018/compilers_and_libraries_2018.0.128/linux/mkl/bin/mklvars.csh intel64;"
+        puts stdout "source ${iigb_modules}/intel/2018/compilers_and_libraries_2018.0.128/linux/mpi/intel64/bin/mpivars.csh intel64;"
+    }
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
         puts stdout ""
 }
