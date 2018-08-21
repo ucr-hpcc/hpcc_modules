@@ -91,9 +91,12 @@ Thus, you obtain the following files:
 
 ExaBayes_bipartitions.tmp 
 * contains an identifier for each branch/split (that is explicitly printed)
+
 ExaBayes_fileNames.tmp 
 * lists the file names used as input (and assigned an id to them)
+
 ExaBayes_bipartitionBranchLengths.tmp 
 * contains all raw branch lengths sampled and lists split id and file ids
+
 ExaBayes_bipartitionStatistics.tmp 
 * contains statistics for each branch (specifically the ESS and PSRF)
