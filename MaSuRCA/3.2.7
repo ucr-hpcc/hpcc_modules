@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tMaSuRCA- Adds MaSuRCA assembler tools to your path"
 }
 
-module-whatis	"MaSuRCA-3.2.3"
+module-whatis	"MaSuRCA-3.2.7"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,8 +20,8 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 module load parallel
-prepend-path    PATH            ${iigb_modules}/MaSuRCA/3.2.3/bin
-prepend-path    PATH            ${iigb_modules}/MaSuRCA/3.2.3/CA/Linux-amd64/bin
-prepend-path	LD_RUN_PATH	${iigb_modules}/MaSuRCA/3.2.3/lib
+prepend-path    PATH            ${iigb_modules}/MaSuRCA/3.2.7/bin
+prepend-path    PATH            ${iigb_modules}/MaSuRCA/3.2.7/CA/Linux-amd64/bin
+prepend-path	LD_RUN_PATH	${iigb_modules}/MaSuRCA/3.2.7/lib:${iigb_modules}/MaSuRCA/3.2.7/lib/perl
 module		use		${modules_dir}
 
