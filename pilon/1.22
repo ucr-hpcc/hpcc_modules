@@ -23,6 +23,7 @@ module load java/8
 
 setenv          PILONDIR	${iigb_modules}/pilon/1.22
 setenv          PILON	${iigb_modules}/pilon/1.22/pilon-1.22.jar
+prepend-path	PATH	${iigb_modules}/pilon/1.22
 
 module          use            ${modules_dir}
 
