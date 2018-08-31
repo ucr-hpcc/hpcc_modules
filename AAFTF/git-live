@@ -32,6 +32,6 @@ module load minimap2
 module load pilon
 
 setenv	AAFTF_DB	/srv/projects/db/AAFTF_DB
-prepend-path    PATH            ${iigb_modules}/AAFTF/script
+prepend-path    PATH            ${iigb_modules}/AAFTF/scripts
 
 module use ${modules_dir}
