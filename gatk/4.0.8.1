@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tgatk - Adds gatk to your path"
 }
 
-module-whatis	"gatk-4.beta.2"
+module-whatis	"gatk-4.0.8.1"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -22,9 +22,8 @@ set	datarootdir	${prefix}/share
 module unload java
 module load java/8
 
-prepend-path    PATH        ${iigb_modules}/gatk/4.beta.2
+prepend-path    PATH        ${iigb_modules}/gatk/4.0.8.1
 
-setenv          GATKDIR     ${iigb_modules}/gatk/4.beta.2
-#setenv  GATK        ${iigb_modules}/gatk/4.beta.2/GenomeAnalysisTK.jar 
+setenv          GATKDIR     ${iigb_modules}/gatk/4.0.8.1
 
 module use ${modules_dir}
