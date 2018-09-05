@@ -21,8 +21,10 @@ set	datarootdir	${prefix}/share
 
 # All python versions need to be unloaded
 conflict    python
-conflict    anaconda
-conflict    miniconda
+conflict    anaconda2
+conflict    miniconda2
+conflict    anaconda3
+conflict    miniconda3
 
 prepend-path    PATH              ${iigb_modules}/anaconda3/4.5.4/bin
 
