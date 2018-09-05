@@ -20,6 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 setenv	SNPEFFJAR	${iigb_modules}/snpEff/4.3r/snpEff/snpEff.jar
+setenv	SNPEFFDIR	${iigb_modules}/snpEff/4.3r/snpEff
 setenv	SNPSIFTJAR	${iigb_modules}/snpEff/4.3r/snpEff/SnpSift.jar
 
 module		use		${modules_dir}
