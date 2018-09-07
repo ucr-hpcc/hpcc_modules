@@ -33,7 +33,7 @@ if { [module-info mode load] || [module-info mode switch2] } {
         puts stdout "source ${iigb_modules}/intel/2018/compilers_and_libraries_2018.0.128/linux/mkl/bin/mklvars.sh intel64;"
         puts stdout "source ${iigb_modules}/intel/2018/compilers_and_libraries_2018.0.128/linux/mpi/intel64/bin/mpivars.sh intel64;"
     }
-    if { $shell == "bash" } {
+    if { $shell == "csh" } {
         puts stdout "source ${iigb_modules}/intel/2018/bin/compilervars.csh intel64;"
         puts stdout "source ${iigb_modules}/intel/2018/bin/iccvars.csh intel64;"
         puts stdout "source ${iigb_modules}/intel/2018/bin/ifortvars.csh intel64;"
