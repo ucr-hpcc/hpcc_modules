@@ -1,4 +1,5 @@
 # Dependencies
+## GNU
 There were a few dependencies:
     1. liblapack.a
     2. librefblas.a
@@ -19,6 +20,14 @@ It should automatically create the other 2 libraries (assuming that the correspo
 
 I also built scalapack.
 
+## Intel
+I had to build the fftw3xf interface from the Intel's MKL.
+
+```bash
+cd ${MKLROOT}/interfaces/fftw3xf
+make libintel64
+```
+
 ## Build
 Apply patches:
 ```
@@ -28,21 +37,28 @@ patch -p0 patch.5.4.1.08072015
 patch -p1 patch.5.4.1.27082015
 patch -p0 patch.5.4.1.06112015
 ```
-Build VASP:
+Link makefile, make edits to makefile and then build:
 ```
 ln -s arch/makefile.include.linux_gfortran makefile.include
-vim makefile.include #Set LIBDIR
+# OR
+#ln -s arch/makefile.include.linux_intel makefile.include
+
+#Set LIBDIR, INCS, OBJECTS, and possibly many other things, refer to example makefiles below
+vim makefile.include 
+
+# Build
 make
 ```
 
 ### Install
+Set your install path to the location of where you want Vasp to be installed, then do the following:
 ```
-mkdir -p /opt/linux/centos/7.x/x86_64/pkgs/vasp
-mv vasp-5.4.1 /opt/linux/centos/7.x/x86_64/pkgs/vasp/5.4.1
+mkdir -p ${INSTALL_PATH}/vasp
+mv vasp-5.4.1 ${INSTALL_PATH}/vasp/5.4.1
 ```
 
-### Example Make Files
-## GNU
+## Example makefiles
+### GNU
 ```
 # Precompiler options
 CPP_OPTIONS= -DMPI -DHOST=\"IFC91_ompi\" -DIFC \
@@ -92,7 +108,7 @@ OBJECTS_LIB= linpack_double.o getshmem.o
 SRCDIR     = ../../src
 BINDIR     = ../../bin
 ```
-## Intel
+### Intel
 ```
 # Precompiler options
 CPP_OPTIONS= -DMPI -DHOST=\"IFC91_ompi\" -DIFC \
