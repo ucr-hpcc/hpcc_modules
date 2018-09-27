@@ -43,7 +43,7 @@ module  load    tRNAscan
 module  load    proteinortho
 module  load    kent
 module  load    signalp
-module  load    diamond
+module  load    diamond/0.9.18
 module  load    fasta
 module  load    trinity-rnaseq
 module  load    hisat2
