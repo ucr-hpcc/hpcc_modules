@@ -19,8 +19,6 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module load htslib/8.12.0
-
 prepend-path    PATH            ${iigb_modules}/nodejs/8.12.0/bin
 prepend-path    MANPATH         ${iigb_modules}/nodejs/8.12.0/share/man
 
