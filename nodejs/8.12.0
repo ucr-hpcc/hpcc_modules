@@ -24,6 +24,3 @@ module load htslib/8.12.0
 prepend-path    PATH            ${iigb_modules}/nodejs/8.12.0/bin
 prepend-path    MANPATH         ${iigb_modules}/nodejs/8.12.0/share/man
 
-setenv          SAMTOOLS_PATH   ${iigb_modules}/nodejs/8.12.0/bin
-
-module use ${modules_dir}
