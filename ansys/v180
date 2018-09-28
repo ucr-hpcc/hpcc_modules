@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH              ${iigb_modules}/ansys/ansys_inc/v180/Framework/bin:${iigb_modules}/ansys/ansys_inc/v180/aisol/bin:${iigb_modules}/ansys/ansys_inc/v180/CFX/bin:${iigb_modules}/ansys/ansys_inc/v180/fluent/bin:${iigb_modules}/ansys/ansys_inc/v180/CFD-Post/bin:${iigb_modules}/ansys/ansys_inc/v180/TurboGrid/bin:${iigb_modules}/ansys/ansys_inc/v180/polyflow/bin:${iigb_modules}/ansys/ansys_inc/v180/RSM/bin:${iigb_modules}/ansys/ansys_inc/v180/fensapice/bin:${iigb_modules}/ansys/ansys_inc/v180/Icepak/bin:${iigb_modules}/ansys/ansys_inc/v180/EKM/bin:${iigb_modules}/ansys/ansys_inc/shared_files/licensing/lic_admin/bin
+prepend-path    PATH              ${iigb_modules}/ansys/ansys_inc/v180/Framework/bin:${iigb_modules}/ansys/ansys_inc/v180/aisol/bin:${iigb_modules}/ansys/ansys_inc/v180/CFX/bin:${iigb_modules}/ansys/ansys_inc/v180/fluent/bin:${iigb_modules}/ansys/ansys_inc/v180/CFD-Post/bin:${iigb_modules}/ansys/ansys_inc/v180/TurboGrid/bin:${iigb_modules}/ansys/ansys_inc/v180/polyflow/bin:${iigb_modules}/ansys/ansys_inc/v180/RSM/bin:${iigb_modules}/ansys/ansys_inc/v180/fensapice/bin:${iigb_modules}/ansys/ansys_inc/v180/Icepak/bin:${iigb_modules}/ansys/ansys_inc/v180/EKM/bin:${iigb_modules}/ansys/ansys_inc/shared_files/licensing/lic_admin/bin:${iigb_modules}/ansys/ansys_inc/v180/fluent/fluent18.0.0/multiport/mpi_wrapper/bin
 prepend-path    LD_LIBRARY_PATH   ${iigb_modules}/ansys/ansys_inc/v180/aisol/lib:${iigb_modules}/ansys/ansys_inc/v180/CFX/lib:${iigb_modules}/ansys/ansys_inc/v180/fluent/lib:${iigb_modules}/ansys/ansys_inc/v180/CFD-Post/lib:${iigb_modules}/ansys/ansys_inc/v180/TurboGrid/lib
 
 module		use		${modules_dir}
