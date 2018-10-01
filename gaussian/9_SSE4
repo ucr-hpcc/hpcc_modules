@@ -21,6 +21,7 @@ set	datarootdir	${prefix}/share
 
 setenv          g09root         ${iigb_modules}/gaussian/9_SSE4
 setenv          GAUSS_SCRDIR    /tmp/
+setenv          GAUSS_EXEDIR    ${iigb_modules}/gaussian/9_SSE4
 
 prepend-path    PATH            ${iigb_modules}/gaussian/9_SSE4
 
