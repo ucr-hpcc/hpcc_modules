@@ -20,7 +20,6 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 module load python/2.7.12
-
 module  load    RepeatMasker/4-0-7
 module  load    ncbi-rmblast
 module  load    augustus/3.3
@@ -54,6 +53,8 @@ module  load    PASA
 module  load    eggnog-mapper
 module  load    minimap2
 module  load    etetoolkit
+module  unload	samtools
+module  load 	samtools/1.8
 
 prepend-path    PATH        ${iigb_modules}/funannotate/git-live
 prepend-path    PATH        ${iigb_modules}/funannotate/git-live/bin
