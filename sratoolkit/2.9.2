@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## eggnog-mapper modulefile
+## sratoolkit modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\teggnog-mapper - Adds eggnog-mapper to your path"
+        puts stderr "\tsratoolkit - Adds sratoolkit tools to your path"
 }
 
-module-whatis	"eggnog-mapper-1.0.3"
+module-whatis	"sratoolkit-2.9.2"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,8 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/eggnog-mapper/1.0.3
+prepend-path    PATH   		${iigb_modules}/sratoolkit/2.9.2/bin
 
 module		use		${modules_dir}
 
-module load diamond/0.9.22
