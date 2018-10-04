@@ -21,6 +21,7 @@ set	datarootdir	${prefix}/share
 
 module load intel/2018
 
-prepend-path    PATH            ${iigb_modules}/alamode/74ab849/bin
-prepend-path    MANPATH         ${iigb_modules}/alamode/74ab849/share/man
+prepend-path    PATH            ${iigb_modules}/alamode/74ab849/alm
+prepend-path    PATH            ${iigb_modules}/alamode/74ab849/anphon
+prepend-path    PATH            ${iigb_modules}/alamode/74ab849/tools
 
