@@ -68,10 +68,6 @@ Here is the following patch for the relevant changes:
 <     xc = '/home/user/libxc-4.0.4/'
 ---
 >     xc = '/opt/linux/centos/7.x/x86_64/pkgs/libxc/4.2.3/'
-81c85
-< if 0:
----
-> if 1:
 ```
 
 ## Compile amd Install
