@@ -12,6 +12,13 @@ After you have been allocated a node then you may proceed with the installation 
 module unload python miniconda2 miniconda3 anaconda2
 module load anaconda3
 ```
+## Conda Paths
+Conda can get very large, so it is best to place the installs under a bigdata space.
+```
+export CONDA_ENVS_PATH=/rhome/$USER/shared/.conda/envs
+export CONDA_PKGS_DIRS=/rhome/$USER/shared/.conda/pkgs
+```
+The above export lines should also be placed in `~/.bashrc` file, thus making them permanent.
 
 ## Create Environment
 ```bash
