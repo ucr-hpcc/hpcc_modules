@@ -13,10 +13,10 @@ module unload python miniconda2 miniconda3 anaconda2
 module load anaconda3
 ```
 ## Conda Paths
-Conda can get very large, so it is best to place the installs under a bigdata space.
+Conda can get very large, so it is best to place the installs under a shared bigdata space.
 ```
-export CONDA_ENVS_PATH=/rhome/$USER/shared/.conda/envs
-export CONDA_PKGS_DIRS=/rhome/$USER/shared/.conda/pkgs
+export CONDA_ENVS_PATH=/bigdata/$GROUP/shared/.conda/envs
+export CONDA_PKGS_DIRS=/bigdata/$GROUP/shared/.conda/pkgs
 ```
 The above export lines should also be placed in `~/.bashrc` file, thus making them permanent.
 
@@ -63,7 +63,7 @@ Here is the following patch for the relevant changes:
 36a37,40
 > libraries = ['blas', 'lapack']
 > library_dirs = ['/lib64']
-> include_dirs = ['/opt/linux/centos/7.x/x86_64/pkgs/libxc/4.2.3/include','/rhome/jhayes/bigdata/.conda/envs/gpaw/lib/python3.4/site-packages/numpy/core/include']
+> include_dirs = ['/opt/linux/centos/7.x/x86_64/pkgs/libxc/4.2.3/include','/bigdata/YOUR_GROUP_NAME/shared/.conda/envs/gpaw/lib/python3.4/site-packages/numpy/core/include']
 >
 52,53c56,57
 < if 0:
@@ -85,14 +85,14 @@ python3 setup.py install
 # Datasets
 Install datasets
 ```bash
-gpaw install-data ~/bigdata/gpaw-setups
+gpaw install-data /bigdata/$GROUP/shared/gpaw-setups
 ```
 
 # Tests
 ## Non- Parallel
 Run single threaded tests
 ```
-export GPAW_SETUP_PATH=~/bigdata/gpaw-setups
+export GPAW_SETUP_PATH=/bigdata/$GROUP/shared/gpaw-setups
 export mpi_warn_on_fork=0
 gpaw test
 ```
@@ -110,4 +110,21 @@ mpiexec -np 4 gpaw-python -m gpaw test
 This does NOT work for some reason, even though it should be equivalent to above.
 ```bash
 gpaw -P 4 test
+```
+
+# Sharing
+To share this software, assuming you did not change your default permission, all that is required is to actiave the conda environment:
+```bash
+# Unload wrong pythons 
+module unload python miniconda2 miniconda3 anaconda2
+
+# Load correct python
+module load anaconda3
+
+# Set conda paths
+export CONDA_ENVS_PATH=/bigdata/$GROUP/shared/.conda/envs
+export CONDA_PKGS_DIRS=/bigdata/$GROUP/shared/.conda/pkgs
+
+# Activate gpaw environment
+source activate gpaw
 ```
