@@ -11,6 +11,17 @@ module unload openmpi
 module load intel/2018
 ```
 
+Since there are Python components to this, then the Python version that is currently active matters.
+You could use the Python version directly under miniconda2 (currently the default). Or setup your own conda environment (untested):
+```bash
+module unload python miniconda2 miniconda3 anaconda2
+module load anaconda3
+conda create -n NameForNewEnv python=2.7.14
+source activate NameForNewEnv
+conda install -n NameForNewEnv numpy
+```
+> Note: The above conda environment is untested, there may be additional Python modules required.
+
 ## Download
 ```bash
 mkdir -p /bigdata/$GROUP/shared/pkgs/dftbplus
