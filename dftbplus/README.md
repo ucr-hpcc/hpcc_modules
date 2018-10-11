@@ -38,6 +38,15 @@ Since the provided intel make file seems compatible, link to it:
 ln -s sys/make.x86_64-linux-intel make.arch
 ```
 
+Also set the MPI fortran compiler to mpiifort in `make.arch`:
+```diff
+12c12,13
+< FXX = mpif90
+---
+> #FXX = mpif90
+> FXX = mpiifort
+```
+
 ## Compile
 ```bash
 make INSTALLDIR=/opt/linux/centos/7.x/x86_64/pkgs/dftbplus/18.2 WITH_DFTD3=1 WITH_MPI=1
