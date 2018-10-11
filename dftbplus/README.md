@@ -6,15 +6,24 @@ srun -p intel --time=1-00:00:00 --ntasks=4 --pty bash -l
 
 ## Environment
 Load and unload modules to fullfil requirements
+```bash
 module unload openmpi
 module load intel/2018
+```
 
 ## Download
-mkdir -p /bigdata/$GROUP/shared/pkgs//dftbplus
-cd /bigdata/$GROUP/shared/pkgs//dftbplus
+```bash
+mkdir -p /bigdata/$GROUP/shared/pkgs/dftbplus
+cd /bigdata/$GROUP/shared/pkgs/dftbplus
 git clone https://github.com/dftbplus/dftbplus.git latest
 cd latest
 git submodule update --init --recursive
+```
+OR
+```bash
+wget https://www.dftbplus.org/fileadmin/DFTBPLUS/public/dftbplus/18.2/dftbplus-18.2.tar.xz
+tar -xf dftbplus-18.2.tar.xz
+```
 
 ## Options
 Define the compiler and options with a make.arch file.
