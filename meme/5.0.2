@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tmeme - Adds meme to your path"
 }
 
-module-whatis	"meme-5.0.3"
+module-whatis	"meme-5.0.2"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,9 +20,9 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/meme/5.0.3/bin
-prepend-path    PERL5LIB        ${iigb_modules}/meme/5.0.3/lib/meme-5.0.2/perl
-prepend-path    PYTHONPATH      ${iigb_modules}/meme/5.0.3/lib/meme-5.0.2/python
+prepend-path    PATH            ${iigb_modules}/meme/5.0.2/bin
+prepend-path    PERL5LIB        ${iigb_modules}/meme/5.0.2/lib/meme-5.0.2/perl
+prepend-path    PYTHONPATH      ${iigb_modules}/meme/5.0.2/lib/meme-5.0.2/python
 
 module		use		${modules_dir}
 
