@@ -24,8 +24,8 @@ conda install -n NameForNewEnv numpy
 
 ## Download
 ```bash
-mkdir -p /bigdata/$GROUP/shared/pkgs/dftbplus
-cd /bigdata/$GROUP/shared/pkgs/dftbplus
+mkdir -p /bigdata/$GROUP/shared/src/dftbplus
+cd /bigdata/$GROUP/shared/src/dftbplus
 git clone https://github.com/dftbplus/dftbplus.git latest
 cd latest
 git submodule update --init --recursive
@@ -47,18 +47,18 @@ Also set the MPI fortran compiler to mpiifort in `make.arch`:
 > FXX = mpiifort
 ```
 
-## Compile
-```bash
-make INSTALLDIR=/opt/linux/centos/7.x/x86_64/pkgs/dftbplus/18.2 WITH_DFTD3=1 WITH_MPI=1
-```
-
-## Test
-The externals are required for running tests:
+Get externals (required for DFTD3 and tests):
 ```bash
 ./utils/get_opt_externals ALL
 ```
 
-If subsequent tests fail, then you may need to remove the socket/H20 tests, like this:
+## Compile
+```bash
+make INSTALLDIR=/bigdata/$GROUP/shared/pkgs/dftbplus/18.2 WITH_DFTD3=1 WITH_MPI=1
+```
+
+## Test
+If tests fail, then you may need to remove the socket/H20 tests, like this:
 ```bash
 #sed -i -e '/^sockets\/H2O/d' -e '/^sockets\/diamond/d' test/prog/dftb+/tests
 ```
