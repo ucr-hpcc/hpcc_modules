@@ -72,7 +72,7 @@ Choose the intel compiler for DFTD3 by updating the file `external/dftd3/origin/
 
 ## Compile
 ```bash
-export INSTALLDIR=/bigdata/$GROUP/shared/pkgs/dftbplus/18.2
+export PREFIX=/bigdata/$GROUP/shared/pkgs/dftbplus/18.2
 make INSTALLDIR=$PREFIX WITH_DFTD3=1 WITH_MPI=1 WITH_SOCKETS=0
 ```
 
