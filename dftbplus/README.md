@@ -51,17 +51,10 @@ ln -s sys/make.x86_64-linux-intel make.arch
 ```
 
 Set the MPI fortran compiler to mpiifort in the following files:
-
-   1. `./make.arch`
-   2. `./external/scalapackfx/origin/make.arch.template`
-   3. `./external/mpifx/origin/make.arch.template`
-
-```diff
-12c12,13
-< FXX = mpif90
----
-> #FXX = mpif90
-> FXX = mpiifort
+```bash
+sed -i 's/mpif90/mpiifort/g' ./make.arch
+sed -i 's/mpif90/mpiifort/g' ./external/scalapackfx/origin/make.arch.template
+sed -i 's/mpif90/mpiifort/g' ./external/mpifx/origin/make.arch.template
 ```
 
 Get externals (required for DFTD3 and tests):
@@ -79,42 +72,40 @@ Choose the intel compiler for DFTD3 by updating the file `external/dftd3/origin/
 
 ## Compile
 ```bash
-make INSTALLDIR=/bigdata/$GROUP/shared/pkgs/dftbplus/18.2 WITH_DFTD3=1 WITH_MPI=1
+export INSTALLDIR=/bigdata/$GROUP/shared/pkgs/dftbplus/18.2
+make INSTALLDIR=$PREFIX WITH_DFTD3=1 WITH_MPI=1 WITH_SOCKETS=0
 ```
 
 ## Test
-If tests fail, then you may need to remove the socket/H20 tests, like this:
-```bash
-#sed -i -e '/^sockets\/H2O/d' -e '/^sockets\/diamond/d' test/prog/dftb+/tests
-```
-The above "solution" was taken from [here](https://github.com/UCL-RITS/rcps-buildscripts/issues/113).
+You need to have the command `fuser` in your path, so add sbin to your PATH:
 
-Also you need to have the command `fuser` in your path, so add sbin to your PATH:
 ```
 export PATH=/usr/sbin:$PATH
 ```
 
+Also, make sure that you have `WITH_MPI` flag for testing, or the tests will run in serial mode with an MPI compiled binary, which will result in failures.
+
 ### Single Test
 ```bash
-make test
+make test WITH_MPI=1 WITH_SOCKETS=0
 ```
 
 ### OMP Test
 ```bash
-make -j2 test TEST_OMP_THREADS=2
+make -j2 test WITH_MPI=1 TEST_OMP_THREADS=2 WITH_SOCKETS=0
 ```
 
 ### MPI Test
 ```bash
-make test TEST_MPI_PROCS=2
+make test WITH_MPI=1 TEST_MPI_PROCS=2 WITH_SOCKETS=0
 ```
 
 ### OMP and MPI Test (hybrid)
 ```bash
-make test TEST_MPI_PROCS=2 TEST_OMP_THREADS=2
+make test TEST_MPI_PROCS=2 TEST_OMP_THREADS=2 WITH_MPI=1 WITH_SOCKETS=0
 ```
 
 ## Install
 ```bash
-make install
+make INSTALLDIR=$PREFIX install
 ```
