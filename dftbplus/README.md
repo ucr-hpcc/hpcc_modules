@@ -38,7 +38,7 @@ Since the provided intel make file seems compatible, link to it:
 ln -s sys/make.x86_64-linux-intel make.arch
 ```
 
-Also set the MPI fortran compiler to mpiifort in `make.arch`:
+If your mpif90 wrapper does not use ifort, then you can set the MPI fortran compiler to mpiifort in `make.arch`:
 ```diff
 12c12,13
 < FXX = mpif90
