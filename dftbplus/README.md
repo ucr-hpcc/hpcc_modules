@@ -64,7 +64,7 @@ Get externals (required for DFTD3 and tests):
 ./utils/get_opt_externals ALL
 ```
 
-Choose the intel compiler for DFTD3 by updating the file `/external/dftd3/origin/make.arch`:
+Choose the intel compiler for DFTD3 by updating the file `external/dftd3/origin/make.arch`:
 ```diff
 2c2
 < ARCH = x86_64-linux-gnu
