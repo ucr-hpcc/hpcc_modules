@@ -23,9 +23,21 @@ conda install -n NameForNewEnv numpy
 > Note: The above conda environment is untested, there may be additional Python modules required.
 
 ## Download
+Create working directory and go to it:
 ```bash
 mkdir -p /bigdata/$GROUP/shared/src/dftbplus
 cd /bigdata/$GROUP/shared/src/dftbplus
+```
+
+Use wget to get a specific release:
+```bash
+wget https://github.com/dftbplus/dftbplus/archive/18.2.tar.gz
+tar -xf dftbplus-18.2.tar.xz
+cd dftbplus-18.2
+```
+
+Or, get latest source code via git:
+```bash
 git clone https://github.com/dftbplus/dftbplus.git latest
 cd latest
 git submodule update --init --recursive
@@ -38,7 +50,7 @@ Since the provided intel make file seems compatible, link to it:
 ln -s sys/make.x86_64-linux-intel make.arch
 ```
 
-If your mpif90 wrapper does not use ifort, then you can set the MPI fortran compiler to mpiifort in `make.arch`:
+Set the MPI fortran compiler to mpiifort in `make.arch`:
 ```diff
 12c12,13
 < FXX = mpif90
@@ -52,7 +64,7 @@ Get externals (required for DFTD3 and tests):
 ./utils/get_opt_externals ALL
 ```
 
-Choose the intel compiler for DFTD3 by updating the file `latest/external/dftd3/origin/make.arch`:
+Choose the intel compiler for DFTD3 by updating the file `/external/dftd3/origin/make.arch`:
 ```diff
 2c2
 < ARCH = x86_64-linux-gnu
