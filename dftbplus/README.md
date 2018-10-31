@@ -50,7 +50,12 @@ Since the provided intel make file seems compatible, link to it:
 ln -s sys/make.x86_64-linux-intel make.arch
 ```
 
-Set the MPI fortran compiler to mpiifort in `make.arch`:
+Set the MPI fortran compiler to mpiifort in the following files:
+
+   1. `./make.arch`
+   2. `./external/scalapackfx/origin/make.arch.template`
+   3. `./external/mpifx/origin/make.arch.template`
+
 ```diff
 12c12,13
 < FXX = mpif90
