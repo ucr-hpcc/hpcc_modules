@@ -1,0 +1,28 @@
+#%Module1.0#####################################################################
+##
+## bcftools modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tbcftools- Adds bcftools to your path"
+}
+
+module-whatis	"bcftools-1.9"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+module load htslib/1.9
+prereq perl/5.20.2 # this was complied against perl/5.20.2 for regexp
+
+prepend-path    PATH        ${iigb_modules}/bcftools/1.9/bin
+prepend-path    MANPATH     ${iigb_modules}/bcftools/1.9/share/man
+
+module use ${modules_dir}
