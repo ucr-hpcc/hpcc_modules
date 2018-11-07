@@ -20,5 +20,5 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 setenv  TRIMMOMATIC     ${iigb_modules}/trimmomatic/0.36/trimmomatic.jar
-
+prepend-path	PATH	${iigb_modules}/trimmomatic/0.36
 module use ${modules_dir}
