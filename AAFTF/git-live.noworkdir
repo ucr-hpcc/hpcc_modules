@@ -30,6 +30,8 @@ module load ncbi-blast/2.7.1+
 module load diamond
 module load minimap2
 module load pilon
+module load BBMap
+module load java/8
 
 setenv	AAFTF_DB	/srv/projects/db/AAFTF_DB
 prepend-path    PATH            ${iigb_modules}/AAFTF/git-live.noworkdir/scripts
