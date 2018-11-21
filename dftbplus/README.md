@@ -1,26 +1,24 @@
 # Install 17.1
-There is an error when trying to compile with newer version of GNU or Intel compilers:
-    https://kynan.github.io/blog/2013/08/12/c-pointers-to-multi-dimensional-assumed-shape-fortran-arrays-with-gfortran
-However Intel 2017.4.196 seems to work.
+Errors occur when compiling with newer version of [GNU](https://kynan.github.io/blog/2013/08/12/c-pointers-to-multi-dimensional-assumed-shape-fortran-arrays-with-gfortran) or Intel compilers, however Intel/2017.4.196 seems to work.
 
 ## Interactive Job
 Since this compilation is quick we will only request 2 hours on the short parition:
 
-```
+```bash
 srun -p short --time=2:00:00 --ntasks=4 --pty bash -l
 ```
 
 ## Download and Prep
 Pull down the source code, extract it:
 
-```
+```bash
 wget -O dftbplus-17.1.tar.gz https://github.com/dftbplus/dftbplus/archive/17.1.tar.gz
 tar -xf dftbplus-17.1.tar.gz
 ```
 
 Load applicable modules and move into the new directory
 
-```
+```bash
 module unload openmpi
 module load intel/2017.4.196
 
@@ -29,13 +27,22 @@ cd dftbplus-17.1
 
 Copy the intel make file, no edits are needed, but you may want to double check:
 
-```
+```bash
 cp sys/make.x86_64-linux-intel make.arch
+```
+
+Modify make.config:
+
+```diff
+29c29
+< WITH_ARPACK := 1
+---
+> WITH_ARPACK := 0
 ```
 
 Install third party softwares:
 
-```
+```bash
 ./utils/get_opt_externals all
 ```
 
@@ -43,7 +50,7 @@ Install third party softwares:
 
 Build the source code with 4 parallel cores:
 
-```
+```bash
 make -j4
 ```
 
@@ -51,7 +58,7 @@ make -j4
 
 Test code, the H20 test does not run, but everything else seems OK:
 
-```
+```bash
 make test
 ```
 
