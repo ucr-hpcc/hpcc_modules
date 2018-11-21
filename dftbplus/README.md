@@ -1,4 +1,61 @@
-# Install
+# Install 17.1
+There is an error when trying to compile with newer version of GNU or Intel compilers:
+    https://kynan.github.io/blog/2013/08/12/c-pointers-to-multi-dimensional-assumed-shape-fortran-arrays-with-gfortran
+However Intel 2017.4.196 seems to work.
+
+## Interactive Job
+Since this compilation is quick we will only request 2 hours on the short parition:
+
+```
+srun -p short --time=2:00:00 --ntasks=4 --pty bash -l
+```
+
+## Download and Prep
+Pull down the source code, extract it:
+
+```
+wget -O dftbplus-17.1.tar.gz https://github.com/dftbplus/dftbplus/archive/17.1.tar.gz
+tar -xf dftbplus-17.1.tar.gz
+```
+
+Load applicable modules and move into the new directory
+
+```
+module unload openmpi
+module load intel/2017.4.196
+
+cd dftbplus-17.1
+```
+
+Copy the intel make file, no edits are needed, but you may want to double check:
+
+```
+cp sys/make.x86_64-linux-intel make.arch
+```
+
+Install third party softwares:
+
+```
+./utils/get_opt_externals all
+```
+
+## Compile
+
+Build the source code with 4 parallel cores:
+
+```
+make -j4
+```
+
+## Test
+
+Test code, the H20 test does not run, but everything else seems OK:
+
+```
+make test
+```
+
+# Install 18.2
 First you will need to request a compute node to compile on:
 ```bash
 srun -p intel --time=1-00:00:00 --ntasks=4 --pty bash -l
