@@ -27,7 +27,7 @@ module load bedtools
 module load SPAdes
 module load BBMap
 
-prepend-path    PATH            ${iigb_modules}/phyloFlash/3.01b
-setenv          DBHOME		${iigb_modules}/phyloFlash/3.01b/db
+prepend-path    PATH            ${iigb_modules}/phyloFlash/3.0b1
+setenv          DBHOME		${iigb_modules}/phyloFlash/3.0b1/db/132
 
 module use ${modules_dir}
