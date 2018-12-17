@@ -5,7 +5,7 @@
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tstaskfarm - Adds Staskfarm to your path"
+        puts stderr "\tstaskfarm - Adds staskfarm to your path"
 }
 
 module-whatis	"staskfarm-1.0"
