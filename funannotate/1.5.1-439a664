@@ -1,0 +1,63 @@
+#%Module1.0#####################################################################
+##
+## funannotate modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tfunannotate - Adds funannotate to your path"
+}
+
+module-whatis	"funannotate-1.5.1-439a664"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+module load python/2.7.12
+module  load    RepeatMasker/4-0-7
+module  load    ncbi-rmblast
+module  load    augustus/3.3
+module  load    lp_solve
+module  load    EVM/1.1.1-live
+module  load    genemarkESET
+module  load    bamtools
+module  load    ncbi-blast/2.5.0+
+module  load    hmmer/3
+module  load    RepeatModeler
+module  load    gmap
+module  load    bedtools
+module  load    tbl2asn
+module  load    braker
+module  load    mummer/4.0
+module  load    RAxML
+module  load    mafft
+module  load    trimal
+module  load    exonerate
+module  load    blat
+module  load    tRNAscan
+module  load    proteinortho
+module  load    kent
+module  load    signalp
+module  load    diamond/0.9.22
+module  load    fasta
+module  load    trinity-rnaseq
+module  load    hisat2
+module  load    kallisto
+module  load    PASA
+module  load    eggnog-mapper
+module  load    minimap2
+module  load    etetoolkit
+module  unload	samtools
+module  load 	samtools/1.9
+
+prepend-path    PATH        ${iigb_modules}/funannotate/1.5.1-439a664
+prepend-path    PATH        ${iigb_modules}/funannotate/1.5.1-439a664/bin
+
+setenv	FUNANNOTATE_DB		${iigb_modules}/funannotate/git-live/DB
+module  use     ${modules_dir}
