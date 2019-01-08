@@ -19,5 +19,7 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+module load intel/2018
+
 prepend-path    PATH            ${iigb_modules}/DassaultSystemes/SIMULIA/Commands
 
