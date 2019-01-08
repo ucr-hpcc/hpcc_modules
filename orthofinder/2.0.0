@@ -22,7 +22,7 @@ set	datarootdir	${prefix}/share
 module load ncbi-blast/2.2.30+
 module load mcl/14-137
 module load fastme/2.1.5
-
+module load MMseqs2
 prepend-path    PATH              ${iigb_modules}/orthofinder/2.0.0
 
 module		use		${modules_dir}

@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## metaphlan2 modulefile
+## orthofinder modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tmetaphlan2- Adds metaphlan2 to your path"
+        puts stderr "\torthofinder- Adds orthofinder to your path"
 }
 
-module-whatis	"metaphlan2-2.6.0"
+module-whatis	"orthofinder-2.3.1"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,10 +19,13 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module load bowtie2
-
-prepend-path    PATH              ${iigb_modules}/metaphlan2/2.6.0
-setenv          mpa_dir           ${iigb_modules}/metaphlan2/2.6.0
+module load ncbi-blast/2.2.30+
+module load mcl/14-137
+module load fastme/2.1.5
+module load RAXML_NG
+module load MMseqs2
+module load RAxML
+prepend-path    PATH              ${iigb_modules}/orthofinder/2.3.1
 
 module		use		${modules_dir}
 

@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## metaphlan2 modulefile
+## ncbi-blast+ modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tmetaphlan2- Adds metaphlan2 to your path"
+        puts stderr "\tncbi-blast - Adds ncbi-blast to your path"
 }
 
-module-whatis	"metaphlan2-2.6.0"
+module-whatis	"ncbi-blast-2.8.1+"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,10 +19,7 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module load bowtie2
-
-prepend-path    PATH              ${iigb_modules}/metaphlan2/2.6.0
-setenv          mpa_dir           ${iigb_modules}/metaphlan2/2.6.0
+prepend-path    PATH            ${iigb_modules}/ncbi-blast/2.8.1+/bin
 
 module		use		${modules_dir}
 

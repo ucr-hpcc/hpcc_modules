@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## metaphlan2 modulefile
+## kraken modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tmetaphlan2- Adds metaphlan2 to your path"
+        puts stderr "\tkraken - Adds kraken to your path"
 }
 
-module-whatis	"metaphlan2-2.6.0"
+module-whatis	"kraken-2.0.7-beta"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,10 +19,7 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module load bowtie2
-
-prepend-path    PATH              ${iigb_modules}/metaphlan2/2.6.0
-setenv          mpa_dir           ${iigb_modules}/metaphlan2/2.6.0
-
-module		use		${modules_dir}
-
+module load ncbi-blast/2.7.1+
+prepend-path    PATH            ${iigb_modules}/kraken/2.0.7-beta
+setenv	KRAKEN2_DB_NAME	/srv/projects/db/kraken
+module use ${modules_dir}
