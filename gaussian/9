@@ -24,6 +24,7 @@ prepend-path    PATH            ${iigb_modules}/gaussian/9/g09
 module		use		${modules_dir}
 
 
-setenv          g09root    ${iigb_modules}/gaussian/9
-setenv          GAUSS_SCRDIR    /tmp/
+setenv          g09root    ${iigb_modules}/gaussian/9                                                                                                                                                                                                                                                                   
+setenv          GAUSS_SCRDIR    /tmp/                                                                                                                                                                                                                                                                                   
+setenv          GAUSS_EXEDIR    ${iigb_modules}/gaussian/9        
 
