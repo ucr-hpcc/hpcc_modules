@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tITSx- Adds ITSx to your path"
 }
 
-module-whatis	"smalt-0.7.6"
+module-whatis	"ITSx-1.0.11"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
