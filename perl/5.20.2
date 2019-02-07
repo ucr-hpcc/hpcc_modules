@@ -22,7 +22,7 @@ set	datarootdir	${prefix}/share
 conflict        perl
 prepend-path    PATH            ${iigb_modules}/perl/5.20.2/bin
 prepend-path    MANPATH         ${iigb_modules}/perl/5.20.2/man
-prepend-path    PERL5LIB        ${iigb_modules}/perl/5.20.2/lib/perl5/x86_64-linux/auto:${iigb_modules}/perl/5.20.2/lib/perl5/x86_64-linux:${iigb_modules}/perl/5.20.2/lib/perl5
+prepend-path    PERL5LIB        ${iigb_modules}/perl/5.20.2/lib/perl5/x86_64-linux/auto:${iigb_modules}/perl/5.20.2/lib/perl5/x86_64-linux:${iigb_modules}/perl/5.20.2/lib/perl5:${iigb_modules}/perl/5.20.2/lib/5.20.2
 setenv          INSTALL_BASE    ${iigb_modules}/perl/5.20.2
 
 module		use		${modules_dir}
