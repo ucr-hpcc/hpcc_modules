@@ -21,6 +21,7 @@ set	datarootdir	${prefix}/share
 
 
 prepend-path    PATH   		       ${iigb_modules}/intel/2018/bin::${iigb_modules}/intel/2018/compilers_and_libraries_2018.0.128/linux/mkl/bin:${iigb_modules}/intel/2018/compilers_and_libraries_2018.0.128/linux/mpi/intel64/bin
+prepend-path    LD_LIBRARY_PATH    ${iigb_modules}/intel/2018/compilers_and_libraries_2018.0.128/linux/compiler/lib/intel64_lin
 prepend-path    MANPATH            ${iigb_modules}/intel/2018/man/common
 
 set shell [module-info shell]
