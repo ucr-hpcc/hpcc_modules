@@ -1,0 +1,26 @@
+#%Module1.0#####################################################################
+##
+## maui modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tphyml - Adds phyml to your path"
+}
+
+module-whatis	"phyml-3.3.20180621"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+
+prepend-path    PATH            ${iigb_modules}/phyml/3.3.20180621/bin
+
+module		use		${modules_dir}
+
