@@ -59,9 +59,19 @@ conflict    anaconda
 conflict    miniconda
 conflict    miniconda2
 
+# Load miniconda
 module unload miniconda2
-module  load miniconda3
-conda activate funannotate
+module load miniconda3/4.3.31
+
+# Set character encoding
+setenv LC_ALL en_US.utf-8
+setenv LANG en_US.utf-8
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3/4.3.31; conda activate funannotate;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
 
 prepend-path    PATH        ${iigb_modules}/funannotate/1.5.2-30c1166
 prepend-path    PATH        ${iigb_modules}/funannotate/1.5.2-30c1166/bin
