@@ -54,10 +54,6 @@ module  load    minimap2
 module  unload	samtools
 module  load 	samtools/1.9
 
-conflict    python
-conflict    anaconda
-conflict    miniconda
-conflict    miniconda2
 
 # Load miniconda
 module unload miniconda2
