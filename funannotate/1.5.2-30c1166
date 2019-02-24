@@ -53,13 +53,16 @@ module  load    eggnog-mapper
 module  load    minimap2
 module  unload	samtools
 module  load 	samtools/1.9
+module  load    stringtie
 
 
 # Load miniconda
 module unload miniconda2
+
 conflict miniconda
 conflict anaconda
 conflict python
+
 module load miniconda3/4.3.31
 
 # Set character encoding
