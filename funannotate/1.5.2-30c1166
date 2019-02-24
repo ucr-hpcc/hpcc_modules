@@ -57,6 +57,9 @@ module  load 	samtools/1.9
 
 # Load miniconda
 module unload miniconda2
+module conflict miniconda
+module conflict anaconda
+module conflict python
 module load miniconda3/4.3.31
 
 # Set character encoding
