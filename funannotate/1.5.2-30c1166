@@ -63,6 +63,8 @@ conflict miniconda
 conflict anaconda
 #conflict python
 
+module unload python
+module unload python
 module load miniconda3/4.3.31
 
 # Set character encoding
