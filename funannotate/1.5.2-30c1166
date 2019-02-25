@@ -61,7 +61,7 @@ module unload miniconda2
 
 conflict miniconda
 conflict anaconda
-conflict python
+#conflict python
 
 module load miniconda3/4.3.31
 
