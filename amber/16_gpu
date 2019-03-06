@@ -23,7 +23,7 @@ conflict ambertools
 module load intel/2018
 
 setenv           AMBER_PREFIX     ${iigb_modules}/amber/16_intel_cuda
-setenv           AMBERHOME        ${iigb_modules}/amber/16_intal_cuda
+setenv           AMBERHOME        ${iigb_modules}/amber/16_intel_cuda
 
 prepend-path     PATH             ${iigb_modules}/amber/16_intel_cuda/bin
 prepend-path     PYTHONPATH       ${iigb_modules}/amber/16_intel_cuda/lib/python/site-packages
