@@ -1,0 +1,26 @@
+#%Module1.0#####################################################################
+##
+## ncdu modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tncdu- Adds ncdu to your path"
+}
+
+module-whatis	"ncdu-1.14"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+module load htslib/1.14
+
+prepend-path    PATH            ${iigb_modules}/ncdu/1.14/bin
+prepend-path    MANPATH         ${iigb_modules}/ncdu/1.14/share/man
+
