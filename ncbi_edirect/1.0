@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 
 prepend-path    PATH            ${iigb_modules}/ncbi_edirect/edirect
-
 module use ${modules_dir}
