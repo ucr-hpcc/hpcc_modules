@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tedirect - Adds edirect to your path"
 }
 
-module-whatis	"edirect-1.0"
+module-whatis	"ncbi_edirect-1.0"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
