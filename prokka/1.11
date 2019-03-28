@@ -21,7 +21,5 @@ set	datarootdir	${prefix}/share
 
 module load perl
 
-prepend-path    PATH            ${iigb_modules}/prokka/1.11/bin
-
-module		use		${modules_dir}
+prepend-path    PATH            ${iigb_modules}/prokka/1.11/bin:${iigb_modules}/prokka/1.11/binaries/linux
 
