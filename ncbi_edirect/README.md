@@ -14,3 +14,4 @@ Entrez Direct: E-utilities on the UNIX Command Line
   export PATH=${PATH}:$HOME/edirect >& /dev/null || setenv PATH "${PATH}:$HOME/edirect"
   ./edirect/setup.sh
 ```
+t
