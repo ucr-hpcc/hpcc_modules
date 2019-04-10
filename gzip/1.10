@@ -6,7 +6,7 @@
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tgzip - Adds angsd to your path"
+        puts stderr "\tgzip - Adds gzip to your path"
 }
 
 module-whatis   "gzip"
@@ -21,7 +21,7 @@ set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/gzip/1.10/bin
+prepend-path    PATH            ${iigb_modules}/gzip/1.10/
 
 module          use             ${modules_dir}
 
