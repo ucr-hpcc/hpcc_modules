@@ -19,6 +19,8 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+conflict intel
+module load intel/2018
 
 prepend-path    PATH            ${iigb_modules}/RAxML/8.2.12_intel/bin
 prepend-path    PATH            ${iigb_modules}/RAxML/8.2.12_intel/scripts
