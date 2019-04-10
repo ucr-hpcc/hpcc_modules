@@ -21,7 +21,7 @@ set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/gzip/1.10/
+prepend-path    PATH            ${iigb_modules}/gzip/1.10/bin
 
 module          use             ${modules_dir}
 
