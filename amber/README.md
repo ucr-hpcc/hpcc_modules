@@ -1,5 +1,5 @@
 # Compiling
-For all examples you must request the whole node, or some tests seem to use 32 (all) cores possible.
+For all examples you must request the whole node, since some tests seem to use 32 (all) cores available.
 ```
 srun -p intel --time=1-00:00:00 --ntasks=4 --cpus-per-task=8 --pty bash -l
 ```
