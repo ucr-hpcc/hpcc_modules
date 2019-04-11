@@ -20,15 +20,17 @@ export AMBERHOME=$(pwd)
 make clean || echo 'All Clean'
 
 # Configure build for CUDA and MPI
-./configure -mpi gnu
+yes | ./configure -mpi gnu
 
-source amber.sh
+if [[ $? -eq 0 ]]; then source amber.sh; fi
 
-# Must use a multiple of 4 but not more than 8? Some tests will fail otherwise
-export DO_PARALLEL='mpirun -np 4'
+if [[ $? -eq 0 ]]; then make -j2 install; fi
 
-make -j2 install
-make test
+if [[ $? -eq 0 ]]; then
+    # Must use a multiple of 4 but not more than 8? Some tests will fail otherwise
+    export DO_PARALLEL='mpirun -np 4'
+    make test
+fi
 ```
 
 ## Intel Example
@@ -36,7 +38,6 @@ make test
 ```bash
 module unload openmpi
 module load intel/2018
-module load cuda/9.0
 
 cd /opt/linux/centos/7.x/x86_64/pkgs/amber/16_intel
 tar -C . -xf ${PATH_TO_AMBER_SRC}/Amber16.tar.bz2
@@ -53,11 +54,15 @@ export AMBERHOME=$(pwd)
 make distclean || echo 'All clean'
 
 # Configure build for CUDA and MPI for intel
-./configure -mpi intel
+yes | ./configure -mpi intel
 
 if [[ $? -eq 0 ]]; then source amber.sh; fi
 
 if [[ $? -eq 0 ]]; then make -j2 install; fi
 
-if [[ $? -eq 0 ]]; then make test; fi
+if [[ $? -eq 0 ]]; then
+    # Must use a multiple of 4 but not more than 8? Some tests will fail otherwise
+    export DO_PARALLEL='mpirun -np 4'
+    make test
+fi
 ```
