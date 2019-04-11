@@ -10,6 +10,8 @@ srun -p intel --time=1-00:00:00 --ntasks=4 --cpus-per-task=8 --pty bash -l
 module load openmpi/2.0.1-slurm-16.05.4
 
 cd /opt/linux/centos/7.x/x86_64/pkgs/amber/16_gnu_mpi
+tar -C . -xf ${PATH_TO_AMBER_SRC}/Amber16.tar.bz2
+tar -C . -xf ${PATH_TO_AMBER_SRC}/AmberTools16.tar.bz2
 
 # Set Amber home
 export AMBERHOME=$(pwd)
@@ -37,6 +39,9 @@ module load intel/2018
 module load cuda/9.0
 
 cd /opt/linux/centos/7.x/x86_64/pkgs/amber/16_intel
+tar -C . -xf ${PATH_TO_AMBER_SRC}/Amber16.tar.bz2
+tar -C . -xf ${PATH_TO_AMBER_SRC}/AmberTools16.tar.bz2
+
 
 # Set MKL Home
 export MKL_HOME=$MKLROOT
