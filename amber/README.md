@@ -19,7 +19,7 @@ export AMBERHOME=$(pwd)
 # Clean out previous build
 make clean || echo 'All Clean'
 
-# Configure build for CUDA and MPI
+# Configure build with GNU and MPI
 yes | ./configure -mpi gnu
 
 if [[ $? -eq 0 ]]; then source amber.sh; fi
@@ -53,7 +53,7 @@ export AMBERHOME=$(pwd)
 # Clean out previous build
 make distclean || echo 'All clean'
 
-# Configure build for CUDA and MPI for intel
+# Configure build with Intel and MPI
 yes | ./configure -mpi intel
 
 if [[ $? -eq 0 ]]; then source amber.sh; fi
