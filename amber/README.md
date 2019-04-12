@@ -53,8 +53,9 @@ export AMBERHOME=$(pwd)
 # Clean out previous build
 make distclean || echo 'All clean'
 
-# Configure build with Intel and MPI
-yes | ./configure -mpi intel
+# Configure build with Intel
+#yes | ./configure -mpi intel # MPI
+yes | ./configure intel # Serial
 
 if [[ $? -eq 0 ]]; then source amber.sh; fi
 
@@ -62,7 +63,7 @@ if [[ $? -eq 0 ]]; then make -j2 install; fi
 
 if [[ $? -eq 0 ]]; then
     # Must use a multiple of 4 but not more than 8? Some tests will fail otherwise
-    export DO_PARALLEL='mpirun -np 4'
+    #export DO_PARALLEL='mpirun -np 4'
     make test
 fi
 ```
