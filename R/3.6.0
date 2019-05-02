@@ -25,6 +25,6 @@ prepend-path    CPATH           ${iigb_modules}/R/3.6.0/lib64/R/include
 prepend-path    LIBRARY_PATH    ${iigb_modules}/R/3.6.0/lib64/R/lib
 prepend-path    LD_LIBRARY_PATH ${iigb_modules}/R/3.6.0/lib64/R/lib
 
-module          load            ggobi
-module          load            pandoc
+# Deps for various R packages
+module          load            ggobi2.1.11 pandoc/2.0 openbabel/2.3.2 netcdf/4.4.1.1 java/8 geos/3.7.1 gdal/2.1.3 hdf5/1.10.1
 
