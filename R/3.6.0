@@ -1,0 +1,30 @@
+#%Module1.0#####################################################################
+##
+## R modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds R 3 to your path"
+}
+
+module-whatis   "R-3.6.0"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set     version         3.4.2
+set     prefix          ${modules_dir}/${version}
+set     exec_prefix     ${prefix}
+set     datarootdir     ${prefix}/share
+
+prepend-path    PATH            ${iigb_modules}/R/3.6.0/bin
+prepend-path    MANPATH         ${iigb_modules}/R/3.6.0/share/man
+prepend-path    CPATH           ${iigb_modules}/R/3.6.0/lib64/R/include
+prepend-path    LIBRARY_PATH    ${iigb_modules}/R/3.6.0/lib64/R/lib
+prepend-path    LD_LIBRARY_PATH ${iigb_modules}/R/3.6.0/lib64/R/lib
+
+# Deps for various R packages
+module          load            ggobi/2.1.11 pandoc/2.0 netcdf/4.4.1.1 java/8 geos/3.7.1 gdal/2.1.3 hdf5/1.10.1
+

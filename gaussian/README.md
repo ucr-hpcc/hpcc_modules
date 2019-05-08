@@ -1,19 +1,19 @@
-# Paladin
+# Gaussian
 
-## Prep
-```
-git clone https://github.com/twestbrookunh/paladin.git
-```
+Our university has a Gaussian campus site license. The software can be downloaded via sftp. Contact ITS for more details.
 
-## Compile
-Not needed
+## Download
+
+Be sure to download the correct SSE version.
+
+```bash
+sftp to.some.host
+get G09.tar
+```
 
 ## Install
-https://github.com/twestbrookunh/paladin
+```bash
+tar -xf G09.tar
+INSTALL_PATH=/opt/linux/centos/7.x/x86_64/pkgs/gaussian
+mv g09 ${INSTALL_PATH}/9_SSE4
 ```
-cd paladin/
-make
-
-mv paladin /opt/linux/centos/7.x/x86_64/pkgs/paladin/1.4.1
-```
-
