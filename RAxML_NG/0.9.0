@@ -19,6 +19,8 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+module load extra
+module load GCC/6.3.0-2.27
 
 prepend-path    PATH            ${iigb_modules}/RAxML_NG/0.9.0/bin
 
