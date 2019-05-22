@@ -25,7 +25,7 @@ module load miniconda3
 module load bwa/0.7.17
 module load bowtie2/2.3.4.1
 module load samtools/1.9
-module load SPAdes/3.9.1
+module load SPAdes/3.13.1
 module load ncbi-blast/2.7.1+
 module load diamond/0.9.24
 module load minimap2/2.17
