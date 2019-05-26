@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## MaSuRCA
+## masurca modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tMaSuRCA- Adds MaSuRCA assembler tools to your path"
+        puts stderr "\tmasurca - Adds masurca (conda) to your path"
 }
 
-module-whatis	"MaSuRCA-3.3.1"
+module-whatis	"masurca-3.3.1"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,11 +19,25 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module load parallel
-module load boost
-prepend-path    PATH            ${iigb_modules}/MaSuRCA/3.3.1/bin
-prepend-path    PATH            ${iigb_modules}/MaSuRCA/3.3.1/CA/Linux-amd64/bin
-prepend-path	LD_RUN_PATH	${iigb_modules}/MaSuRCA/3.3.1/lib:${iigb_modules}/MaSuRCA/3.3.1/lib/perl
-prepend-path	LD_LIBRARY_PATH	${iigb_modules}/MaSuRCA/3.3.1/lib:${iigb_modules}/MaSuRCA/3.3.1/lib/perl
-module		use		${modules_dir}
+# All python versions need to be unloaded
+conflict    python
+conflict    anaconda
+conflict    miniconda
 
+# Load miniconda
+module load miniconda3/4.3.31
+
+# Set character encoding
+setenv LC_ALL en_US.utf-8
+setenv LANG en_US.utf-8
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3/4.3.31; source activate masurca;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
+# Add path manually, since source activate does not function within parent shell
+prepend-path    PATH    ${iigb_modules}/miniconda3/4.3.31/envs/masurca/bin
+
+module		use		${modules_dir}
