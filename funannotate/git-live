@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tfunannotate - Adds funannotate to your path"
 }
 
-module-whatis	"funannotate-gitlive"
+module-whatis	"funannotate-git-live"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,7 +19,6 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module load python/2.7.12
 module  load    RepeatMasker/4-0-7
 module  load    ncbi-rmblast
 module  load    augustus/3.3
@@ -32,7 +31,7 @@ module  load    hmmer/3
 module  load    RepeatModeler
 module  load    gmap
 module  load    bedtools
-module  load    tbl2asn
+module  load    tbl2asn/25.7
 module  load    braker
 module  load    mummer/4.0
 module  load    RAxML
@@ -46,18 +45,42 @@ module  load    kent
 module  load    signalp
 module  load    diamond/0.9.22
 module  load    fasta
-module  load    trinity-rnaseq
+module  load    trinity-rnaseq/2.8.4
 module  load    hisat2
 module  load    kallisto
 module  load    PASA
 module  load    eggnog-mapper
 module  load    minimap2
-module  load    etetoolkit
 module  unload	samtools
-module  load 	samtools/1.8
+module  load 	samtools/1.9
+module  load    stringtie
+
+
+# Load miniconda
+module unload miniconda2
+
+conflict miniconda
+conflict anaconda
+#conflict python
+
+module unload python
+module unload python
+module load miniconda3/4.3.31
+
+# Set character encoding
+setenv LC_ALL en_US.utf-8
+setenv LANG en_US.utf-8
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3/4.3.31; source activate funannotate;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+# Add path manually, since source activate does not function within parent shell
+prepend-path    PATH    ${iigb_modules}/miniconda3/4.3.31/envs/funannotate/bin
 
 prepend-path    PATH        ${iigb_modules}/funannotate/git-live
 prepend-path    PATH        ${iigb_modules}/funannotate/git-live/bin
 
-setenv	FUNANNOTATE_DB		${iigb_modules}/funannotate/git-live/DB
+setenv	FUNANNOTATE_DB		${iigb_modules}/funannotate/share
 module  use     ${modules_dir}
