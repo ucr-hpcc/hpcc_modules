@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/fasttree/2.1.10/bin
+prepend-path    PATH            ${iigb_modules}/fasttree/2.1.11/bin
 
 module		use		${modules_dir}
 
