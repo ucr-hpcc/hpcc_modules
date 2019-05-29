@@ -19,6 +19,9 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+module load extra
+module load GCC/6.3.0-2.27
+
 prepend-path    PATH   ${iigb_modules}/revbayes/1.0.11
 
 module use ${modules_dir}
