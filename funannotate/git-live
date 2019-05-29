@@ -61,7 +61,7 @@ module unload miniconda2
 
 conflict miniconda
 conflict anaconda
-#conflict python
+conflict perl
 
 module unload python
 module unload python
