@@ -58,10 +58,11 @@ module  load    stringtie
 
 # Load miniconda
 module unload miniconda2
+module unload perl
 
 conflict miniconda
 conflict anaconda
-conflict perl
+
 
 module unload python
 module unload python
