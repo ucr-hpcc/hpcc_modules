@@ -21,6 +21,8 @@ set	datarootdir	${prefix}/share
 
 
 prepend-path    PATH            ${iigb_modules}/glimmerhmm/3.0.4/bin
+prepend-path    PATH            ${iigb_modules}/glimmerhmm/3.0.4/train
+prepend-path	PERL5LIB	${iigb_modules}/glimmerhmm/3.0.4/train
 
 module		use		${modules_dir}
 
