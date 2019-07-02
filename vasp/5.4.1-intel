@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## VASP modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tVASP - Adds VASP to your path"
+}
+
+module-whatis	"vasp-5.4.1-intel"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path    PATH            ${iigb_modules}/vasp/5.4.1-intel/bin
+
