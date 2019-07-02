@@ -109,7 +109,20 @@ SRCDIR     = ../../src
 BINDIR     = ../../bin
 ```
 ### Intel
+
+First Load proper intel module:
+```bash
+module load intel/2017.4.196
 ```
+
+Then compile the Intel wrapper for fftw3xf (likely already done):
+```bash
+cd /opt/linux/centos/7.x/x86_64/pkgs/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/mkl/interfaces/fftw3xf
+make libintel64
+```
+
+Then you can proceed with the using the following makefile.include for Intel:
+```make
 # Precompiler options
 CPP_OPTIONS= -DMPI -DHOST=\"IFC91_ompi\" -DIFC \
              -DCACHE_SIZE=4000 -DPGF90 -Davoidalloc \
@@ -129,6 +142,7 @@ OFLAG_IN   = $(OFLAG)
 DEBUG      = -O0
 
 MKLROOT=/opt/linux/centos/7.x/x86_64/pkgs/intel/mkl/2017.2.174/mkl/
+SCALAPACK  = /opt/linux/centos/7.x/x86_64/pkgs/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/mkl/lib/intel64_lin/libmkl_scalapack_lp64.a $(BLACS)
 
 MKL_PATH   = $(MKLROOT)/lib/intel64
 BLAS       =
