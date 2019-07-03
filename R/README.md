@@ -16,11 +16,28 @@ cd R-3.4.2
 
 Copy over previous install script, be sure to update the install path:
 ```bash
-cp ../R-3.4.0/iigb_configure.sh .
-vim iigb_configure.sh
-./iigb_configure.sh 
+cp ../R-3.4.0/hpcc_configure.sh .
+vim hpcc_configure.sh
+./hpcc_configure.sh 
 make -j 10
 make install
+```
+
+The hpcc_configure.sh script contains the following:
+```bash
+./configure \
+--prefix /opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0 \
+--enable-R-shlib \
+--enable-BLAS-shlib \
+--enable-shared \
+--enable-static \
+--with-blas \
+--with-lapack \
+--with-libpng \
+--with-jpeglib \
+--with-x
+
+make && make install
 ```
 
 After R is installed install the module.
