@@ -18,15 +18,11 @@ Copy over previous install script, be sure to update the install path:
 ```bash
 cp ../R-3.4.0/hpcc_configure.sh .
 vim hpcc_configure.sh
-./hpcc_configure.sh 
-make -j 10
-make install
 ```
-
 The hpcc_configure.sh script contains the following:
 ```bash
 ./configure \
---prefix /opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0 \
+--prefix /opt/linux/centos/7.x/x86_64/pkgs/R/3.4.0 \
 --enable-R-shlib \
 --enable-BLAS-shlib \
 --enable-shared \
@@ -36,9 +32,16 @@ The hpcc_configure.sh script contains the following:
 --with-libpng \
 --with-jpeglib \
 --with-x
-
-make && make install
 ```
+
+Then configure, build, and install
+```
+./hpcc_configure.sh 
+make -j 10
+make install
+```
+
+
 
 After R is installed install the module.
 
