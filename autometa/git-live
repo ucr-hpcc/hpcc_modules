@@ -27,9 +27,12 @@ module load bedtools
 module load prodigal
 
 module unload miniconda2
-module load miniconda3
 
-source activate autometa
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; source activate autometa;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "source deactivate;"
+}
 prepend-path    PATH            ${iigb_modules}/autometa/git-live/pipeline
 
 module use ${modules_dir}
