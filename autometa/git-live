@@ -26,6 +26,10 @@ module load bowtie2
 module load bedtools
 module load prodigal
 
+module unload miniconda2
+module load miniconda3
+
+source activate autometa
 prepend-path    PATH            ${iigb_modules}/autometa/git-live/pipeline
 
 module use ${modules_dir}
