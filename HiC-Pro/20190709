@@ -32,5 +32,5 @@ if { [module-info mode load] || [module-info mode switch2] } {
         puts stdout "conda deactivate;"
 }
 
-prepend    PATH   ${iigb_modules}/hic-pro/20190709/HiC-Pro_2.11.1/bin:${iigb_modules}/miniconda2/4.4.10/envs/hic-pro/bin
+prepend-path    PATH   ${iigb_modules}/hic-pro/20190709/HiC-Pro_2.11.1/bin:${iigb_modules}/miniconda2/4.4.10/envs/hic-pro/bin
 
