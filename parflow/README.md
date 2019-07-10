@@ -46,23 +46,23 @@ cd $SOURCE_DIR
 
 ## Install SILO
 ```bash
-    tar -xvf $SOURCE_DIR/silo-4.10.2.tar.gz
-    cd silo-4.10.2
-    # Configuration step specifying this location
-    ./configure --disable-silex --prefix=$SOFT_DIR/silo/4.10.2
-    # will test making then make binary  in specified path
-    make && make install
-    cd ../
+tar -xvf $SOURCE_DIR/silo-4.10.2.tar.gz
+cd silo-4.10.2
+# Configuration step specifying this location
+./configure --disable-silex --prefix=$SOFT_DIR/silo/4.10.2
+# will test making then make binary  in specified path
+make && make install
+cd ../
 ```
 
 ## Install Hypre
 ```bash
-    tar -xvf hypre-2.9.0b.tar.gz
-    cd hypre-2.9.0b/src
-    # will put sunder software folder with with last directory being version
-    ./configure --prefix=$SOFT_DIR/hypre/2.9.0b --with-MPI --with-MPI-include=$MPI_PATH/include --with-MPI-libs=mpi --with-MPI-lib-dirs=$MPI_PATH/lib
-    make && make install
-    cd ../../
+tar -xvf hypre-2.9.0b.tar.gz
+cd hypre-2.9.0b/src
+# will put sunder software folder with with last directory being version
+./configure --prefix=$SOFT_DIR/hypre/2.9.0b --with-MPI --with-MPI-include=$MPI_PATH/include --with-MPI-libs=mpi --with-MPI-lib-dirs=$MPI_PATH/lib
+make && make install
+cd ../../
 ```
 
 ## Install ParFlow
