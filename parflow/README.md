@@ -68,7 +68,7 @@ cd ../../
 ## Install ParFlow
 ### Extract Parflow
 ```bash
-    tar -xvf parflow-3.2.0.tar.gz
+tar -xvf parflow-3.2.0.tar.gz
 ```
 
 ### Apply Patch (CLM Jacob's Modification)
@@ -105,6 +105,6 @@ cd ..
 
 ## Tests
 ```bash
-    cd test
-    make check
+cd test
+make check
 ```
