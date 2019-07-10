@@ -75,13 +75,13 @@ tar -xvf parflow-3.2.0.tar.gz
 Apply path to `parflow-3.2.0/pfsimulator/clm/drv_restart.F90`
 ```diff
 126c126
-<      write(TS,'(I6.6)') tstamp
+<      write(TS,'(I5.5)') tstamp
 ---
->      write(TS,'(I5.5)') tstamp
+>      write(TS,'(I6.6)') tstamp
 440c440
-<         write(TS,'(I6.6)') tstamp
+<         write(TS,'(I5.5)') tstamp
 ---
->         write(TS,'(I5.5)') tstamp
+>         write(TS,'(I6.6)') tstamp
 ```
 
 # Install pfsimulator
