@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## Vsearch 2.9.1  modulefile
+## Vsearch 2.13.6  modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tVSearch - Adds VSearch to your path"
+        puts stderr "\tvsearch - Adds vearch to your path"
 }
 
-module-whatis	"vsearch-2.9.1"
+module-whatis	"vsearch-2.13.6"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,8 +19,8 @@ set	prefix		 ${modules_dir}/${version}
 set	exec_prefix	 ${prefix}
 set	datarootdir	 ${prefix}/share
 
-prepend-path	PATH	 ${iigb_modules}/vsearch/2.9.1/bin
-prepend-path	MANPATH  ${iigb_modules}/vsearch/2.9.1/man
+prepend-path	PATH	 ${iigb_modules}/vsearch/2.13.6/bin
+prepend-path	MANPATH  ${iigb_modules}/vsearch/2.13.6/man
 
 module		use	 ${modules_dir}
 
