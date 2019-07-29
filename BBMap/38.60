@@ -1,6 +1,6 @@
 #%Module1.0#####################################################################
 ##
-##modulefile
+## modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\t - Adds BBMap tools to your path"
 }
 
-module-whatis   "BBMap-38.16"
+module-whatis   "BBMap-38.60"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,8 +19,8 @@ set     prefix          ${modules_dir}/${version}
 set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
-prepend-path     PATH             ${iigb_modules}/BBMap/38.16
-prepend-path     PATH             ${iigb_modules}/BBMap/38.16/pipelines
+prepend-path     PATH             ${iigb_modules}/BBMap/38.60
+prepend-path     PATH             ${iigb_modules}/BBMap/38.60/pipelines
 
 module           use              ${modules_dir}
 
