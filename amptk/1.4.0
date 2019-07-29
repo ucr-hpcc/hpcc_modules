@@ -38,5 +38,6 @@ if { [module-info mode load] || [module-info mode switch2] } {
 }
 # Add path manually, since source activate does not function within parent shell
 prepend-path    PATH    ${iigb_modules}/miniconda2/4.4.10/envs/amptk/bin
+prepend-path    PATH    ${iigb_modules}/amptk/1.4.0/scripts
 
 module		use		${modules_dir}
