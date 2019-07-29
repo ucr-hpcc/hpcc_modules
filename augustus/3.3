@@ -20,6 +20,8 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 module load lp_solve
+# needed for braker steps
+module load bamtools 
 
 prepend-path    PATH                    ${iigb_modules}/augustus/3.3/bin:${iigb_modules}/augustus/3.3/scripts
 setenv          AUGUSTUS_CONFIG_PATH    ${iigb_modules}/augustus/3.3/config
