@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## db-ncbi modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tdb-ncbi - Sets ncbi database path to NCBI_DB environment variable"
+}
+
+module-whatis	"db-ncbi"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+setenv          NCBI_DB	    /srv/projects/db/ncbi/preformatted/20190805
+prepend-path    BLASTDB	    /srv/projects/db/ncbi/preformatted/20190805
+
