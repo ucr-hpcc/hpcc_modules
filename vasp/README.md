@@ -29,6 +29,8 @@ make libintel64
 ```
 
 ## Build
+Download patches from: https://cms.mpi.univie.ac.at/wiki/index.php/Installing_VASP#Patches
+
 Apply patches:
 ```
 tar -xf vasp.5.4.1.tar.gz
