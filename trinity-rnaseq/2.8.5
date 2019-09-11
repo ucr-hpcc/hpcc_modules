@@ -1,0 +1,37 @@
+#%Module1.0#####################################################################
+##
+## trinity-rnaseq modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\ttrinity-rnaseq - Adds trinity-rnaseq to your path"
+}
+
+module-whatis	"trinity-rnaseq-2.8.5"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+module unload samtools
+module load samtools/1.9
+module unload perl
+module load perl/5.24.0
+module load bowtie2/2.3.4.1
+module load jellyfish/2.2.9
+module load salmon/0.9.1
+module load python/2.7.13
+
+
+prepend-path    PATH            ${iigb_modules}/trinity-rnaseq/2.8.5
+prepend-path    PATH            ${iigb_modules}/trinity-rnaseq/2.8.5/util
+setenv          TRINITY_HOME    ${iigb_modules}/trinity-rnaseq/2.8.5
+setenv          TRINITYHOME     ${iigb_modules}/trinity-rnaseq/2.8.5
+
+module use ${modules_dir}
