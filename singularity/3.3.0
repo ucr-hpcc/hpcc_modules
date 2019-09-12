@@ -22,4 +22,3 @@ set     datarootdir     ${prefix}/share
 prepend-path    PATH            ${iigb_modules}/singularity/3.3.0/bin
 prepend-path    MANPATH         ${iigb_modules}/singularity/3.3.0/share/man
 
-module          use             ${modules_dir}
