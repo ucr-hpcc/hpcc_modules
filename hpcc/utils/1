@@ -1,11 +1,11 @@
 #%Module1.0#####################################################################
 ##
-## HPCC Utils modulefilei  Loads a commmon bin for HPCC admin tools -
+## HPCC utils modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tiigb_utilities - Adds iigb_utilities to your path"
+        puts stderr "\thpcc_utils - Adds hpcc utilities to your path"
 }
 
 module-whatis   "hpcc_utils-1"
@@ -19,8 +19,5 @@ set     prefix          ${modules_dir}/${version}
 set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
-
-prepend-path    PATH            /bigdata/operations/shared/hpcc/utils/bin
-
-module          use             ${modules_dir}
+prepend-path    PATH    /hpcc/utils/bin
 
