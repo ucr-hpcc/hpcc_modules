@@ -1,6 +1,6 @@
 #%Module1.0#####################################################################
 ##
-## Structure modulefile
+## scythe modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
