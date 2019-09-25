@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## scythe modulefile
+## redmask and Red modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tscythe - Adds scythe to your path"
+        puts stderr "\tRed and redmask - Adds redmask.py to your path"
 }
 
-module-whatis	"scythe-0.981"
+module-whatis	"redmask-2015-05-22"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		${iigb_modules}/scythe/0.981/bin
+prepend-path    PATH   		${iigb_modules}/redmask/2015-05-22/bin
 
 module		use		${modules_dir}
 
