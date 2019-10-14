@@ -6,10 +6,13 @@ Even using the Make.py script did not function as expected. Possibly due to prev
 You must ensure a clean src directory by only compiling once, otherwise the results are unpredictable.
 
 # Install
+Visit Github page and get latest stable release URL (ie. "copy link address") [https://github.com/lammps/lammps/releases](https://github.com/lammps/lammps/releases)
+
+Then use wget to download on the cluster
 ```
-wget <URL>
-tar -xf <file>.tar.gz
-cd <newfolder>/src
+wget https://github.com/lammps/lammps/archive/stable_7Aug2019.tar.gz #Use copied link from github
+tar -xf stable_7Aug2019.tar.gz
+cd lammps-stable_7Aug2019/src
 make mpi
 ```
 
