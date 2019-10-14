@@ -10,6 +10,7 @@ Visit Github page and get latest stable release URL (ie. "copy link address") [h
 
 Then use wget to download on the cluster
 ```
+cd /bigdata/${GROUP}/shared/software 
 wget https://github.com/lammps/lammps/archive/stable_7Aug2019.tar.gz #Use copied link from github
 tar -xf stable_7Aug2019.tar.gz
 cd lammps-stable_7Aug2019/src
