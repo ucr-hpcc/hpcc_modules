@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tlammps- Adds lammps to your path"
 }
 
-module-whatis	"lammps-16Feb16"
+module-whatis	"lammps-7Aug2019"
 
 set      iigb_modules    $::env(IIGB_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,9 +19,7 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path    PATH              ${iigb_modules}/lammps/16Feb16/bin:${iigb_modules}/lammps/16Feb16/python/examples
-prepend-path    LD_LIBRARY_PATH   ${iigb_modules}/lammps/16Feb16/lib64
-prepend-path    PYTHONPATH        ${iigb_modules}/lammps/16Feb16/python/build/lib
-
-module		use		${modules_dir}
+prepend-path    PATH              ${iigb_modules}/lammps/7Aug2019/bin:${iigb_modules}/lammps/7Aug2019/python/examples
+prepend-path    LD_LIBRARY_PATH   ${iigb_modules}/lammps/7Aug2019/lib64
+prepend-path    PYTHONPATH        ${iigb_modules}/lammps/7Aug2019/python/build/lib
 
