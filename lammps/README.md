@@ -27,6 +27,13 @@ Go to source code directory:
 cd lammps-stable_7Aug2019/src
 ```
 
+Install additional packages, and list status of all packages
+```bash
+make yes-COMPRESS
+make yes-MANYBODY
+make package-status
+```
+
 Build binary, static and shared libraries
 ```bash
 make mode=lib g++_openmpi && make mode=shlib g++_openmpi
