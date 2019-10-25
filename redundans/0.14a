@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## redundans modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tredundans- Adds redundans to your path"
+}
+
+module-whatis	"redundans-0.14a"
+
+set      iigb_modules    $::env(IIGB_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path    PATH            ${iigb_modules}/redundans/0.14a
+
+module use ${modules_dir}
