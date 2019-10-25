@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"autometa-git-live"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -33,6 +33,6 @@ if { [module-info mode load] || [module-info mode switch2] } {
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "source deactivate;"
 }
-prepend-path    PATH            ${iigb_modules}/autometa/git-live/pipeline
+prepend-path    PATH            ${hpcc_modules}/autometa/git-live/pipeline
 
 module use ${modules_dir}

@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"USPEX-9.4.4"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -21,7 +21,7 @@ set	datarootdir	${prefix}/share
 
 module  load    octave/4.0.0
 
-prepend-path    PATH        ${iigb_modules}/USPEX/9.4.4
-setenv          USPEXPATH   ${iigb_modules}/USPEX/9.4.4/src
+prepend-path    PATH        ${hpcc_modules}/USPEX/9.4.4
+setenv          USPEXPATH   ${hpcc_modules}/USPEX/9.4.4/src
 
 module  use     ${modules_dir}

@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis   "runBNG-1.03-cda06f4"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -24,6 +24,6 @@ prereq           bionano
 module switch perl/5.16.3
 prereq           perl/5.16.3
 
-prepend-path     PATH     ${iigb_modules}/runBNG/1.03-cda06f4/
+prepend-path     PATH     ${hpcc_modules}/runBNG/1.03-cda06f4/
 
 module           use      ${modules_dir}

@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"jmodeltest2-2.1.10"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -21,6 +21,6 @@ set	datarootdir	${prefix}/share
 
 module  load    java/8
 
-setenv JMODELTEST_HOME  ${iigb_modules}/jmodeltest2/2.1.10
+setenv JMODELTEST_HOME  ${hpcc_modules}/jmodeltest2/2.1.10
 
 module use ${modules_dir}

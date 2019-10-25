@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"PacBioEDA-c2f69de"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -20,9 +20,9 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH              ${iigb_modules}/PacBioEDA/c2f69de
-#prepend-path    LD_LIBRARY_PATH   ${iigb_modules}/samtools/1.4.1/htslib/lib
-#prepend-path	MANPATH		  ${iigb_modules}/samtools/1.4.1/share/man
+prepend-path    PATH              ${hpcc_modules}/PacBioEDA/c2f69de
+#prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/samtools/1.4.1/htslib/lib
+#prepend-path	MANPATH		  ${hpcc_modules}/samtools/1.4.1/share/man
 
 module		use		${modules_dir}
 

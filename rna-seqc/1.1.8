@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis   "RNA-SeQC-1.1.8"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -21,10 +21,10 @@ set     datarootdir     ${prefix}/share
 
 module load java
 
-prepend-path    PATH           ${iigb_modules}/rna-seqc/1.1.8/bin
-setenv          RNASEQC        ${iigb_modules}/rna-seqc/1.1.8/lib/rna-seqc.jar
-setenv          RNASEQC_LIB    ${iigb_modules}/rna-seqc/1.1.8/lib
-prepend-path    CLASSPATH      ${iigb_modules}/rna-seqc/1.1.8/lib
+prepend-path    PATH           ${hpcc_modules}/rna-seqc/1.1.8/bin
+setenv          RNASEQC        ${hpcc_modules}/rna-seqc/1.1.8/lib/rna-seqc.jar
+setenv          RNASEQC_LIB    ${hpcc_modules}/rna-seqc/1.1.8/lib
+prepend-path    CLASSPATH      ${hpcc_modules}/rna-seqc/1.1.8/lib
 
 module          use            ${modules_dir}
 

@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"oases-0.2.09"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -21,6 +21,6 @@ set	datarootdir	${prefix}/share
 
 prereq          velvet/1.2.10
 
-prepend-path    PATH    ${iigb_modules}/oases/0.2.09:${iigb_modules}/oases/0.2.09/scripts
+prepend-path    PATH    ${hpcc_modules}/oases/0.2.09:${hpcc_modules}/oases/0.2.09/scripts
 
 module          use     ${modules_dir}

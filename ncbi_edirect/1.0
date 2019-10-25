@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"ncbi_edirect-1.0"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -20,6 +20,6 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/ncbi_edirect/edirect
+prepend-path    PATH            ${hpcc_modules}/ncbi_edirect/edirect
 
 module use ${modules_dir}

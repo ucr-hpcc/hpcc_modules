@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"bcftools-1.9"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -22,7 +22,7 @@ set	datarootdir	${prefix}/share
 module load htslib/1.9
 prereq perl/5.20.2 # this was complied against perl/5.20.2 for regexp
 
-prepend-path    PATH        ${iigb_modules}/bcftools/1.9/bin
-prepend-path    MANPATH     ${iigb_modules}/bcftools/1.9/share/man
+prepend-path    PATH        ${hpcc_modules}/bcftools/1.9/bin
+prepend-path    MANPATH     ${hpcc_modules}/bcftools/1.9/share/man
 
 module use ${modules_dir}

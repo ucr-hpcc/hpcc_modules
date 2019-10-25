@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"ghc-7.6.3"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -20,10 +20,10 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH              ${iigb_modules}/ghc/7.6.3/bin
-prepend-path    LD_LIBRARY_PATH   ${iigb_modules}/ghc/7.6.3/lib
-prepend-path	MANPATH		      ${iigb_modules}/ghc/7.6.3/share/man
-setenv          GHC               ${iigb_modules}/ghc/7.6.3/
+prepend-path    PATH              ${hpcc_modules}/ghc/7.6.3/bin
+prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/ghc/7.6.3/lib
+prepend-path	MANPATH		      ${hpcc_modules}/ghc/7.6.3/share/man
+setenv          GHC               ${hpcc_modules}/ghc/7.6.3/
 
 module		use		${modules_dir}
 

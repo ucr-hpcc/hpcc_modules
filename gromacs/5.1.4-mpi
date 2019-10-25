@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis   "gromacs-5.1.4"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -22,11 +22,11 @@ set datarootdir ${prefix}/share
 module load cuda
 prereq cuda
 
-prepend-path     C_INCLUDE_PATH     ${iigb_modules}/gromacs/5.1.4-slurm/include
-prepend-path     CPLUS_INCLUDE_PATH ${iigb_modules}/gromacs/5.1.4-slurm/include
-prepend-path     LIBRARY_PATH       ${iigb_modules}/gromacs/5.1.4-slurm/lib64
-prepend-path     PATH               ${iigb_modules}/gromacs/5.1.4-slurm/bin
-prepend-path     LD_LIBRARY_PATH    ${iigb_modules}/gromacs/5.1.4-slurm/lib64
-prepend-path     MANPATH            ${iigb_modules}/gromacs/5.1.4-slurm/share/man
+prepend-path     C_INCLUDE_PATH     ${hpcc_modules}/gromacs/5.1.4-slurm/include
+prepend-path     CPLUS_INCLUDE_PATH ${hpcc_modules}/gromacs/5.1.4-slurm/include
+prepend-path     LIBRARY_PATH       ${hpcc_modules}/gromacs/5.1.4-slurm/lib64
+prepend-path     PATH               ${hpcc_modules}/gromacs/5.1.4-slurm/bin
+prepend-path     LD_LIBRARY_PATH    ${hpcc_modules}/gromacs/5.1.4-slurm/lib64
+prepend-path     MANPATH            ${hpcc_modules}/gromacs/5.1.4-slurm/share/man
 
 module           use      ${modules_dir}

@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis   "beagle-4.1"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -24,10 +24,10 @@ conflict    java
 module unload java
 module load java/8
 
-prepend-path    PATH           ${iigb_modules}/beagle/4.1/bin
-setenv          beagle          ${iigb_modules}/beagle/4.1/lib/beagle.23Jul16.fb0.jar
-setenv          beagle_LIB      ${iigb_modules}/beagle/4.1/lib
-prepend-path    CLASSPATH      ${iigb_modules}/beagle/4.1/lib
+prepend-path    PATH           ${hpcc_modules}/beagle/4.1/bin
+setenv          beagle          ${hpcc_modules}/beagle/4.1/lib/beagle.23Jul16.fb0.jar
+setenv          beagle_LIB      ${hpcc_modules}/beagle/4.1/lib
+prepend-path    CLASSPATH      ${hpcc_modules}/beagle/4.1/lib
 
 module          use            ${modules_dir}
 

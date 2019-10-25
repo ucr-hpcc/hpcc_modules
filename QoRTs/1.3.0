@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"QoRTs-1.3.0"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 module load java/8
-setenv	QORTS	${iigb_modules}/QoRTs/1.3.0/QoRTs-STABLE.jar
+setenv	QORTS	${hpcc_modules}/QoRTs/1.3.0/QoRTs-STABLE.jar
 
 module		use		${modules_dir}
 

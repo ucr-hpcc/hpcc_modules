@@ -108,7 +108,7 @@ proc ModulesHelp { } {
 
                 module-whatis   "cpmd-4.1"
 
-                set      iigb_modules    $::env(IIGB_MODULES)
+                set      hpcc_modules    $::env(HPCC_MODULES)
                 set      modules_dir     $::env(MODULES_DIR)
 
                 # for Tcl script use only
@@ -119,7 +119,7 @@ proc ModulesHelp { } {
 
                 module load intel/2017.4.196
 
-                prepend-path    PATH            ${iigb_modules}/cpmd/4.1/bin
+                prepend-path    PATH            ${hpcc_modules}/cpmd/4.1/bin
 
                 module          use             ${modules_dir}
 ```

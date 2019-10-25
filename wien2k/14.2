@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis   "wien2k-14.2"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -21,8 +21,8 @@ set     datarootdir     ${prefix}/share
 
 
 
-prepend-path    PATH            ${iigb_modules}/wien2k/14.2:/opt/linux/centos/7.x/x86_64/pkgs/wien2k/14.2/SRC_BerryPI/BerryPI
-setenv          BERRYPI_PATH    ${iigb_modules}/wien2k/14.2/SRC_BerryPI/BerryPI
+prepend-path    PATH            ${hpcc_modules}/wien2k/14.2:/opt/linux/centos/7.x/x86_64/pkgs/wien2k/14.2/SRC_BerryPI/BerryPI
+setenv          BERRYPI_PATH    ${hpcc_modules}/wien2k/14.2/SRC_BerryPI/BerryPI
 
 module          use             ${modules_dir}
 

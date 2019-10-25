@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"kissplice-2.4.0-p1"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -22,7 +22,7 @@ set	datarootdir	${prefix}/share
 # Any Python 2.7.x will do
 prereq      python/2.7.5
 
-prepend-path    PATH    ${iigb_modules}/kissplice/2.4.0-p1/bin
-prepend-path    MANPATH ${iigb_modules}/kissplice/2.4.0-p1/share/man
+prepend-path    PATH    ${hpcc_modules}/kissplice/2.4.0-p1/bin
+prepend-path    MANPATH ${hpcc_modules}/kissplice/2.4.0-p1/share/man
 
 module use ${modules_dir}

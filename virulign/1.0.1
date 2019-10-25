@@ -11,7 +11,7 @@ proc ModulesHelp { } {
 
 module-whatis	"virulign-1.0.1"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -21,6 +21,6 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/virulign/1.0.1/bin
+prepend-path    PATH            ${hpcc_modules}/virulign/1.0.1/bin
 
 module use ${modules_dir}

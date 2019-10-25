@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"mirdeep-2.0.0.8"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -20,10 +20,10 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH              ${iigb_modules}/mirdeep/2.0.0.8/bin
-prepend-path	PERL_MB_OPT		  "--install_base ${iigb_modules}/mirdeep/2.0.0.8/lib/perl5"
-prepend-path	PERL_MM_OPT		  "INSTALL_BASE=${iigb_modules}/mirdeep/2.0.0.8/lib/perl5"
-prepend-path	PERL5LIB		  ${iigb_modules}/mirdeep/2.0.0.8/lib/perl5
+prepend-path    PATH              ${hpcc_modules}/mirdeep/2.0.0.8/bin
+prepend-path	PERL_MB_OPT		  "--install_base ${hpcc_modules}/mirdeep/2.0.0.8/lib/perl5"
+prepend-path	PERL_MM_OPT		  "INSTALL_BASE=${hpcc_modules}/mirdeep/2.0.0.8/lib/perl5"
+prepend-path	PERL5LIB		  ${hpcc_modules}/mirdeep/2.0.0.8/lib/perl5
 
 module		use		${modules_dir}
 

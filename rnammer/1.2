@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"RNAmmer-1.2"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -19,6 +19,6 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path	PATH	${iigb_modules}/rnammer/1.2
-prepend-path	MANPATH	${iigb_modules}/rnammer/1.2/man
+prepend-path	PATH	${hpcc_modules}/rnammer/1.2
+prepend-path	MANPATH	${hpcc_modules}/rnammer/1.2/man
 module		use     ${modules_dir}

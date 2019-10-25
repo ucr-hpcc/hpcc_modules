@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"japsa-v1.6-10a"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -23,6 +23,6 @@ module  load    java/8u25
 #module  load    hdf-java
 module  load    kalign
 
-prepend-path    PATH    ${iigb_modules}/japsa/v1.6-10a/bin
+prepend-path    PATH    ${hpcc_modules}/japsa/v1.6-10a/bin
 
 module  use     ${modules_dir}

@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis   "gottcha-v20150825"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -21,7 +21,7 @@ set     datarootdir     ${prefix}/share
 
 module switch perl/5.22.0
 
-prepend-path    PATH            ${iigb_modules}/gottcha/v20150825/bin
+prepend-path    PATH            ${hpcc_modules}/gottcha/v20150825/bin
 setenv	GOTTCHA_DB	/srv/projects/db/GOTTCHA/v20150825/database
 setenv DEFAULT_GOTTCHA_DB	/srv/projects/db/GOTTCHA/v20150825/database/GOTTCHA_BACTERIA_c4937_k24_u30_xHUMAN3x.species
 module          use             ${modules_dir}

@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis   "amber-16_gpu"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -22,10 +22,10 @@ set     datarootdir     ${prefix}/share
 conflict ambertools
 module load intel/2018
 
-setenv           AMBER_PREFIX     ${iigb_modules}/amber/16_intel_cuda
-setenv           AMBERHOME        ${iigb_modules}/amber/16_intel_cuda
+setenv           AMBER_PREFIX     ${hpcc_modules}/amber/16_intel_cuda
+setenv           AMBERHOME        ${hpcc_modules}/amber/16_intel_cuda
 
-prepend-path     PATH             ${iigb_modules}/amber/16_intel_cuda/bin
-prepend-path     PYTHONPATH       ${iigb_modules}/amber/16_intel_cuda/lib/python/site-packages
-prepend-path     LD_LIBRARY_PATH  ${iigb_modules}/amber/16_intel_cuda/lib
+prepend-path     PATH             ${hpcc_modules}/amber/16_intel_cuda/bin
+prepend-path     PYTHONPATH       ${hpcc_modules}/amber/16_intel_cuda/lib/python/site-packages
+prepend-path     LD_LIBRARY_PATH  ${hpcc_modules}/amber/16_intel_cuda/lib
 

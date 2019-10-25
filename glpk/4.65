@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"glpk-4.65"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -19,8 +19,8 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path    PATH            ${iigb_modules}/glpk/4.65/bin
-prepend-path    C_INCLUDE_PATH  ${iigb_modules}/glpk/4.65/include
-prepend-path    LD_LIBRARY_PATH ${iigb_modules}/glpk/4.65/lib
+prepend-path    PATH            ${hpcc_modules}/glpk/4.65/bin
+prepend-path    C_INCLUDE_PATH  ${hpcc_modules}/glpk/4.65/include
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/glpk/4.65/lib
 
 module use ${modules_dir}

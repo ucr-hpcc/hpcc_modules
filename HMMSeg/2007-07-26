@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis   "HMMSeg-2007-07-26"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -20,7 +20,7 @@ set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
 module load java
-setenv          HMMSEG	${iigb_modules}/HMMSeg/2007-07-26/HMMSeg.jar
+setenv          HMMSEG	${hpcc_modules}/HMMSeg/2007-07-26/HMMSeg.jar
 
 module          use            ${modules_dir}
 

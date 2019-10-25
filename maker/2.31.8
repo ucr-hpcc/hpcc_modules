@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis   "MAKER-2.31.8"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -24,12 +24,12 @@ module load perl/5.24.0
 module unload openmpi
 module load mpich/3.2
 
-prepend-path     PATH              ${iigb_modules}/maker/2.31.8/bin
-prepend-path     PERL5LIB          ${iigb_modules}/maker/2.31.8/lib:${iigb_modules}/maker/2.31.8/perl/lib
-prepend-path     MANPATH           ${iigb_modules}/maker/2.31.8/man
+prepend-path     PATH              ${hpcc_modules}/maker/2.31.8/bin
+prepend-path     PERL5LIB          ${hpcc_modules}/maker/2.31.8/lib:${hpcc_modules}/maker/2.31.8/perl/lib
+prepend-path     MANPATH           ${hpcc_modules}/maker/2.31.8/man
 
 # Moved OpenMPI LD_PRELOAD to here, since it is needed here and causes warnings elsewhere
-prepend-path	LD_PRELOAD	 ${iigb_modules}/mpich/3.2/lib/libmpi.so
+prepend-path	LD_PRELOAD	 ${hpcc_modules}/mpich/3.2/lib/libmpi.so
 module           use               ${modules_dir}
 
 module load ncbi-blast/2.2.26

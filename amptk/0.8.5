@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"amptk-0.8.5"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -26,5 +26,5 @@ module load hmmer
 module load fastx_toolkit
 module load vsearch
 
-prepend-path	PATH	${iigb_modules}/amptk/0.8.5
+prepend-path	PATH	${hpcc_modules}/amptk/0.8.5
 module		use		${modules_dir}

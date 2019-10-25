@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"hmmer-2.3.2"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -20,8 +20,8 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/hmmer/2.3.2/bin
-prepend-path    MANPATH         ${iigb_modules}/hmmer/2.3.2/man
+prepend-path    PATH            ${hpcc_modules}/hmmer/2.3.2/bin
+prepend-path    MANPATH         ${hpcc_modules}/hmmer/2.3.2/man
 
 module		use		${modules_dir}
 

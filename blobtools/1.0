@@ -11,7 +11,7 @@ proc ModulesHelp { } {
 
 module-whatis	"blobtools-1.0"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -23,7 +23,7 @@ set	datarootdir	${prefix}/share
 module load samtools/1.6
 module load htslib/1.6
 # depends on python (2.7)
-prepend-path    PATH            ${iigb_modules}/blobtools/1.0
+prepend-path    PATH            ${hpcc_modules}/blobtools/1.0
 
 module		use		${modules_dir}
 

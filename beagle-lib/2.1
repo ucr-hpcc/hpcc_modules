@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"beagle-lib-2.1"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -19,6 +19,6 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path    LD_LIBRARY_PATH ${iigb_modules}/beagle-lib/2.1/lib
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/beagle-lib/2.1/lib
 module		use		${modules_dir}
 

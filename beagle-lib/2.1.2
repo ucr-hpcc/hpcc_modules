@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"beagle-lib-2.1.2"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -19,10 +19,10 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path  LD_LIBRARY_PATH  ${iigb_modules}/beagle-lib/2.1.2/lib
-setenv        BEAGLE_LIB       ${iigb_modules}/beagle-lib/2.1.2/lib
-setenv        BEAGLE_CFLAGS    -I${iigb_modules}/beagle-lib/2.1.2/include/libhmsbeagle-1
-setenv        BEAGLE_LIBS      "-L${iigb_modules}/beagle-lib/2.1.2/lib -lhmsbeagle -ldl"
+prepend-path  LD_LIBRARY_PATH  ${hpcc_modules}/beagle-lib/2.1.2/lib
+setenv        BEAGLE_LIB       ${hpcc_modules}/beagle-lib/2.1.2/lib
+setenv        BEAGLE_CFLAGS    -I${hpcc_modules}/beagle-lib/2.1.2/include/libhmsbeagle-1
+setenv        BEAGLE_LIBS      "-L${hpcc_modules}/beagle-lib/2.1.2/lib -lhmsbeagle -ldl"
 
 module		use		${modules_dir}
 
