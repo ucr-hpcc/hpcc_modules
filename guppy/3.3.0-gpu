@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"guppy-3.3.0-gpu"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      iigb_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
