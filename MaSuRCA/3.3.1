@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"masurca-3.3.1"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -38,6 +38,6 @@ if { [module-info mode load] || [module-info mode switch2] } {
 }
 
 # Add path manually, since source activate does not function within parent shell
-prepend-path    PATH    ${iigb_modules}/miniconda3/4.3.31/envs/masurca/bin
+prepend-path    PATH    ${hpcc_modules}/miniconda3/4.3.31/envs/masurca/bin
 
 module		use		${modules_dir}

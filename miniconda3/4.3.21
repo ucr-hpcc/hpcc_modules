@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"miniconda-4.3.21"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -24,5 +24,5 @@ conflict    python
 conflict    anaconda
 conflict    miniconda
 
-prepend-path    PATH              ${iigb_modules}/miniconda3/4.3.21/bin
+prepend-path    PATH              ${hpcc_modules}/miniconda3/4.3.21/bin
 

@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"QUAST-4.6.3"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -22,6 +22,6 @@ set	datarootdir	${prefix}/share
 module unload java
 module load java/7u40
 
-prepend-path    PATH	${iigb_modules}/QUAST/4.6.3
+prepend-path    PATH	${hpcc_modules}/QUAST/4.6.3
 module		use		${modules_dir}
 

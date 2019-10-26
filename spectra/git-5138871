@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"spectra-git-5138871"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -21,7 +21,7 @@ set	datarootdir	${prefix}/share
 
 module load eigen
 
-prepend-path    CPLUS_INCLUDE_PATH  ${iigb_modules}/spectra/git-5138871/include
+prepend-path    CPLUS_INCLUDE_PATH  ${hpcc_modules}/spectra/git-5138871/include
 
 module		use		${modules_dir}
 

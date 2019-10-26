@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"gatk-3.5"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -21,8 +21,8 @@ set	datarootdir	${prefix}/share
 
 module load java 
 
-setenv  GATKDIR     ${iigb_modules}/gatk/3.5
-setenv  GATK        ${iigb_modules}/gatk/3.5/GenomeAnalysisTK.jar 
+setenv  GATKDIR     ${hpcc_modules}/gatk/3.5
+setenv  GATK        ${hpcc_modules}/gatk/3.5/GenomeAnalysisTK.jar 
 
 module		use		${modules_dir}
 

@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"SNAP-2013-11-29"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/SNAP/2013-11-29/bin
-setenv	ZOE ${iigb_modules}/SNAP/2013-11-29
+prepend-path    PATH            ${hpcc_modules}/SNAP/2013-11-29/bin
+setenv	ZOE ${hpcc_modules}/SNAP/2013-11-29
 module		use		${modules_dir}
 

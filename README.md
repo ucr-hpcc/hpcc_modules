@@ -26,7 +26,7 @@ However you can look at the openbabel module and see the example README.md:
 These are the modules that are currently available on the UCR HPC cluster
 
 Module files now use environment variables to determine the path:
-    IIGB_MODULES - Path dynamically built by /etc/profile.d/modules.sh at login to specify install path of modules.
+    HPCC_MODULES - Path dynamically built by /etc/profile.d/modules.sh at login to specify install path of modules.
     MODULESHOME - Path set by module system to specify home of module system.
 
 ## Standards

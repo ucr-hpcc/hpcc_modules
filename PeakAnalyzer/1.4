@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis   "PeakAnalyzer-1.4"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -20,10 +20,10 @@ set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
 module load java
-setenv          PEAKANALYZER       ${iigb_modules}/PeakAnalyzer/1.4/PeakAnalyzer.jar
-setenv          PEAKANALYZERGUI    ${iigb_modules}/PeakAnalyzer/1.4/PeakAnalyzerGUI.jar
-setenv          PEAKANALYZERDIR    ${iigb_modules}/PeakAnalyzer/1.4/
-prepend-path    CLASSPATH          ${iigb_modules}/PeakAnalyzer/1.4/
+setenv          PEAKANALYZER       ${hpcc_modules}/PeakAnalyzer/1.4/PeakAnalyzer.jar
+setenv          PEAKANALYZERGUI    ${hpcc_modules}/PeakAnalyzer/1.4/PeakAnalyzerGUI.jar
+setenv          PEAKANALYZERDIR    ${hpcc_modules}/PeakAnalyzer/1.4/
+prepend-path    CLASSPATH          ${hpcc_modules}/PeakAnalyzer/1.4/
 
 module          use            ${modules_dir}
 

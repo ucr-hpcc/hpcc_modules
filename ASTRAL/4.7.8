@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis   "ASTRAL-4.7.8"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -20,8 +20,8 @@ set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
 module load java
-setenv          ASTRALDIR	${iigb_modules}/ASTRAL/4.7.8
-setenv          ASTRALJAR	${iigb_modules}/ASTRAL/4.7.8/astral.jar
+setenv          ASTRALDIR	${hpcc_modules}/ASTRAL/4.7.8
+setenv          ASTRALJAR	${hpcc_modules}/ASTRAL/4.7.8/astral.jar
 
 module          use            ${modules_dir}
 

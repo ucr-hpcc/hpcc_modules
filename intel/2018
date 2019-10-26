@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"intel-2018"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -28,18 +28,18 @@ set shell [module-info shell]
 
 if { [module-info mode load] || [module-info mode switch2] } {
     if { $shell == "bash" } {
-        puts stdout "source ${iigb_modules}/intel/2018/bin/compilervars.sh intel64;"
-        puts stdout "source ${iigb_modules}/intel/2018/bin/iccvars.sh intel64;"
-        puts stdout "source ${iigb_modules}/intel/2018/bin/ifortvars.sh intel64;"
-        puts stdout "source ${iigb_modules}/intel/2018/compilers_and_libraries_2018.0.128/linux/mkl/bin/mklvars.sh intel64;"
-        puts stdout "source ${iigb_modules}/intel/2018/compilers_and_libraries_2018.0.128/linux/mpi/intel64/bin/mpivars.sh intel64;"
+        puts stdout "source ${hpcc_modules}/intel/2018/bin/compilervars.sh intel64;"
+        puts stdout "source ${hpcc_modules}/intel/2018/bin/iccvars.sh intel64;"
+        puts stdout "source ${hpcc_modules}/intel/2018/bin/ifortvars.sh intel64;"
+        puts stdout "source ${hpcc_modules}/intel/2018/compilers_and_libraries_2018.0.128/linux/mkl/bin/mklvars.sh intel64;"
+        puts stdout "source ${hpcc_modules}/intel/2018/compilers_and_libraries_2018.0.128/linux/mpi/intel64/bin/mpivars.sh intel64;"
     }
     if { $shell == "csh" } {
-        puts stdout "source ${iigb_modules}/intel/2018/bin/compilervars.csh intel64;"
-        puts stdout "source ${iigb_modules}/intel/2018/bin/iccvars.csh intel64;"
-        puts stdout "source ${iigb_modules}/intel/2018/bin/ifortvars.csh intel64;"
-        puts stdout "source ${iigb_modules}/intel/2018/compilers_and_libraries_2018.0.128/linux/mkl/bin/mklvars.csh intel64;"
-        puts stdout "source ${iigb_modules}/intel/2018/compilers_and_libraries_2018.0.128/linux/mpi/intel64/bin/mpivars.csh intel64;"
+        puts stdout "source ${hpcc_modules}/intel/2018/bin/compilervars.csh intel64;"
+        puts stdout "source ${hpcc_modules}/intel/2018/bin/iccvars.csh intel64;"
+        puts stdout "source ${hpcc_modules}/intel/2018/bin/ifortvars.csh intel64;"
+        puts stdout "source ${hpcc_modules}/intel/2018/compilers_and_libraries_2018.0.128/linux/mkl/bin/mklvars.csh intel64;"
+        puts stdout "source ${hpcc_modules}/intel/2018/compilers_and_libraries_2018.0.128/linux/mpi/intel64/bin/mpivars.csh intel64;"
     }
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
         puts stdout ""

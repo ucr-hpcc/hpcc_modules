@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"dftbplus-18.2"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -24,6 +24,6 @@ set	datarootdir	${prefix}/share
 module load miniconda2
 module load intel
 
-prepend-path    PATH            ${iigb_modules}/dftbplus/18.2/bin
-prepend-path    PYTHONPATH      ${iigb_modules}/dftbplus/18.2/lib/python2.7/site-packages
+prepend-path    PATH            ${hpcc_modules}/dftbplus/18.2/bin
+prepend-path    PYTHONPATH      ${hpcc_modules}/dftbplus/18.2/lib/python2.7/site-packages
 

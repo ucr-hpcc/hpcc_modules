@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"angsd"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -23,7 +23,7 @@ module unload htslib
 module load htslib
 prereq htslib
 
-prepend-path    PATH   		${iigb_modules}/angsd/0.921/bin
+prepend-path    PATH   		${hpcc_modules}/angsd/0.921/bin
 
 module		use		${modules_dir}
 

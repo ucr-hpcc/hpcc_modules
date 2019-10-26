@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"gmt-4.5.8"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -22,9 +22,9 @@ set	datarootdir	${prefix}/share
 module load netcdf
 module load octave
 
-prepend-path    PATH            ${iigb_modules}/gmt/4.5.8/bin
-prepend-path    C_INCLUDE_PATH  ${iigb_modules}/gmt/4.5.8/include
-prepend-path    LD_LIBRARY_PATH ${iigb_modules}/gmt/4.5.8/lib
-prepend-path    MANPATH         ${iigb_modules}/gmt/5.4.2/share/man
+prepend-path    PATH            ${hpcc_modules}/gmt/4.5.8/bin
+prepend-path    C_INCLUDE_PATH  ${hpcc_modules}/gmt/4.5.8/include
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/gmt/4.5.8/lib
+prepend-path    MANPATH         ${hpcc_modules}/gmt/5.4.2/share/man
 
 module use ${modules_dir}

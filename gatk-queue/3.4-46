@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"gatk-queue-3.4-46"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -21,8 +21,8 @@ set	datarootdir	${prefix}/share
 
 module load java 
 
-setenv       GATKQUEUEDIR   ${iigb_modules}/gatk-queue/3.4-46
-setenv       GATKQUEUE      ${iigb_modules}/gatk-queue/3.4-46/Queue.jar
+setenv       GATKQUEUEDIR   ${hpcc_modules}/gatk-queue/3.4-46
+setenv       GATKQUEUE      ${hpcc_modules}/gatk-queue/3.4-46/Queue.jar
 prepend-path CLASSPATH      ${GATKQUEUEDIR}:${GATKQUEUEDIR}/resources
 
 module		use		${modules_dir}

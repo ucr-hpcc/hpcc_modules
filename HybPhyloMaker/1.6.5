@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"HybPhyloMaker-1.6.5"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -21,5 +21,5 @@ set	datarootdir	${prefix}/share
 
 module load singularity
 
-setenv    HYBPHYLOMAKER_IMG   ${iigb_modules}/HybPhyloMaker/1.6.5/HybPhyloMaker.simg
+setenv    HYBPHYLOMAKER_IMG   ${hpcc_modules}/HybPhyloMaker/1.6.5/HybPhyloMaker.simg
 

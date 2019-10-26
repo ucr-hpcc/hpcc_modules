@@ -92,7 +92,7 @@ For GPU tests this must also be done from within a job running under Torque:
 ## Install
 Copy files to proper install path:
 ```
-cp -r Linux-x86_64-g++ $IIGB_MODULES/namd/2.10
+cp -r Linux-x86_64-g++ $HPCC_MODULES/namd/2.10
 ```
 
 ## Cleanup

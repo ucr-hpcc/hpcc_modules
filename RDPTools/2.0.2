@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis   "RDPTools-2.0.2"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -21,11 +21,11 @@ set     datarootdir     ${prefix}/share
 
 module load java/8
 
-setenv          RDPTOOLSDIR	${iigb_modules}/RDPTools/2.0.2/lib
-setenv          RDPTOOLS	${iigb_modules}/RDPTools/2.0.2
-prepend-path    CLASSPATH	${iigb_modules}/RDPTools/2.0.2/lib
+setenv          RDPTOOLSDIR	${hpcc_modules}/RDPTools/2.0.2/lib
+setenv          RDPTOOLS	${hpcc_modules}/RDPTools/2.0.2
+prepend-path    CLASSPATH	${hpcc_modules}/RDPTools/2.0.2/lib
 
 # mostly for QIIME 
-setenv	RDP_JAR_PATH	${iigb_modules}/RDPTools/2.0.2/lib/classifier.jar
+setenv	RDP_JAR_PATH	${hpcc_modules}/RDPTools/2.0.2/lib/classifier.jar
 module          use            ${modules_dir}
 

@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"RepeatModeler-1.0.11"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -23,6 +23,6 @@ set	datarootdir	${prefix}/share
 #module load RepeatScout
 #module load RECON
 #module load trf
-prepend-path    PATH    ${iigb_modules}/RepeatModeler/1.0.11
+prepend-path    PATH    ${hpcc_modules}/RepeatModeler/1.0.11
 
 module use ${modules_dir}

@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"cfncluster-1.3"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -23,7 +23,7 @@ set	datarootdir	${prefix}/share
 conflict    python
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "source ${iigb_modules}/cfncluster/1.3/cfncluster-virtenv/bin/activate;"
+    puts stdout "source ${hpcc_modules}/cfncluster/1.3/cfncluster-virtenv/bin/activate;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "deactivate;"
 }

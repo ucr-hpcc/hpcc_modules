@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"funannotate-development"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -40,5 +40,5 @@ if { [module-info mode load] || [module-info mode switch2] } {
 }
 # Add path manually, since source activate does not function within parent shell
 
-setenv	FUNANNOTATE_DB		${iigb_modules}/funannotate/share
+setenv	FUNANNOTATE_DB		${hpcc_modules}/funannotate/share
 module  use     ${modules_dir}

@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"pgi"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -19,6 +19,6 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module use ${iigb_modules}/pgi/17.10/modulefiles
+module use ${hpcc_modules}/pgi/17.10/modulefiles
 module load pgi/17.10
 

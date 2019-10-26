@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis   "openbabel-2.3.2"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -24,15 +24,15 @@ set datarootdir ${prefix}/share
 module load python/2.7.5
 prereq           python/2.7.5
 
-setenv           BABEL_DATADIR      ${iigb_modules}/openbabel/2.3.2/share/openbabel/2.3.2
-setenv           BABEL_LIBDIR       ${iigb_modules}/openbabel/2.3.2/lib/openbabel/2.3.2
-prepend-path     C_INCLUDE_PATH     ${iigb_modules}/openbabel/2.3.2/include
-prepend-path     CPLUS_INCLUDE_PATH ${iigb_modules}/openbabel/2.3.2/include
-prepend-path     LIBRARY_PATH       ${iigb_modules}/openbabel/2.3.2/lib
-prepend-path     PATH               ${iigb_modules}/openbabel/2.3.2/bin
-prepend-path     LD_LIBRARY_PATH    ${iigb_modules}/openbabel/2.3.2/lib
-prepend-path     MANPATH            ${iigb_modules}/openbabel/2.3.2/share/man
-prepend-path     PYTHONPATH         ${iigb_modules}/openbabel/2.3.2/lib
-prepend-path     CLASSPATH          ${iigb_modules}/openbabel/2.3.2/lib/openbabel.jar
+setenv           BABEL_DATADIR      ${hpcc_modules}/openbabel/2.3.2/share/openbabel/2.3.2
+setenv           BABEL_LIBDIR       ${hpcc_modules}/openbabel/2.3.2/lib/openbabel/2.3.2
+prepend-path     C_INCLUDE_PATH     ${hpcc_modules}/openbabel/2.3.2/include
+prepend-path     CPLUS_INCLUDE_PATH ${hpcc_modules}/openbabel/2.3.2/include
+prepend-path     LIBRARY_PATH       ${hpcc_modules}/openbabel/2.3.2/lib
+prepend-path     PATH               ${hpcc_modules}/openbabel/2.3.2/bin
+prepend-path     LD_LIBRARY_PATH    ${hpcc_modules}/openbabel/2.3.2/lib
+prepend-path     MANPATH            ${hpcc_modules}/openbabel/2.3.2/share/man
+prepend-path     PYTHONPATH         ${hpcc_modules}/openbabel/2.3.2/lib
+prepend-path     CLASSPATH          ${hpcc_modules}/openbabel/2.3.2/lib/openbabel.jar
 
 module           use      ${modules_dir}

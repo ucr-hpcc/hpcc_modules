@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"intel-2017.4.196"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -20,19 +20,19 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH   		       ${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/bin:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/bin/intel64:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/mkl/bin:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/mpi/intel64/bin
-prepend-path    MANPATH            ${iigb_modules}/intel/mkl/2017.2.174/man:${iigb_modules}/intel/mkl/2017.2.174/inspector_2017.1.2.497970/man:${iigb_modules}/intel/mkl/2017.2.174/parallel_studio_xe_2017.3.053/man:${iigb_modules}/intel/mkl/2017.2.174/itac/2017.2.028/man:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/man:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/mpi/man:${iigb_modules}/intel/mkl/2017.2.174/vtune_amplifier_xe_2017.2.0.499904/man:${iigb_modules}/intel/mkl/2017.2.174/advisor_2017.1.2.501009/man:${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017/linux/man:${iigb_modules}/intel/mkl/2017.2.174/documentation_2017/en/man:${iigb_modules}/intel/mkl/2017.2.174/documentation_2017/en/debugger/gdb-igfx/man:${iigb_modules}/intel/mkl/2017.2.174/documentation_2017/en/debugger/gdb-mic/man:${iigb_modules}/intel/mkl/2017.2.174/documentation_2017/en/debugger/gdb-ia/man:${iigb_modules}/intel/mkl/2017.2.174/documentation_2017/ja/man:${iigb_modules}/intel/mkl/2017.2.174/documentation_2017/ja/debugger/gdb-igfx/man:${iigb_modules}/intel/mkl/2017.2.174/documentation_2017/ja/debugger/gdb-mic/man:${iigb_modules}/intel/mkl/2017.2.174/documentation_2017/ja/debugger/gdb-ia/man
+prepend-path    PATH   		       ${hpcc_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/bin:${hpcc_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/bin/intel64:${hpcc_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/mkl/bin:${hpcc_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/mpi/intel64/bin
+prepend-path    MANPATH            ${hpcc_modules}/intel/mkl/2017.2.174/man:${hpcc_modules}/intel/mkl/2017.2.174/inspector_2017.1.2.497970/man:${hpcc_modules}/intel/mkl/2017.2.174/parallel_studio_xe_2017.3.053/man:${hpcc_modules}/intel/mkl/2017.2.174/itac/2017.2.028/man:${hpcc_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/man:${hpcc_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.3.191/linux/mpi/man:${hpcc_modules}/intel/mkl/2017.2.174/vtune_amplifier_xe_2017.2.0.499904/man:${hpcc_modules}/intel/mkl/2017.2.174/advisor_2017.1.2.501009/man:${hpcc_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017/linux/man:${hpcc_modules}/intel/mkl/2017.2.174/documentation_2017/en/man:${hpcc_modules}/intel/mkl/2017.2.174/documentation_2017/en/debugger/gdb-igfx/man:${hpcc_modules}/intel/mkl/2017.2.174/documentation_2017/en/debugger/gdb-mic/man:${hpcc_modules}/intel/mkl/2017.2.174/documentation_2017/en/debugger/gdb-ia/man:${hpcc_modules}/intel/mkl/2017.2.174/documentation_2017/ja/man:${hpcc_modules}/intel/mkl/2017.2.174/documentation_2017/ja/debugger/gdb-igfx/man:${hpcc_modules}/intel/mkl/2017.2.174/documentation_2017/ja/debugger/gdb-mic/man:${hpcc_modules}/intel/mkl/2017.2.174/documentation_2017/ja/debugger/gdb-ia/man
 
 set shell [module-info shell]
 
 if { [module-info mode load] || [module-info mode switch2] } {
     if { $shell == "bash" } {
-        puts stdout "source ${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/bin/compilervars.sh intel64;"
-        puts stdout "source ${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/mkl/bin/mklvars.sh intel64;"
+        puts stdout "source ${hpcc_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/bin/compilervars.sh intel64;"
+        puts stdout "source ${hpcc_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/mkl/bin/mklvars.sh intel64;"
     }
     if { $shell == "csh" } {
-        puts stdout "source ${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/bin/compilervars.csh intel64;"
-        puts stdout "source ${iigb_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/mkl/bin/mklvars.csh intel64;"
+        puts stdout "source ${hpcc_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/bin/compilervars.csh intel64;"
+        puts stdout "source ${hpcc_modules}/intel/mkl/2017.2.174/compilers_and_libraries_2017.4.196/linux/mkl/bin/mklvars.csh intel64;"
     }
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout ""

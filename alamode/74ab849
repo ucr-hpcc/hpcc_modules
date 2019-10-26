@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"alamode-74ab849"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -21,7 +21,7 @@ set	datarootdir	${prefix}/share
 
 module load intel/2018
 
-prepend-path    PATH            ${iigb_modules}/alamode/74ab849/alm
-prepend-path    PATH            ${iigb_modules}/alamode/74ab849/anphon
-prepend-path    PATH            ${iigb_modules}/alamode/74ab849/tools
+prepend-path    PATH            ${hpcc_modules}/alamode/74ab849/alm
+prepend-path    PATH            ${hpcc_modules}/alamode/74ab849/anphon
+prepend-path    PATH            ${hpcc_modules}/alamode/74ab849/tools
 

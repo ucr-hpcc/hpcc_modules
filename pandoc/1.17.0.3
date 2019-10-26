@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"pandoc-1.17.0.3"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${iigb_modules}/pandoc/1.17.0.3/bin
+prepend-path    PATH            ${hpcc_modules}/pandoc/1.17.0.3/bin
 
 module		use		${modules_dir}
 

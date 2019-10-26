@@ -10,7 +10,7 @@ proc ModulesHelp { } {
 
 module-whatis	"HybPhyloMaker-1.6.5"
 
-set      iigb_modules    $::env(IIGB_MODULES)
+set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # for Tcl script use only
@@ -32,5 +32,5 @@ if { [module-info mode load] || [module-info mode switch2] } {
         puts stdout "conda deactivate;"
 }
 
-prepend-path    PATH   ${iigb_modules}/hic-pro/20190709/HiC-Pro_2.11.1/bin:${iigb_modules}/miniconda2/4.4.10/envs/hic-pro/bin
+prepend-path    PATH   ${hpcc_modules}/hic-pro/20190709/HiC-Pro_2.11.1/bin:${hpcc_modules}/miniconda2/4.4.10/envs/hic-pro/bin
 
