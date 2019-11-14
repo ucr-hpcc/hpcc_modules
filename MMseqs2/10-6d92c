@@ -11,7 +11,11 @@ module-whatis	"MMseqs2-10-6d92c"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
-set      partition       $::env(SLURM_JOB_PARTITION)
+if { [info exists ::env(SLURM_JOB_PARTITION)] } {
+    set      partition       $::env(SLURM_JOB_PARTITION)
+} else {
+    set      partition     ""
+}
 
 # for Tcl script use only
 set	version		3.2.9
