@@ -21,5 +21,6 @@ set	datarootdir	${prefix}/share
 
 module unload perl
 prepend-path    PATH        ${hpcc_modules}/mugsy/2017-04-07/mugsy
+setenv	MUGSY_INSTALL	${hpcc_modules}/mugsy/2017-04-07/mugsy
 prepend-path	PERL5LIB	${hpcc_modules}/mugsy/2017-04-07/MUMmer3.20/scripts
 
