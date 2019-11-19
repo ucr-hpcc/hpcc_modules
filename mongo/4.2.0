@@ -1,0 +1,25 @@
+#%Module1.0#####################################################################
+##
+## mongo modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tmongo- Adds mongo to your path"
+}
+
+module-whatis	"mongo-4.2.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+module load singularity
+
+setenv    MONGO_IMG   ${hpcc_modules}/mongo/4.2.0/mongo_4.2.0.sif
+
