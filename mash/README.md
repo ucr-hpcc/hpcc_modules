@@ -6,11 +6,11 @@ https://mash.readthedocs.io/en/latest/index.html
 ## Prep
 ```
 cd /opt/linux/centos/7.x/x86_64/pkgs/mash
-wget https://github.com/marbl/Mash/releases/download/v1.1.1/mash-Linux64-v1.1.1.tar.gz
+wget https://github.com/marbl/Mash/releases/download/v2.2/mash-Linux64-v2.2.tar.gz
 ```
 Uncompress:
 ```
-tar zxf mash-Linux64-v1.1.1.tar.gz
+tar zxf mash-Linux64-v2.2.tar.gz
 ```
 ## Compile
 
@@ -19,10 +19,10 @@ tar zxf mash-Linux64-v1.1.1.tar.gz
 ## Install
 Copy files to proper install path:
 ```
-mv mash-Linux64-v1.1.1/mash 1.1.1/bin
+mv mash-Linux64-v2.2/mash 2.2/bin
 ```
 
 ## Cleanup
 ```
-rm mash-Linux64-v1.1.1.tar.gz
+rm mash-Linux64-v2.2.tar.gz
 ```
