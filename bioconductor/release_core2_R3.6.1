@@ -20,5 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 conflict R
+module load singularity
+setenv          BIOC_CORE2_IMG  ${hpcc_modules}/bioconductor/release_core2_R3.6.1/release_core2_latest.sif
 prepend-path    PATH            ${hpcc_modules}/bioconductor/release_core2_R3.6.1/bin
 
