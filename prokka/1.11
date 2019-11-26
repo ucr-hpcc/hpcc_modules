@@ -20,6 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 module load perl
+module load parallel
 
 prepend-path    PATH            ${hpcc_modules}/prokka/1.11/bin:${hpcc_modules}/prokka/1.11/binaries/linux
 
