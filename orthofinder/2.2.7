@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tOrthoFinder - Adds OrthoFinder to your path"
 }
 
-module-whatis	"OrthoFinder-2.2.1"
+module-whatis	"OrthoFinder-2.2.7"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -28,7 +28,9 @@ module load RAxML
 module load mafft
 module load muscle
 module load diamond
-prepend-path    PATH   		${hpcc_modules}/OrthoFinder/2.2.1
+module load MMseqs2
+
+prepend-path    PATH   		${hpcc_modules}/orthofinder/2.2.7
 
 
 module		use		${modules_dir}
