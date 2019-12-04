@@ -40,7 +40,7 @@ export PREFIX=/bigdata/operations/shared/software/SPAdes/3.13.0
 Set building directories:
 ```bash
 BUILD_DIR=build_spades
-BASEDIR=`pwd`/`dirname $0`
+BASEDIR=`pwd`/
 ```
 
 Remove old build:
