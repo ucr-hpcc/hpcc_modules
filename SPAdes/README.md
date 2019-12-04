@@ -7,7 +7,7 @@ It is simple enough to uncompress and place them where needed.
 ## Request Job
 Compiling this software requires more resources, so let's request a job first:
 ```bash
-srun -p batch -c 8 --mem=10 --pty bash -l
+srun -p batch -c 8 --mem=10g --pty bash -l
 ```
 Your node must be on batch since GCC 6.3.0 only works from a batch node.
 
