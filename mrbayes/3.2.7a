@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tmrbayes - Adds mrbayes to your path"
 }
 
-module-whatis	"mrbayes-3.2.7"
+module-whatis	"mrbayes-3.2.7a"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -21,5 +21,5 @@ set	datarootdir	 ${prefix}/share
 
 module load beagle-lib/3.1.2
 
-prepend-path	PATH	 ${hpcc_modules}/mrbayes/3.2.7
+prepend-path	PATH	 ${hpcc_modules}/mrbayes/3.2.7a
 
