@@ -19,7 +19,7 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-module load samtools/1.9
+module load samtools/1.10
 module load diamond
 module load hmmer/3
 module load bowtie2
@@ -27,9 +27,11 @@ module load bedtools
 module load prodigal
 
 module unload miniconda2
+module unload anaconda3
+module load miniconda3
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; source activate autometa;"
+    puts stdout "module unload anaconda3; module unload miniconda2; module load miniconda3; source activate autometa;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "source deactivate;"
 }
