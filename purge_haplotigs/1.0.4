@@ -24,7 +24,9 @@ module load bedtools
 module load samtools
 module load minimap2
 module load R
-
+module unload perl
+module unload perl
+module load perl/5.24.0
 
 prepend-path    PATH            ${hpcc_modules}/purge_haplotigs/1.0.4/bin
 prepend-path	PERL5LIB	$hpcc_modules}/purge_haplotigs/1.0.4/lib
