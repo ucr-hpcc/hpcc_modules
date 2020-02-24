@@ -25,8 +25,11 @@ module unload miniconda2
 module load anaconda3
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module unload miniconda3 miniconda2; module load anaconda3; conda activate MACS2;"
+    puts stdout "module unload miniconda3 miniconda2; module load anaconda3; source activate MACS2;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
-    puts stdout "module unload miniconda3 miniconda2; module load anaconda3; conda deactivate;"
+    puts stdout "module unload miniconda3 miniconda2; module load anaconda3; source deactivate;"
 }
+
+# Add paths manually
+prepend-path    PATH    ${hpcc_modules}/anaconda3/4.5.4/envs/MACS2/bin
 
