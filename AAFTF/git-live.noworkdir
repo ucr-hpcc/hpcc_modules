@@ -24,7 +24,7 @@ module unload miniconda2
 module load miniconda3
 module load bwa/0.7.17
 module load bowtie2
-module load samtools/1.9
+module load samtools/1.10
 module load SPAdes
 module load ncbi-blast/2.7.1+
 module load diamond
