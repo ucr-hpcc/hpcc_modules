@@ -20,6 +20,9 @@ set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
 module load java/8
+module unload perl
+module unload miniconda2
+module load miniconda3
 
 prepend-path    PATH    ${hpcc_modules}/canu/1.9/Linux-amd64/bin
 
