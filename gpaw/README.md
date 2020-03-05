@@ -77,7 +77,7 @@ Here is the following patch for the relevant changes:
 >     xc = '/opt/linux/centos/7.x/x86_64/pkgs/libxc/4.2.3/'
 ```
 
-## Compile amd Install
+## Compile and Install
 ```bash
 python3 setup.py install
 ```
