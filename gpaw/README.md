@@ -1,4 +1,12 @@
-# Intel Install
+# Basics
+First you must request a compute node to do the work
+```bash
+srun -p short --ntasks=4 --pty bash -l
+```
+After you have been allocated a node then you may proceed with the installation and tests.
+
+# Intel Compiler
+## Install
 Create file `siteconfig.py` with the following contents:
 ```python
 compiler = 'icc'
@@ -26,13 +34,7 @@ define_macros += [("GPAW_ASYNC",1)]
 define_macros += [("GPAW_MPI2",1)]
 ```
 
-# GCC Install
-First you must request a compute node to do the work
-```bash
-srun -p short --ntasks=4 --pty bash -l
-```
-After you have been allocated a node then you may proceed with the installation and tests.
-
+# GCC Compiler
 # Install
 
 ## Load Conda
