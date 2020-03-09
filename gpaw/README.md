@@ -1,4 +1,32 @@
-# Basics
+# Intel Install
+Create file `siteconfig.py` with the following contents:
+```python
+compiler = 'icc'
+mpicompiler = '/opt/linux/centos/7.x/x86_64/pkgs/intel/2018/compilers_and_libraries_2018.0.128/linux/mpi/intel64/bin/mpiicc'
+mpilinker = '/opt/linux/centos/7.x/x86_64/pkgs/intel/2018/compilers_and_libraries_2018.0.128/linux/mpi/intel64/bin/mpiicc'
+
+scalapack = True
+
+library_dirs += ['/opt/linux/centos/7.x/x86_64/pkgs/intel/2018/compilers_and_libraries_2018.0.128/linux/mkl/lib/intel64_lin','/rhome/jhayes/bigdata/software/intelpython3/2020.0.014/lib']
+libraries = ['mkl_intel_lp64' ,'mkl_sequential' ,'mkl_core',
+             'mkl_lapack95_lp64',
+             'mkl_scalapack_lp64', 'mkl_blacs_intelmpi_lp64',
+             'pthread','python3.7m'
+             ]
+
+libraries += ['xc']
+# change this to your installation directory
+LIBXCDIR='/opt/linux/centos/7.x/x86_64/pkgs/libxc/4.2.3_intel/'
+library_dirs += [LIBXCDIR + 'lib']
+include_dirs += [LIBXCDIR + 'include']
+
+define_macros += [('GPAW_NO_UNDERSCORE_CBLACS', '1')]
+define_macros += [('GPAW_NO_UNDERSCORE_CSCALAPACK', '1')]
+define_macros += [("GPAW_ASYNC",1)]
+define_macros += [("GPAW_MPI2",1)]
+```
+
+# GCC Install
 First you must request a compute node to do the work
 ```bash
 srun -p short --ntasks=4 --pty bash -l
