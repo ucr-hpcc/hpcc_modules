@@ -12,6 +12,9 @@ Unload other Pythons and MPI libraries:
 ```bash
 module unload python miniconda2 miniconda3 anaconda2 anaconda3 openmpi
 module load intel/2018
+
+# I will make these module soon
+export LD_LIBRARY_PATH=/opt/linux/centos/7.x/x86_64/pkgs/libfabric/1.9.1/lib:/opt/linux/centos/7.x/x86_64/pkgs/libxc/4.2.3_intel/lib:$LD_LIBRARY_PATH
 ```
 
 ## IntelPython
