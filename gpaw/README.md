@@ -6,7 +6,57 @@ srun -p short --ntasks=4 --pty bash -l
 After you have been allocated a node then you may proceed with the installation and tests.
 
 # Intel Compiler
-## Install
+## Modules
+Unload other Pythons and MPI libraries:
+
+```bash
+module unload python miniconda2 miniconda3 anaconda2 anaconda3 openmpi
+module load intel/2018
+```
+
+## IntelPython
+Download intelpython from [https://software.intel.com/en-us/distribution-for-python/choose-download/linux](https://software.intel.com/en-us/distribution-for-python/choose-download/linux)
+
+```bash
+# Update the tar to the cluster, then unpack it
+tar -xf l_pythoni3_p_2020.0.014.tar.gz
+
+# Move it to a version directory
+mkdir ~/bigdata/software/intelpython3/
+mv intelpython3 ~/bigdata/software/intelpython3/2020.0.014
+```
+
+Then run `./setup_intel_python.sh`, which installs everything in the same directory.
+After that add the `/intelpython/bin` directory to your PATH:
+
+```
+export PATH=/intelpytyhon/bin:$PATH
+```
+
+Then initalize conda:
+
+```bash
+conda init
+```
+
+You may have to logout and back in, or just do this:
+
+```bash
+source ~/.bashrc
+```
+
+## Install GPAW
+### Download
+Get GPAW source:
+
+```bash
+mkdir ~/bigdata/src && cd ~/bigdata/src
+wget https://pypi.org/packages/source/g/gpaw/gpaw-20.1.0.tar.gz
+tar -xf gpaw-20.1.0.tar.gz
+cd gpaw-20.1.0
+```
+
+### Configure
 Create file `siteconfig.py` with the following contents:
 ```python
 compiler = 'icc'
@@ -32,6 +82,12 @@ define_macros += [('GPAW_NO_UNDERSCORE_CBLACS', '1')]
 define_macros += [('GPAW_NO_UNDERSCORE_CSCALAPACK', '1')]
 define_macros += [("GPAW_ASYNC",1)]
 define_macros += [("GPAW_MPI2",1)]
+```
+
+### Build
+Then build and install gpaw:
+```bash
+python setup.py install --prefix='' --home=~/bigdata/software/intelpython3/2020.0.014
 ```
 
 # GCC Compiler
