@@ -128,6 +128,12 @@ export PYTHONPATH=~/bigdata/software/intelpython3/2020.0.014/lib/python:$PYTHONP
 
 Add both of these `export` lines to the end of your `~/.bashrc` file to make these changes permanent.
 
+## Notes
+We ended up using an externally compiled libfabric, not the intel internal version of libfabric.
+However, I am making a note of it for future reference.
+It can be enabled when `mpivars.sh` script is executed with the `-ofi_internal` argument. Or when `I_MPI_OFI_LIBRARY_INTERNAL` is set to a positive value.
+
+
 # GCC Compiler
 # Install
 
