@@ -12,9 +12,8 @@ Unload other Pythons and MPI libraries:
 ```bash
 module unload python miniconda2 miniconda3 anaconda2 anaconda3 openmpi
 module load intel/2018
-
-# I will make these module soon
-export LD_LIBRARY_PATH=/opt/linux/centos/7.x/x86_64/pkgs/libfabric/1.9.1/lib:/opt/linux/centos/7.x/x86_64/pkgs/libxc/4.2.3_intel/lib:$LD_LIBRARY_PATH
+module load libfabric/1.9.1
+module load libxc/4.2.3_intel
 ```
 
 ## IntelPython
@@ -30,19 +29,20 @@ mv intelpython3 ~/bigdata/software/intelpython3/2020.0.014
 ```
 
 Then run `./setup_intel_python.sh`, which installs everything in the same directory.
-After that add the `/intelpython/bin` directory to your PATH:
+After that add the `~/bigdata/software/intelpython3/2020.0.014/bin` directory to your PATH:
 
 ```
-export PATH=/intelpytyhon/bin:$PATH
+export PATH=~/bigdata/software/intelpython3/2020.0.014/bin:$PATH
 ```
 
 Then initalize conda:
 
 ```bash
 conda init
+conda activate base
 ```
 
-You may have to logout and back in, or just do this:
+Logout and back in, or just reload your bashrc, like so:
 
 ```bash
 source ~/.bashrc
@@ -89,9 +89,50 @@ define_macros += [("GPAW_MPI2",1)]
 
 ### Build
 Then build and install gpaw:
+
 ```bash
 python setup.py install --prefix='' --home=~/bigdata/software/intelpython3/2020.0.014
 ```
+
+## Pre-Running
+Unload things we don't want:
+
+```bash
+module unload python miniconda2 miniconda3 anaconda2 anaconda3 openmpi
+```
+
+Then we need to load the base intelpython conda:
+```
+conda activate base
+```
+
+Not sure why `conda` does not already do this, but we need to add the intelpython shared object files to our `LD_LIBRARY_PATH`, like this:
+
+```
+export LD_LIBRARY_PATH=~/bigdata/software/intelpython3/2020.0.014/lib:$LD_LIBRARY_PATH
+```
+
+Load software that we do want:
+
+```bash
+module load intel/2018
+module load libfabric/1.9.1
+module load libxc/4.2.3_intel
+```
+
+Since we installed `gpaw` into a custom location we need to add this to our `PYTHONPATH`, like so:
+
+```bash
+export PYTHONPATH=~/bigdata/software/intelpython3/2020.0.014/lib/python:$PYTHONPATH
+```
+
+Add both of these `export` lines to the end of your `~/.bashrc` file to make these changes permanent.
+
+## Notes
+We ended up using an externally compiled libfabric, not the intel internal version of libfabric.
+However, I am making a note of it for future reference.
+It can be enabled when `mpivars.sh` script is executed with the `-ofi_internal` argument. Or when `I_MPI_OFI_LIBRARY_INTERNAL` is set to a positive value.
+
 
 # GCC Compiler
 # Install
