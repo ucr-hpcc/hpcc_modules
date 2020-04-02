@@ -13,7 +13,7 @@ Requirements for BUSCO (check busco module file for required modules):
 6. SEPP
 7. R + ggplot2 
 
-All non Python related software is installed as separate modules.
+All non Python related software are installed as separate modules.
 All Python related software is installed under a single busco package directory.
 This way we can keep everything under a single Python environment.
 
