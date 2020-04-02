@@ -9,7 +9,7 @@ Requirements for BUSCO (check busco module file for required modules):
 3. tBLASTn 2.2+
 4. Augustus 3.2
 5. Prodigal
-5. HMMER3.1+
+5. HMMER 3.1+
 6. SEPP
 7. R + ggplot2 
 
