@@ -1,21 +1,25 @@
 # nanoplish
 
 ## Prep
+First go to GitHub and copy hash for version:
 ```
-git clone --recursive https://github.com/jts/nanopolish.git
+https://github.com/jts/nanopolish/tags
 ```
-Uncompress:
+
+Then copy repo and check out specific version:
 ```
+git clone --recursive https://github.com/jts/nanopolish.git nanopolish-0.13.1
+cd nanopolish-0.13.1
+git checkout 2202318e5aed7e26c069f118be3bf94566619eeb # Use hash for version 0.13.1
 ```
 
 ## Compile
-make
-## Test
+```
+make all
+```
 
 ## Install
 ```
-rsync -a nanoplish/ /opt/linux/centos/7.x/x86_64/pkgs/nanopolish/v0.5.0-45-g6406f78/
+mv nanopolish-0.13.1 ${HPCC_MODULES}/nanopolish/0.13.1
 ```
-
-## Cleanup
 
