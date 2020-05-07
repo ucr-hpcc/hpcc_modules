@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## interproscan modulefile
+## nanopolish modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tinterproscan - Adds interproscan to your path"
+        puts stderr "\tvsearch - Adds vsearch to your path"
 }
 
-module-whatis	"interproscan-5.25-64.0"
+module-whatis	"nanopolish-0.13.1"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,10 +20,6 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${hpcc_modules}/interproscan/5.25-64.0
-prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/interproscan/5.25-64.0/lib
-module		use		${modules_dir}
-
-module load coils
-module load signalp
-module load java/8
+prepend-path    PATH            ${hpcc_modules}/nanopolish/0.13.1/bin
+prepend-path    PATH            ${hpcc_modules}/nanopolish/0.13.1
+prepend-path    PATH            ${hpcc_modules}/nanopolish/0.13.1/scripts

@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## interproscan modulefile
+## iqtree modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tinterproscan - Adds interproscan to your path"
+        puts stderr "\tiqtree - Adds iqtree to your path"
 }
 
-module-whatis	"interproscan-5.27-66.0"
+module-whatis	"iqtree-2.0.4"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,10 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${hpcc_modules}/interproscan/5.27-66.0
-prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/interproscan/5.27-66.0/lib
+prepend-path    PATH            ${hpcc_modules}/iqtree/2.0.4/bin
+
 module		use		${modules_dir}
 
-module load coils
-module load signalp
-module load java/8

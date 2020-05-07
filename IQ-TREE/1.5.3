@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## IQ-TREE modulefile
+## iqtree modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tIQ-TREE - Adds IQ-TREE to your path"
+        puts stderr "\tiqtree - Adds iqtree to your path"
 }
 
-module-whatis	"IQ-TREE-1.5.3"
+module-whatis	"iqtree-1.5.3"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${hpcc_modules}/IQ-TREE/1.5.3/bin
+prepend-path    PATH            ${hpcc_modules}/iqtree/1.5.3/bin
 
 module		use		${modules_dir}
 

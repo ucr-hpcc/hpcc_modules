@@ -1,6 +1,7 @@
 # Install
 ## Get Source
-The source code was provided by the user.
+Orignal source code was provided by the user.
+However, one could likely get it from [here](https://www.ebert.cup.uni-muenchen.de/kkr/kkrlicense/).
 
 ## Extract
 Set SRC_ROOT to wherever you want SPRKKR installed.
