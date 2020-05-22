@@ -1,5 +1,7 @@
 ## Stacks
 
+Stacks requires GCC 4.9+, the extra GCC modules seem to only work on batch nodes.
+Thus, one should compile two versions of this, one for batch and the other for intel.
 
 [Stacks Website](http://catchenlab.life.illinois.edu/stacks/)
 
