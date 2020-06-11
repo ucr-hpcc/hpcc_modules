@@ -22,7 +22,7 @@ set datarootdir ${prefix}/share
 module unload perl
 module load perl/5.24.0
 module unload openmpi
-module load mpich/3.2
+module load mpich/3.2.1
 
 prepend-path     PATH              ${hpcc_modules}/maker/2.31.11/bin
 prepend-path     PERL5LIB          ${hpcc_modules}/maker/2.31.11/lib:${hpcc_modules}/maker/2.31.11/perl/lib
