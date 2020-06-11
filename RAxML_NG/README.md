@@ -4,23 +4,24 @@
 
 ## Install
 
+Get the RAxML-NG Linux MPI version of the source code, since it has a prebuilt `libpll`.
+
 ```bash
-git clone --recursive https://github.com/amkozlov/raxml-ng
-cd raxml-ng
+mkdir raxml-ng-0.9.0
+cd raxml-ng-0.9.0
 mkdir build && cd build
 
 module load cmake/3.4.0
-module load extra
-module load GCC/6.3.0-2.27
-export CXX=/opt/linux/centos/7.x/x86_64/easybuild/pkgs/GCCcore/6.3.0/bin/c++
-export CC=/opt/linux/centos/7.x/x86_64/easybuild/pkgs/GCCcore/6.3.0/bin/gcc
+module load extra GCC/7.4.0-2.31.1
 
+export CC=$(which gcc)
+export CXX=$(which g++)
+
+# Build it twice so we have an MPI and non MPI version
 cmake -DUSE_MPI=ON ..
+cmake -DUSE_MPI=OFF ..
 make
 ```
-
-
-
 
 ### From Raxml Readme
 PTHREADS version:
@@ -33,7 +34,7 @@ cmake ..
 make
 ```
 
-MPI version:
+MPI version (This did not work for me, missing `libpll`):
 
 ```
 git clone --recursive https://github.com/amkozlov/raxml-ng
