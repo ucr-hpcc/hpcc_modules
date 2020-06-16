@@ -157,10 +157,22 @@ openbabel-lib=/opt/linux/centos/7.x/x86_64/pkgs/openbabel/2.3.2/lib' ChemmineOB_
 ```
 
 #### Install Rmpi
+
 Download latest Rmpi version using wget. Make sure you have the proper R version loaded and then run the following:
-```r
+
+```bash
 wget http://www.stats.uwo.ca/faculty/yu/Rmpi/download/linux/Rmpi_0.6-7.tar.gz
-R CMD INSTALL Rmpi_0.6-7.tar.gz --configure-args=--with-mpi=/opt/linux/centos/7.x/x86_64/pkgs/openmpi/2.0.1-slurm-16.05.4/
+```
+
+This package has not been updated since 2018. A slighly newer package may be available from CRAN directly:
+
+```bash
+wget https://cran.r-project.org/src/contrib/Rmpi_0.6-9.tar.gz```
+```
+
+Then install it like so:
+```bash
+R CMD INSTALL Rmpi_0.6-9.tar.gz --configure-args=--with-mpi=/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/
 ```
 
 #### Install ChipSeek
