@@ -22,7 +22,7 @@ set     datarootdir     ${prefix}/share
 prepend-path     PATH             ${hpcc_modules}/java/jdk1.8.0_45/bin
 prepend-path     MANPATH          ${hpcc_modules}/java/jdk1.8.0_45/man
 prepend-path     C_INCLUDE_PATH   ${hpcc_modules}/java/jdk1.8.0_45/include
-prepend-path     LD_LIBRARY_PATH  ${hpcc_modules}/java/jdk1.8.0_45/lib
+prepend-path     LD_LIBRARY_PATH  ${hpcc_modules}/java/jdk1.8.0_45/lib:${hpcc_modules}/java/jdk1.8.0_45/jre/lib/amd64/server
 
 setenv           JAVA_HOME        ${hpcc_modules}/java/jdk1.8.0_45
 
