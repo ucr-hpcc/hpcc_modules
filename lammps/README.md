@@ -5,10 +5,7 @@ Attempting to use the `Make.py` script may not work as intented.
 # Install
 Visit Github page and get latest stable release URL (ie. "copy link address") [https://github.com/lammps/lammps/releases](https://github.com/lammps/lammps/releases)
 
-Then use wget to download on the cluster
-
-```
-Choose and create install location:
+Then from the cluster, choose and create install location:
 
 ```bash
 mkdir -p /bigdata/${GROUP}/shared/software/lammps
