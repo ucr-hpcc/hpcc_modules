@@ -45,7 +45,7 @@ module load extra
 module load EasyBuild
 ```
 
-## Eaxmples
+## Examples
 
 ### Typical Install
 
