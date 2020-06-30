@@ -10,8 +10,8 @@ If you have an older `config.cfg` file then you may want to port over your optio
 # Default config location
 EBCONFIG=${HOME}/.config/easybuild/config.cfg
 
-# Check if old config exists, then rename it
-if [[ ! -f ${EBCONFIG} ]]; then
+# Check if old config exists and rename it
+if [[ -f ${EBCONFIG} ]]; then
     mv ${EBCONFIG} ${EBCONFIG}_old
 fi
 
