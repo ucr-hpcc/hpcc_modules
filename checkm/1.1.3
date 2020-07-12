@@ -22,9 +22,6 @@ set	datarootdir	${prefix}/share
 module unload miniconda2
 module unload miniconda3
 module load anaconda3
-module load prodigal
-module load hmmer/3
-module load pplacer
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module unload miniconda2; module unload miniconda3; module load anaconda3; source activate checkm;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
