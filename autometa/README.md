@@ -1,5 +1,7 @@
 https://github.com/KwanLab/Autometa
 
+Note - this is still python2 tool
+
 conda env installed in miniconda3 as autometa
 databases installed in /srv/projects/db/autometa/1.0.1
 see download.sh script in there reproduced here:
