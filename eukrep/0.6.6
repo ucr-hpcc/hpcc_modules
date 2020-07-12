@@ -1,0 +1,34 @@
+#%Module1.0#####################################################################
+##
+## eukrep and links modulefile
+#
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tEukRep - Adds EukRep metagenome binning tools to your path"
+}
+
+module-whatis	"EukRep-0.6.6"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+module unload miniconda2
+module unload miniconda3
+module load anaconda3
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module unload miniconda2 miniconda3; module load anaconda3; source activate eukrep;"
+    puts "source activate eukrep;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "module unload miniconda2 miniconda3; module load anaconda3; conda deactivate;"
+}
+
+module use ${modules_dir}
