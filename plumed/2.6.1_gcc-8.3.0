@@ -41,7 +41,7 @@ set use_absolute_soname "no"
 
 # execution path
 prepend-path  PATH               $bindir
-prepend-path  LD_LIBRARY_PATH    $libdir:${HPCC_MODULES}/cp2k/7.1_gcc-8.3.0/tools/toolchain/install/gsl-2.5/lib
+prepend-path  LD_LIBRARY_PATH    $libdir:${hpcc_modules}/cp2k/7.1_gcc-8.3.0/tools/toolchain/install/gsl-2.5/lib
 
 # include path
 prepend-path  CPATH              $includedir
