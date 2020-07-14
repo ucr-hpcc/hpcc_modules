@@ -15,7 +15,6 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # Manually add here dependencies and conflicts
-module purge
 module load extra
 module load GCC/8.3.0
 module load python/3.4.3
@@ -42,6 +41,7 @@ set use_absolute_soname "no"
 
 # execution path
 prepend-path  PATH               $bindir
+prepend-path  LD_LIBRARY_PATH    $libdir:${HPCC_MODULES}/cp2k/7.1_gcc-8.3.0/tools/toolchain/install/gsl-2.5/lib
 
 # include path
 prepend-path  CPATH              $includedir
@@ -66,13 +66,13 @@ if { [module-info mode load] && [ info exists ::env(PLUMED_KERNEL) ] } {
 }
 
 # if we use a relative soname (as it is common in Linux) then the (DY)LD_LIBRARY_PATH should be set.
-if { $use_absolute_soname != "yes" } {
-  if { $soext == "dylib"  } {
-    prepend-path  DYLD_LIBRARY_PATH    $libdir
-  } else {
-    prepend-path  LD_LIBRARY_PATH    $libdir:${HPCC_MODULES}/cp2k/7.1_gcc-8.3.0/tools/toolchain/install/gsl-2.5/lib
-  }
-}
+#if { $use_absolute_soname != "yes" } {
+#  if { $soext == "dylib"  } {
+#    prepend-path  DYLD_LIBRARY_PATH    $libdir
+#  } else {
+#    prepend-path  LD_LIBRARY_PATH    $libdir
+#  }
+#}
 
 # python path
 prepend-path  PYTHONPATH         $libdir/$progname/python
