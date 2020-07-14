@@ -57,7 +57,7 @@ setenv        PLUMED_VIMPATH     $libdir/$progname/vim
 prepend-path  PKG_CONFIG_PATH    $libdir/pkgconfig/
 
 # some paths are only set if plumed is compiled as a dynamic library
-if { [ string length $soext ]  != 0 } {
+#if { [ string length $soext ]  != 0 } {
 
 # this is checking if PLUMED_KERNEL is already set
 if { [module-info mode load] && [ info exists ::env(PLUMED_KERNEL) ] } {
@@ -80,4 +80,4 @@ prepend-path  PYTHONPATH         $libdir/$progname/python
 # plumed kernel
 setenv        PLUMED_KERNEL      $libdir/lib${progname}Kernel.$soext
 
-}
+#}
