@@ -15,6 +15,7 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # Manually add here dependencies and conflicts
+module load slurm
 module load extra
 module load GCC/8.3.0
 module load python/3.4.3
@@ -24,11 +25,11 @@ module load xdrfile/1.1.4_gcc-8.3.0
 # For example gsl-2.5, then manually added to the libdir when set
 
 # this is the path for libraries
-set libdir ${hpcc_modules}"/plumed/2.6.1_gcc-8.3.0/lib"
+set libdir ${hpcc_modules}/plumed/2.6.1_gcc-8.3.0/lib
 # this is the path for binaries
-set bindir ${hpcc_modules}"/plumed/2.6.1_gcc-8.3.0/bin"
+set bindir ${hpcc_modules}/plumed/2.6.1_gcc-8.3.0/bin
 # this is the path for include files
-set includedir ${hpcc_modules}"/plumed/2.6.1_gcc-8.3.0/include"
+set includedir ${hpcc_modules}/plumed/2.6.1_gcc-8.3.0/include
 # this is the extension for dynamic libraries
 # if set to empty, switches off plumed library
 set soext  "so"
