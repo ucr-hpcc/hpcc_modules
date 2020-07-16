@@ -28,9 +28,10 @@ set shell [module-info shell]
 
 if { [module-info mode load] || [module-info mode switch2] } {
     if { $shell == "bash" } {
-        puts stdout "source ${hpcc_modules}/cp2k/7.1_gcc-8.3.0/tools/toolchain/install/setup;"
+        puts stdout "source ${hpcc_modules}/cp2k/7.1_gcc-8.3.0/hpcc_setup.sh;"
     }
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
         puts stdout ""
 }
 
+setenv        CP2K_PATH   ${hpcc_modules}/cp2k/7.1_gcc-8.3.0
