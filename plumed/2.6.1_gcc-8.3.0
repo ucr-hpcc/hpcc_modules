@@ -15,9 +15,8 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
 # Manually add here dependencies and conflicts
-module load extra
-module load GCC/8.3.0
-module load python/3.4.3
+prereq GCC/8.3.0 # Only do prereq since unloading is painful
+module load python/3.4.3 # We may need to recompile python with GCC 8.3.0
 module load xdrfile/1.1.4_gcc-8.3.0
 # Since this version of plumed is for CP2K some deps are under
 # ${HPCC_MODULES}/cp2k/7.1_gcc-8.3.0/tools/toolchain/install/*
