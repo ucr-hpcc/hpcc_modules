@@ -37,7 +37,7 @@ module load ncbi-blast/2.9.0+
 module load muscle
 module load meme/4.11.2
 module load glimmerhmm/3.0.4
-module load glimmer/3.0.2
+module load glimmer/3.02
 #module load cd-hit/4.8.1 - since this also depends on a conda env will just load and install directly in plantantismash env
 
 # Set character encoding
