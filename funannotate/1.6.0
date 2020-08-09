@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tfunannotate - Adds funannotate to your path"
 }
 
-module-whatis	"funannotate-git-live"
+module-whatis	"funannotate-1.6.0"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -82,8 +82,8 @@ if { [module-info mode load] || [module-info mode switch2] } {
 # Add path manually, since source activate does not function within parent shell
 prepend-path    PATH    ${hpcc_modules}/miniconda3/4.3.31/envs/funannotate/bin
 
-prepend-path    PATH        ${hpcc_modules}/funannotate/git-live
-prepend-path    PATH        ${hpcc_modules}/funannotate/git-live/bin
+prepend-path    PATH        ${hpcc_modules}/funannotate/1.6.0
+prepend-path    PATH        ${hpcc_modules}/funannotate/1.6.0/bin
 
 setenv	FUNANNOTATE_DB		${hpcc_modules}/funannotate/share
 module  use     ${modules_dir}
