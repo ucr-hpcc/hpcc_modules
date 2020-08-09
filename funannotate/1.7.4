@@ -75,7 +75,7 @@ module unload python
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module unload miniconda3 miniconda2; module load anaconda3; source activate funannotate;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
-    puts stdout "module unload miniconda3 miniconda2; module load anaconda3; source deactivate; conda deactivate;"
+    puts stdout "module unload miniconda3 miniconda2; module load anaconda3;  conda deactivate;"
 }
 
 

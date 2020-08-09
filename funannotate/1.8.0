@@ -73,7 +73,7 @@ module unload python
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module unload anaconda3 miniconda2; module load minconda3; source activate funannotate;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
-    puts stdout "module unload anaconda3 miniconda2; module load miniconda3; source deactivate; conda deactivate;"
+    puts stdout "module unload anaconda3 miniconda2; module load miniconda3; conda deactivate;"
 }
 
 setenv	FUNANNOTATE_DB		${hpcc_modules}/funannotate/development/DB
