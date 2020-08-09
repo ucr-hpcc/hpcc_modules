@@ -24,7 +24,6 @@ module unload anaconda3
 module unload miniconda2
 module unload perl
 
-
 module load miniconda3
 module  load    RepeatMasker/4-0-7
 module  load    ncbi-rmblast/2.9.0-p2
@@ -71,7 +70,7 @@ module unload perl
 module unload python
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module unload anaconda3 miniconda2; module load minconda3; source activate funannotate;"
+    puts stdout "module unload anaconda3 miniconda2; module load miniconda3; source activate funannotate;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "module unload anaconda3 miniconda2; module load miniconda3; conda deactivate;"
 }
