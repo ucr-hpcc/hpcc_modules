@@ -70,7 +70,7 @@ module unload perl
 module unload python
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module unload anaconda3 miniconda2; module load miniconda3; source activate funannotate;"
+    puts stdout "module unload anaconda3 miniconda2; module load miniconda3; source activate funannotate-1.8;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "module unload anaconda3 miniconda2; module load miniconda3; conda deactivate;"
 }
