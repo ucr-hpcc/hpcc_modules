@@ -46,10 +46,10 @@ module  load	trimmomatic
 module  load    exonerate/2.4.0
 module  load    blat/35
 module  load    tRNAscan/1.3.1
-module  load    proteinortho/5.16b
+module  load    diamond/2.0.2
+module  load    proteinortho/6.0.11
 module  load    kent/318
 module  load    signalp/4.1c
-module  load    diamond/2.0.2
 module  load    fasta/36.3.8g
 module  load    trinity-rnaseq/2.8.4
 module  load    hisat2/2.1.0
