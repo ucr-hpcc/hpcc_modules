@@ -77,7 +77,7 @@ if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module unload anaconda3 miniconda2; module load miniconda3; conda deactivate;"
 }
 
-setenv	FUNANNOTATE_DB		${hpcc_modules}/funannotate/1.8/DB
+setenv	FUNANNOTATE_DB		${hpcc_modules}/funannotate/1.8.0/DB
 
 # Add path manually, since source activate does not function within parent shell
 prepend-path    PATH    ${hpcc_modules}/miniconda3/4.3.31/envs/funannotate-1.8/bin
