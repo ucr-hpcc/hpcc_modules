@@ -19,11 +19,15 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+module unload miniconda2
+module unload python
+module unload perl
+module load miniconda3
+module load IQ-TREE
 module load ncbi-blast/2.9.0+
 module load mcl/14-137
 module load fastme/2.1.5
 module load RAxML_NG
-module load MMseqs2
 module load RAxML
 module load diamond/2.0.2
 module load MMseqs2/10-6d92c
