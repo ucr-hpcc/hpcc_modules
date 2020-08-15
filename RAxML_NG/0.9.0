@@ -12,6 +12,11 @@ module-whatis	"RAxML_NG-0.9.0"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
+if { [info exists ::env(SLURM_JOB_PARTITION)] } {
+    set      partition       $::env(SLURM_JOB_PARTITION)
+} else {
+    set      partition     ""
+}
 
 # for Tcl script use only
 set	version		3.2.9
