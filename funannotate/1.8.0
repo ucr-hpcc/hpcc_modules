@@ -51,7 +51,7 @@ module  load    proteinortho/6.0.20
 module  load    kent/318
 module  load    signalp/4.1c
 module  load    fasta/36.3.8g
-module  load    trinity-rnaseq/2.8.4
+module  load    trinity-rnaseq/2.11.0
 module  load    hisat2/2.1.0
 module  load    kallisto/0.46.2
 module  load    PASA/2.4.1
