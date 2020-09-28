@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tfunannotate - Adds funannotate to your path"
 }
 
-module-whatis	"funannotate-1.8.0"
+module-whatis	"funannotate-1.8.1"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -46,13 +46,13 @@ module  load	trimmomatic
 module  load    exonerate/2.4.0
 module  load    blat/35
 module  load    tRNAscan/1.3.1
-module  load    diamond/2.0.2
+module  load    diamond/2.0.4
 module  load    proteinortho/6.0.20
 module  load    kent/318
 module  load    signalp/5.0b
-module  load    fasta/36.3.8g
+module  load    fasta/36.3.8h
 module  load    trinity-rnaseq/2.11.0
-module  load    hisat2/2.1.0
+module  load    hisat2/2.2.1
 module  load    kallisto/0.46.2
 module  load    PASA/2.4.1
 module  load    eggnog-mapper/1.0.3-py3
