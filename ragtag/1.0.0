@@ -23,6 +23,7 @@ set	datarootdir	${prefix}/share
 module unload miniconda2
 module unload miniconda3
 module load anaconda3
+module load minimap2
 
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module unload miniconda3 miniconda2; module load anaconda3; source activate ragtag;"
