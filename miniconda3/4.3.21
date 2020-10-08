@@ -20,9 +20,24 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 # All python versions need to be unloaded
-conflict    python
-conflict    anaconda
-conflict    miniconda
+conflict python miniconda2 miniconda3 anaconda2 anaconda3
 
+set shell [module-info shell]
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    if { $shell == "bash" } {
+        puts stdout "export PATH=${hpcc_modules}/miniconda3/4.3.21/bin:\${PATH}; conda_init;"
+    }
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout ""
+}
+
+# Older versions of conda do not use these
+unsetenv CONDA_SHLVL
+unsetenv CONDA_EXE
+unsetenv _CE_CONDA
+unsetenv CONDA_PYTHON_EXE
+
+setenv      PYTHONPATH  ""
 prepend-path    PATH              ${hpcc_modules}/miniconda3/4.3.21/bin
 
