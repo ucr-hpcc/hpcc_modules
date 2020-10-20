@@ -12,7 +12,6 @@ module-whatis	"gocryptfs-1.8.0"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
-set      euid            $::env(EUID)
 
 # for Tcl script use only
 set	version		3.2.9
@@ -23,7 +22,6 @@ set	datarootdir	${prefix}/share
 setenv          SHARED_ENCRYPTED_DIR      ~/shared/encrypted
 setenv          BIGDATA_ENCRYPTED_DIR     ~/bigdata/encrypted
 setenv          HOME_ENCRYPTED_DIR        ~/encrypted
-setenv          UNENCRYPTED_DIR           /run/user/${euid}/unencrypted
 
 prepend-path    PATH            ${hpcc_modules}/gocryptfs/1.8.0/bin
 prepend-path    MANPATH         ${hpcc_modules}/gocryptfs/1.8.0/share/man
