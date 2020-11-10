@@ -12,7 +12,7 @@ Once a node has been allocated, unload unwanted software and load others:
 ```bash
 module unload miniconda2 miniconda3 anaconda2 anaconda3
 module unload perl
-module load extra GCC/8.0.3
+module load extra GCC/8.3.0
 ```
 
 Next, download the treePL source code:
