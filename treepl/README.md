@@ -1,4 +1,10 @@
-#Submit job
+# Submit job
+
+In order to compile, you will need to request an interactive job:
+
+```bash
+srun -p short -C intel -c 4 --mem=10g --pty bash -l
+```
 
 ### Unload unwanted software and load others
 `module unload miniconda2 miniconda3 anaconda2 anaconda3
