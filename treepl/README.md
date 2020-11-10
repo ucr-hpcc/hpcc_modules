@@ -1,75 +1,140 @@
-# Submit job
+# Install treePL
 
+## Prepare
 In order to compile, you will need to request an interactive job:
 
 ```bash
 srun -p short -C intel -c 4 --mem=10g --pty bash -l
 ```
 
-### Unload unwanted software and load others
-`module unload miniconda2 miniconda3 anaconda2 anaconda3
-module load extra GCC/8.0.3`
+Once a node has been allocated, unload unwanted software and load others:
 
-# Download source code
-`git clone git://github.com/blackrim/treePL.git`
+```bash
+module unload miniconda2 miniconda3 anaconda2 anaconda3
+module unload perl
+module load extra GCC/8.0.3
+```
 
-# Move into source code dependencies (`deps`) subdirectory
-`cd treePL/deps/`
-# Dependencies
-## nlopt dependency
-### Extract nlopt
-`tar -xf nlopt-2.4.2.tar.gz`
+Next, download the treePL source code:
 
-### Make directory where nlopt will be installed
-`mkdir -p /bigdata/GROUP/USERNAME/software/nlopt/2.4.2`
+```bash
+mkdir ~/src
+cd ~/src
+git clone git://github.com/blackrim/treePL.git
+```
 
+### Dependencies
 
-### Configure nlopt
-`./configure --prefix=/bigdata/GROUP/USERNAME/software/nlopt/2.4.2`
+Move into source code dependencies (`deps`) subdirectory:
 
-### Build and install nlopt
-`make && make install`
+```bash
+cd ~/src/treePL/deps/
+```
 
-### Move up to dependencies (`deps`) directory
-`cd ..`
+#### nlopt
 
-## ADOL-C dependency
-### Extract adol-c
-`tar -xf adol-c_git_saved.tar.gz`
+Extract nlopt:
 
-### Move into adol-c source directory
-`cd adol-c`
-### Update source code
-`./update_versions.sh`
+```bash
+tar -xf nlopt-2.4.2.tar.gz
+```
 
-### Create directory where adol-c will be installed
-`mkdir -p /bigdata/GROUP/USERNAME/software/adol-c/git`
+Make directory where nlopt will be installed:
 
-### Configure adol-c
-`./configure --prefix=/bigdata/GROUP/USERNAME/software/adol-c/git`
+```bash
+mkdir -p /bigdata/GROUP/USERNAME/software/nlopt/2.4.2
+```
 
-### Build and install adol-c
-`make && make install`
+Configure nlopt:
 
-### Move up and over to main treePL source code directory
-`cd ../../src`
+```bash
+./configure --prefix=/bigdata/GROUP/USERNAME/software/nlopt/2.4.2
+```
 
-# Edit your Makefile
-### 1.) Manually edit the Makefile.in file, line 13 should look like the line bellow (be sure to use your own paths):
-`LIBS := -lm $(OPENMP) -ladolc -lnlopt
--L/usr/lib64:/usr/local/lib64:/bigdata/GROUP/USERNAME/software/adol-c/git/lib64:/bigdata/GROUP/USERNAME/software/nlopt/2.4.2/lib`
+Build and install nlopt:
 
-### 2.) Manually edit the Makefile.in file, line 14 should look like the line below (be sure to use your own paths):
-`LDFLAGS := -L/usr/local/lib64 -I/usr/local/include -L/bigdata/GROUP/USERNAME/software/adol-c/git/lib64/ -L/bigdata/GROUP/USERNAME/software/nlopt/2.4.2/lib -I/bigdata/GROUP/USERNAME/software/nlopt/2.4.2/include -I/bigdata/GROUP/USERNAME/software/adol-c/git/include`
+```bash
+make && make install
+```
 
-### 3.) Manually edit Makefile.in file, line 20 should look like the line below (be sure to use your own path):
-`prefix = /bigdata/GROUP/USERNAME/software/treepl/1.0`
+#### adol-c
 
-# COMPILATION
-### Then compile from the src directory with the following command:
-`CPPFLAGS='-L/bigdata/GROUP/USERNAME/software/adol-c/git/lib64/
+```bash
+cd ~/src/treePL/deps/
+```
+
+Extract adol-c:
+
+```bash
+tar -xf adol-c_git_saved.tar.gz
+```
+
+Move into adol-c source directory:
+
+```bash
+cd adol-c
+```
+
+Update source code:
+
+```bash
+./update_versions.sh
+```
+
+Create directory where adol-c will be installed:
+
+```bash
+mkdir -p /bigdata/GROUP/USERNAME/software/adol-c/git
+```
+
+Configure adol-c
+
+```bash
+./configure --prefix=/bigdata/GROUP/USERNAME/software/adol-c/git
+```
+
+Build and install adol-c
+
+```bash
+make && make install
+```
+
+## Build
+
+### Makefile
+
+Manually edit the `~/src/treePL/src/Makefile.in` file, line 13 should look like the line bellow (be sure to use your own paths):
+
+```
+LIBS := -lm $(OPENMP) -ladolc -lnlopt -L/usr/lib64:/usr/local/lib64:/bigdata/GROUP/USERNAME/software/adol-c/git/lib64:/bigdata/GROUP/USERNAME/software/nlopt/2.4.2/lib
+```
+
+Manually edit the `Makefile.in` file once more file, line 14 should look like the line below (be sure to use your own paths):
+
+```
+LDFLAGS := -L/usr/local/lib64 -I/usr/local/include -L/bigdata/GROUP/USERNAME/software/adol-c/git/lib64/ -L/bigdata/GROUP/USERNAME/software/nlopt/2.4.2/lib -I/bigdata/GROUP/USERNAME/software/nlopt/2.4.2/include -I/bigdata/GROUP/USERNAME/software/adol-c/git/include
+```
+
+Manually edit the `Makefile.in` file one last time, line 20 should look like the line below (be sure to use your own path):
+
+```
+prefix = /bigdata/GROUP/USERNAME/software/treepl/1.0
+```
+
+### Configure
+
+Then run configure from the `~/src/treePL/src` directory with the following command:
+
+```
+CPPFLAGS='-L/bigdata/GROUP/USERNAME/software/adol-c/git/lib64/
 -L/bigdata/GROUP/USERNAME/software/nlopt/2.4.2/lib-I/bigdata/GROUP/USERNAME/software/nlopt/2.4.2/include-I/bigdata/GROUP/USERNAME/software/adol-c/git/include'
-./configure--prefix=/bigdata/GROUP/USERNAME/software/treepl/1.0`
+./configure--prefix=/bigdata/GROUP/USERNAME/software/treepl/1.0
+```
 
-### final steps
-`make && make install`
+### Compile
+
+The last step we need to do is to compile (build) the binaries and libraries:
+
+```bash
+make && make install
+```
