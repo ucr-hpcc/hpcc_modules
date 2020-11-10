@@ -42,13 +42,13 @@ tar -xf nlopt-2.4.2.tar.gz
 Make directory where nlopt will be installed:
 
 ```bash
-mkdir -p /bigdata/GROUP/USERNAME/software/nlopt/2.4.2
+mkdir -p /bigdata/$GROUP/$USER/software/nlopt/2.4.2
 ```
 
 Configure nlopt:
 
 ```bash
-./configure --prefix=/bigdata/GROUP/USERNAME/software/nlopt/2.4.2
+./configure --prefix=/bigdata/$GROUP/$USER/software/nlopt/2.4.2
 ```
 
 Build and install nlopt:
@@ -84,13 +84,13 @@ Update source code:
 Create directory where adol-c will be installed:
 
 ```bash
-mkdir -p /bigdata/GROUP/USERNAME/software/adol-c/git
+mkdir -p /bigdata/$GROUP/$USER/software/adol-c/git
 ```
 
 Configure adol-c
 
 ```bash
-./configure --prefix=/bigdata/GROUP/USERNAME/software/adol-c/git
+./configure --prefix=/bigdata/$GROUP/$USER/software/adol-c/git
 ```
 
 Build and install adol-c
@@ -103,22 +103,29 @@ make && make install
 
 ### Makefile
 
+For this section, since we are modifying a file and not running a command on the command line, you will need to replace all occurrences of `$GROUP` and `$USER` with your actual group and username. These values can be determined like so:
+
+```bash
+echo $USER
+echo $GROUP
+```
+
 Manually edit the `~/src/treePL/src/Makefile.in` file, line 13 should look like the line bellow (be sure to use your own paths):
 
 ```
-LIBS := -lm $(OPENMP) -ladolc -lnlopt -L/usr/lib64:/usr/local/lib64:/bigdata/GROUP/USERNAME/software/adol-c/git/lib64:/bigdata/GROUP/USERNAME/software/nlopt/2.4.2/lib
+LIBS := -lm $(OPENMP) -ladolc -lnlopt -L/usr/lib64:/usr/local/lib64:/bigdata/$GROUP/$USER/software/adol-c/git/lib64:/bigdata/$GROUP/$USER/software/nlopt/2.4.2/lib
 ```
 
 Manually edit the `Makefile.in` file once more file, line 14 should look like the line below (be sure to use your own paths):
 
 ```
-LDFLAGS := -L/usr/local/lib64 -I/usr/local/include -L/bigdata/GROUP/USERNAME/software/adol-c/git/lib64/ -L/bigdata/GROUP/USERNAME/software/nlopt/2.4.2/lib -I/bigdata/GROUP/USERNAME/software/nlopt/2.4.2/include -I/bigdata/GROUP/USERNAME/software/adol-c/git/include
+LDFLAGS := -L/usr/local/lib64 -I/usr/local/include -L/bigdata/$GROUP/$USER/software/adol-c/git/lib64/ -L/bigdata/$GROUP/$USER/software/nlopt/2.4.2/lib -I/bigdata/$GROUP/$USER/software/nlopt/2.4.2/include -I/bigdata/$GROUP/$USER/software/adol-c/git/include
 ```
 
 Manually edit the `Makefile.in` file one last time, line 20 should look like the line below (be sure to use your own path):
 
 ```
-prefix = /bigdata/GROUP/USERNAME/software/treepl/1.0
+prefix = /bigdata/$GROUP/$USER/software/treepl/1.0
 ```
 
 ### Configure
@@ -126,9 +133,9 @@ prefix = /bigdata/GROUP/USERNAME/software/treepl/1.0
 Then run configure from the `~/src/treePL/src` directory with the following command:
 
 ```
-CPPFLAGS='-L/bigdata/GROUP/USERNAME/software/adol-c/git/lib64/
--L/bigdata/GROUP/USERNAME/software/nlopt/2.4.2/lib-I/bigdata/GROUP/USERNAME/software/nlopt/2.4.2/include-I/bigdata/GROUP/USERNAME/software/adol-c/git/include'
-./configure--prefix=/bigdata/GROUP/USERNAME/software/treepl/1.0
+CPPFLAGS='-L/bigdata/$GROUP/$USER/software/adol-c/git/lib64/
+-L/bigdata/$GROUP/$USER/software/nlopt/2.4.2/lib-I/bigdata/$GROUP/$USER/software/nlopt/2.4.2/include-I/bigdata/$GROUP/$USER/software/adol-c/git/include'
+./configure--prefix=/bigdata/$GROUP/$USER/software/treepl/1.0
 ```
 
 ### Compile
