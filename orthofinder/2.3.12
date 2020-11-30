@@ -29,7 +29,7 @@ module load fastme/2.1.5
 module load RAxML_NG
 module load RAxML
 module load IQ-TREE
-module load diamond/2.0.2
+module load diamond/2.0.5
 module load MMseqs2/11-e1a1c
 module load muscle
 module load fasttree
