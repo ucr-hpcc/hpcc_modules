@@ -9,17 +9,17 @@ srun --p batch --mem=10gb --ntasks=10 --time=1-00:00:00 --pty bash -l
 Go to source directory, download R source and extract it:
 ```bash
 cd /opt/linux/centos/7.x/x86_64/src
-wget https://cran.r-project.org/src/base/R-3/R-3.4.2.tar.gz
-tar -xf R-3.4.2.tar.gz 
-cd R-3.4.2
+wget https://cran.r-project.org/src/base/R-3/R-4.0.3.tar.gz
+tar -xf R-4.0.3.tar.gz 
+cd R-4.0.3
 ```
 
 Copy over previous install script, be sure to update the install path:
 ```bash
-cp ../R-3.4.0/hpcc_configure.sh .
+cp ../R-4.0.1/hpcc_configure.sh .
 vim hpcc_configure.sh
 ```
-The hpcc_configure.sh script contains the following:
+The `hpcc_configure.sh` script should have simliar code as the following:
 ```bash
 ./configure \
 --prefix /opt/linux/centos/7.x/x86_64/pkgs/R/3.4.0 \
@@ -32,31 +32,25 @@ The hpcc_configure.sh script contains the following:
 --with-libpng \
 --with-jpeglib \
 --with-x
-```
 
-Then configure, build, and install
-```
-./hpcc_configure.sh 
-make -j 10
-make install
-```
+if [[ $? -eq 0 ]]; then
+    make
+fi
 
-
+fi [[ $? -eq 0 ]]; then
+    make install
+fi
+```
 
 After R is installed install the module.
 
 ### Bioconductor
-Install Bioconductor as pkgadmin and with the correct version of R via module load.
+Install the latest compatible version of Bioconductor as pkgadmin and with the correct version of R via module load.
 From within R run the following:
 ```r
-source("https://bioconductor.org/biocLite.R")
-biocLite()
+install.packages("BiocManager")
+BiocManager::install(version = "3.12")
 Update all/some/none? [a/s/n]: a # Update all packages
-```
-#### Development (leading-edge)
-To enable the development version of Bioconductor run the following from within R:
-```r
-BiocInstaller::useDevel()
 ```
 
 ### Packages
@@ -67,24 +61,24 @@ Then access compute node and run the following:
 ```bash
 srun --p batch --mem=10gb --ntasks=10 --time=1-00:00:00 --pty bash -l
 
-module load R/3.4.0 # To get list of old packages
+module load R/4.0.1 # To get list of old packages
 R
 ```
+
 ```r
-source("http://bioconductor.org/biocLite.R")
 pkgs <- rownames(installed.packages())
 writeLines(pkgs, "/tmp/pkgs")
 q()
 ```
+
 ```bash
-module switch R/3.4.2
-module load nfcd #netcdf4, Rhdf5lib
+module switch R/4.0.3
 R
 ```
+
 ```r
 pkgs <- readLines("/tmp/pkgs")
-source("http://bioconductor.org/biocLite.R")
-biocLite(pkgs) # will take some time...
+BiocManager::install(pkgs) # will take some time...
 ```
 
 Double check what is still missing and load/install dependencies to resolve issues:
@@ -92,42 +86,68 @@ Double check what is still missing and load/install dependencies to resolve issu
 pkgs2 <- rownames(installed.packages())
 missing <- pkgs[!pkgs %in% pkgs2] # Return names of packages that failed to install
 biocLite(missing) # Install those missing packages
-install.packages("/bigdata/girkelab/shared/modules_1.2.tar.gz", repos=NULL) # Maintained by Tyler
-
 q()
+```
+Some packages may require additional RPMs to be installed or modules to load.
+Additionally, some packages may only exist from a GitHub repo and cannot be installed with the above method (ie. `RenvModule` and `RenvCheck` are here: `https://github.com/jdhayes/`).
+
+#### RenvModule
+
+This module will be used later, so better to install it first:
+
+```r
+library(devtools)
+install_github("jdhayes/RenvModule")
 ```
 
 #### RGeos
-Currently the libgeos-dev package is only installed on Pigeon (epel?), thus install from pigeon:
+
+The package `RGeos` may requires the `geos` headers, which are installed under:
+
+```
+/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/include/
+```
+
+Loading the module should allow R to find the above path:
+
 ```r
+module('load','geos/3.7.1')
 biocLite('rgeos')
 ```
 
 #### rJava
-Set paths in order to install rJava (ie. LD_LIBRARY_PATH=/path/to/libjvm.so):
+Set paths in order to install `rJava` (ie. LD_LIBRARY_PATH=/path/to/libjvm.so):
+
 ```bash
 module load java/8
-R CMD javareconf -e 
+R CMD javareconf
 ```
+
 ```r
-biocLite('rJava')
+BiocManager::install('rJava')
 ```
 
 #### RPostgreSQL
-Additional header file (libpq-fe.h) required for RPostgreSQL to install correctly:
+
+Install additional header file `libpq-fe.h` for `RPostgreSQL` to install correctly:
+
 ```bash
 yum install postgresql-devel
 ```
+
 ```r
 install.packages("RPostgreSQL")
 # Re install dependent packages (some not available?)
-biocLite(c("GWASdata", "GWASTools", "rcdklibs", "RankProd", "xcms", "mzR", "rgeos", "ncdf4", "rJava"))
+BiocManager::install(c("GWASdata", "GWASTools", "rcdklibs", "RankProd", "xcms", "mzR", "rgeos", "ncdf4", "rJava"))
 ```
 
 #### Github repositories
+
 3rd Party packages that are used:
+
 ```r
 library(devtools)
+install_github("jdhayes/RenvCheck")
 biocLite("tgirke/longevityDrugs", build_vignettes=FALSE, dependencies=FALSE)
 biocLite("tgirke/longevityTools", build_vignettes=FALSE, dependencies=FALSE)
 install_github("duncantl/RGoogleDocs")
@@ -135,8 +155,6 @@ install_github("jalvesaq/VimCom")
 install_github("cran/setwidth")
 install_github("jalvesaq/colorout")
 install_github("cran/Geneland")
-install_github("jdhayes/RenvCheck")
-install_github("jdhayes/RenvModule")
 install_github('Sage-Bionetworks/rSynapseClient', ref='develop')
 devtools::install_github("yduan004/drugbankR")
 install.packages("http://hartleys.github.io/QoRTs/QoRTs_LATEST.tar.gz",repos=NULL,type="source")
@@ -144,14 +162,16 @@ devtools::install_github("cmap/cmapR")
 ```
 
 #### ChemmineOB
+
 ChemmineOB needs special attention.
 First, become pkgadmin (sudo or ssh keys).
 Then access a compute node and run the following:
+
 ```bash
 srun --p batch --mem=10gb --ntasks=10 --time=1-00:00:00 --pty bash -l
 
 module load openbabel
-wget www.bioconductor.org/packages/release/bioc/src/contrib/ChemmineOB_1.14.0.tar.gz
+wget www.bioconductor.org/packages/release/bioc/src/contrib/ChemmineOB_1.16.0.tar.gz
 R CMD INSTALL --configure-args='--with-openbabel-include=/opt/linux/centos/7.x/x86_64/pkgs/openbabel/2.3.2/include/openbabel-2.0 --with-
 openbabel-lib=/opt/linux/centos/7.x/x86_64/pkgs/openbabel/2.3.2/lib' ChemmineOB_1.16.0.tar.gz
 ```
@@ -161,25 +181,27 @@ openbabel-lib=/opt/linux/centos/7.x/x86_64/pkgs/openbabel/2.3.2/lib' ChemmineOB_
 Download latest Rmpi version using wget. Make sure you have the proper R version loaded and then run the following:
 
 ```bash
-wget http://www.stats.uwo.ca/faculty/yu/Rmpi/download/linux/Rmpi_0.6-7.tar.gz
-```
-
-This package has not been updated since 2018. A slighly newer package may be available from CRAN directly:
-
-```bash
 wget https://cran.r-project.org/src/contrib/Rmpi_0.6-9.tar.gz```
 ```
 
 Then install it like so:
+
 ```bash
 R CMD INSTALL Rmpi_0.6-9.tar.gz --configure-args=--with-mpi=/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/
 ```
 
 #### Install ChipSeek
-First get the units and udunits2 prereqs.
+
+First get the units and udunits2 prereqs, then install `ChipSeek`:
+
 ```bash
+sudo yum install udunits2-devel
+```
+
+```r
 install.packages("udunits2",configure.args='--with-udunits2-include=/usr/include/udunits2')
-biocLite("ChIPseeker")
+
+BiocManager::install("ChIPseeker")
 ```
 
 #### Install rgdal
@@ -212,8 +234,6 @@ install.packages('SpatialEpi')
 Here is a list of R packages and there devel dependency delimeted by colon:
 
 ```
-RPostgreSQL:postgresql-devel
-udunits2:udunits2-devel
 Rmpfr:mpfr-devel
 clusterSim:mesa-libGLU-devel
 ```
