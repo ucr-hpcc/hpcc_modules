@@ -27,8 +27,8 @@ if { ![ is-loaded GCCcore/8.3.0 ] } {
     module load GCCcore/8.3.0
 }
 
-if { ![ is-loaded 2.35.1-GCCcore-8.3.0 ] } {
-    module load 2.35.1-GCCcore-8.3.0
+if { ![ is-loaded binutils/2.35.1-GCCcore-8.3.0 ] } {
+    module load binutils/2.35.1-GCCcore-8.3.0
 }
 
 # Manually built by Joradn Hayes
