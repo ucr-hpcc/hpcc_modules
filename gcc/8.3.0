@@ -1,0 +1,34 @@
+#%Module
+proc ModulesHelp { } {
+    puts stderr {
+
+Description
+===========
+The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Java, and Ada,
+ as well as libraries for these languages (libstdc++, libgcj,...).
+
+
+More information
+================
+ - Homepage: https://gcc.gnu.org/
+    }
+}
+
+module-whatis {Description: The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Java, and Ada,
+ as well as libraries for these languages (libstdc++, libgcj,...).}
+module-whatis {Homepage: https://gcc.gnu.org/}
+module-whatis {URL: https://gcc.gnu.org/}
+
+set root /opt/linux/centos/7.x/x86_64/pkgs/gcc/8.3.0/
+
+conflict GCCcore
+
+prepend-path	CMAKE_LIBRARY_PATH		$root/lib64
+prepend-path	CMAKE_PREFIX_PATH		$root
+prepend-path	LD_LIBRARY_PATH		$root/lib
+prepend-path	LD_LIBRARY_PATH		$root/lib64
+prepend-path	MANPATH		$root/share/man
+prepend-path	PATH		$root/bin
+prepend-path	XDG_DATA_DIRS		$root/share
+
+# Manually compiled by Jordan Hayes
