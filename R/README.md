@@ -182,6 +182,41 @@ install.packages("udunits2",configure.args='--with-udunits2-include=/usr/include
 biocLite("ChIPseeker")
 ```
 
+#### Install rgdal
+
+First, install some RPM dependencies:
+
+```bash
+yum install proj proj-devel proj-epsg
+```
+
+Next, load some dependencies with module load:
+
+```bash
+module load gdal
+```
+
+After that, you should be able to install `rgdal`
+```R
+install.packages('rgdal', configure.args='--with-include=/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/include')
+```
+
+Then you can install `SpatialEpi`:
+
+```R
+install.packages('SpatialEpi')
+```
+
+#### Various devel packages
+
+Here is a list of R packages and there devel dependency delimeted by colon:
+
+```
+RPostgreSQL:postgresql-devel
+udunits2:udunits2-devel
+Rmpfr:mpfr-devel
+clusterSim:mesa-libGLU-devel
+```
 
 ### Upgrading R Version on RStudio Server
 Modify paths in the following files:
