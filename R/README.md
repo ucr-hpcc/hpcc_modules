@@ -85,7 +85,7 @@ Double check what is still missing and load/install dependencies to resolve issu
 ```r
 pkgs2 <- rownames(installed.packages())
 missing <- pkgs[!pkgs %in% pkgs2] # Return names of packages that failed to install
-biocLite(missing) # Install those missing packages
+BiocManager::install(missing) # Install those missing packages
 q()
 ```
 Some packages may require additional RPMs to be installed or modules to load.
@@ -112,7 +112,7 @@ Loading the module should allow R to find the above path:
 
 ```r
 module('load','geos/3.7.1')
-biocLite('rgeos')
+BiocManager::install('rgeos')
 ```
 
 #### rJava
@@ -139,26 +139,6 @@ yum install postgresql-devel
 install.packages("RPostgreSQL")
 # Re install dependent packages (some not available?)
 BiocManager::install(c("GWASdata", "GWASTools", "rcdklibs", "RankProd", "xcms", "mzR", "rgeos", "ncdf4", "rJava"))
-```
-
-#### Github repositories
-
-3rd Party packages that are used:
-
-```r
-library(devtools)
-install_github("jdhayes/RenvCheck")
-biocLite("tgirke/longevityDrugs", build_vignettes=FALSE, dependencies=FALSE)
-biocLite("tgirke/longevityTools", build_vignettes=FALSE, dependencies=FALSE)
-install_github("duncantl/RGoogleDocs")
-install_github("jalvesaq/VimCom")
-install_github("cran/setwidth")
-install_github("jalvesaq/colorout")
-install_github("cran/Geneland")
-install_github('Sage-Bionetworks/rSynapseClient', ref='develop')
-devtools::install_github("yduan004/drugbankR")
-install.packages("http://hartleys.github.io/QoRTs/QoRTs_LATEST.tar.gz",repos=NULL,type="source")
-devtools::install_github("cmap/cmapR")
 ```
 
 #### ChemmineOB
@@ -229,22 +209,65 @@ Then you can install `SpatialEpi`:
 install.packages('SpatialEpi')
 ```
 
-#### Various devel packages
-
-Here is a list of R packages and there devel dependency delimeted by colon:
-
+#### Install Rmpfr
 ```
-Rmpfr:mpfr-devel
-clusterSim:mesa-libGLU-devel
+sudo yum install mpfr-devel
 ```
 
-### Upgrading R Version on RStudio Server
+```
+install.packages(Rmpfr)
+```
+
+#### Install clusterSim
+
+```bash
+sudo yum install mesa-libGLU-devel
+```
+
+```r
+install.packages(clusterSim)
+```
+
+
+#### Misc Packages
+
+__GitHub__
+```r
+
+library(devtools)
+install_github("yduan004/drugbankR")
+install_github("cmap/cmapR")
+install_github("jdhayes/RenvCheck")
+install_github("duncantl/RGoogleDocs")
+install_github("jalvesaq/VimCom")
+install_github("cran/setwidth")
+install_github("jalvesaq/colorout")
+install_github("cran/Geneland")
+install_github('Sage-Bionetworks/rSynapseClient', ref='develop')
+```
+
+__Direct URL__
+```r
+install.packages("http://hartleys.github.io/QoRTs/QoRTs_LATEST.tar.gz",repos=NULL,type="source")
+```
+
+__Bioconductor__
+```
+BiocManager::install("tgirke/longevityDrugs", build_vignettes=FALSE, dependencies=FALSE)
+BiocManager::install("tgirke/longevityTools", build_vignettes=FALSE, dependencies=FALSE)
+```
+
+### Upgrading R in RStudio Server
+
 Modify paths in the following files:
+
 ```
 /etc/rstudio/rserver.conf
 /etc/rstudio/profiles # Pro Version Only
 ```
 
-And lastly, and most important:
-```ln -s /opt/linux/centos/7.x/x86_64/pkgs/R/3.4.2/lib64/R/lib/* /lib64/```
+And lastly, and most important link the librarys to `lib64` since modifying `LD_LIBRARY_PATH` is not possible:
 
+```
+ln -s /opt/linux/centos/7.x/x86_64/pkgs/R/3.4.2/lib64/R/lib/* /lib64/
+```
