@@ -232,9 +232,10 @@ install.packages(clusterSim)
 #### Misc Packages
 
 __GitHub__
-```r
 
+```r
 library(devtools)
+install_github('snoweye/pbdZMQ') # Available in CRAN, but only GitHub version installed
 install_github("yduan004/drugbankR")
 install_github("cmap/cmapR")
 install_github("jdhayes/RenvCheck")
@@ -247,11 +248,13 @@ install_github('Sage-Bionetworks/rSynapseClient', ref='develop')
 ```
 
 __Direct URL__
+
 ```r
 install.packages("http://hartleys.github.io/QoRTs/QoRTs_LATEST.tar.gz",repos=NULL,type="source")
 ```
 
 __Bioconductor__
+
 ```
 BiocManager::install("tgirke/longevityDrugs", build_vignettes=FALSE, dependencies=FALSE)
 BiocManager::install("tgirke/longevityTools", build_vignettes=FALSE, dependencies=FALSE)
@@ -266,8 +269,8 @@ Modify paths in the following files:
 /etc/rstudio/profiles # Pro Version Only
 ```
 
-And lastly, and most important link the librarys to `lib64` since modifying `LD_LIBRARY_PATH` is not possible:
+And lastly, and most important link the librarys to `lib64` since modifying `LD_LIBRARY_PATH` inside of RStudio server is not easily done:
 
 ```
-ln -s /opt/linux/centos/7.x/x86_64/pkgs/R/3.4.2/lib64/R/lib/* /lib64/
+ln -s /opt/linux/centos/7.x/x86_64/pkgs/R/4.0.3_gcc-8.3.0/lib64/R/lib/* /lib64/
 ```
