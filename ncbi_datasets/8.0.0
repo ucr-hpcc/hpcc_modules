@@ -20,6 +20,6 @@ set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
 
-prepend-path    PATH            ${hpcc_modules}/ncbi_datasets/2020-02-03/bin
+prepend-path    PATH            ${hpcc_modules}/ncbi_datasets/8.0.0/bin
 module          use             ${modules_dir}
 
