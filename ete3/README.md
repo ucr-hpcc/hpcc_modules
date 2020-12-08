@@ -1,4 +1,8 @@
-Installed via conda
+Installed via conda. See issues 
+https://github.com/etetoolkit/ete/issues/475
+and
+https://gitter.im/etetoolkit/ete?utm=
+
 ```
 conda create -n ete3 -c etetoolkit ete_toolchain ete3
 
