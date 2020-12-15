@@ -26,5 +26,7 @@ module		use		${modules_dir}
 module load signalp/4.1c
 module load tmhmm/2.0c
 module load java/13
+module unload perl
+module load miniconda3
 #technically we need to do module load python/3 but instead this is being done in .sh file so that 
 #python2 and python3 can coexist for tools which shell out this program (e.g. funannotate iprscan)
