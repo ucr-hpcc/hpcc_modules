@@ -2,17 +2,11 @@
 
 ## Prep
 https://github.com/ebi-pf-team/interproscan/wiki/HowToDownload
-```
-cd /opt/linux/centos/7.x/x86_64/src/
-wget ftp://ftp.ebi.ac.uk/pub/software/unix/iprscan/5/5.20-59.0/interproscan-5.20-59.0-64-bit.tar.gz{,.md5}
-md5sum -c interproscan-5.20-59.0-64-bit.tar.gz.md5
-```
 
 ## Compile
 Not needed
 
 ## Install
-https://github.com/ebi-pf-team/interproscan/wiki/HowToDownload
 ```
 # Main Installation
 cd /opt/linux/centos/7.x/x86_64/pkgs/interproscan/
@@ -68,7 +62,6 @@ to
 
 ## Cleanup
 ```
-# Load Java 8 if default version is older
 module load interproscan/5.48-83.0
 # Run interproscan.sh to reveal any missing packages
 /opt/linux/centos/7.x/x86_64/pkgs/interproscan/5.48-83.0/interproscan.sh
