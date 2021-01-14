@@ -21,5 +21,11 @@ set     datarootdir     ${prefix}/share
 
 module load boost
 
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module unload anaconda3 miniconda2; module load miniconda3; source activate SALSA;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "module unload anaconda3 miniconda2; module load miniconda3; conda deactivate;"
+}
+
 prepend-path    PATH    ${hpcc_modules}/SALSA/2/bin
 
