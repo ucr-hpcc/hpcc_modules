@@ -23,5 +23,5 @@ set	datarootdir	${prefix}/share
 prereq intel/2018
 # Do not pre-load intel
 
-prepend-path    PATH    ${hpcc_modules}/espresso/6.7_intel
+prepend-path    PATH    ${hpcc_modules}/espresso/6.7_intel/bin
 
