@@ -10,7 +10,7 @@ Load needed software from module system and CP2K toolchain:
 module purge
 module load extra GCC/8.3.0
 module load python/3.4.3
-module load xdrfile/1.1.4_gcc-8.3.0
+module load xdrfile/1.1.4_gcc-8.3.0 # Compile with --enable-shared
 
 source $HPCC_MODULES/cp2k/7.1_gcc-8.3.0/tools/toolchain/install/setup
 ```
