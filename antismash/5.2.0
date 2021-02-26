@@ -45,7 +45,7 @@ setenv LANG en_US.utf-8
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module unload anaconda3 miniconda2; module load miniconda3; source activate antismash5_2;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
-    puts stdout "module unload anaconda3 miniconda2; module load minconda3; conda deactivate;"
+    puts stdout "module unload anaconda3 miniconda2; module load miniconda3; conda deactivate;"
 }
 
 # Add path manually, since source activate does not function within parent shell
