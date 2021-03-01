@@ -1,6 +1,5 @@
 # ClipKIT
 Installed from https://github.com/JLSteenwyk/ClipKIT
-using anaconda3 env, installed with pip
 
 ```
 module unload miniconda2
