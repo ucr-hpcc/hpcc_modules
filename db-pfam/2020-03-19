@@ -19,7 +19,7 @@ set	prefix		/usr/local/Modules/3.2.9
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-setenv      PFAM_DB	    /srv/projects/db/pfam/2020-03-18-Pfam-33.0
+setenv      PFAM_DB	    /srv/projects/db/pfam/2020-03-18-Pfam33.0
 
 module      use    ${modules_dir}
 
