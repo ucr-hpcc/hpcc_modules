@@ -29,4 +29,3 @@ if { [module-info mode load] || [module-info mode switch2] } {
     #puts stdout "deactivate;"
 }
 
-module use ${modules_dir}

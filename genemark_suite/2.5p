@@ -20,5 +20,4 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/genemark_suite/2.5p/gmsuite
-module		use		${modules_dir}
 

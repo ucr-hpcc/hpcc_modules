@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 prepend-path    PATH            ${hpcc_modules}/zoem/11-166/bin
 prepend-path    MANPATH         ${hpcc_modules}/zoem/11-166/share/man
 
-module		use		${modules_dir}
 

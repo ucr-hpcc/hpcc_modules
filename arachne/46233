@@ -22,5 +22,4 @@ set     datarootdir     ${prefix}/share
 prepend-path    PATH         ${hpcc_modules}/arachne/46233/bin
 prepend-path    DOCPATH      ${hpcc_modules}/arachne/46233/share/doc
 
-module           use              ${modules_dir}
 

@@ -21,4 +21,3 @@ set	datarootdir	${prefix}/share
 
 prepend-path    CPLUS_INCLUDE_PATH  ${hpcc_modules}/sparsehash/r107_4cb9240/include
 
-module use ${modules_dir}

@@ -32,4 +32,3 @@ if { [module-info mode load] || [module-info mode switch2] } {
 
 prepend-path    PATH    ${hpcc_modules}/python/2.7.13-venv/biobakery_workflows-0.9.0/bin
 
-module use ${modules_dir}

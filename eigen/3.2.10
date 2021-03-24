@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    CPLUS_INCLUDE_PATH  ${hpcc_modules}/eigen/3.2.10
 
-module		use		${modules_dir}
 

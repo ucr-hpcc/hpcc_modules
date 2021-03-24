@@ -20,5 +20,4 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 prepend-path    PATH   		${hpcc_modules}/smis/2015-01-08
-module		use		${modules_dir}
 

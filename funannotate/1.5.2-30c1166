@@ -83,4 +83,3 @@ prepend-path    PATH        ${hpcc_modules}/funannotate/1.5.2-30c1166
 prepend-path    PATH        ${hpcc_modules}/funannotate/1.5.2-30c1166/bin
 
 setenv	FUNANNOTATE_DB		${hpcc_modules}/funannotate/share
-module  use     ${modules_dir}

@@ -24,5 +24,4 @@ prepend-path    MANPATH         ${hpcc_modules}/ggobi/2.1.11/share/man
 prepend-path    CPATH           ${hpcc_modules}/ggobi/2.1.11/include/ggobi
 prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/ggobi/2.1.11/lib
 
-module          use             ${modules_dir}
 

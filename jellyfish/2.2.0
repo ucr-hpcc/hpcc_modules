@@ -26,5 +26,4 @@ prepend-path    PATH            ${hpcc_modules}/jellyfish/2.2.0/bin
 prepend-path    MANPATH         ${hpcc_modules}/jellyfish/2.2.0/share/man
 
 
-module          use             ${modules_dir}
 

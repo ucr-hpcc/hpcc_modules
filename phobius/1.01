@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 module load signalp
 prepend-path    PATH            ${hpcc_modules}/phobius/1.01/bin
 
-module		use		${modules_dir}
 

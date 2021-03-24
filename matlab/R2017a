@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH          ${hpcc_modules}/MATLAB/R2017a/bin
 
-module		use		${modules_dir}
 

@@ -31,4 +31,3 @@ module load perl/5.24.0
 prepend-path    PATH            ${hpcc_modules}/redundans/0.14a
 prepend-path    PATH            ${hpcc_modules}/redundans/0.14a/bin
 
-module use ${modules_dir}

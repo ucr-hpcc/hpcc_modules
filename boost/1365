@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/boost/1365/bin
 
-module		use		${modules_dir}
 

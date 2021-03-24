@@ -22,4 +22,3 @@ set	datarootdir	${prefix}/share
 module load ncbi-blast/2.7.1+
 prepend-path    PATH            ${hpcc_modules}/kraken/2.0.7-beta
 setenv	KRAKEN2_DB_NAME	/srv/projects/db/kraken
-module use ${modules_dir}

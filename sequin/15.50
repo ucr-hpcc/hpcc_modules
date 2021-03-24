@@ -21,5 +21,4 @@ set     datarootdir     ${prefix}/share
 
 
 prepend-path    PATH            ${hpcc_modules}/sequin/15.50
-module          use             ${modules_dir}
 setenv	NCBI	${hpcc_modules}/sequin/15.50

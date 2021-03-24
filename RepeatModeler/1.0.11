@@ -25,4 +25,3 @@ set	datarootdir	${prefix}/share
 #module load trf
 prepend-path    PATH    ${hpcc_modules}/RepeatModeler/1.0.11
 
-module use ${modules_dir}

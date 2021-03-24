@@ -25,4 +25,3 @@ module load miniconda3
 prepend-path    PATH            ${hpcc_modules}/PHYling/git-live
 prepend-path    PATH            ${hpcc_modules}/PHYling/git-live/util
 
-module use ${modules_dir}

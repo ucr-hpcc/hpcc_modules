@@ -23,4 +23,3 @@ prepend-path    CPLUS_INCLUDE_PATH  ${hpcc_modules}/libkml/8609edf/include
 prepend-path    LD_LIBRARY_PATH     ${hpcc_modules}/libkml/8609edf/lib
 prepend-path    PYTHONPATH          ${hpcc_modules}/libkml/8609edf/lib/python2.7/site-packages
 
-module use ${modules_dir}

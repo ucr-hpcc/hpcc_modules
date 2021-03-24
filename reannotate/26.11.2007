@@ -21,4 +21,3 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH    ${hpcc_modules}/reannotate/26.11.2007
 
-module use ${modules_dir}

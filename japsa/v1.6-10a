@@ -25,4 +25,3 @@ module  load    kalign
 
 prepend-path    PATH    ${hpcc_modules}/japsa/v1.6-10a/bin
 
-module  use     ${modules_dir}

@@ -26,4 +26,3 @@ prepend-path     LD_LIBRARY_PATH  ${hpcc_modules}/java/jdk1.7.0_17/lib
 
 setenv           JAVA_HOME        ${hpcc_modules}/java/jdk1.7.0_17
 
-module           use              ${modules_dir}

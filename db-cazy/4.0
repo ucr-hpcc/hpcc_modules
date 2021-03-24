@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 setenv      CAZY_FOLDER	/srv/projects/db/CAZY/CAZyDB/4.0
 setenv      CAZY_DB	/srv/projects/db/CAZY/CAZyDB/4.0/dbCAN-fam-HMMs.txt.v4
 
-module      use    ${modules_dir}
 

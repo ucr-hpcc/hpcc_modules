@@ -31,4 +31,3 @@ if { $partition == "gpu" } {
 } else {
 	prepend-path    PATH        ${hpcc_modules}/raven/1.1.10/bin
 }
-module use ${modules_dir}

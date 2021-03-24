@@ -24,5 +24,4 @@ module load java
 setenv  GATKDIR     ${hpcc_modules}/gatk/3.3-0
 setenv  GATK        ${hpcc_modules}/gatk/3.3-0/GenomeAnalysisTK.jar 
 
-module		use		${modules_dir}
 

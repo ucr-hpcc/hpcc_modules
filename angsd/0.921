@@ -25,5 +25,4 @@ prereq htslib
 
 prepend-path    PATH   		${hpcc_modules}/angsd/0.921/bin
 
-module		use		${modules_dir}
 

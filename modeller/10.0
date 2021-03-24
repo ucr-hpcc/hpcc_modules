@@ -26,4 +26,3 @@ prepend-path	PYTHONPATH	${hpcc_modules}/modeller/10.0//lib/x86_64-intel8/python3
 prepend-path    PATH            ${hpcc_modules}/modeller/10.0/bin
 prepend-path	LD_LIBRARY_PATH	${hpcc_modules}/modeller/10.0/lib/x86_64-intel8
 
-module use ${modules_dir}

@@ -23,5 +23,4 @@ setenv	SNPEFFJAR	${hpcc_modules}/snpEff/4.3t/snpEff/snpEff.jar
 setenv	SNPEFFDIR	${hpcc_modules}/snpEff/4.3t/snpEff
 setenv	SNPSIFTJAR	${hpcc_modules}/snpEff/4.3t/snpEff/SnpSift.jar
 
-module		use		${modules_dir}
 

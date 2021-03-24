@@ -25,5 +25,4 @@ prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/fftw/3.3.5_intel/lib
 prepend-path    INCLUDE_PATH   ${hpcc_modules}/fftw/3.3.5_intel/include
 prepend-path	MANPATH		  ${hpcc_modules}/fftw/3.3.5_intel/share/man
 
-module		use		${modules_dir}
 

@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 setenv	SNPEFFJAR	${hpcc_modules}/snpEff/4.1K/snpEff.jar
 setenv	SNPSIFTJAR	${hpcc_modules}/snpEff/4.1K/SnpSift.jar
 
-module		use		${modules_dir}
 

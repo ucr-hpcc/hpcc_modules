@@ -25,5 +25,4 @@ module load fastme/2.1.5
 module load MMseqs2
 prepend-path    PATH              ${hpcc_modules}/orthofinder/2.0.0
 
-module		use		${modules_dir}
 

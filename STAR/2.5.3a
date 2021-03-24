@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/STAR/2.5.3a/bin
 
-module		use		${modules_dir}
 

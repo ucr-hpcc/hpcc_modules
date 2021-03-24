@@ -25,5 +25,4 @@ prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/python/2.7.13/lib
 prepend-path    MANPATH         ${hpcc_modules}/python/2.7.13/share/man
 prepend-path	PYTHONPATH      ${hpcc_modules}/python/2.7.13/lib/python2.7/site-packages:${hpcc_modules}/python/2.7.13/lib64/python2.7/site-packages 
 
-module		use		${modules_dir}
 

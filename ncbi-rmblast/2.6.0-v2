@@ -21,4 +21,3 @@ set	datarootdir	${prefix}/share
 
 prepend-path PATH ${hpcc_modules}/ncbi-rmblast/2.6.0-v2/bin
 
-module use ${modules_dir}

@@ -26,4 +26,3 @@ setenv          CDMETAPOP_SRC   ${hpcc_modules}/cdmetapop/f54feef/src
 setenv          CDMETAPOP_DATA  ${hpcc_modules}/cdmetapop/f54feef/data
 #prepend-path    PATH    ${hpcc_modules}/cdmetapop/f54feef/src
 
-module use ${modules_dir}

@@ -20,5 +20,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH	${hpcc_modules}/PBSuite/15.8.24/bin
 prepend-path	PYTHONPATH	${hpcc_modules}/PBSuite/15.8.24
-module		use		${modules_dir}
 

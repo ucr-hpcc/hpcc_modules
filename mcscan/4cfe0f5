@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH              ${hpcc_modules}/mcscan/4cfe0f5
 
-module		use		${modules_dir}
 

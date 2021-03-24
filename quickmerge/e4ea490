@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 module load mummer/3.23
 prepend-path    PATH            ${hpcc_modules}/quickmerge/e4ea490
-module		use		${modules_dir}
 

@@ -22,4 +22,3 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH   		${hpcc_modules}/kallisto/0.44.0/bin
 
-module		use		${modules_dir}

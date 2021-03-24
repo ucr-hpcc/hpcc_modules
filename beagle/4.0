@@ -28,5 +28,4 @@ setenv          beagle          ${hpcc_modules}/beagle/4.0/lib/beagle.r1399.jar
 setenv          beagle_LIB      ${hpcc_modules}/beagle/4.0/lib
 prepend-path    CLASSPATH      ${hpcc_modules}/beagle/4.0/lib
 
-module          use            ${modules_dir}
 

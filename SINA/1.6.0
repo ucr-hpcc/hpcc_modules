@@ -22,4 +22,3 @@ set	datarootdir	${prefix}/share
 prepend-path    PATH            ${hpcc_modules}/SINA/1.6.0/bin
 prepend-path    MANPATH         ${hpcc_modules}/SINA/1.6.0/share/man
 
-module use ${modules_dir}

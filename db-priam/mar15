@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 setenv      PRIAM_DB	    /srv/projects/db/PRIAM/PRIAM_MAR15
 
-module      use    ${modules_dir}
 

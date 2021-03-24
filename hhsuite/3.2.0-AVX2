@@ -21,4 +21,3 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/hhsuite/3.2.0-AVX2/bin:${hpcc_modules}/hhsuite/3.2.0-AVX2/scripts
 
-module use ${modules_dir}

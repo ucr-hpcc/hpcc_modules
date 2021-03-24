@@ -21,4 +21,3 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH   ${hpcc_modules}/concorde/03.12.19
 
-module use ${modules_dir}

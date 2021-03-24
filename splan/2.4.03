@@ -27,5 +27,4 @@ module load samtools
 
 prepend-path    PATH   		${hpcc_modules}/splan/2.4.03/bin
 prepend-path    MANPATH   		${hpcc_modules}/splan/2.4.03
-module		use		${modules_dir}
 

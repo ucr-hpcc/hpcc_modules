@@ -20,5 +20,4 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 setenv	BMGE	${hpcc_modules}/BMGE/1.12/BMGE.jar
-module		use		${modules_dir}
 

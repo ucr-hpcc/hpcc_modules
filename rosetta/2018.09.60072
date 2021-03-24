@@ -24,5 +24,4 @@ setenv          ROSETTA3_DB   ${hpcc_modules}/rosetta/2018.09.60072/main/databas
 setenv          ROSETTA3_TOOLS   ${hpcc_modules}/rosetta/2018.09.60072/tools/
 prepend-path    PATH            ${hpcc_modules}/rosetta/2018.09.60072/main/source/bin/
 
-module          use             ${modules_dir}
 

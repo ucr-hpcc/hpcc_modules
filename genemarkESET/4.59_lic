@@ -22,4 +22,3 @@ set	datarootdir	${prefix}/share
 prepend-path    PATH            ${hpcc_modules}/genemarkESET/4.59_lic
 setenv          GENEMARK_PATH   ${hpcc_modules}/genemarkESET/4.59_lic
 
-module  use     ${modules_dir}

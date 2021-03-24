@@ -23,4 +23,3 @@ module  load    java/8
 
 setenv JMODELTEST_HOME  ${hpcc_modules}/jmodeltest2/8242fcf/dist
 
-module use ${modules_dir}

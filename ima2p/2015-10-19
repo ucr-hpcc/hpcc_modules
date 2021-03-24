@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH   		${hpcc_modules}/ima2p/2015-10-19/bin
 
-module		use		${modules_dir}
 

@@ -22,5 +22,4 @@ set     datarootdir     ${prefix}/share
 module load java
 setenv          HMMSEG	${hpcc_modules}/HMMSeg/2007-07-26/HMMSeg.jar
 
-module          use            ${modules_dir}
 

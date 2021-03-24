@@ -35,4 +35,3 @@ module load BBMap/38.60
 setenv	AAFTF_DB	/bigdata/operations/pkgadmin/srv/projects/db/AAFTF_DB
 prepend-path    PATH            ${hpcc_modules}/AAFTF/git-live/scripts
 
-module use ${modules_dir}

@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/blasr/81d8eef/bin
 
-module		use		${modules_dir}
 

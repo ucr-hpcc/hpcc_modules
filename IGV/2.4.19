@@ -21,4 +21,3 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH    ${hpcc_modules}/IGV/2.4.19
 
-module use ${modules_dir}

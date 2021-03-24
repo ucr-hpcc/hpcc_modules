@@ -121,7 +121,6 @@ proc ModulesHelp { } {
 
                 prepend-path    PATH            ${hpcc_modules}/cpmd/4.1/bin
 
-                module          use             ${modules_dir}
 ```
 
 ### Running CPMD

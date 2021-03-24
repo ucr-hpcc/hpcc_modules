@@ -23,5 +23,4 @@ module load eigen
 
 prepend-path    CPLUS_INCLUDE_PATH  ${hpcc_modules}/spectra/git-5138871/include
 
-module		use		${modules_dir}
 

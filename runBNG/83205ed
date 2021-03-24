@@ -26,4 +26,3 @@ prereq           perl/5.16.3
 
 prepend-path     PATH     ${hpcc_modules}/runBNG/83205ed/
 
-module           use      ${modules_dir}

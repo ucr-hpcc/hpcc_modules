@@ -20,5 +20,4 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 prepend-path    PATH	${hpcc_modules}/QUAST/5.0.0-dev
-module		use		${modules_dir}
 

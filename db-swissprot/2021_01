@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 setenv      UNIPROT_DB	  /srv/projects/db/Swissprot/2021_01
 
-module      use    ${modules_dir}
 

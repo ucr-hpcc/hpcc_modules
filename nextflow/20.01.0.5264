@@ -23,4 +23,3 @@ module load htslib/1.10
 
 prepend-path    PATH            ${hpcc_modules}/nextflow/20.01.0.5264/bin
 
-module use ${modules_dir}

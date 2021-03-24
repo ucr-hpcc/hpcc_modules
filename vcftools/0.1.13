@@ -25,5 +25,4 @@ prepend-path    PATH            ${hpcc_modules}/vcftools/0.1.13/bin
 prepend-path    MANPATH		${hpcc_modules}/vcftools/0.1.13/share/man
 prepend-path    PERL5LIB	${hpcc_modules}/vcftools/0.1.13/lib/perl5/site_perl
 
-module		use		${modules_dir}
 module load tabix

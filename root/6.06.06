@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 setenv	ROOTSYS	${hpcc_modules}/root/6.06.06
 prepend-path	LD_LIBRARY_PATH	${hpcc_modules}/root/6.06.06/lib
-module		use		${modules_dir}
 

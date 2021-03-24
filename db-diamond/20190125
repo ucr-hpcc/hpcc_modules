@@ -20,5 +20,4 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 setenv      DIAMOND_DB	    /srv/projects/db/ncbi/diamond/20190125
-module      use    ${modules_dir}
 

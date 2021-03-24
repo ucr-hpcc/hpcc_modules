@@ -27,4 +27,3 @@ prepend-path    PATH            ${hpcc_modules}/trinity-rnaseq/2.4.0
 prepend-path    PATH            ${hpcc_modules}/trinity-rnaseq/2.4.0/util
 setenv          TRINITY_HOME    ${hpcc_modules}/trinity-rnaseq/2.4.0
 
-module use ${modules_dir}

@@ -33,4 +33,3 @@ if { [module-info mode load] || [module-info mode switch2] } {
 setenv	EUKDETECT_CONF	/opt/linux/centos/7.x/x86_64/pkgs/eukdetect/2020-08-01/default_configfile.yml
 setenv	EUKDETECT_DB	/opt/linux/centos/7.x/x86_64/pkgs/eukdetect/share/eukdetect_database_v1
 setenv  EUKDETECT_DIR /opt/linux/centos/7.x/x86_64/pkgs/eukdetect/2020-08-01
-module use ${modules_dir}

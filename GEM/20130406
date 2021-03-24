@@ -21,5 +21,4 @@ set     datarootdir     ${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/GEM/20130406/bin
 prepend-path	MANPATH		${hpcc_modules}/GEM/20130406/man
-module          use             ${modules_dir}
 

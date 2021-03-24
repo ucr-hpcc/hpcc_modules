@@ -24,5 +24,4 @@ prepend-path    PATH              /opt/linux/centos/7.x/x86_64/pkgs/cuda/8.0/bin
 prepend-path    LD_LIBRARY_PATH   /opt/linux/centos/7.x/x86_64/pkgs/cuda/8.0/lib64:/opt/linux/centos/7.x/x86_64/pkgs/cuda/8.0/nvvm/lib64
 setenv          CUDA_HOME         /opt/linux/centos/7.x/x86_64/pkgs/cuda/8.0
 
-module		use		${modules_dir}
 

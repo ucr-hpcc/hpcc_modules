@@ -26,4 +26,3 @@ prepend-path    LIBRARY_PATH    ${hpcc_modules}/bamtools/2.4.0/lib
 prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/bamtools/2.4.0/lib
 setenv          BAMTOOLS_PATH   ${hpcc_modules}/bamtools/2.4.0/bin
 
-module  use     ${modules_dir}

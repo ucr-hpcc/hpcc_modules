@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/bfast/0.7.0a/bin
 
-module		use		${modules_dir}
 

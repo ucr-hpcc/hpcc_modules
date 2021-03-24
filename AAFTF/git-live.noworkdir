@@ -36,4 +36,3 @@ module load java/8
 setenv	AAFTF_DB	/srv/projects/db/AAFTF_DB
 prepend-path    PATH            ${hpcc_modules}/AAFTF/git-live.noworkdir/scripts
 
-module use ${modules_dir}

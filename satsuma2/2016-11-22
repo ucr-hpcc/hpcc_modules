@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH       ${hpcc_modules}/satsuma2/2016-11-22/bin
 setenv	SATSUMA2_PATH	${hpcc_modules}/satsuma2/2016-11-22/bin
-module		use		${modules_dir}
 

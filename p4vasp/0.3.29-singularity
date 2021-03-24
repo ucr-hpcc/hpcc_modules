@@ -23,4 +23,3 @@ module load singularity
 
 prepend-path    PATH    ${hpcc_modules}/p4vasp/0.3.29-singularity
 
-module use ${modules_dir}

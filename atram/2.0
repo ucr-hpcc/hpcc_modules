@@ -30,4 +30,3 @@ if { [module-info mode load] || [module-info mode switch2] } {
 
 setenv	ATRAM_PATH	${hpcc_modules}/aTRAM/2.0
 prepend-path	PATH	${hpcc_modules}/aTRAM/2.0:${hpcc_modules}/aTRAM/2.0/atram-env/bin
-module		use		${modules_dir}

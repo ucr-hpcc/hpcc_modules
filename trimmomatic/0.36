@@ -21,4 +21,3 @@ set	datarootdir	${prefix}/share
 
 setenv  TRIMMOMATIC     ${hpcc_modules}/trimmomatic/0.36/trimmomatic.jar
 prepend-path	PATH	${hpcc_modules}/trimmomatic/0.36
-module use ${modules_dir}

@@ -24,5 +24,4 @@ module load ruby/2.3.0
 prepend-path    PATH   		${hpcc_modules}/flo/74d9f37
 setenv FLO_PATH ${hpcc_modules}/flo/74d9f37
 
-module		use		${modules_dir}
 

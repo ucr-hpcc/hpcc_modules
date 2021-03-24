@@ -24,5 +24,4 @@ prepend-path    PATH              ${hpcc_modules}/netcdf-fortran/4.4.4_intel/bin
 prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/netcdf-fortran/4.4.4_intel/lib
 prepend-path	MANPATH           ${hpcc_modules}/netcdf-fortran/4.4.4_intel/share/man
 
-module		use		${modules_dir}
 

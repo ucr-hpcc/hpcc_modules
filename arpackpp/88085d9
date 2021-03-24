@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    CPLUS_INCLUDE_PATH  ${hpcc_modules}/arpackpp/88085d9/include
 
-module		use		${modules_dir}
 

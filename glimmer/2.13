@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/glimmer/2.13/bin
 
-module		use		${modules_dir}
 

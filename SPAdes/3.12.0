@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 
 prepend-path    PATH            ${hpcc_modules}/SPAdes/3.12.0/bin
-module		use		${modules_dir}
 

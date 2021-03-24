@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH   		${hpcc_modules}/emmax/07032010
 
-module		use		${modules_dir}
 

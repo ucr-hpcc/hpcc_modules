@@ -25,5 +25,4 @@ prepend-path    C_INCLUDE_PATH  ${hpcc_modules}/jags/4.2.0/include
 prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/jags/4.2.0/lib
 prepend-path    MANPATH         ${hpcc_modules}/jags/4.2.0/share/man
 
-module		use		${modules_dir}
 

@@ -37,5 +37,4 @@ module load fasttree
 
 prepend-path    PATH              ${hpcc_modules}/orthofinder/2.4.0
 
-module		use		${modules_dir}
 

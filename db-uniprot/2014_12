@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 setenv      UNIPROT_DB	  /srv/projects/db/uniprot/2014_12
 
-module      use    ${modules_dir}
 

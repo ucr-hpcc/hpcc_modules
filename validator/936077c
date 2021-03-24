@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 prepend-path    PATH              ${hpcc_modules}/validator/936077c/
 prepend-path    PERL5LIB          ${hpcc_modules}/validator/936077c/
 
-module		use		${modules_dir}
 

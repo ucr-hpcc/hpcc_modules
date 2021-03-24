@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path	PATH	${hpcc_modules}/CRISP/2015-08/bin
 
-module		use		${modules_dir}
 

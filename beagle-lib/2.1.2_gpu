@@ -24,5 +24,4 @@ setenv        BEAGLE_LIB       ${hpcc_modules}/beagle-lib/2.1.2_gpu/lib
 setenv        BEAGLE_CFLAGS    -I${hpcc_modules}/beagle-lib/2.1.2_gpu/include/libhmsbeagle-1
 setenv        BEAGLE_LIBS      "-L${hpcc_modules}/beagle-lib/2.1.2_gpu/lib -lhmsbeagle -ldl"
 
-module		use		${modules_dir}
 

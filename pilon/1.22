@@ -25,5 +25,4 @@ setenv          PILONDIR	${hpcc_modules}/pilon/1.22
 setenv          PILON	${hpcc_modules}/pilon/1.22/pilon-1.22.jar
 prepend-path	PATH	${hpcc_modules}/pilon/1.22
 
-module          use            ${modules_dir}
 

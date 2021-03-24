@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/soap2/2.20/bin
 
-module		use		${modules_dir}
 

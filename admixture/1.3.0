@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH   		${hpcc_modules}/admixture/1.3.0
 
-module		use		${modules_dir}
 

@@ -20,5 +20,4 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 prepend-path    PATH       ${hpcc_modules}/kraken-coordinate/2016-12-08/bin
-module		use		${modules_dir}
 

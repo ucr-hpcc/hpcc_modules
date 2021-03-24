@@ -23,4 +23,3 @@ prepend-path    PATH            ${hpcc_modules}/glpk/4.65/bin
 prepend-path    C_INCLUDE_PATH  ${hpcc_modules}/glpk/4.65/include
 prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/glpk/4.65/lib
 
-module use ${modules_dir}

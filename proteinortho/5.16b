@@ -26,4 +26,3 @@ module      load    ncbi-blast
 
 prepend-path    PATH    ${hpcc_modules}/proteinortho/5.16b
 
-module		use		${modules_dir}

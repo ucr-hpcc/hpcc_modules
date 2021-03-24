@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 prepend-path    PATH          ${hpcc_modules}/p7zip/16.02/bin
 prepend-path	MANPATH       ${hpcc_modules}/p7zip/16.02
 
-module		use		${modules_dir}
 

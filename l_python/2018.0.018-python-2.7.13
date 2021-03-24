@@ -26,5 +26,4 @@ prepend-path    MANPATH         ${hpcc_modules}/l_python/2018.0.018/intelpython2
 # Not sure if modifying PYTHONPATH is needed under a conda install
 #prepend-path	PYTHONPATH      ${hpcc_modules}/l_python/2018.0.018/intelpython2/lib/python2.7/site-packages:${hpcc_modules}/python/2018.0.018/intelpython2/lib64/python2.7/site-packages 
 
-module		use		${modules_dir}
 

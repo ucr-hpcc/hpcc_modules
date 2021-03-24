@@ -27,4 +27,3 @@ module load phred-phrap-consed
 prepend-path    PATH    ${hpcc_modules}/RepeatMasker/4-0-7
 prepend-path    PATH    ${hpcc_modules}/RepeatMasker/4-0-7/util
 
-module  use     ${modules_dir}
