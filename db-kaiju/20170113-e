@@ -21,4 +21,3 @@ set	datarootdir	${prefix}/share
 
 setenv  KAIJU_DB    /srv/projects/db/kaiju/20170113-e
 
-module use ${modules_dir}

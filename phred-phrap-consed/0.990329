@@ -21,5 +21,4 @@ set datarootdir ${prefix}/share
 
 prepend-path    PATH    ${hpcc_modules}/phred-phrap-consed/0.990329
 
-module          use     ${modules_dir}
 

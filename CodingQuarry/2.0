@@ -24,5 +24,4 @@ module load lp_solve
 prepend-path    PATH                    ${hpcc_modules}/CodingQuarry/2.0/bin
 setenv          QUARRY_PATH		${hpcc_modules}/CodingQuarry/2.0/QuarryFiles
 
-module  use     ${modules_dir}
 

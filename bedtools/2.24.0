@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/bedtools/2.24.0/bin
 
-module		use		${modules_dir}
 

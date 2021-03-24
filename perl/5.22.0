@@ -25,5 +25,4 @@ prepend-path    MANPATH         ${hpcc_modules}/perl/5.22.0/man
 prepend-path    PERL5LIB        ${hpcc_modules}/perl/5.22.0/lib/5.22.0:${hpcc_modules}/perl/5.22.0/lib/site_perl/5.22.0:
 setenv          INSTALL_BASE    ${hpcc_modules}/perl/5.22.0
 
-module		use		${modules_dir}
 

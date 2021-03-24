@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 setenv      MEROPS_DB	    /srv/projects/db/MEROPS/2017-02-02
 
-module      use    ${modules_dir}
 

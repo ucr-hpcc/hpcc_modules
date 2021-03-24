@@ -21,4 +21,3 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH    ${hpcc_modules}/fastsimcoal2/2.5.2.21
 
-module use ${modules_dir}

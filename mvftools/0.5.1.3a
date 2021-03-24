@@ -22,4 +22,3 @@ set	datarootdir	${prefix}/share
 prereq python/3
 prepend-path    PATH    ${hpcc_modules}/mvftools/0.5.1.3a
 
-module use ${modules_dir}

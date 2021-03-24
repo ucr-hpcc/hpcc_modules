@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/ncbi-blast/2.2.31+/bin
 
-module		use		${modules_dir}
 

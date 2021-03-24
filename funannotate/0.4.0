@@ -49,4 +49,3 @@ module  load    signalp
 prepend-path    PATH        ${hpcc_modules}/funannotate/0.4.0
 prepend-path    PATH        ${hpcc_modules}/funannotate/0.4.0/bin
 
-module  use     ${modules_dir}

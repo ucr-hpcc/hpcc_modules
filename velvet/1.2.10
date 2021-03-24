@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/velvet/1.2.10
 
-module		use		${modules_dir}
 

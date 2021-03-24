@@ -27,5 +27,4 @@ prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/R/3.4.0/lib64/R/lib
 
 module          load            ggobi
 module          load            pandoc
-module          use             ${modules_dir}
 

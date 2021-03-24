@@ -22,5 +22,4 @@ set     datarootdir     ${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/sim4/2012-10-10/bin
 
-module          use             ${modules_dir}
 

@@ -22,5 +22,4 @@ set     datarootdir     ${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/trf/4.07b/bin
 
-module          use             ${modules_dir}
 

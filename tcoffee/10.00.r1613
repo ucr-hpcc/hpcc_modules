@@ -21,5 +21,4 @@ set     datarootdir     ${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/tcoffee/10.00.r1613/bin
 
-module          use             ${modules_dir}
 

@@ -22,4 +22,3 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/AlignGraph/2015-06-01/bin
 
-module		use		${modules_dir}

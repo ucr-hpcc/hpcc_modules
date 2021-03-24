@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 setenv      PANTHER_DB	    /srv/projects/db/panther/10.0
 
-module      use    ${modules_dir}
 

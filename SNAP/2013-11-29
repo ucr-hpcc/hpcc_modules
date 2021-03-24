@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/SNAP/2013-11-29/bin
 setenv	ZOE ${hpcc_modules}/SNAP/2013-11-29
-module		use		${modules_dir}
 

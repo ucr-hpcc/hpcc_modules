@@ -21,4 +21,3 @@ set	datarootdir	${prefix}/share
 
 
 prepend-path    PATH            ${hpcc_modules}/phylobayes/mpi-1.7b/bin
-module		use		${modules_dir}

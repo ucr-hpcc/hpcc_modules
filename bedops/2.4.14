@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/bedops/2.4.14/bin
 
-module		use		${modules_dir}
 

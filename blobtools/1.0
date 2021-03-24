@@ -25,5 +25,4 @@ module load htslib/1.6
 # depends on python (2.7)
 prepend-path    PATH            ${hpcc_modules}/blobtools/1.0
 
-module		use		${modules_dir}
 

@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/gapcloser/1.12-r6/bin
 
-module		use		${modules_dir}
 

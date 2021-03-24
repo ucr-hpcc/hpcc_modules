@@ -24,5 +24,4 @@ module load bowtie2
 prepend-path    PATH              ${hpcc_modules}/metaphlan2/2.6.0
 setenv          mpa_dir           ${hpcc_modules}/metaphlan2/2.6.0
 
-module		use		${modules_dir}
 

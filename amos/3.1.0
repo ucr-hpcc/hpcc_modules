@@ -22,5 +22,4 @@ set datarootdir ${prefix}/share
 prepend-path    PATH        ${hpcc_modules}/amos/3.1.0/bin
 prepend-path    PERL5LIB    ${hpcc_modules}/amos/3.1.0/lib
 
-module          use         ${modules_dir}
 

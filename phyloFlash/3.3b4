@@ -30,4 +30,3 @@ module load BBMap
 prepend-path    PATH            ${hpcc_modules}/phyloFlash/3.3b4
 setenv          DBHOME		${hpcc_modules}/phyloFlash/3.3b4/db/138
 
-module use ${modules_dir}

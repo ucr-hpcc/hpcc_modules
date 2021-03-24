@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/usearch/10.0.240_i86linux32/bin
 prepend-path    PATH            ${hpcc_modules}/usearch/10.0.240_i86linux32/scripts
-module		use		${modules_dir}
 

@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH              ${hpcc_modules}/evolver/2.70/bin
 
-module		use		${modules_dir}
 

@@ -22,5 +22,4 @@ set     datarootdir     ${prefix}/share
 prepend-path     PATH             ${hpcc_modules}/BBMap/38.84
 prepend-path     PATH             ${hpcc_modules}/BBMap/38.84/pipelines
 
-module           use              ${modules_dir}
 

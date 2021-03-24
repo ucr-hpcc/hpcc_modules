@@ -27,4 +27,3 @@ module  load    boost/1.64.0
 prepend-path    PATH    ${hpcc_modules}/silix/1.2.9-mpich/bin
 prepend-path    MANPATH ${hpcc_modules}/silix/1.2.9-mpich/share/man
 
-module use ${modules_dir}

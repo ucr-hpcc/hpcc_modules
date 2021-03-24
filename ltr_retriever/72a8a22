@@ -26,4 +26,3 @@ module  load    cd-hit
 
 prepend-path    PATH    ${hpcc_modules}/ltr_retriever/72a8a22
 
-module use ${modules_dir}

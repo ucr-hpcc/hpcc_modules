@@ -21,4 +21,3 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/mauve/2015-02-13
 
-module use ${modules_dir}

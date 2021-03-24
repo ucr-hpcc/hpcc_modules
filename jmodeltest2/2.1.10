@@ -23,4 +23,3 @@ module  load    java/8
 
 setenv JMODELTEST_HOME  ${hpcc_modules}/jmodeltest2/2.1.10
 
-module use ${modules_dir}

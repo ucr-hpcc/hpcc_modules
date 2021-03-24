@@ -28,4 +28,3 @@ module load gdal/2.1.3
 prepend-path    PATH        ${hpcc_modules}/biodiverse/r2742_424d9c2/bin:${hpcc_modules}/biodiverse/r2742_424d9c2/perls/perl-5.26.2/bin:${hpcc_modules}/biodiverse/r2742_424d9c2/biodiverse/bin
 prepend-path    MANPATH     ${hpcc_modules}/biodiverse/r2742_424d9c2/perls/perl-5.26.2/man
 
-module use ${modules_dir}

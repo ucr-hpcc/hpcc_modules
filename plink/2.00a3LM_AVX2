@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/plink/2.00a3LM_AVX2/bin
 
-module		use		${modules_dir}
 

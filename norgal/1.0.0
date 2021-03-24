@@ -22,4 +22,3 @@ module load megahit
 
 prepend-path    PATH            ${hpcc_modules}/norgal/1.0.0
 
-module use ${modules_dir}

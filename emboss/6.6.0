@@ -26,5 +26,4 @@ prepend-path    CPATH           ${hpcc_modules}/emboss/6.6.0/include
 prepend-path    LIBRARY_PATH    ${hpcc_modules}/emboss/6.6.0/lib
 prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/emboss/6.6.0/lib
 
-module		use		${modules_dir}
 

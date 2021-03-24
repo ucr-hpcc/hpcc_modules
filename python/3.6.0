@@ -27,5 +27,4 @@ prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/python/3.6.0/lib
 prepend-path    MANPATH         ${hpcc_modules}/python/3.6.0/share/man
 prepend-path	PYTHONPATH      ${hpcc_modules}/python/3.6.0/lib/python3.6/site-packages:${hpcc_modules}/python/3.6.0/lib64/python3.6/site-packages
 
-module		use		${modules_dir}
 

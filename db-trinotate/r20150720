@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 setenv      TRINOTATE_DB	    /srv/projects/db/trinotate/r20150720
 
-module      use    ${modules_dir}
 

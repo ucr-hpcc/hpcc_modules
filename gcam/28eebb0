@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH              ${hpcc_modules}/gcam/28eebb0
 
-module		use		${modules_dir}
 

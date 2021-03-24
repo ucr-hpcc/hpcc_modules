@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 setenv          NCBI_DB	    /srv/projects/db/ncbi/preformatted/20171212
 prepend-path    BLASTDB	    /srv/projects/db/ncbi/preformatted/20171212
 
-module      use    ${modules_dir}
 

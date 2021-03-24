@@ -25,5 +25,4 @@ setenv       GATKQUEUEDIR   ${hpcc_modules}/gatk-queue/3.4-46
 setenv       GATKQUEUE      ${hpcc_modules}/gatk-queue/3.4-46/Queue.jar
 prepend-path CLASSPATH      ${GATKQUEUEDIR}:${GATKQUEUEDIR}/resources
 
-module		use		${modules_dir}
 

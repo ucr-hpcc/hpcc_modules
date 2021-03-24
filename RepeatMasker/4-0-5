@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 #mkdir -p $::env(HOME)/.RepeatMaskerCache
 prepend-path    PATH            ${hpcc_modules}/RepeatMasker/4-0-5
 
-module		use		${modules_dir}
 

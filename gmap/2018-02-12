@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/gmap/2018-02-12/bin
 
-module		use		${modules_dir}
 

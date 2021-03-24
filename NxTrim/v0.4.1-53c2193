@@ -22,5 +22,4 @@ set     datarootdir     ${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/NxTrim/v0.4.1-53c2193/bin
 
-module          use             ${modules_dir}
 

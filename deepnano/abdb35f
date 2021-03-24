@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 prereq          python/2.7.5
 prepend-path    PATH   		${hpcc_modules}/deepnano/abdb35f/
 
-module		use		${modules_dir}
 

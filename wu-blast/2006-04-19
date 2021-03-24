@@ -25,5 +25,4 @@ set	datarootdir	${prefix}/share
 prepend-path    PATH            ${hpcc_modules}/wu-blast/2006-04-19
 prepend-path    PATH            ${hpcc_modules}/wu-blast/2006-04-19/filter
 
-module		use		${modules_dir}
 

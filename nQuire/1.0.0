@@ -23,4 +23,3 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH    ${hpcc_modules}/nQuire/1.0.0
 
-module  use ${modules_dir}

@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH              ${hpcc_modules}/supernova/2.0.0
 
-module		use		${modules_dir}
 

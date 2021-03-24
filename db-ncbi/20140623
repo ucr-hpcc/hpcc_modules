@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 setenv      NCBI_DB	    /srv/projects/db/ncbi/preformatted/20140623
 
-module      use    ${modules_dir}
 

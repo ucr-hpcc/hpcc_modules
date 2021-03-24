@@ -26,5 +26,4 @@ prepend-path    PATH              ${hpcc_modules}/libgpuarray/eb3127b/bin
 prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/libgpuarray/eb3127b/lib
 prepend-path    PYTHONPATH        ${hpcc_modules}/libgpuarray/eb3127b/lib64/python2.7/site-packages/
 
-module		use		${modules_dir}
 

@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 setenv      PFAM_DB	    /srv/projects/db/pfam/2015-07-27-Pfam28.0
 
-module      use    ${modules_dir}
 

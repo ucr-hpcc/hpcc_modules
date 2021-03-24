@@ -23,4 +23,3 @@ set	datarootdir	${prefix}/share
 prepend-path    PATH            ${hpcc_modules}/nanopolish/v0.5.0-45-g6406f78/bin
 prepend-path    PATH            ${hpcc_modules}/nanopolish/v0.5.0-45-g6406f78
 prepend-path    PATH            ${hpcc_modules}/nanopolish/v0.5.0-45-g6406f78/scripts
-module		use		${modules_dir}

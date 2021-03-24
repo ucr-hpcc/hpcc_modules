@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 module load hmmer/3
 prepend-path    PATH            ${hpcc_modules}/ITSx/1.0.11/bin
-module		use		${modules_dir}
 

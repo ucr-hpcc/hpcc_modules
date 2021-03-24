@@ -23,4 +23,3 @@ prereq          velvet/1.2.10
 
 prepend-path    PATH    ${hpcc_modules}/oases/0.2.09:${hpcc_modules}/oases/0.2.09/scripts
 
-module          use     ${modules_dir}

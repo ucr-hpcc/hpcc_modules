@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/cap3/2015.4.24.amd
 
-module		use		${modules_dir}
 

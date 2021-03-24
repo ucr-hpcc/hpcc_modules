@@ -21,5 +21,4 @@ set     datarootdir     ${prefix}/share
 
 setenv  HUMANNPATH      ${hpcc_modules}/humann/0.99
 
-module  use             ${modules_dir}
 

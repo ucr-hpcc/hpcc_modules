@@ -22,4 +22,3 @@ set     datarootdir     ${prefix}/share
 prepend-path    PATH            ${hpcc_modules}/transdecoder/3.0.0/bin:${hpcc_modules}/transdecoder/3.0.0/util:${hpcc_modules}/transdecoder/3.0.0/util/bin:${hpcc_modules}/transdecoder/3.0.0/transdecoder_plugins/cdhit
 prepend-path    PERL5LIB        ${hpcc_modules}/transdecoder/3.0.0/PerlLib:${hpcc_modules}/transdecoder/3.0.0/bin/PerlLib
 
-module          use             ${modules_dir}

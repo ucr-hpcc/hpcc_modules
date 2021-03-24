@@ -21,4 +21,3 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/RefalignerAssembler/tools
 
-module use ${modules_dir}

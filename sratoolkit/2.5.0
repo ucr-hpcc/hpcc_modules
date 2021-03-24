@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH   		${hpcc_modules}/sratoolkit/2.5.0/bin
 
-module		use		${modules_dir}
 

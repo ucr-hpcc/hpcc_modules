@@ -60,4 +60,3 @@ prepend-path    PATH        ${hpcc_modules}/funannotate/1.5.1-439a664
 prepend-path    PATH        ${hpcc_modules}/funannotate/1.5.1-439a664/bin
 
 setenv	FUNANNOTATE_DB		${hpcc_modules}/funannotate/git-live/DB
-module  use     ${modules_dir}

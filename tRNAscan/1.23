@@ -24,5 +24,4 @@ prepend-path    PERL5LIB    ${hpcc_modules}/tRNAscan-SE/1.23/bin
 prepend-path    PERL5LIB    ${hpcc_modules}/tRNAscan-SE/1.23/lib
 prepend-path    MANPATH     ${hpcc_modules}/tRNAscan-SE/1.23/man
 
-module          use         ${modules_dir}
 

@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/bionj/1997
 
-module		use		${modules_dir}
 

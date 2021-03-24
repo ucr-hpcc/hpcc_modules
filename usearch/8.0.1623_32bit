@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/usearch/8.0.1623_32bit/bin
 
-module		use		${modules_dir}
 

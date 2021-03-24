@@ -21,4 +21,3 @@ set	datarootdir	${prefix}/share
 
 
 prepend-path    PATH            ${hpcc_modules}/phylobayes/3.3f/bin
-module		use		${modules_dir}

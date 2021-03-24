@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 setenv	TBB_PATH_LIB	${hpcc_modules}/tbb/20170226oss/lib
 setenv	TBB_PATH_INCLUDES	${hpcc_modules}/tbb/20170226oss/include
-module		use		${modules_dir}
 

@@ -21,4 +21,3 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH    ${hpcc_modules}/r8s/1.81/bin
 
-module use ${modules_dir}

@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/paml/4.8a/bin
 
-module		use		${modules_dir}
 

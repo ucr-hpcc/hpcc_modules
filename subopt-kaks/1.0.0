@@ -23,4 +23,3 @@ prepend-path    PATH            ${hpcc_modules}/subopt-kaks/1.0.0/bin
 prepend-path    MANPATH         ${hpcc_modules}/subopt-kaks/1.0.0/man
 setenv          SUBOPTDIR	${hpcc_modules}/subopt-kaks/1.0.0
 
-module use ${modules_dir}

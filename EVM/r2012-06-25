@@ -22,4 +22,3 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/EVM/r2012-06-25
 setenv EVM_HOME ${hpcc_modules}/EVM/r2012-06-25
-module		use		${modules_dir}

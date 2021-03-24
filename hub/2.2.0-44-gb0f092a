@@ -21,5 +21,4 @@ set     datarootdir     ${prefix}/share
 
 prepend-path     PATH             ${hpcc_modules}/hub/2.2.0-44-gb0f092a/bin
 
-module           use              ${modules_dir}
 

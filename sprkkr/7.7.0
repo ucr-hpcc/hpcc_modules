@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH   		${hpcc_modules}/sprkkr/7.7.0
 
-module		use		${modules_dir}
 

@@ -21,5 +21,4 @@ set     datarootdir     ${prefix}/share
 
 prepend-path     PATH             ${hpcc_modules}/BBMap/35.49
 
-module           use              ${modules_dir}
 

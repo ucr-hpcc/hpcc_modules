@@ -24,4 +24,3 @@ prepend-path    LD_LIBRARY_PATH	${hpcc_modules}/jellyfish/1.1.11/lib
 prepend-path    MANPATH         ${hpcc_modules}/jellyfish/1.1.11/share/man
 prepend-path    PKG_CONFIG_PATH ${hpcc_modules}/jellyfish/1.1.11/lib/pkgconfig
 
-module          use             ${modules_dir}

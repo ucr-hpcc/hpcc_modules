@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 prepend-path    PATH            ${hpcc_modules}/pantherscore/1.03
 prepend-path    PERL5LIB        ${hpcc_modules}/pantherscore/1.03/lib
 
-module		use		${modules_dir}
 

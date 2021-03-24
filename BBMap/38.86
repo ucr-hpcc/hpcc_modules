@@ -24,5 +24,4 @@ module load java/13
 prepend-path     PATH             ${hpcc_modules}/BBMap/38.86
 prepend-path     PATH             ${hpcc_modules}/BBMap/38.86/pipelines
 
-module           use              ${modules_dir}
 

@@ -23,5 +23,4 @@ prepend-path	LD_RUN_PATH	${hpcc_modules}/cmph/2.0/lib
 prepend-path	LD_LIBRARY_PATH	${hpcc_modules}/cmph/2.0/lib
 setenv	CMPH_PATH_LIB	${hpcc_modules}/cmph/2.0/lib
 setenv	CMPH_PATH_INCLUDES	${hpcc_modules}/cmph/2.0/include
-module		use		${modules_dir}
 

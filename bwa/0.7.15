@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/bwa/0.7.15/bin
 
-module		use		${modules_dir}
 

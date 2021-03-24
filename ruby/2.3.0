@@ -25,5 +25,4 @@ prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/ruby/2.3.0/lib
 prepend-path    MANPATH         ${hpcc_modules}/ruby/2.3.0/share/man
 prepend-path	GEM_HOME        ${hpcc_modules}/ruby/2.3.0/lib/ruby/2.3.0/
 
-module		use		${modules_dir}
 

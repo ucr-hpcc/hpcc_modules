@@ -27,5 +27,4 @@ prepend-path    PATH            ${hpcc_modules}/trinity-rnaseq/r2013-02-25/util
 prepend-path    CLASSPATH     	${hpcc_modules}/trinity-rnaseq/r2013-02-25/Analysis/Trinotate/java
 setenv		TRINITY_HOME	${hpcc_modules}/trinity-rnaseq/r2013-02-25
 
-module		use		${modules_dir}
 

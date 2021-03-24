@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/hercules/2017-Nov/bin
 
-module		use		${modules_dir}
 

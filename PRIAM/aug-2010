@@ -26,5 +26,4 @@ setenv          PRIAM          ${hpcc_modules}/PRIAM/aug-2010/lib/PRIAM_search.j
 setenv          PRIAM_LIB      ${hpcc_modules}/PRIAM/aug-2010/lib
 prepend-path    CLASSPATH      ${hpcc_modules}/PRIAM/aug-2010/lib
 
-module          use            ${modules_dir}
 

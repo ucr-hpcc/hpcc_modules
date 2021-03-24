@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/seqclean/2011-02-22:${hpcc_modules}/seqclean/2011-02-22/bin
 
-module		use		${modules_dir}
 

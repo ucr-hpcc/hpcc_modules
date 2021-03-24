@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/wgs-assembler/8.3rc1/Linux-amd64/bin
 
-module		use		${modules_dir}
 

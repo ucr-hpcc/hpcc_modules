@@ -21,5 +21,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH   		${hpcc_modules}/MMseqs2/5-9375b/bin
 
-module		use		${modules_dir}
 

@@ -32,4 +32,3 @@ if { [module-info mode load] || [module-info mode switch2] } {
 }
 setenv PHYLOFLASH_DBHOME	/srv/projects/db/phyloFlash/138.1
 
-module use ${modules_dir}

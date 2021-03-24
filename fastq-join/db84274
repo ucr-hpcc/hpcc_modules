@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH              ${hpcc_modules}/fastq-join/db84274
 
-module		use		${modules_dir}
 

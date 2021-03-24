@@ -31,4 +31,3 @@ if { [module-info mode load] || [module-info mode switch2] } {
 }
 prepend-path    PATH            ${hpcc_modules}/mitoz/2.4-alpha
 
-module use ${modules_dir}

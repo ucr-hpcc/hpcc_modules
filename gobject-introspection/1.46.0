@@ -24,5 +24,4 @@ prepend-path    PATH              ${hpcc_modules}/gobject-introspection/1.46.0/b
 prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/gobject-introspection/1.46.0/lib
 prepend-path	MANPATH		  ${hpcc_modules}/gobject-introspection/1.46.0/share/man
 
-module		use		${modules_dir}
 

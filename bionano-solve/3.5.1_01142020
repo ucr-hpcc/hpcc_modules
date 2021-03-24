@@ -21,4 +21,3 @@ set datarootdir ${prefix}
 
 prepend-path     PATH               ${hpcc_modules}/bionano-solve/3.5.1_01142020/RefAligner/1.0/avx:${hpcc_modules}/bionano-solve/3.5.1_01142020/Pipeline/1.0/:${hpcc_modules}/bionano-solve/3.5.1_01142020/HybridScaffold/1.0/scripts
 
-module           use      ${modules_dir}

@@ -31,4 +31,3 @@ if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module unload miniconda3 anaconda3; module load miniconda2; conda deactivate;"
 }
 
-module use ${modules_dir}

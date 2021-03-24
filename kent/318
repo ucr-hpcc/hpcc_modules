@@ -24,5 +24,4 @@ set	datarootdir	${prefix}/share
 prepend-path    PATH            ${hpcc_modules}/kent/318/bin:${hpcc_modules}/kent/318/scripts
 setenv          KENT_SRC        ${hpcc_modules}/kent/318
 
-module		use		${modules_dir}
 

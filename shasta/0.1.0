@@ -21,4 +21,3 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/shasta/0.1.0/bin
 
-module use ${modules_dir}

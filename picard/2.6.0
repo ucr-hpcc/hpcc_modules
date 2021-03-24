@@ -26,5 +26,4 @@ setenv          PICARD         ${hpcc_modules}/picard/2.6.0/lib/picard.jar
 setenv          PICARDDIR      ${hpcc_modules}/picard/2.6.0/lib
 prepend-path    CLASSPATH      ${hpcc_modules}/picard/2.6.0/lib
 
-module          use            ${modules_dir}
 

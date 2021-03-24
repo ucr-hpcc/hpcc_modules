@@ -24,5 +24,4 @@ module      load    perl
 prepend-path    PATH            ${hpcc_modules}/tmhmm/2.0c/bin
 prepend-path    PERL5LIB        ${hpcc_modules}/tmhmm/2.0c/lib
 
-module		use		${modules_dir}
 

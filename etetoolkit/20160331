@@ -24,5 +24,4 @@ prepend-path    PATH              ${hpcc_modules}/etetoolkit/20160331/bin
 prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/etetoolkit/20160331/local/lib
 prepend-path	MANPATH		  ${hpcc_modules}/etetoolkit/20160331/local/share/man
 
-module		use		${modules_dir}
 

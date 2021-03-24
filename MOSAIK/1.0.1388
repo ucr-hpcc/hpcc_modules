@@ -22,5 +22,4 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH              ${hpcc_modules}/MOSAIK/1.0.1388/bin
 
-module		use		${modules_dir}
 

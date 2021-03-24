@@ -24,5 +24,4 @@ module load java
 setenv	TRIMMOMATIC	${hpcc_modules}/trimmomatic/0.33/bin/trimmomatic.jar
 prepend-path    PATH            ${hpcc_modules}/trimmomatic/0.33/bin
 
-module		use		${modules_dir}
 

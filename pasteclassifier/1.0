@@ -32,4 +32,3 @@ prepend-path    PATH    ${hpcc_modules}/pasteclassifier/1.0/bin
 
 setenv      REPET_PATH  ${hpcc_modules}/pasteclassifier/1.0
 
-module use ${modules_dir}

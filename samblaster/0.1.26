@@ -21,4 +21,3 @@ set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/samblaster/0.1.26/bin
 
-module use ${modules_dir}

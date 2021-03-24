@@ -24,5 +24,4 @@ module load zoem
 prepend-path    PATH            ${hpcc_modules}/mcl/14-137/bin
 prepend-path    MANPATH         ${hpcc_modules}/mcl/14-137/share/man
 
-module		use		${modules_dir}
 
