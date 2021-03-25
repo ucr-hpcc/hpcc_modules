@@ -23,7 +23,8 @@ prepend-path    PATH            ${hpcc_modules}/interproscan/5.47-82.0
 prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/interproscan/5.47-82.0/lib
 
 module load signalp/4.1c
-module load tmhmm/2.0c # This loads perl
+# This tmhmm loads perl
+module load tmhmm/2.0c
 module load java/13
 module load miniconda3
 #technically we need to do module load python/3 but instead this is being done in .sh file so that 
