@@ -24,7 +24,7 @@ module unload bwa
 module unload last
 
 ## need multithreaded perl
-module unload perl
+prereq perl/5.24.0
 module load perl/5.24.0
 
 
