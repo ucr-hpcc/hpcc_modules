@@ -20,8 +20,8 @@ set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
 # Unload java
-conflict    java
 module load java/8
+prereq java/8
 
 prepend-path    PATH           ${hpcc_modules}/beagle/4.0/bin
 setenv          beagle          ${hpcc_modules}/beagle/4.0/lib/beagle.r1399.jar
