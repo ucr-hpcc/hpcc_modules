@@ -21,7 +21,6 @@ set	datarootdir	${prefix}/share
 
 module unload openmpi
 conflict openmpi
-module unload intel
 module load intel/2017.4.196
 prereq intel/2017.4.196
 
