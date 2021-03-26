@@ -1,4 +1,3 @@
-
 #%Module1.0#####################################################################
 ##
 ## maui modulefile
@@ -22,5 +21,4 @@ set     datarootdir     ${prefix}/share
 
 
 prepend-path    PATH            ${hpcc_modules}/gzip/1.10/bin
-
 
