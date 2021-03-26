@@ -20,8 +20,8 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 # Any Python 2.7.x should work
-module load python/2.7.14
-prereq  python/2.7.14
+module load hpcc-python/2.7.14
+prereq  hpcc-python/2.7.14
 
 setenv          CDMETAPOP_SRC   ${hpcc_modules}/cdmetapop/f54feef/src
 setenv          CDMETAPOP_DATA  ${hpcc_modules}/cdmetapop/f54feef/data
