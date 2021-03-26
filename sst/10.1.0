@@ -19,6 +19,7 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+module load python/3.6.0
 prereq python/3.6.0
 conflict miniconda2
 conflict miniconda3
