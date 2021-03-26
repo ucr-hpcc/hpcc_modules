@@ -22,10 +22,10 @@ set	datarootdir	${prefix}/share
 # All python versions need to be unloaded
 conflict    python
 conflict    anaconda
-conflict    miniconda
 
 # Load miniconda
 module load miniconda2/4.4.10
+prereq miniconda2/4.4.10
 
 # Set character encoding, Python3 only
 #setenv LC_ALL en_US.utf-8
