@@ -19,13 +19,16 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+# Try an alias
+module-alias name python/2.7.14
+
 # Python conflicts
 conflict python
 conflict miniconda3
 conflict anaconda
 
 # Load miniconda
-module -f load miniconda2/4.4.10
+module load miniconda2/4.4.10
 prereq miniconda2/4.4.10
 
 # Set character encoding, Python3 only
@@ -33,9 +36,9 @@ prereq miniconda2/4.4.10
 #setenv LANG en_US.utf-8
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda2/4.4.10; source activate hpcc-base;"
+    puts stdout "module load miniconda2/4.4.10; conda activate hpcc-base;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
-    puts stdout "source deactivate;"
+    puts stdout "conda deactivate;"
 }
 
 # Add path manually, since source activate does not function within parent shell
