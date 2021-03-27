@@ -25,7 +25,7 @@ conflict python miniconda2 miniconda3 anaconda2 anaconda3
 set shell [module-info shell]
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    if { $shell == "bash" } {
+    if { $shell == "bash" || $shell == "sh" } {
         puts stdout "export PATH=${hpcc_modules}/miniconda3/4.3.21/bin:\${PATH}; conda_init;"
     }
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {

@@ -19,8 +19,8 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prereq python/2.7.12
 module load python/2.7.12
+prereq python/2.7.12
 
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "source ${hpcc_modules}/python/2.7.12/falcon-env/bin/activate;"

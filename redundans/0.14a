@@ -24,8 +24,8 @@ module unload bwa
 module unload last
 
 ## need multithreaded perl
-module unload perl
 module load perl/5.24.0
+prereq perl/5.24.0
 
 
 prepend-path    PATH            ${hpcc_modules}/redundans/0.14a

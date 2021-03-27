@@ -20,11 +20,10 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 # All python versions need to be unloaded
-module unload python miniconda2 miniconda3 anaconda2 anaconda3
 module load miniconda3
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module unload miniconda2 miniconda3 anaconda2 anaconda3; module load miniconda3; conda activate faststructure;"
+    puts stdout "module load miniconda3; conda activate faststructure;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "module unload miniconda3; conda deactivate;"
 }
