@@ -20,3 +20,5 @@ set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
 prepend-path    MODULEPATH            ${hpcc_modules}/oneAPI/BaseKit_p_2021.1.0.2659/modulefiles
+
+module load  vtune vpl ccl itac mkl dnnl intel_ipp_intel64 mpi dpct inspector advisor dev-utilities dal intel_ippcp_intel64 compiler clck
