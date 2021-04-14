@@ -23,7 +23,9 @@ Note that without-libraries is set to an empty string, so that all modules are b
 ```bash
 SOFTNAME=boost
 VERSION=1.68.0
-./bootstrap.sh --prefix=/opt/linux/centos/7.x/x86_64/pkgs/${SOFTNAME}/${VERSION} --without-libraries=
+
+# Depending on which python you want to use...
+./bootstrap.sh --with-python=$(which python3) --prefix=/opt/linux/centos/7.x/x86_64/pkgs/${SOFTNAME}/${VERSION} --without-libraries=
 ```
 
 ## Edit project-config.jam
