@@ -41,4 +41,4 @@ setenv LC_ALL en_US.utf-8
 setenv LANG en_US.utf-8
 
 
-module load diamond/2.0.6
+module load diamond/2.0.8
