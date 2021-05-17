@@ -23,8 +23,11 @@ set	datarootdir	${prefix}/share
 module load samtools/1.9
 module load htslib/1.9
 
+module unload python miniconda2 anaconda2 anaconda3
+module load miniconda3
+
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3/4.3.31; source activate blobtools;"
+    puts stdout "module unload python miniconda2 anaconda2 anaconda3; module load miniconda3/4.3.31; conda activate blobtools;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
