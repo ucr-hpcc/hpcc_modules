@@ -26,6 +26,7 @@ module load samtools/1.11
 module load htslib/1.11
 module load ncbi-blast/2.9.0+
 module load diamond
+module load seqtk
 
 #source-sh bash ${hpcc_modules}/hpcc_user_utils/bin/conda_activate_wrapper miniconda3/4.3.31 blobtools-2.5.0
 
