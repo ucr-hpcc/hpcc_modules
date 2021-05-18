@@ -42,7 +42,20 @@ fi [[ $? -eq 0 ]]; then
 fi
 ```
 
-After R is installed install the module.
+After R is installed copy the following code into a file called `$R_INSTALL_DIR/lib64/etc/Rprofile.site`:
+
+```R
+local({
+    setHook(packageEvent("grDevices", "onLoad"),function(...)
+    grDevices::X11.options(type='cairo'))
+    options(device='x11')
+    options(bitmapType='cairo')
+})
+```
+
+This is used to set options to allow RStudio Server to plot graphs.
+
+After that, then install the module.
 
 ### Bioconductor
 Install the latest compatible version of Bioconductor as pkgadmin and with the correct version of R via module load.
