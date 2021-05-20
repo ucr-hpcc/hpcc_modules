@@ -1,0 +1,35 @@
+#%Module1.0#####################################################################
+##
+## gwcodeml
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tgwcodeml - Adds gwcodeml to your path"
+}
+
+module-whatis	"gwcodeml-1.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+module unload miniconda2
+#  this will load python3
+module load miniconda3 
+
+# Set character encoding
+setenv LC_ALL en_US.utf-8
+setenv LANG en_US.utf-8
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module unload anaconda3 miniconda2; module load miniconda3; source activate gwcodeml;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "module unload anaconda3 miniconda2; module load miniconda3; conda deactivate;"
+}
+
