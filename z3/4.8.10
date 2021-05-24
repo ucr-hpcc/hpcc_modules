@@ -5,10 +5,10 @@
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tinfernal - Adds infernal to your path"
+        puts stderr "\tz3 - Adds infernal to your path"
 }
 
-module-whatis   "infernal-1.1.4"
+module-whatis   "z3-4.8.10"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -20,7 +20,6 @@ set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
 
-prepend-path    PATH            ${hpcc_modules}/infernal/1.1.4/bin
-prepend-path    MANPATH		${hpcc_modules}/infernal/1.1.4/share/man
-
-
+prepend-path    PATH            ${hpcc_modules}/z3/4.8.10/bin
+prepend-path    INCLUDE_PATH    ${hpcc_modules}/z3/4.8.10/include
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/z3/4.8.10//lib
