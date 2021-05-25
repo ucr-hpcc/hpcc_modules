@@ -1,4 +1,7 @@
 #%Module
+#
+# Manually built by Joradn Hayes
+#
 proc ModulesHelp { } {
     puts stderr {
 
@@ -19,8 +22,6 @@ module-whatis {Description: The GNU Compiler Collection includes front ends for 
 module-whatis {Homepage: http://gcc.gnu.org/}
 module-whatis {URL: http://gcc.gnu.org/}
 
-set root /opt/linux/centos/7.x/x86_64/easybuild/pkgs/GCC/8.3.0
-
 conflict GCC
 
 if { ![ is-loaded GCCcore/8.3.0 ] } {
@@ -31,4 +32,3 @@ if { ![ is-loaded binutils/2.35.1-GCCcore-8.3.0 ] } {
     module load binutils/2.35.1-GCCcore-8.3.0
 }
 
-# Manually built by Joradn Hayes

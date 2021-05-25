@@ -1,4 +1,7 @@
 #%Module
+#
+# Manually built by Jordan Hayes
+#
 proc ModulesHelp { } {
     puts stderr {
 
@@ -33,4 +36,3 @@ prepend-path	MANPATH		$root/share/man
 prepend-path	PATH		$root/bin
 prepend-path	XDG_DATA_DIRS		$root/share
 
-# Manually built by Jordan Hayes
