@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## clinker clbaster modulefile
+## parallel-fastq-dump clbaster modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tclinker - Adds clinker and cblaster to your path"
+        puts stderr "\t parallel-fastq-dump - Adds  parallel-fastq-dump to your path"
 }
 
-module-whatis	"clinker-cblaster-0.0.20"
+module-whatis	"parallel-fastq-dump-0.6.7"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -28,10 +28,8 @@ setenv LC_ALL en_US.utf-8
 setenv LANG en_US.utf-8
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module unload anaconda3 miniconda2; module load miniconda3; source activate clinker;"
+    puts stdout "module unload anaconda3 miniconda2; module load miniconda3; source activate parallel-fastq-dump;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "module unload anaconda3 miniconda2; module load miniconda3; conda deactivate;"
 }
 
-module load diamond
-module load hmmer/3
