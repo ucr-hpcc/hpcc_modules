@@ -25,3 +25,8 @@ prepend-path	PERL5LIB ${hpcc_modules}/tcoffee/13.45/perl/lib/perl5
 prepend-path	PATH	${hpcc_modules}/tcoffee/13.45/bin/linux
 setenv	MAFFT_BINARIES	${hpcc_modules}/mafft/7.471/bin
 setenv	CACHE_4_TCOFFEE /scratch
+
+module load mafft
+module load fsa
+module load muscle
+module load clustalw
