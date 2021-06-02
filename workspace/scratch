@@ -12,8 +12,6 @@ module-whatis	"workspace-scratch"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
-set      slurm_job_id    $::env(SLURM_JOB_ID)
-set      user            [module-info username]
 
 # for Tcl script use only
 set	version		3.2.9
@@ -21,5 +19,16 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
+# Get JOB ID
+if { [info exists ::env(SLURM_JOB_ID)] } {
+    set   slurm_job_id   $::env(SLURM_JOB_ID)
+} else {
+    set   slurm_job_id   ""
+}
+
+# Get User
+set      user            [module-info username]
+
+# Set SCRATCH
 setenv          SCRATCH   /scratch/${user}/${slurm_job_id}
 
