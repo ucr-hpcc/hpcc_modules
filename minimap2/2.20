@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## genemarkESET modulefile
+## minimap2 modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tgenemarkESET - Adds GeneMark-ES/ET 4.62 to your path"
+        puts stderr "\tminimap2 - Adds minimap2 to your path"
 }
 
-module-whatis	"genemarkESET-4.62_lic"
+module-whatis	"minimap2-2.20"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,6 +19,8 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path    PATH            ${hpcc_modules}/genemarkESET/4.62_lic
-setenv          GENEMARK_PATH   ${hpcc_modules}/genemarkESET/4.62_lic
+
+prepend-path    PATH            ${hpcc_modules}/minimap2/2.20/bin
+prepend-path    MANPATH         ${hpcc_modules}/minimap2/2.20/share/man
+
 
