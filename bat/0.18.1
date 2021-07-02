@@ -20,6 +20,11 @@ set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/bat/0.18.1/bin
-prepend-path    MANPATH            ${hpcc_modules}/bat/0.18.1/share/man
+prepend-path    MANPATH         ${hpcc_modules}/bat/0.18.1/share/man
+setenv          PAGER           "bat"
+setenv          MANPAGER        "sh -c 'col -bx | bat -l man -p'"
 
+if { [ module-info mode load ] } {
+    alias bat='bat --paging=never --theme=base16'
+}
 
