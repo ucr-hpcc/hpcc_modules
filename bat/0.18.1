@@ -25,6 +25,6 @@ setenv          PAGER           "bat"
 setenv          MANPAGER        "sh -c 'col -bx | bat -l man -p'"
 
 if { [ module-info mode load ] } {
-    set-alias bat 'bat --paging=never --theme=base16'
+    set-alias bat "bat --paging=never --theme=base16"
 }
 
