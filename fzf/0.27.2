@@ -42,5 +42,7 @@ switch -- [module-info shelltype] {
     }
 }
 
-set-alias load-mods "\$(module avail -t -o '' | fzf -m | xargs -r echo module load)"
+if { [ module-info mode load ] } {
+    set-alias module-load "\$(module avail -t -o '' | fzf -m | xargs -r echo module load)"
+}
 
