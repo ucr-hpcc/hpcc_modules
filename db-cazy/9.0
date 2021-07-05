@@ -20,5 +20,5 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 setenv      CAZY_FOLDER	/srv/projects/db/CAZY/CAZyDB/v9.0
-setenv      CAZY_DB	/srv/projects/db/CAZY/CAZyDB/v9.0/dbCAN-HMMdb-V9.txt
+setenv      CAZY_DB	/srv/projects/db/CAZY/CAZyDB/v9.0/dbCAN.txt
 
