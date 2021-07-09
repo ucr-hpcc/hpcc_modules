@@ -59,6 +59,7 @@ module load sqlite/3.35.4_gcc-8.3.0
 module load hdf5/1.12.0_gcc-8.3.0
 module load xdrfile/1.1.4_gcc-8.3.0
 module load netcdf-c/4.8.0_gcc-8.3.0
+module load netcdf-fortran/4.5.3_gcc-8.3.0
 module load proj/7.2.1_gcc-8.3.0
 module load eigen/3.3.9_gcc-8.3.0
 module load swig/4.0.2_gcc-8.3.0
