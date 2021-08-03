@@ -15,14 +15,27 @@ After you have been allocated a node then you may proceed with the installation 
 
 # Intel Compiler
 
-## Modules
+## Prep
 
-Unload other Pythons and MPI libraries:
+Add the following lines to the end of your `~/.bashrc` file to make these changes persistant.
+Or add these lines to a file named `~/.gpaw_profile` which you can `source` to enable the environment more quickly.
 
-```bash
+```
+# Unload things we don't want
 module purge
+
+# Load slurm, Intel suite, and libxc
 module load slurm
 module load oneapi/2021.1.0.2659_suite
+module load libxc/4.3.4_oneapi
+
+# Activate IntelPython (conda)
+export PATH=/opt/linux/centos/7.x/x86_64/pkgs/oneAPI/BaseKit_p_2021.1.0.2659/intelpython/python3.7/condabin:$PATH
+conda_init
+conda activate base
+
+# Add local bins to PATH
+export PATH=~/.local/bin:$PATH
 ```
 
 ## IntelPython
@@ -31,14 +44,7 @@ IntelPython now comes with oneapi as well as all the other Intel compilers for f
 However if you still wish to do so you can use the following link:
 Download intelpython from [https://software.intel.com/en-us/distribution-for-python/choose-download/linux](https://software.intel.com/en-us/distribution-for-python/choose-download/linux)
 
-
-Once you have loaded `openapi`, then initalize conda:
-
-```bash
-export PATH=/opt/linux/centos/7.x/x86_64/pkgs/oneAPI/BaseKit_p_2021.1.0.2659/intelpython/python3.7/condabin:$PATH
-conda_init
-conda activate base
-```
+> Note: You will need to alter the `~/.gpaw_profile` to use your newly downloaded version of IntelPython if you choose to install your own custom version.
 
 ## Install GPAW
 
@@ -74,41 +80,22 @@ libraries = [
              'mkl_scalapack_lp64', 'mkl_blacs_intelmpi_lp64',
              'pthread','python3.7m'
             ]
+
+libraries += ['xc']
+# change this to your installation directory
+LIBXCDIR='/opt/linux/centos/7.x/x86_64/pkgs/libxc/4.3.4_oneapi/'
+library_dirs += [LIBXCDIR + 'lib64']
+include_dirs += [LIBXCDIR + 'include']
 ```
 
 ### Build
+
 Then build and install gpaw:
 
 ```bash
+source ~/.gpaw_profile
 python setup.py install --user
 ```
-
-## Pre-Running
-
-Unload things we don't want:
-
-```bash
-module purge
-```
-
-Load slurm, Intel suite, and libxc:
-
-```bash
-module load slurm
-module load oneapi/2021.1.0.2659_suite
-module load libxc/4.3.4_oneapi
-```
-
-Activate IntelPython (conda):
-
-```bash
-export PATH=/opt/linux/centos/7.x/x86_64/pkgs/oneAPI/BaseKit_p_2021.1.0.2659/intelpython/python3.7/condabin:$PATH
-conda_init
-conda activate base
-```
-
-> Note: You can add all of the above lines to the end of your `~/.bashrc` file to make these changes persistant.
-> Or add the above lines to a file like `~/.gpaw_profile` which you can `source` to enable the environment more quickly.
 
 # GCC Compiler
 # Install
@@ -212,4 +199,13 @@ Run MPI tests
 ```bash
 source ~/.gpaw_profile
 gpaw -P 4 test
+```
+
+# Example
+
+## Parallel
+
+```bash
+source ~/.gpaw_profile
+gpaw -P 4 python gpaw_input.py
 ```
