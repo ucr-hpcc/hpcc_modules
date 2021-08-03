@@ -49,7 +49,7 @@ Get GPAW source:
 ```bash
 mkdir ~/bigdata/src && cd ~/bigdata/src
 wget https://pypi.org/packages/source/g/gpaw/gpaw-21.6.0.tar.gz
-tar -xf gpawgpaw-21.6.0.tar.gz
+tar -xf gpaw-21.6.0.tar.gz
 cd gpaw-21.6.0
 ```
 
