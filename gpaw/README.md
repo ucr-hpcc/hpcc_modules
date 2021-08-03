@@ -89,23 +89,26 @@ Unload things we don't want:
 
 ```bash
 module purge
-module load oneapi/2021.1.0.2659_suite
-export PATH=/opt/linux/centos/7.x/x86_64/pkgs/oneAPI/BaseKit_p_2021.1.0.2659/intelpython/python3.7/condabin:$PATH
-conda_init
 ```
 
-Then we need to activate the base intelpython conda:
-```
-conda activate base
-```
-
-Load software that we do want:
+Load slurm, Intel suite, and libxc:
 
 ```bash
 module load slurm
+module load oneapi/2021.1.0.2659_suite
+module load libxc/4.3.4_oneapi
 ```
 
-You can add all of the above lines to the end of your `~/.bashrc` file to make these changes persistant.
+Activate IntelPython (conda):
+
+```bash
+export PATH=/opt/linux/centos/7.x/x86_64/pkgs/oneAPI/BaseKit_p_2021.1.0.2659/intelpython/python3.7/condabin:$PATH
+conda_init
+conda activate base
+```
+
+> Note: You can add all of the above lines to the end of your `~/.bashrc` file to make these changes persistant.
+> Or add the above lines to a file like `~/.gpaw_profile` which you can `source` to enable the environment more quickly.
 
 # GCC Compiler
 # Install
@@ -186,6 +189,7 @@ python3 setup.py install
 ```
 
 # Datasets
+
 Install datasets
 ```bash
 gpaw install-data /bigdata/$GROUP/shared/gpaw-setups
@@ -197,6 +201,7 @@ gpaw install-data /bigdata/$GROUP/shared/gpaw-setups
 
 Run single threaded tests
 ```
+source ~/.gpaw_profile
 gpaw test
 ```
 
@@ -205,5 +210,6 @@ gpaw test
 Run MPI tests
 
 ```bash
+source ~/.gpaw_profile
 gpaw -P 4 test
 ```
