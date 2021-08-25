@@ -1,4 +1,15 @@
-# Install
+# Install Binary
+
+Get the binary and place it under the proper `INSTALL_PATH`:
+
+```
+SALMON_VERSION=1.0.0
+wget https://github.com/COMBINE-lab/salmon/releases/download/v${SALMON_VERSION}/Salmon-${SALMON_VERSION}_linux_x86_64.tar.gz
+tar -xf Salmon-${SALMON_VERSION}_linux_x86_64.tar.gz
+mv salmon-latest_linux_x86_64 $INSTALL_PATH/salmon/$SALMON_VERSION
+```
+
+# Install From Source
 Download from https://github.com/COMBINE-lab/salmon/releases
 
 Uncompress
