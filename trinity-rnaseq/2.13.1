@@ -20,5 +20,6 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 prepend-path    PATH            ${hpcc_modules}/trinity-rnaseq/2.13.1/bin
+setenv          TRINITY_HOME    ${hpcc_modules}/trinity-rnaseq/2.13.1/
 setenv          TRINITY_SIMG    ${hpcc_modules}/trinity-rnaseq/2.13.1/images/trinityrnaseq.simg
 
