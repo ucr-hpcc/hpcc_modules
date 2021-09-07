@@ -24,3 +24,4 @@ prepend-path    CPATH               ${hpcc_modules}/ImageMagick/7.0.11-7_gcc-8.3
 prepend-path    LD_LIBRARY_PATH     ${hpcc_modules}/ImageMagick/7.0.11-7_gcc-8.3.0/lib
 prepend-path    LIBRARY_PATH        ${hpcc_modules}/ImageMagick/7.0.11-7_gcc-8.3.0/lib
 prepend-path    MANPATH             ${hpcc_modules}/ImageMagick/7.0.11-7_gcc-8.3.0/share/man
+prepend-path    PKG_CONFIG_PATH     ${hpcc_modules}/ImageMagick/7.0.11-7_gcc-8.3.0/lib/pkgconfig
