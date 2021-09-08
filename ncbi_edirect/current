@@ -20,5 +20,5 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${hpcc_modules}/ncbi_edirect/edirect
+prepend-path    PATH            ${hpcc_modules}/ncbi_edirect/current
 
