@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tfasttree - Adds fasttree to your path"
 }
 
-module-whatis	"fasttreee-2.1.10"
+module-whatis	"fasttree-2.1.10"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
