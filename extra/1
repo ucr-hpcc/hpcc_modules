@@ -21,4 +21,5 @@ set	datarootdir	${prefix}/share
 
 module		use		${hpcc_modules}/../easybuild/modules/all
 module		use		${hpcc_modules}/pgi/17.10/modulefiles
-#module		use		/opt/linux/centos/7.x/x86_64/easybuild/modules
+module      use     ${hpcc_modules}/nvidia/hpc_sdk/21.9/modulefiles
+
