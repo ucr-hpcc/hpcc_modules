@@ -11,7 +11,9 @@ NOTES:
 
 ## Install PGI
 
-Had to download the entire Nvidia HPC suite: https://developer.nvidia.com/nvidia-hpc-sdk-downloads
+Had to download the entire Nvidia HPC suite:
+https://developer.nvidia.com/nvidia-hpc-sdk-downloads
+
 Once downloaded, just extract and execute `installer` script:
 
 ```bash
@@ -34,7 +36,7 @@ export FC=$(which pgf90)
 
 # Confiugre
 ./configure \
---prefix=/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.12.0_pgi-21.9-0 \
+--prefix=${HPCC_MODULES}/hdf5/1.12.0_pgi-21.9-0 \
 --enable-fortran \
 --enable-cxx \
 --enable-shared \
@@ -70,7 +72,7 @@ export CPPFLAGS="-I${HPCC_MODULES}/hdf5/1.12.0_pgi-21.9-0/include"
 export LDFLAGS="-L${HPCC_MODULES}/hdf5/1.12.0_pgi-21.9-0/lib -lhdf5"
 
 # Confiugre netcdf
-./configure --prefix=/opt/linux/centos/7.x/x86_64/pkgs/netcdf-c/4.8.1_pgi-21.9-0 --disable-dap
+./configure --prefix=${HPCC_MODULES}/netcdf-c/4.8.1_pgi-21.9-0 --disable-dap
 
 # Build
 make
@@ -103,7 +105,7 @@ export LDFLAGS="-L${HPCC_MODULES}/netcdf-c/4.8.1_pgi-21.9-0/lib -lnetcdf"
 export CFLAGS=-DpgiFortran
 
 # Configure
-./configure --prefix=/opt/linux/centos/7.x/x86_64/pkgs/netcdf-fortran/4.5.3_pgi-21.9-0
+./configure --prefix=${HPCC_MODULES}/netcdf-fortran/4.5.3_pgi-21.9-0
 
 # Build
 make
@@ -130,9 +132,11 @@ BASEDIR=$(pwd)
 for file in $(grep -R '^BASEDIR = ${HOME}/ioapi-3.2'| cut -f1 -d:); do
     sed -i "s/^BASEDIR = \${HOME}\/ioapi-3.2/BASEDIR = ${BASEDIR}/g" $file;
 done
+```
 
 Then modify Top level `${BASEDIR}/Makefile` with the following customizations:
-```
+
+```Makefile
 OAPIDEFS   = "-DIOAPI_NCF4=1"
 DEFINEFLAGS = "-DIOAPI_NCF4=1"
 ARCHFLAGS  = "-DIOAPI_NCF4=1"
