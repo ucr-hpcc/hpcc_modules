@@ -19,7 +19,7 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prereq GCC/8.3.0
+module load GCC/8.3.0
 
 prepend-path    LD_LIBRARY_PATH     ${hpcc_modules}/openblas/0.3.17_gcc-8.3.0/lib
 prepend-path    INCLUDE_PATH        ${hpcc_modules}/openblas/0.3.17_gcc-8.3.0/include
