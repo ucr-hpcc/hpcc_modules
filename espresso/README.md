@@ -14,6 +14,74 @@ This can be a good thing, but also difficult to customize.
 
 The latest version of QE (6.7+) requires a newer GCC compiler (C11 support?), thus we now use GCC 8.3.0 to compile.
 
+#### CMake
+
+Load modules:
+```bash
+module purge
+module load base/gcc/8.3.0
+module load slurm/19.05.0
+module load openblas/0.3.17_gcc-8.3.0
+module load fftw/3.3.5_gcc-8.3.0
+module load cmake git/2.33.1
+```
+
+Set verions:
+```bash
+VERSION="6.8_gcc-8.3.0_clean"
+export CC=$(which gcc)
+export CXX=$(which g++)
+export FC=$(which gfortran)
+```
+
+Export paths:
+```bash
+export FFTW3_ROOT=${HPCC_MODULES}/fftw/3.3.5_gcc-8.3.0
+export FFTW3_INCLUDE_DIRS=${FFTW3_ROOT}/include
+export BLAS_ROOT=${HPCC_MODULES}/openblas/0.3.17_gcc-8.3.0
+export BLAS_INCLUDE_DIRS=${BLAS_ROOT}/include
+```
+
+Set Flags:
+```bash
+export FCFLAGS=${FFTW3_INCLUDE_DIRS}:${BLAS_INCLUDE_DIRS}
+export CPPFLAGS=${FFTW3_INCLUDE_DIRS}:${BLAS_INCLUDE_DIRS}
+```
+
+Create new build directory:
+```bash
+rm -rf ./build
+mkdir ./build
+cd ./build
+```
+
+Configure:
+```bash
+cmake \
+-DCMAKE_INSTALL_PREFIX=${HPCC_MODULES}/espresso/${VERSION} \
+-DCMAKE_Fortran_COMPILER=mpif90 \
+-DCMAKE_C_COMPILER=mpicc \
+-DFFTW3_ROOT=${FFTW3_ROOT} \
+-DFFTW3_INCLUDE_DIRS=${FFTW3_INCLUDE_DIRS} \
+..
+```
+
+Build `all` and `epw` targets:
+```bash
+ALL=$(grep -P "^all\s+:"  Makefile | cut -d: -f2)
+make $ALL epw
+```
+
+Install:
+```bash
+make install
+```
+
+#### Configure Script
+
+Using the `configure` script stopped working well, try using the `CMake` method instead.
+However if you insist, here is how we used to use the `configure` script:
+
 ```bash
 module purge
 module load base/gcc/8.3.0
