@@ -1,5 +1,11 @@
 # FFTW
 
+Install this at least twice, use the same install directory for both `single/float` and `double` precisions.
+The build of each precision (ie. `single/float` and `double`) results in differently named libraries (`libfftw3f` and `libfftw3` respectively).
+Thus it is safe to install multiple times with differing precisions.
+
+> NOTE: The `long-double` precision does not work with `SSE2`. Perhaps there are other limitations, thus we only use `single/float` and `double`.
+
 ## Install Prep
 
 Load modules:
@@ -51,7 +57,7 @@ Configure build and install float/single (libfftw3f)
 --enable-threads \
 --enable-shared \
 --enable-sse2 \
---enable-single && \
+--enable-float && \
 make -j 2 && \
 make install
 ```
