@@ -9,7 +9,7 @@ module load base/gcc/8.3.0
 ```
 
 Export compilers:
-```
+```bash
 export CC=$(which gcc)
 export CXX=$(which g++)
 export FC=$(which gfortran)
@@ -37,8 +37,10 @@ CPU Arch:
 
 ## Single Precision (a.k.a Float)
 
-# Clean
+Clean up:
+```bash
 make distclean || make clean || echo "Nothing to clean"
+```
 
 Configure build and install float/single (libfftw3f)
 ```bash
@@ -57,7 +59,7 @@ make install
 ## Double Precision
 
 Clean up:
-```
+```bash
 make distclean || make clean || echo "Nothing to clean"
 ```
 
