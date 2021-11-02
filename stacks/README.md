@@ -7,7 +7,7 @@ Stacks requires GCC 4.9+, use the latest GCC module to compile.
 
 ### Download source
 ```bash
-wget http://catchenlab.life.illinois.edu/stacks/source/stacks-2.3b.tar.gz
+wget http://catchenlab.life.illinois.edu/stacks/source/stacks-2.60.tar.gz
 ```
 
 ### Extract source
