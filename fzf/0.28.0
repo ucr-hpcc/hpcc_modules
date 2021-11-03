@@ -20,6 +20,7 @@ set     exec_prefix     ${prefix}
 set     datarootdir     ${prefix}/share
 
 prepend-path    PATH             ${hpcc_modules}/fzf/0.28.0/bin
+prepend-path    MANPATH          ${hpcc_modules}/fzf/0.28.0/man
 
 # Cant use since sh-to-mod returns no changes
 #source-sh bash ${hpcc_modules}/fzf/0.27.2/shell/completion.bash
