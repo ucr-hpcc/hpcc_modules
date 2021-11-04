@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 # Load, do not set requirement
-module load intel/2017.2.174
+module load intel/2017.4.196
 
 prepend-path    PATH            ${hpcc_modules}/castep/19.11/bin/linux_x86_64_ifort17--mpi
 
