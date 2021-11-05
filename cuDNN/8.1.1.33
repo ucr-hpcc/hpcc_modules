@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## cuda modulefile
+## cuDNN modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tcuda - Adds cuda cuDNN 6 to your path"
+        puts stderr "\tcuDNN - Adds cuda cuDNN 6 to your path"
 }
 
-module-whatis	"cuDNN-7.5"
+module-whatis	"cuDNN-8.1.1.33"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -19,5 +19,5 @@ set	prefix		${modules_dir}/${version}
 set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
-prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/cuDNN/7.5/lib64
+prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/cuDNN/8.1.1.33/lib64
 
