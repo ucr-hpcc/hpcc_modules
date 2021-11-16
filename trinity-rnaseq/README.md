@@ -13,3 +13,32 @@
 * Run make
   * make
 * Create module file
+
+## Singularity
+
+Run build script as (root is not required):
+
+```bash
+trinityrnaseq/trinityrnaseq.git/Docker/make_simg.sh
+```
+
+This will create an image `trinityrnaseq.v${VERSION}.simg`.
+
+Create install directory and copy singularity image to it:
+
+```
+mkdir -p ${HPCC_MODULES}/trinity-rnaseq/${VERSION}/images
+cp trinityrnaseq.v${VERSION}.simg ${HPCC_MODULES}/trinity-rnaseq/${VERSION}/images/trinityrnaseq.simg
+```
+
+Copy custom wrapper to install directory:
+
+```
+cp ${HPCC_MODULES}/trinity-rnaseq/${OLD_VERSION}/Trinity ${HPCC_MODULES}/trinity-rnaseq/${VERSION}/Trinity
+```
+
+Create symlinks for utils:
+
+```
+find ${TRINITY_SOURCE}/util/ -maxdepth 1 -name '*.pl' -exec ln -s {} . \;
+```
