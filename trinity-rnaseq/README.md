@@ -16,9 +16,15 @@
 
 ## Singularity
 
-Run build script as (root is not required):
+First download the source code.
+
+Then run build script as (root is not required):
 
 ```bash
+# Interactive job
+srun -p short -c 2 --mem=8gb --pty bash -l
+
+# Run build script
 trinityrnaseq/trinityrnaseq.git/Docker/make_simg.sh
 ```
 
