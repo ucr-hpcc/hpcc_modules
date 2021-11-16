@@ -24,13 +24,11 @@ Then run build script as (root is not required):
 # Interactive job
 srun -p short -c 2 --mem=8gb --pty bash -l
 
+# Load singularity
+module load singularity
+
 # Run build script (may need to add `module load singularity`)
 trinityrnaseq/trinityrnaseq.git/Docker/make_simg.sh
-
-# OR just run directly
-module load singularity
-VERSION=$(cat VERSION.txt)
-singularity build trinityrnaseq.v${VERSION}.simg docker://trinityrnaseq/trinityrnaseq:$VERSION
 ```
 
 This will create an image `trinityrnaseq.v${VERSION}.simg`.
