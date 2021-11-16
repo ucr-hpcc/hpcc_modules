@@ -49,5 +49,5 @@ cp ${HPCC_MODULES}/trinity-rnaseq/${OLD_VERSION}/Trinity ${HPCC_MODULES}/trinity
 Create symlinks for utils:
 
 ```
-find ${TRINITY_SOURCE}/util/ -maxdepth 1 -name '*.pl' -exec ln -s {} . \;
+for util in $(find ${TRINITY_SOURCE}/util/ -maxdepth 1 -name '*.pl' -exec basename {} \;); do ln -s ../Trinity $util; done
 ```
