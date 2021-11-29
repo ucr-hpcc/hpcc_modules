@@ -1,6 +1,8 @@
 Install
 1. make a conda env with version (eg `conda create -n amptk-1.5.4 mambda`) - usually within miniconda3
-2. `conda activate amptk-1.5.4` or `source activate amptk-1.5.4`)
+2. `conda activate amptk-1.5.4` or `source activate amptk-1.5.4`). Install conda dependencies
+```
+mamba install 
 3. download amptk package
 ```
 cd /opt/linux/centos/7.x/x86_64/pkgs/amptk
