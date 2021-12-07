@@ -75,7 +75,7 @@ Then access compute node and run the following:
 ```bash
 srun --p batch --mem=10gb --ntasks=10 --time=1-00:00:00 --pty bash -l
 
-module load R/4.0.1 # To get list of old packages
+module load R/4.1.0_gcc-8.3.0 # To get list of old packages
 R
 ```
 
@@ -86,7 +86,7 @@ q()
 ```
 
 ```bash
-module switch R/4.0.3
+module switch R/4.1.1_gcc-8.3.0
 R
 ```
 
