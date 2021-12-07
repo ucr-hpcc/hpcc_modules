@@ -3,26 +3,26 @@
 First, become pkgadmin (sudo or ssh keys).
 Then access a compute node:
 ```bash
-srun --p batch --mem=10gb --ntasks=10 --time=1-00:00:00 --pty bash -l
+srun -p batch --mem=20gb --cpus-per-task=10 --time=1-00:00:00 --pty bash -l
 ```
 
 Go to source directory, download R source and extract it:
 ```bash
-cd /opt/linux/centos/7.x/x86_64/src
-wget https://cran.r-project.org/src/base/R-3/R-4.0.3.tar.gz
-tar -xf R-4.0.3.tar.gz 
-cd R-4.0.3
+cd /opt/linux/centos/7.x/x86_64/src/R 
+wget https://cran.r-project.org/src/base/R-4/R-4.1.1.tar.gz
+tar -xf R-4.1.1.tar.gz
+cd R-4.1.1
 ```
 
 Copy over previous install script, be sure to update the install path:
 ```bash
-cp ../R-4.0.1/hpcc_configure.sh .
+cp ../R-4.1.0/hpcc_configure.sh .
 vim hpcc_configure.sh
 ```
 The `hpcc_configure.sh` script should have simliar code as the following:
 ```bash
 ./configure \
---prefix /opt/linux/centos/7.x/x86_64/pkgs/R/3.4.0 \
+--prefix /opt/linux/centos/7.x/x86_64/pkgs/R/4.1.1 \
 --enable-R-shlib \
 --enable-BLAS-shlib \
 --enable-shared \
@@ -42,7 +42,7 @@ fi [[ $? -eq 0 ]]; then
 fi
 ```
 
-After R is installed copy the following code into a file called `$R_INSTALL_DIR/lib64/etc/Rprofile.site`:
+After R is installed copy the following code into a file called `$R_INSTALL_DIR/lib64/R/etc/Rprofile.site`:
 
 ```R
 local({
@@ -55,14 +55,15 @@ local({
 
 This is used to set options to allow RStudio Server to plot graphs.
 
-After that, then install the module.
+## Add Module
+The next step is to create a new module file, like this [example](https://github.com/ucr-hpcc/hpcc_modules/blob/master/R/4.1.0_gcc-8.3.0), and push it to the GitHub Repo.
 
 ### Bioconductor
 Install the latest compatible version of Bioconductor as pkgadmin and with the correct version of R via module load.
 From within R run the following:
 ```r
 install.packages("BiocManager")
-BiocManager::install(version = "3.12")
+BiocManager::install(version = "3.14")
 Update all/some/none? [a/s/n]: a # Update all packages
 ```
 
@@ -74,7 +75,7 @@ Then access compute node and run the following:
 ```bash
 srun --p batch --mem=10gb --ntasks=10 --time=1-00:00:00 --pty bash -l
 
-module load R/4.0.1 # To get list of old packages
+module load R/4.1.0_gcc-8.3.0 # To get list of old packages
 R
 ```
 
@@ -85,7 +86,7 @@ q()
 ```
 
 ```bash
-module switch R/4.0.3
+module switch R/4.1.1_gcc-8.3.0
 R
 ```
 
