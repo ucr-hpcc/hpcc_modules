@@ -73,7 +73,7 @@ Install all pckages that exist in previous version of R.
 First, become pkgadmin (sudo or ssh keys).
 Then access compute node and run the following:
 ```bash
-srun --p batch --mem=10gb --ntasks=10 --time=1-00:00:00 --pty bash -l
+srun -p batch --mem=20gb --cpus-per-task=10 --time=1-00:00:00 --pty bash -l
 
 module load R/4.1.0_gcc-8.3.0 # To get list of old packages
 R
