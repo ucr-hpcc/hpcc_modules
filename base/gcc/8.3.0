@@ -50,7 +50,7 @@ if { ![is-loaded 'binutils/2.35.1-GCCcore-8.3.0'] } {
 
 # Load all base GCC/8.3.0 modules
 module load mpich/3.4.1_gcc-8.3.0
-module load R/4.1.0_gcc-8.3.0
+module load R/4.1.1_gcc-8.3.0
 module load python/3.9.4_gcc-8.3.0
 module load boost/1.75.0_gcc-8.3.0
 module load openbabel/3.1.1_gcc-8.3.0
