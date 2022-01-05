@@ -18,6 +18,7 @@ Copy over previous install script, be sure to update the install path:
 ```bash
 cp ../R-4.1.0/hpcc_configure.sh .
 vim hpcc_configure.sh
+## R_VER=4.1.1 ## Update the R version!
 ```
 The `hpcc_configure.sh` script should have simliar code as the following:
 ```bash
