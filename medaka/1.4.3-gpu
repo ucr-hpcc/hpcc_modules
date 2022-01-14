@@ -27,9 +27,9 @@ if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module unload anaconda3 miniconda2; module load miniconda3; conda deactivate;"
 }
 
-module load samtools/1.11
-module load minimap2/2.17
-module load bcftools/1.11
+module load samtools/1.12
+module load minimap2/2.24
+module load bcftools/1.12
 module load racon/1.4.13
 
 setenv LC_ALL en_US.utf-8
