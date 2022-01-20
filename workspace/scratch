@@ -31,4 +31,5 @@ set      user            [module-info username]
 
 # Set SCRATCH
 setenv          SCRATCH   /scratch/${user}/${slurm_job_id}
+setenv          TMPDIR    /scratch/${user}/${slurm_job_id}
 
