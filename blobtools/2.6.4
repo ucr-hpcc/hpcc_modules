@@ -31,12 +31,12 @@ module load seqtk
 #source-sh bash ${hpcc_modules}/hpcc_user_utils/bin/conda_activate_wrapper miniconda3/4.3.31 blobtools-2.5.0
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module unload python miniconda2 anaconda2 anaconda3; module load miniconda3/4.3.31; conda activate blobtools-2.6.4;"
+    puts stdout "module unload python miniconda2 anaconda2 anaconda3; module load miniconda3/4.3.31; conda activate blobtools-2;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
 
-prepend-path    PATH            ${hpcc_modules}/blobtools/2.5.0
+prepend-path    PATH            ${hpcc_modules}/blobtools/2.6.4
 setenv BLOBDB /srv/projects/db/blobPlotDB/current
 setenv BLOBREFDB /srv/projects/db/blobPlotDB/current/reference_proteomes.dmnd
 setenv BLOBTAX  /srv/projects/db/blobPlotDB/taxonomy
