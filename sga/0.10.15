@@ -30,3 +30,5 @@ if { [module-info mode load] || [module-info mode switch2] } {
 prepend-path     PATH             ${hpcc_modules}/sga/0.10.15/bin
 
 module load ABYSS
+module load bamtools
+module load samtools
