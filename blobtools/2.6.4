@@ -37,6 +37,9 @@ if { [module-info mode load] || [module-info mode switch2] } {
 }
 
 prepend-path    PATH            ${hpcc_modules}/blobtools/2.6.4/blobtools2
+prepend-path    PATH            ${hpcc_modules}/blobtools/2.6.4/specification
+prepend-path    PATH            ${hpcc_modules}/blobtools/2.6.4/insdc-pipeline/scripts
+
 setenv BLOBDB /srv/projects/db/blobPlotDB/current
 setenv BLOBREFDB /srv/projects/db/blobPlotDB/current/reference_proteomes.dmnd
 setenv BLOBTAX  /srv/projects/db/blobPlotDB/taxonomy
