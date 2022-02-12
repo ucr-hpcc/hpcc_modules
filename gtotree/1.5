@@ -21,12 +21,11 @@ set	datarootdir	${prefix}/share
 
 module unload miniconda2
 module unload anaconda3
-module load miniconda3
+module unload miniconda3
 
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module unload anaconda3; module unload miniconda2; module load miniconda3; source activate gtotree;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
-prepend-path    PATH    ${hpcc_modules}/miniconda3/4.3.31/envs/gtotree/bin
 
