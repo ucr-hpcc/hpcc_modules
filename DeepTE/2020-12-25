@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## gtotree modulefile
+## DeepTE modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tgtotree - Adds gtotree to your path (1.5.x release series)"
+        puts stderr "\tDeepTE - Adds DeepTE to your path "
 }
 
-module-whatis	"gtotree-1.5"
+module-whatis	"DeepTE-2020-12-25"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -24,8 +24,9 @@ module unload anaconda3
 module unload miniconda3
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module unload anaconda3; module unload miniconda2; module load miniconda3; source activate gtotree;"
+    puts stdout "module unload anaconda3; module unload miniconda2; module load miniconda3; source activate DeepTE;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
-
+prepend-path    PATH            ${hpcc_modules}/DeepTE/2020-12-25
+prepend-path    PATH            ${hpcc_modules}/DeepTE/2020-12-25/scripts
