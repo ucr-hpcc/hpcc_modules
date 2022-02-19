@@ -21,7 +21,7 @@ set	datarootdir	${prefix}/share
 
 module unload miniconda2
 module unload anaconda3
-module unload miniconda3
+module load miniconda3
 
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module unload anaconda3; module unload miniconda2; module load miniconda3; source activate gtotree;"
