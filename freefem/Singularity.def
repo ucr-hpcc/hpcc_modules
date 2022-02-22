@@ -1,0 +1,16 @@
+Bootstrap: docker
+From: ubuntu:20.04
+
+%post
+    export DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC
+    apt-get -y update
+    apt-get -y install wget
+    wget https://github.com/FreeFem/FreeFem-sources/releases/download/v4.10/FreeFEM-4.10-amd64-20.04-amd64.deb
+    apt install -y ./FreeFEM-4.10-amd64-20.04-amd64.deb
+    rm -f FreeFEM-4.10-amd64-20.04-amd64.deb
+
+%environment
+    export LC_ALL=C
+
+%runscript
+    FreeFem++

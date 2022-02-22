@@ -4,7 +4,20 @@ These are the modules that are currently available on the UCR HPC cluster.
 
 ## Install Software
 
-The most common form of source based isntalls are:
+The most common forms of installs are either binary or source.
+We do support all kinds of packaged software, thus installations can become more complex then what is covered here.
+For specific installation details please refer to the documentation prodvided by the software as well as the individual `README.md` files contained within the installed module, assuming that the softwere had been insatlled previously.
+
+### Binary
+
+When installing a binary all that is requied is to download and then extract.
+Sometimes there may be an `install` script to place the binaries under their final resting place, or you may have to do this manually.
+
+### Source
+
+#### Configure
+
+When installing from a `configure` based install, the following would typically apply:
 
 ```bash
 configure
@@ -12,16 +25,26 @@ make
 make install
 ```
 
-However, we do support all kinds of packaged software, thus installations can become complex.
-For specific installation details please refer to the documentation prodvided by the software as well as the individual README.md files contained within the installed module, assuming that the softwere had been insatlled previously.
+#### CMake
 
-## Example Documentation
+When installing from a `cmake` based instaall, the following would typically apply:
 
-Look at the `openbabel` module for an example `README.md`:
-[Openbabel](openbabel)
+```bash
+mkdir build
+cd build
+cmake ../
+```
 
-Also, here is a conda based example:
-[Qiime2](qiime2)
+## Documentation
+
+When installing software you must create a `README.md` file within the software module directory with reproducible instructions.
+Creating a `hpcc_install.sh` script within the source tree can also be very useful for later installs.
+
+Here is a documentation example: [openbabel/README.md](openbabel)
+
+Here is another example (conda): [qiime2/README.md](qiime2)
+
+Here is yet one more example (singularity): [freefam/README.md](freefam)
 
 ## Create Module
 
@@ -36,9 +59,9 @@ __Environment variables__
 
 The following variables are used and should be set automatically:
 
-  * HPCC_MODULES - Path dynamically built by /etc/profile.d/hpcc_modules.sh based on OS and arch.
-  * MODULESHOME - Path set by module system to specify home of module system.
-  * MODULEPATH - List set by module system to indicate where modules live (colon delimited).
+  * `HPCC_MODULES` - Path dynamically built by /etc/profile.d/hpcc_modules.sh based on OS and arch.
+  * `MODULESHOME` - Path set by module system to specify home of module system.
+  * `MODULEPATH` - List set by module system to indicate where modules live (colon delimited).
 
 __Basic Process__
 
