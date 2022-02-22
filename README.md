@@ -44,7 +44,7 @@ Here is a documentation example: [openbabel/README.md](openbabel)
 
 Here is another example (conda): [qiime2/README.md](qiime2)
 
-Here is yet one more example (singularity): [freefam/README.md](freefam)
+Here is yet one more example (singularity): [freefem/README.md](freefem)
 
 ## Create Module
 
