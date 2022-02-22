@@ -1,4 +1,4 @@
-# HPCC Module
+# HPCC Modules
 
 These are the modules that are currently available on the UCR HPC cluster.
 
