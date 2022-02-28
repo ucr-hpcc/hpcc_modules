@@ -23,8 +23,8 @@ set     datarootdir     ${prefix}/share
 conflict R
 
 # Deps for various R packages
-#module load gdal/3.2.2_gcc-8.3.0 geos/3.9.1_gcc-8.3.0 texlive/2017 pandoc/2.9.2.1
-module load workspace/scratch
+# No module for gdal and geos, these are now installed as RPMs
+module load texlive pandoc workspace/scratch
 
 # Setup PATHs
 prepend-path    PATH            ${hpcc_modules}/R/4.1.2/bin
