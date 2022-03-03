@@ -1,0 +1,26 @@
+#%Module1.0#####################################################################
+##
+## beagle-lib modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tbeagle-lib - Adds beagle-lib to your path"
+}
+
+module-whatis	"beagle-lib-3.1.2"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path  LD_LIBRARY_PATH  ${hpcc_modules}/beagle-lib/3.1.2/lib
+setenv        BEAGLE_LIB       ${hpcc_modules}/beagle-lib/3.1.2/lib
+setenv        BEAGLE_CFLAGS    -I${hpcc_modules}/beagle-lib/3.1.2/include/libhmsbeagle-1
+setenv        BEAGLE_LIBS      "-L${hpcc_modules}/beagle-lib/3.1.2/lib -lhmsbeagle -ldl"
+
