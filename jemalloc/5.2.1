@@ -1,0 +1,27 @@
+#%Module1.0#####################################################################
+##
+## jemalloc modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tjemalloc - jemalloc to your library path runpath"
+}
+
+module-whatis	"jemalloc-5.2.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+setenv	JEMALLOC_LIBRARY	 ${hpcc_modules}/jemalloc/5.2.1
+setenv	JEMALLOC_INCLUDE_DIR	${hpcc_modules}/jemalloc/5.2.1/include
+prepend-path	LD_LIBRARY_PATH	   ${hpcc_modules}/jemalloc/5.2.1/lib
+prepend-path	LIBRARY_PATH	   ${hpcc_modules}/jemalloc/5.2.1/lib
+
+prepend-path	PKG_CONFIG_PATH	${hpcc_modules}/jemalloc/5.2.1/lib/pkgconfig
