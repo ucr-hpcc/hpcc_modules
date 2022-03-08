@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## oneapi modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\toneapi - Adds oneapi 2022.1.2.146 to your path"
+}
+
+module-whatis   "oneapi-2022.1.2.146"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set     version         3.2.9
+set     prefix          ${modules_dir}/${version}
+set     exec_prefix     ${prefix}
+set     datarootdir     ${prefix}/share
+
+prepend-path    MODULEPATH            ${hpcc_modules}/oneapi/2022.1.2.146/modulefiles
+
+module load vtune vpl ccl itac mkl dnnl intel_ipp_intel64 mpi dpct inspector advisor dev-utilities dal intel_ippcp_intel64 compiler clck
