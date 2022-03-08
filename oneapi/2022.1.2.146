@@ -21,4 +21,4 @@ set     datarootdir     ${prefix}/share
 
 prepend-path    MODULEPATH            ${hpcc_modules}/oneapi/2022.1.2.146/modulefiles
 
-module load vtune vpl ccl itac mkl dnnl intel_ipp_intel64 mpi dpct inspector advisor dev-utilities dal intel_ippcp_intel64 compiler clck
+module -s load vtune vpl ccl itac mkl dnnl intel_ipp_intel64 mpi dpct inspector advisor dev-utilities dal intel_ippcp_intel64 compiler clck
