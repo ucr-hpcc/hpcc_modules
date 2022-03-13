@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 
-prepend-path    PATH            ${hpcc_modules}/RAxML/8.2.12/bin
-prepend-path    PATH            ${hpcc_modules}/RAxML/8.2.12/scripts
+prepend-path    PATH            ${hpcc_modules}/raxml/8.2.12/bin
+prepend-path    PATH            ${hpcc_modules}/raxml/8.2.12/scripts
 
 
