@@ -21,6 +21,7 @@ set	datarootdir	${prefix}/share
 
 
 module  load    CodingQuarry
+module  load    signalp/5.0b
 
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module load miniconda3; conda activate ${hpcc_modules}/funannotate/1.8/env"
