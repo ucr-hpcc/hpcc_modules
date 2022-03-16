@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## PRIAM DB modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tdb-priam - Sets PRIAM database path to PRIAM_DB environment variable"
+}
+
+module-whatis	"db-priam"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		/usr/local/Modules/3.2.9
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+setenv      PRIAM_DB	    /srv/projects/db/PRIAM/PRIAM_MAR15
+
+
