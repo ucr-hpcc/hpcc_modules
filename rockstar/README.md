@@ -1,5 +1,13 @@
 # Rockstar
 
+# Prep
+
+Ensure RPM is installed (admins only):
+
+```bash
+sudo dnf install libtirpc-devel
+```
+
 # Download
 
 Get source from github:
