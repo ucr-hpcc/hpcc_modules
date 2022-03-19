@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## gcc modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tgcc- Adds gcc to your path"
+}
+
+module-whatis	"gcc-9.2.1"
+
+#source-sh /opt/rh/gcc-toolset-9/enable bash
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "source /opt/rh/gcc-toolset-9/enable;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "echo 'Cannot Unload gcc';"
+}
+
