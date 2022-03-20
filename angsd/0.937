@@ -22,5 +22,5 @@ set	datarootdir	${prefix}/share
 module load htslib/1.15
 module load libdeflate/1.10
 
-prepend-path    PATH   		${hpcc_modules}/angsd/0.937/bin
+prepend-path    PATH   		${hpcc_modules}/angsd/0.937
 
