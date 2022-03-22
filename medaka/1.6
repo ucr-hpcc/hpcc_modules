@@ -21,6 +21,10 @@ set	datarootdir	${prefix}/share
 
 # Load miniconda
 module load miniconda3
+module load samtools
+module load minimap2
+module load bwa
+module load bcftools
 
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module load miniconda3; conda activate ${hpcc_modules}/medaka/1.6;"
