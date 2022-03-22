@@ -1,0 +1,34 @@
+#%Module1.0#####################################################################
+##
+## medaka modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tmedaka - Adds medaka to your path"
+}
+
+module-whatis	"medaka-1.6"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		3.2.9
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+# Load miniconda
+module load miniconda3
+module load samtools
+module load minimap2
+module load bwa
+module load bcftools
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/medaka/1.6;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
