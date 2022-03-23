@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## ete32 modulefile
+## ete3 modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tete32- Adds ete32 to your path"
+        puts stderr "\tete3- Adds ete3 to your path"
 }
 
-module-whatis	"ete32-3.1.2"
+module-whatis	"ete3-3.1.2"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -23,7 +23,7 @@ set	datarootdir	${prefix}/share
 module load miniconda3
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/ete32/3.1.2;"
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/ete3/3.1.2;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
