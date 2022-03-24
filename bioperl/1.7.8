@@ -23,7 +23,7 @@ set	datarootdir	${prefix}/share
 module load miniconda3
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/bioperl/1.7.8;"
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/bioperl/1.7.8/env;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
