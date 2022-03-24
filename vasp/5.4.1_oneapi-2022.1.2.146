@@ -20,7 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 # Load intel libraries
-module -s load oneapi/2022.1.2.146
+module load oneapi/2022.1.2.146
 
 prepend-path    PATH            ${hpcc_modules}/vasp/5.4.1_oneapi-2022.1.2.146/bin
 
