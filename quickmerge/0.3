@@ -1,14 +1,14 @@
 #%Module1.0#####################################################################
 ##
-## bioperl modulefile
+## quickmerge modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tbioperl - Adds bioperl modules to your path"
+        puts stderr "\tquickmerge - Adds quickmerge to your path"
 }
 
-module-whatis	"bioperl-1.7.8"
+module-whatis	"quickmerge-0.3"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -23,7 +23,7 @@ set	datarootdir	${prefix}/share
 module load miniconda3
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/bioperl/1.7.8/env;"
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/quickmerge/0.3;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
