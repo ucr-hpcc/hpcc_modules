@@ -24,3 +24,7 @@ prepend-path    MANPATH         ${hpcc_modules}/slurm/21.08.5/share/man
 prepend-path    C_INCLUDE_PATH  ${hpcc_modules}/slurm/21.08.5/include
 prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/slurm/21.08.5/lib
 
+# Slurm 20.11+ switched to steps being "--exclusive", srun waits for new resources.
+# To allow srun to use current allocation set overlap.
+setenv          SLURM_OVERLAP    1
+
