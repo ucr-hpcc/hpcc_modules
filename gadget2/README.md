@@ -37,15 +37,15 @@ SYSTYPE="UCR_HPCC_GCC"
 
 # Ensure this block is placed near the other systems
 ifeq ($(SYSTYPE),"UCR_HPCC_GCC")
-CC       =  mpicc
+CC       =  mpicc                                                                      
 OPTIMIZE =  -O3 -Wall -m64 -DH5_USE_16_API
-GSL_INCL =  -I/usr/include/gsl
+GSL_INCL =  -I/usr/include/gsl                                                   
 GSL_LIBS =  -L/usr/lib64
 FFTW_INCL=  -I/opt/linux/rocky/8.x/x86_64/pkgs/fftw/2.1.5/include
 FFTW_LIBS=  -L/opt/linux/rocky/8.x/x86_64/pkgs/fftw/2.1.5/lib
 MPICHLIB =  -L/opt/linux/rocky/8.x/x86_64/pkgs/openmpi/4.1.2_slurm-21.08.5/lib -lmpi
-HDF5INCL =  -I/opt/linux/rocky/8.x/x86_64/pkgs/hdf5/1.10.8/include
-HDF5LIB  =  -L/opt/linux/rocky/8.x/x86_64/pkgs/hdf5/1.10.8/lib -lhdf5 -lz
+HDF5INCL =  -I/opt/linux/rocky/8.x/x86_64/pkgs/hdf5/1.12.1/include
+HDF5LIB  =  -L/opt/linux/rocky/8.x/x86_64/pkgs/hdf5/1.12.1/lib -lhdf5 -lz
 endif
 ```
 
