@@ -13,5 +13,9 @@ module-whatis   "gadget2-2.0.7"
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
+module load openmpi/4.1.2_slurm-21.08.5
+module load fftw/2.1.5
+module load hdf5/1.12.1
+
 prepend-path     PATH               ${hpcc_modules}/gadget2/2.0.7/Gadget2
 
