@@ -107,3 +107,4 @@ SOFT_VER=[software version]
 14. `git add [soft version]` as well as `.version` if added, then `git commit` the changes, lastly do `git push`
 15. After this you can test the installation by trying `module load $SOFT_NAME` and `module avail $SOFT_NAME`
 16. Make sure to document how the software was installed within a corresponding `README.md` file.
+
