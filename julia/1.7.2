@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## julia modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tjulia- Adds julia to your path"
+}
+
+module-whatis	"julia-1.7.2"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+prepend-path    PATH             ${hpcc_modules}/julia/1.7.2/bin
+prepend-path    LD_LIBRARY_PATH  ${hpcc_modules}/julia/1.7.2/lib
+prepend-path    MANPATH          ${hpcc_modules}/julia/1.7.2/share/man
+prepend-path    C_INCLUDE        ${hpcc_modules}/julia/1.7.2/include
+prepend-path    INCLUDE_PATH     ${hpcc_modules}/julia/1.7.2/include
+
