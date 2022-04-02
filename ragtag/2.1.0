@@ -28,3 +28,4 @@ if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "conda deactivate;"
 }
 
+module load unimap
