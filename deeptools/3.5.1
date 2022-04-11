@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## deeptools modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tdeeptools- Adds deeptools to your path"
+}
+
+module-whatis	"deeptools-3.5.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# Load miniconda
+module load miniconda3
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/deeptools/3.5.1;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
