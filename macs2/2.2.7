@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tmacs2- Adds macs2 to your path"
 }
 
-module-whatis	"macs2-2.2.6"
+module-whatis	"macs2-2.2.7"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
@@ -23,11 +23,11 @@ set	datarootdir	${prefix}/share
 module load miniconda3
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/macs2/2.2.6;"
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/macs2/2.2.7;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
 
 # RStudio need PATH to be explicitly set
-append-path    PATH    ${hpcc_modules}/macs2/2.2.6/bin
+append-path    PATH    ${hpcc_modules}/macs2/2.2.7/bin
 
