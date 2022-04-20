@@ -1,10 +1,48 @@
 # interproscan
 
 ## Prep
+
+This location no longer works:
 https://github.com/ebi-pf-team/interproscan/wiki/HowToDownload
 
+Try this instead:
+https://github.com/ebi-pf-team/interproscan/releases
+
 ## Compile
-Not needed
+
+Download and extract pftools:
+
+```bash
+wget https://github.com/sib-swiss/pftools3/archive/refs/tags/v3.2.11.tar.gz
+tar -xf v3.2.11.tar.gz
+```
+
+Configure without `AFFINITY`:
+
+```bash
+mkdir pftools3-3.2.11/build
+cd pftools3-3.2.11/build
+cmake -DUSE_AFFINITY=OFF -DCMAKE_INSTALL_PREFIX:PATH=$HPCC_MODULES/pftools/3.2.11 ..
+```
+
+Build:
+
+```bash
+make && make install && make test
+```
+
+Replace each existing interproscan binary with symlink:
+
+```
+cd $HPCC_MODULES/iprscan/5.54-87.0/bin/prosite
+mkdir altbin2
+for file in $(find . -maxdepth 1 -type f); do
+  if [[ -f $HPCC_MODULES/pftools/3.2.11/bin/$file ]]; then
+    mv $file altbin2/$file
+    ln -s $HPCC_MODULES/pftools/3.2.11/bin/$file
+  fi
+done
+```
 
 ## Install
 ```
