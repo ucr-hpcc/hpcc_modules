@@ -11,7 +11,6 @@ proc ModulesHelp { } {
 module-whatis   "slurm-21.08.5"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
-set      modules_dir     $::env(MODULES_DIR)
 
 prepend-path    PATH            ${hpcc_modules}/slurm/21.08.5/bin:${hpcc_modules}/slurm/21.08.5/sbin
 prepend-path    MANPATH         ${hpcc_modules}/slurm/21.08.5/share/man
