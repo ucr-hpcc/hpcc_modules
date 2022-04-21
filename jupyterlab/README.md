@@ -1,6 +1,5 @@
 # JupyterLab
 
-
 ## Install
 
 Use miniconda to install jupyterlab under individual directory:

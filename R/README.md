@@ -243,7 +243,6 @@ sudo yum install mesa-libGLU-devel
 install.packages(clusterSim)
 ```
 
-
 #### Misc Packages
 
 __GitHub__

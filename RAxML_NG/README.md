@@ -1,7 +1,5 @@
 # RAxML-NG v0.9.0
 
-
-
 ## Install
 
 Get the RAxML-NG Linux MPI version of the source code, since it has a prebuilt `libpll`.
@@ -69,7 +67,6 @@ make
 
      `./raxml-ng --all --msa testAA.fa --model LG+G8+F --tree pars{10} --bs-trees 200`
 
-
   3. Optimize branch lengths and free model parameters on a fixed topology
      (using multiple partitions with proportional branch lengths)
 
@@ -78,5 +75,4 @@ make
   4. Map support values from existing set of replicate trees:
 
      `./raxml-ng --support --tree bestML.tree --bs-trees bootstraps.tree`
-
 

@@ -11,13 +11,6 @@ proc ModulesHelp { } {
 module-whatis	"PhyKIT-1.11"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
-set      modules_dir     $::env(MODULES_DIR)
-
-# for Tcl script use only
-set	version		3.2.9
-set	prefix		${modules_dir}/${version}
-set	exec_prefix	${prefix}
-set	datarootdir	${prefix}/share
 
 #  this will load python3
 module load miniconda3 
@@ -25,7 +18,6 @@ module load miniconda3
 # Set character encoding
 setenv LC_ALL en_US.utf-8
 setenv LANG en_US.utf-8
-
 
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module unload anaconda3 miniconda2; module load miniconda3; source activate ${hpcc_modules}/phykit/1.11;"

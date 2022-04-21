@@ -11,14 +11,6 @@ proc ModulesHelp { } {
 module-whatis	"db-trinotate"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
-set      modules_dir     $::env(MODULES_DIR)
-
-# for Tcl script use only
-set	version		3.2.9
-set	prefix		/usr/local/Modules/3.2.9
-set	exec_prefix	${prefix}
-set	datarootdir	${prefix}/share
 
 setenv      TRINOTATE_DB	    /srv/projects/db/trinotate/r20150720
-
 

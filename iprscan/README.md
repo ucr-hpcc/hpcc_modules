@@ -61,7 +61,6 @@ Create symlinks to third-party binaries in the bin/ folder - usually these are s
 Packages: SignalP, Phobius, TMHMM
 Use a previous version for reference
 
-
 Need to also run this after downloading and unpacking to index databases
 ```
 python initial_setup.py

@@ -40,7 +40,6 @@ vim ~/bigdata/pkgs/dram/1.3.4/lib/python3.9/site-packages/mag_annotator/CONFIG
 
 Be sure to update each path and version number of each entry.
 
-
 ## Test
 
 At this point, everything should be installed, just actiate conda and run `DRAM-setup.py print_config` to test and make sure all the paths look good:

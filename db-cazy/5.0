@@ -11,15 +11,7 @@ proc ModulesHelp { } {
 module-whatis	"db-cazy-5.0"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
-set      modules_dir     $::env(MODULES_DIR)
-
-# for Tcl script use only
-set	version		3.2.9
-set	prefix		/usr/local/Modules/3.2.9
-set	exec_prefix	${prefix}
-set	datarootdir	${prefix}/share
 
 setenv      CAZY_FOLDER	/srv/projects/db/CAZY/CAZyDB/5.0
 setenv      CAZY_DB	/srv/projects/db/CAZY/CAZyDB/5.0/dbCAN-fam-HMMs.txt.v5
-
 

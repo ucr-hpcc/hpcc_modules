@@ -1,8 +1,6 @@
 ## Install GATK
 
-
 ### Download and install
-
 
 These files can come as binaries so we don't have to compile.
 

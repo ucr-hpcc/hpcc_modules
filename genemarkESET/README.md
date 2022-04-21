@@ -11,7 +11,6 @@ perl -i.bak -p -e 's/\#\!\/usr\/bin\/perl/#!\/usr\/bin\/env perl/'  *.pl
 
 As part of the module loading a symlink to the $GENEMARK_PATH/gm_key_6 will be made in ~/.gm_key
 
-
 # these were old directions 
 Users need to copy gm_key_64 to their folder 
 

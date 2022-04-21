@@ -11,13 +11,6 @@ proc ModulesHelp { } {
 module-whatis	"parallel-fastq-dump-0.6.7"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
-set      modules_dir     $::env(MODULES_DIR)
-
-# for Tcl script use only
-set	version		3.2.9
-set	prefix		${modules_dir}/${version}
-set	exec_prefix	${prefix}
-set	datarootdir	${prefix}/share
 
 module unload miniconda2
 #  this will load python3
@@ -27,7 +20,6 @@ module load sratoolkit
 # Set character encoding
 setenv LC_ALL en_US.utf-8
 setenv LANG en_US.utf-8
-
 
 prepend-path    PATH            ${hpcc_modules}/parllel-fastq-dump/0.6.7/bin
 

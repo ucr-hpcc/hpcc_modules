@@ -53,7 +53,6 @@ endif
 
 In order to compile, just run `make`.
 
-
 # Install
 
 Move the source directory to install location:
