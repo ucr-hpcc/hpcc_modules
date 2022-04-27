@@ -1,20 +1,24 @@
 #%Module1.0#####################################################################
 ##
-## RepeatModeler modulefile
+## busco modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tRepeatModeler - Adds RepeatModeler to your path"
+        puts stderr "\tbusco- Adds busco to your path"
 }
 
-module-whatis	"RepeatModeler-2.0.3"
+module-whatis	"busco-5.3.2"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
+# Load miniconda
+module load miniconda3
+
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/RepeatModeler/2.0.3;"
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/busco/5.3.2;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
 
+setenv          BUSCO_LINEAGES      /srv/projects/db/BUSCO/v10
