@@ -14,7 +14,7 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 
 module  load    CodingQuarry
 module  load    signalp/5.0b
-module load EVM
+#module load EVM
 
 if { [module-info mode load] || [module-info mode switch2] } {
     if { ![file exists /rhome/${user}/.gm_key] } {
@@ -33,4 +33,4 @@ setenv          GENEMARK_PATH   ${hpcc_modules}/genemarkESET/4.69_lic
 setenv 		FUNANNOTATE_DB	/srv/projects/db/funannotate/1.8
 setenv		TRINITYHOME	${hpcc_modules}/funannotate/1.8/env/bin
 setenv		PASAHOME	${hpcc_modules}/funannotate/1.8/env/bin
-
+setenv		EVM_HOME	${hpcc_modules}/funannotate/1.8/env/bin
