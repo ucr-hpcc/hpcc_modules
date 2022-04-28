@@ -20,15 +20,14 @@ setenv          MANPAGER        "sh -c 'col -bx | bat -l man -p'"
 switch -- [module-info shelltype] {
     fish {
         puts stdout "source ${hpcc_modules}/bat/0.18.3/autocomplete/*.fish;"
-    }
-    zsh {
+    } zsh {
         puts stdout "source ${hpcc_modules}/bat/0.18.3/autocomplete/*.zsh;"
-    }
-    sh {
+    } sh {
         puts stdout "source ${hpcc_modules}/bat/0.18.3/autocomplete/*.bash;"
-    }
-    bash {
+    } bash {
         puts stdout "source ${hpcc_modules}/bat/0.18.3/autocomplete/*.bash;"
+    } r {
+        echo stdout "print('Configure autocomplete manually for bat')"
     } default {
         echo stdout "echo 'Configure autocomplete manually for bat'"
     }
