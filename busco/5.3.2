@@ -21,6 +21,6 @@ if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "conda deactivate;"
 }
 
-setenv          BUSCO_LINEAGES      /srv/projects/db/BUSCO/v10
-append-path     PATH                ${hpcc_modules}/busco/5.3.2/bin
+setenv           BUSCO_LINEAGES      /srv/projects/db/BUSCO/v10
+prepend-path     PATH                ${hpcc_modules}/busco/5.3.2/bin
 
