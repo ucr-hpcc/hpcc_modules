@@ -15,7 +15,7 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 module  load    usearch
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/amptk/1.5"
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/amptk/1.5;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
