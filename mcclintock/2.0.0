@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## mcclintock modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tmcclintock - Adds mcclintock for TE site discovery from NGS your path"
+}
+
+module-whatis	"mcclintock-2.0.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Load miniconda
+module load miniconda3
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/mcclintock/2.0.0;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
