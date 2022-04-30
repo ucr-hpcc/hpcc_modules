@@ -1,0 +1,18 @@
+#%Module1.0#####################################################################
+##
+## aria2 modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\taria2- Adds aria2 to your path"
+}
+
+module-whatis	"aria2-1.36.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load libdeflate/1.10
+prepend-path    PATH            ${hpcc_modules}/aria2/1.36.0/bin
+prepend-path    MANPATH         ${hpcc_modules}/aria2/1.36.0/share/man
+
