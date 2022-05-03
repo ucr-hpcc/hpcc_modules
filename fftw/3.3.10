@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## fftw modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tfftw- Adds fftw to your path"
+}
+
+module-whatis	"fftw-3.3.10"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/fftw/3.3.10/lib
+prepend-path    INCLUDE_PATH      ${hpcc_modules}/fftw/3.3.10/include
+
