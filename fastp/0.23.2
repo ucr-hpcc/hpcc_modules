@@ -1,0 +1,18 @@
+#%Module1.0#####################################################################
+##
+## fastp modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tfastp- Adds fastp to your path"
+}
+
+module-whatis	"fastp-0.23.2"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load libdeflate/1.10
+module load isa-l
+prepend-path    PATH            ${hpcc_modules}/fastp/0.23.2/bin
+

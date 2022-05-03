@@ -7,7 +7,7 @@ proc ModulesHelp { } {
 	puts stderr "\tMMseqs2 - Adds MMseqs2 ultra fast and sensitive search and clustering suite your path"
 }
 
-module-whatis	"MMseqs2-13-45111"
+module-whatis	"mmseqs2-13-45111"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
@@ -18,8 +18,8 @@ if { [info exists ::env(SLURM_JOB_PARTITION)] } {
 }
 
 if { $partition == "batch" || $partition == "stajichlab" } {
-    prepend-path    PATH        ${hpcc_modules}/MMseqs2/13-45111/bin
+    prepend-path    PATH        ${hpcc_modules}/mmseqs2/13-45111/bin
 } else {
-    prepend-path    PATH   		${hpcc_modules}/MMseqs2/13-45111-avx2/bin
+    prepend-path    PATH   		${hpcc_modules}/mmseqs2/13-45111-avx2/bin
 }
 
