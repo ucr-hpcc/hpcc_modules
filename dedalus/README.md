@@ -84,6 +84,7 @@ git@github.com:DedalusProject/dedalus.git
 Install Dedalus into newly created `virutalenv`:
 
 ```bash
+cd dedalus
 pip install --no-cache .
 ```
 
