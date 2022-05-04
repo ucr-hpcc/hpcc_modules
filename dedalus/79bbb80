@@ -1,0 +1,33 @@
+#%Module1.0#####################################################################
+##
+## dedalus modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tdedalus - Adds dedalus to your path"
+}
+
+module-whatis	"dedalus-79bbb80"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+module unload miniconda3
+module load openmpi/4.1.2_slurm-21.08.5
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module unload miniconda3; source ${hpcc_modules}/dedalus/79bbb80/bin/activate;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "deactivate;"
+}
+
+# Need libs from parent python
+prepend-path    LD_LIBRARY_PATH  ${hpcc_modules}/python/3.10.4/lib
+
+# Not needed since we are using a virtualenv
+#prepend-path    PATH             ${hpcc_modules}/python/3.10.4/bin
+#prepend-path    CPATH            ${hpcc_modules}/python/3.10.4/include
+#prepend-path    PYTHONPATH       ${hpcc_modules}/python/3.10.4/lib/python3.10/site-packages
+#prepend-path    MANPATH          ${hpcc_modules}/python/3.10.4/share/man
+
