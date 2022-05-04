@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## osg-wn-client modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tosg-wn-client- Adds osg-wn-client to your path"
+}
+
+module-whatis	"osg-wn-client-3.6.220426-1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "source ${hpcc_modules}/osg-wn-client/3.6.220426-1/setup.sh;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "WARN: Cannot unload osg-wn-client"
+}
+
