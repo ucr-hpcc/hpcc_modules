@@ -18,3 +18,5 @@ if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "WARN: Cannot unload osg-wn-client"
 }
 
+setenv     OSG_GRID     ${hpcc_modules}/osg-wn-client/3.6.220426-1
+
