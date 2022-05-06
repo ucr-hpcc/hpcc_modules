@@ -22,4 +22,5 @@ module load RepeatMasker
 prepend-path    PATH            ${hpcc_modules}/gridss/2.13.2/bin:${hpcc_modules}/gridss/2.13.2/scripts
 
 setenv	GRIDSS_JAR	${hpcc_modules}/gridss/2.13.2/lib/java/gridss.jar
-
+setenv	VIRUSBREAKDB	${hpcc_modules}/gridss/2.13.2/data/virusbreakenddb_20210401
+prepend-path	KRAKEN2_DB_PATH	${hpcc_modules}/gridss/2.13.2/data
