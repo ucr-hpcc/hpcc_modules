@@ -35,7 +35,7 @@ module load oneapi/2022.1.2.146
 cmake -C ../initial_cache.cmake_intel ../
 ```
 
-AND
+OR
 
 ```bash
 cd $FHI_AIMS_SRC/build_gcc9
