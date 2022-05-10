@@ -1,5 +1,16 @@
 # FHI-AIMS
 
+When compiling with `GCC`, first request an AMD node:
+
+```bash
+srun -p short -C amd -c 4 --mem=10g --pty bash -l
+```
+
+When compiling with `Intel` (`oneapi`), first request an AMD node:
+```bash
+srun -p short -C intel -c 4 --mem=10g --pty bash -l
+```
+
 ## Prep
 
 Aquire the source code and upload it to the cluster. Extract source and move into source directory. 
@@ -58,4 +69,3 @@ Ensure this new `bin` path is added to your path (add to your ~/.bashrc file for
 ```bash
 export PATH=$FHI_AIMS_SRC/bin:$PATH
 ```
-
