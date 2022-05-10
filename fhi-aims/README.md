@@ -15,7 +15,17 @@ srun -p short -C intel -c 4 --mem=10g --pty bash -l
 
 Aquire the source code and upload it to the cluster. Extract source and move into source directory. 
 This source directory will henceforth be refered to as `$FHI_AIMS`.
-Download the appropriate CMake cache files within `$FHI_AIMS`.
+Download the appropriate CMake cache files within `$FHI_AIMS` like so:
+
+```bash
+wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_modules/main/fhi-aims/initial_cache.cmake_intel
+```
+
+OR
+
+```bash
+wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_modules/main/fhi-aims/initial_cache.cmake_gcc9
+```
 
 Then create a build directory:
 
@@ -27,18 +37,6 @@ OR
 
 ```bash
 mkdir $FHI_AIMS/build_gcc9
-```
-
-And then download the correct build file:
-
-```bash
-wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_modules/main/fhi-aims/initial_cache.cmake_intel
-```
-
-OR 
-
-```bash
-wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_modules/main/fhi-aims/initial_cache.cmake_gcc9
 ```
 
 ## Configure
