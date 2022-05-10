@@ -21,7 +21,24 @@ Then create a build directory:
 
 ```bash
 mkdir $FHI_AIMS_SRC/build_intel
+```
+
+OR
+
+```bash
 mkdir $FHI_AIMS_SRC/build_gcc9
+```
+
+And then download the correct build file:
+
+```bash
+wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_modules/main/fhi-aims/initial_cache.cmake_intel
+```
+
+OR 
+
+```bash
+wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_modules/main/fhi-aims/initial_cache.cmake_gcc9
 ```
 
 ## Configure
