@@ -1,0 +1,29 @@
+#%Module1.0#####################################################################
+##
+## GTDB-Tk modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tGTDB-Tk - Adds gtdb-tk to your path"
+}
+
+module-whatis	"gtdbtk-2.1.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+#  this will load python3
+module load miniconda3 
+
+# Set character encoding
+setenv LC_ALL en_US.utf-8
+setenv LANG en_US.utf-8
+
+module load fastani
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module unload anaconda3 miniconda2; module load miniconda3; source activate ${hpcc_modules}/gtdbtk/2.1.0;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "module unload anaconda3 miniconda2; module load miniconda3; conda deactivate;"
+}
+setenv 	GTDBTK_DATA_PATH	/srv/projects/db/gtdbtk/207_v2
