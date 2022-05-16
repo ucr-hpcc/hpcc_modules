@@ -1,0 +1,10 @@
+FC = gfortran
+FFLAGS = -O3 -xHost -ip -module $(MODDIR) -fp-model precise
+F90FLAGS = $(FFLAGS)
+ARCHITECTURE = Generic
+USE_MPI = yes
+MPIFC = mpif90
+LAPACKBLAS = -L/usr/lib64 -I/usr/include -lopenblas
+SCALAPACK = -L/opt/linux/rocky/8.x/x86_64/pkgs/scalapack/2.2.0/lib -I/opt/linux/rocky/8.x/x86_64/pkgs/scalapack/2.2.0/include -lscalapack
+CC = gcc
+CCFLAGS = -O3 -xHost
