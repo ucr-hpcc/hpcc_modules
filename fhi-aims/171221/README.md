@@ -6,19 +6,25 @@ However, the Intel version is tested, and seems to compile a working binary on o
 
 ## Build
 
-Move to src directory
+Move to src directory:
 
 ```bash
 cd fhi-aims.171221_intel/src
 ```
 
-Modify (or create) makefile
+Load `Intel` compilers:
+
+```bash
+module load oneapi
+```
+
+Get makefile:
 
 ```bash
 wget -O make.sys https://raw.githubusercontent.com/ucr-hpcc/hpcc_modules/main/fhi-aims/171221/make.sys_intel
 ```
 
-Build binaries
+Build binaries:
 
 ```bash
 make mpi
