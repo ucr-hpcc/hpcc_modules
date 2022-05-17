@@ -1,0 +1,7 @@
+FC = ifort
+FFLAGS = -O3 -ip
+F90FLAGS = $(FFLAGS)
+ARCHITECTURE = Generic
+LAPACKBLAS = -L$MKLROOT/lib/intel64/ -I$MKLROOT/include/intel64/lp64/ -lmkl_intel_lp64 -lmkl_sequential -lmkl_core
+USE_MPI = yes
+MPIFC = mpif90
