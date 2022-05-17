@@ -4,7 +4,7 @@ These are some example `make.sys` files for `fhi-aims` (version `171221`) from a
 The GCC version is untested, and likely not working for our current environment.
 However, the Intel version is tested, and seems to compile a working binary on our current environment.
 
-## Build
+## MPI
 
 Move to src directory:
 
@@ -24,19 +24,23 @@ Get makefile:
 wget -O make.sys https://raw.githubusercontent.com/ucr-hpcc/hpcc_modules/main/fhi-aims/171221/make.sys_intel
 ```
 
-Or, if you want to enable `ScalaPack`:
-
-```bash
-wget -O make.sys https://raw.githubusercontent.com/ucr-hpcc/hpcc_modules/main/fhi-aims/171221/make.sys_intel_scalapack
-```
-
 Build binaries:
 
 ```bash
 make mpi
 ```
 
-Or, if you got the make.sys with `ScalaPack`:
+## ScalaPack
+
+The `ScalaPack` version is currently broken (ie. undefined reference to MPI libs), however it is is for reference:
+
+Get makefile with `ScalaPack`:
+
+```bash
+wget -O make.sys https://raw.githubusercontent.com/ucr-hpcc/hpcc_modules/main/fhi-aims/171221/make.sys_intel_scalapack
+```
+
+Build with `ScalaPack`:
 
 ```bash
 make scalapack.mpi
