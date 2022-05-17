@@ -24,8 +24,20 @@ Get makefile:
 wget -O make.sys https://raw.githubusercontent.com/ucr-hpcc/hpcc_modules/main/fhi-aims/171221/make.sys_intel
 ```
 
+Or, if you want to enable `ScalaPack`:
+
+```bash
+wget -O make.sys https://raw.githubusercontent.com/ucr-hpcc/hpcc_modules/main/fhi-aims/171221/make.sys_intel_scalapack
+```
+
 Build binaries:
 
 ```bash
 make mpi
+```
+
+Or, if you got the make.sys with `ScalaPack`:
+
+```bash
+make scalapack.mpi
 ```
