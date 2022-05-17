@@ -32,7 +32,7 @@ make mpi
 
 ## ScalaPack
 
-The `ScalaPack` version is currently broken (ie. undefined reference to MPI libs), however it is is for reference:
+The `ScalaPack` version is currently broken (ie. undefined reference to MPI functions), however here it is for reference:
 
 Get makefile with `ScalaPack`:
 
