@@ -1,10 +1,7 @@
 FC = ifort
-FFLAGS = -O3 -xHost -ip -module $(MODDIR) -fp-model precise
+FFLAGS = -O3 -ip
 F90FLAGS = $(FFLAGS)
 ARCHITECTURE = Generic
+LAPACKBLAS = -L$MKLROOT/lib/intel64/ -I$MKLROOT/include/intel64/lp64/ -lmkl_intel_lp64 -lmkl_sequential -lmkl_core
 USE_MPI = yes
 MPIFC = mpif90
-LAPACKBLAS = -L/opt/linux/rocky/8.x/x86_64/pkgs/oneapi/2022.1.2.146/mkl/2022.0.2/lib/intel64 -I/opt/linux/rocky/8.x/x86_64/pkgs/oneapi/2022.1.2.146/mkl/2022.0.2/include/intel64/lp64 -lmkl_intel_lp64 -lmkl_sequential -lmkl_core
-SCALAPACK = -L/opt/linux/rocky/8.x/x86_64/pkgs/oneapi/2022.1.2.146/mkl/2022.0.2/lib/intel64 -I/opt/linux/rocky/8.x/x86_64/pkgs/oneapi/2022.1.2.146/mkl/2022.0.2/include/intel64/lp64 -lmkl_scalapack_lp64 -lmkl_blacs_openmpi_lp64
-CC = icc
-CCFLAGS = -O3 -xHost
