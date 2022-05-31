@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## megahit modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tmegahit - Adds megahit to your path"
+}
+
+module-whatis	"megahit-1.2.9"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/megahit/1.2.9/bin
+

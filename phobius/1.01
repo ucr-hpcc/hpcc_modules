@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## phobius modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tphobius - Adds phobius to your path"
+}
+
+module-whatis	"phobius-3.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load signalp/5.0b
+prepend-path    PATH            ${hpcc_modules}/phobius/1.01/bin
