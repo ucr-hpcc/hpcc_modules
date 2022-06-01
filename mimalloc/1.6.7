@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## mimalloc modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tmimalloc- Adds mimalloc to your path"
+}
+
+module-whatis	"mimalloc-1.6.7"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+prepend-path    LD_LIBRARY_PATH_PATH      ${hpcc_modules}/mimalloc/1.6.7/out/release/
+
