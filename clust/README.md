@@ -6,7 +6,7 @@ then run the following:
 
 ```sh
 module load miniconda3
-conda create -p $HPCC_MODULES/$SOFT_NAME/$SOFT_VER -c bioconda clust
+conda create -p $HPCC_MODULES/$SOFT_NAME/$SOFT_VER/env -c bioconda clust
 ```
 
 After this follow steps (7) - (17).
