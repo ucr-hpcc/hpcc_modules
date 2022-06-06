@@ -1,4 +1,4 @@
-## Installed clust via bioconda [ [URL](https://github.com/BaselAbujamous/clust) ]  
+## Installed `clust` via bioconda [ [URL](https://github.com/BaselAbujamous/clust) ]  
 
 As `pkgadmin` define as outlined [here](https://github.com/ucr-hpcc/hpcc_modules#create-module) the variables 
 `SOFT_NAME`, `SOFT_FIRST` and `SOFT_VER`. Next create directories as instructed under steps (3) and (5), and 
