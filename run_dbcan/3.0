@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## run_dbcan modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\trun_dbcan - Adds run_dbcan.py to your path"
+}
+
+module-whatis	"run_dbcan-3.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module unload anaconda3 miniconda2; module load miniconda3; source activate ${hpcc_modules}/run_dbcan/3.0;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "module unload anaconda3 miniconda2; module load miniconda3; conda deactivate;"
+}
+
+module load db-cazy
+module load hmmer/3
+module load prodigal
+module load signalp/4.1c
