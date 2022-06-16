@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## juicebox modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tjuicebox - Adds juicebox jar to your path"
+}
+
+module-whatis	"juicebox-2.13.07"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load java
+
+setenv  JUICEBOXDIR     ${hpcc_modules}/juicebox/2.13.07
+setenv  JUICEBOX	${hpcc_modules}/juicebox/2.13.07/juicebox.jar
+
