@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## last modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tlast - Adds last to your path"
+}
+
+module-whatis	"last-923"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/last/1352/build
+prepend-path    PATH            ${hpcc_modules}/last/1352/bin
+
