@@ -1,0 +1,18 @@
+#%Module1.0#####################################################################
+##
+## mmv modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds mmv to your path"
+}
+
+module-whatis   "mmv-2.3"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/mmv/2.3/usr/local/bin
+prepend-path    MANPATH         ${hpcc_modules}/mmv/2.3/usr/local/share/man
+
