@@ -12,6 +12,9 @@ module-whatis	"funannotate-1.8"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
+# Get user
+set      user            [module-info username]
+
 module  load    CodingQuarry
 module  load    signalp/6.0g
 module load PASA
