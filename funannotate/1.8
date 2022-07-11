@@ -13,8 +13,16 @@ module-whatis	"funannotate-1.8"
 set      hpcc_modules    $::env(HPCC_MODULES)
 
 module  load    CodingQuarry
-module  load    signalp/5.0b
+module  load    signalp/6.0g
 module load PASA
+
+# Create symlink for genemark key file
+if { [module-info mode load] || [module-info mode switch2] } {
+    if { ![file exists /rhome/${user}/.gm_key] } {
+        puts "ln -s ${hpcc_modules}/genemarkESET/4.69_lic/gm_key /rhome/${user}/.gm_key"
+    }
+}
+
 
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module load miniconda3; conda activate ${hpcc_modules}/funannotate/1.8/env;"
