@@ -1,0 +1,18 @@
+#%Module1.0#####################################################################
+##
+## ASTRAL modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Sets ASTRAL JAR path to your environment"
+}
+
+module-whatis   "ASTRAL-5.15.5 - Multithreaded"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load java
+setenv          ASTRALDIR	${hpcc_modules}/ASTRAL/5.15.5
+setenv          ASTRALJAR	${hpcc_modules}/ASTRAL/5.15.5/astral.5.15.5.jar
+
