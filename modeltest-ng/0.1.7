@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## modeltest-ng modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tmodeltest-ng - Adds modeltest-ng to your path"
+}
+
+module-whatis	"modeltest-ng-0.1.7"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+if { [info exists ::env(SLURM_JOB_PARTITION)] } {
+    set      partition       $::env(SLURM_JOB_PARTITION)
+} else {
+    set      partition     ""
+}
+
+prepend-path    PATH            ${hpcc_modules}/modeltest-ng/0.1.7/bin
+
