@@ -8,6 +8,12 @@ then run the following:
 module load miniconda3
 conda create -p $HPCC_MODULES/$SOFT_NAME/$SOFT_VER/env -c bioconda beagle
 ```
+Included install of [ [beagle 4.1](https://faculty.washington.edu/browning/beagle/b4_1.html) ] via bioconda
+
+```sh
+module load miniconda3
+conda create -p $HPCC_MODULES/beagle/4.1/env -c bioconda/label/cf201901 beagle
+```
 
 After this follow steps (7) - (17).
 
