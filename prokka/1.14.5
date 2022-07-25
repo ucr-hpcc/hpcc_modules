@@ -1,6 +1,6 @@
 #%Module1.0#####################################################################
 ##
-## maui modulefile
+## prokka modulefile
 ##
 proc ModulesHelp { } {
         global version prefix
@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tprokka - Adds prokka to your path"
 }
 
-module-whatis	"prokka-1.14.6"
+module-whatis	"prokka-1.14.5"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
@@ -18,7 +18,7 @@ module load signalp/3.0
 module load miniconda3
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/prokka/1.14.6;"
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/prokka/1.14.5;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
