@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## metabat2 modulefile
+#
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tmetabat2 - Adds metabat2 to your path"
+}
+
+module-whatis	"metabat2-2.15"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/metabat2/2.15;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
