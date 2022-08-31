@@ -1,0 +1,26 @@
+#%Module1.0#####################################################################
+##
+## kofamscan modulefile
+#
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tkofamscan- Adds kofamscan to your path"
+}
+
+module-whatis	"kofamscan-1.3.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Load miniconda
+module load miniconda3
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/kofamscan/1.3.0/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
+setenv KOFAMSCAN_CONFIG	/opt/linux/centos/8.x/x86_64/pkgs/kofamscan/1.3.0/config/config.yml 
+setenv KOFAM_DB	/srv/projects/db/koscan/2022-06-02
