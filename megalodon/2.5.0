@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## megalodon modulefile
+#
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tmegalodon - Adds megalodon to your path"
+}
+
+module-whatis	"megalodon-2.5.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Load miniconda
+module load guppy
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/megalodon/2.5.0;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
