@@ -15,7 +15,7 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 setenv	TBB_PATH_LIB	${hpcc_modules}/tbb/2021.5.0/lib
 setenv	TBB_PATH_INCLUDES	${hpcc_modules}/tbb/2021.5.0/include
 setenv	TBBROOT	${hpcc_modules}/tbb/2021.5.0
-
+setenv	TBB_ROOT ${hpcc_modules}/tbb/2021.5.0
 prepend-path	PKG_CONFIG_PATH	${hpcc_modules}/tbb/2021.5.0/lib/pkgconfig
 prepend-path	CPATH		${hpcc_modules}/tbb/2021.5.0/lib:${hpcc_modules}/tbb/2021.5.0/include
 prepend-path	LD_LIBRARY_PATH	   ${hpcc_modules}/tbb/2021.5.0/lib:${hpcc_modules}/tbb/2021.5.0/lib/intel64/gcc4.8

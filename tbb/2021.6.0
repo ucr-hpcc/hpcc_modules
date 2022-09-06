@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## TBB modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\ttbb - Threaded Building Blocks to your library path runpath"
+}
+
+module-whatis	"tbb-2021.6.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+setenv	TBB_PATH_LIB	${hpcc_modules}/tbb/2021.6.0/lib
+setenv	TBB_PATH_INCLUDES	${hpcc_modules}/tbb/2021.6.0/include
+setenv	TBBROOT	${hpcc_modules}/tbb/2021.6.0
+setenv	TBB_ROOT ${hpcc_modules}/tbb/2021.6.0
+setenv  TBB_INCLUDE ${hpcc_modules}/tbb/2021.6.0/include
+setenv  TBB_LIBRARY ${hpcc_modules}/tbb/2021.6.0/lib
+prepend-path	PKG_CONFIG_PATH	${hpcc_modules}/tbb/2021.6.0/lib/pkgconfig
+prepend-path	CPATH		${hpcc_modules}/tbb/2021.6.0/lib:${hpcc_modules}/tbb/2021.6.0/include
+prepend-path	LD_LIBRARY_PATH	   ${hpcc_modules}/tbb/2021.6.0/lib:${hpcc_modules}/tbb/2021.6.0/lib/intel64/gcc4.8
+prepend-path	LIBRARY_PATH	   ${hpcc_modules}/tbb/2021.6.0/lib:${hpcc_modules}/tbb/2021.6.0/lib/intel64/gcc4.8
