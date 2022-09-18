@@ -15,8 +15,8 @@ Make sure htslib is already installed.
 Then installing should be as easy as the following:
 
 ```bash
-SOFT_NAME='htslib'
-SOFT_VER='1.15'
+SOFT_NAME=htslib
+SOFT_VER=1.16
 ./configure --with-htslib=$HPCC_MODULES/htslib/$SOFT_VER/ --prefix=$HPCC_MODULES/$SOFT_NAME/$SOFT_VER \
 && make install
 ```
