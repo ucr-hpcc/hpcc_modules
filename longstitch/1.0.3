@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## longstitch modulefile
+#
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tlongstitch - Adds longstitch assembly scaffolding tool to your path"
+}
+
+module-whatis	"longstitch-1.0.3"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/longstitch/1.0.3;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
