@@ -17,3 +17,5 @@ if { [module-info mode load] || [module-info mode switch2] } {
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
+
+setenv BAKTA_DB	/srv/projects/db/bakta/4.0
