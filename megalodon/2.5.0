@@ -14,7 +14,7 @@ module-whatis	"megalodon-2.5.0"
 set      hpcc_modules    $::env(HPCC_MODULES)
 
 # Load miniconda
-module load guppy/6.3.7
+module load guppy/6.3.8
 
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module load miniconda3; conda activate ${hpcc_modules}/megalodon/2.5.0;"
