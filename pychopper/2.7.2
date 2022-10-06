@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## pychopper modulefile
+#
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tpychopper - Adds pychopper tools to your path"
+}
+
+module-whatis	"pychopper-2.7.2"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/pychopper/2.7.2;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
