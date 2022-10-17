@@ -1,0 +1,28 @@
+#%Module1.0#####################################################################
+##
+## trinity-rnaseq modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\ttrinity-rnaseq - Adds trinity-rnaseq to your path"
+}
+
+module-whatis	"trinity-rnaseq-2.14.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load trinity-rnaseq
+module load fastqc
+module load samtools
+module load jellyfish
+module load bowtie2
+module load salmon
+module load java
+
+prepend-path    PATH            ${hpcc_modules}/trinity-rnaseq/2.14.0
+prepend-path    PATH            ${hpcc_modules}/trinity-rnaseq/2.14.0/util
+prepend-path    PATH            ${hpcc_modules}/trinity-rnaseq/2.14.0/util/misc
+setenv          TRINITY_HOME    ${hpcc_modules}/trinity-rnaseq/2.14.0
+setenv          TRINITYHOME     ${hpcc_modules}/trinity-rnaseq/2.14.0
+
