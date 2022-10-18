@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## pnetcdf modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tpnetcdf - Adds pnetcdf to your path"
+}
+
+module-whatis   "pnetcdf-1.3.1_oneapi-2022.3.0.8767"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH                 ${hpcc_modules}/pnetcdf/1.3.1_oneapi-2022.3.0.8767/bin
+prepend-path    INCLUDE_PATH         ${hpcc_modules}/pnetcdf/1.3.1_oneapi-2022.3.0.8767/include
+prepend-path    C_INCLUDE_PATH       ${hpcc_modules}/pnetcdf/1.3.1_oneapi-2022.3.0.8767/include
+prepend-path    LD_LIBRARY_PATH      ${hpcc_modules}/pnetcdf/1.3.1_oneapi-2022.3.0.8767/lib
+prepend-path    MANPATH              ${hpcc_modules}/pnetcdf/1.3.1_oneapi-2022.3.0.8767/share/man
