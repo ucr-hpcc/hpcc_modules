@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\teggnog-mapper - Adds eggnog-mapper to your path"
 }
 
-module-whatis	"eggnog-mapper-2.1.4"
+module-whatis	"eggnog-mapper-2.1.7"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
@@ -18,7 +18,7 @@ if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "conda deactivate;"
 }
 
-setenv	EGGNOG_DATA_DIR	/srv/projects/db/eggNOG/5.0.2
+setenv	EGGNOG_DATA_DIR	/srv/projects/db/eggNOG/LATEST
 
 # Set character encoding
 
