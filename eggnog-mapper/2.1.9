@@ -1,0 +1,26 @@
+#%Module1.0#####################################################################
+##
+## eggnog-mapper modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\teggnog-mapper - Adds eggnog-mapper to your path"
+}
+
+module-whatis	"eggnog-mapper-2.1.9"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/eggnog-mapper/2.1.9/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
+setenv	EGGNOG_DATA_DIR	/srv/projects/db/eggNOG/LATEST
+
+# Set character encoding
+
+setenv LC_ALL en_US.utf-8
+setenv LANG en_US.utf-8
