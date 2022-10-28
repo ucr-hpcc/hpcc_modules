@@ -12,7 +12,7 @@ module-whatis	"amptk-1.5"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
-module  load    usearch
+module  load    usearch/10
 module load mafft
 module load fasttree
 if { [module-info mode load] || [module-info mode switch2] } {
