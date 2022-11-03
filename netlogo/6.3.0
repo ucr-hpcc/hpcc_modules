@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## netlogo modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tnetlogo - Adds NetLogo to your path"
+}
+
+module-whatis   "netlogo-6.3.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/netlogo/6.3.0
+setenv          NETLOGO_DIR     ${hpcc_modules}/netlogo/6.3.0
