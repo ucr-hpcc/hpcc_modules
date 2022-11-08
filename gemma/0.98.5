@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## gemma modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tgemma - Adds gemma to your path"
+}
+
+module-whatis	"gemma-0.98.5"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/gemma/0.98.5/bin
+
