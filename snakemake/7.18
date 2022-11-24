@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## snakemake modulefile
+#
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tsnakemake - Adds snakemake to your path"
+}
+
+module-whatis	"snakemake-7.18"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/snakemake/7.18;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
