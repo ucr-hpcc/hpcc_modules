@@ -1,5 +1,10 @@
 install via conda package `conda install -c bioconda -c conda-forge funannotate`
 
+also need to explictly install
+```
+conda install -c bioconda perl-file-which perl-local-lib
+```
+
 installed as separate module load packages
 * CodingQuarry 
 
