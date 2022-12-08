@@ -18,7 +18,7 @@ module load hmmer/3
 module load kent-tools
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/RepeatMasker/4-1-2/env;"
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/RepeatMasker/4-1-4/env;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
