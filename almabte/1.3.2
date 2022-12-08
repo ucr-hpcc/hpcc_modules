@@ -1,0 +1,18 @@
+#%Module1.0#####################################################################
+##
+## almabte modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\talmabte - Adds almaBTE to your path"
+}
+
+module-whatis	"almabte-1.3.2"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module switch boost/1.62.0_openmpi
+module switch hdf5/1.8.22_openmpi
+
+prepend-path    PATH        ${hpcc_modules}/almabte/1.3.2/bin

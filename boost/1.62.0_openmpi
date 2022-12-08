@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## boost modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tboost - Adds boost to your path"
+}
+
+module-whatis   "boost-1.62.0_openmpi"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+setenv  BOOSTDIR        ${hpcc_modules}/boost/1.62.0_openmpi
+setenv  BOOST_ROOT  ${hpcc_modules}/boost/1.62.0_openmpi
+
+prepend-path    LD_LIBRARY_PATH    ${hpcc_modules}/boost/1.62.0_openmpi/lib
+prepend-path    LIBRARY_PATH       ${hpcc_modules}/boost/1.62.0_openmpi/lib
