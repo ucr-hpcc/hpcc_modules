@@ -12,7 +12,7 @@ module-whatis	"RepeatMasker-4-1-4"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
-module load ncbi-rmblast/2.11.0
+module load ncbi-rmblast/2.13.0
 module load trf
 module load hmmer/3
 module load kent-tools
