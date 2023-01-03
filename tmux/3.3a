@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## tmux modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\ttmux - Adds tmux to your path"
+}
+
+module-whatis   "tmux-3.3a"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH             ${hpcc_modules}/tmux/3.3a/bin
+
