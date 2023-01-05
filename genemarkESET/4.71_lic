@@ -18,7 +18,7 @@ set      user            [module-info username]
 # Create symlink
 if { [module-info mode load] || [module-info mode switch2] } {
     if { ![file exists /rhome/${user}/.gm_key] } {
-        puts "ln -s ${hpcc_modules}/genemarkESET/4.71_lic/gm_key /rhome/${user}/.gm_key"
+        puts stdout "ln -s ${hpcc_modules}/genemarkESET/4.71_lic/gm_key /rhome/${user}/.gm_key;"
     }
 }
 
