@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## spart modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tspart- adds spart - A user-oriented partition info command for slurm. It gives a brief view of the cluster."
+}
+
+module-whatis	"spart-1.5.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/spart/1.5.0/bin
+prepend-path    MANPATH         ${hpcc_modules}/spart/1.5.0/share/man
+
