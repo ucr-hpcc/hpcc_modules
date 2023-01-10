@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## phyloFlash modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds phyloFlash to your path"
+}
+
+module-whatis   "phyloFlash-3.4"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load miniconda3
+
+# Setup PATHs
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/phyloFlash/3.4;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
