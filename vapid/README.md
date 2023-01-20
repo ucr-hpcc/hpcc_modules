@@ -1,6 +1,6 @@
 ## Installed VAPiD from source [ [URL](https://github.com/rcs333/VAPiD/releases/tag/v1.3) ]
 
-Installed Vapid virus db in /srv/db/vapid
+Installed Vapid virus db in /srv/db/vapid  
 Modified vapid3.py to use new table2asn command 
 
 ```sh
