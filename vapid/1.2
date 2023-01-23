@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## vapid modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tvapid- Adds vapid to your path"
+}
+
+module-whatis	"vapid-1.2"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load biopython/1.79
+module load ncbi-table2asn/2022-06-10
+module load mafft/7.490
+module load ncbi-blast/2.13.0+
+
+prepend-path    PATH                   ${hpcc_modules}/vapid/1.2/
+setenv          VAPID_DB               /bigdata/operations/pkgadmin/srv/projects/db/vapid

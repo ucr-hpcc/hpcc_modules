@@ -16,5 +16,6 @@ prepend-path    PATH                 ${hpcc_modules}/netcdf-c/4.9.0_oneapi-2022.
 prepend-path    INCLUDE_PATH         ${hpcc_modules}/netcdf-c/4.9.0_oneapi-2022.3.0.8767/include
 prepend-path    C_INCLUDE_PATH       ${hpcc_modules}/netcdf-c/4.9.0_oneapi-2022.3.0.8767/include
 prepend-path    CPLUS_INCLUDE_PATH   ${hpcc_modules}/netcdf-c/4.9.0_oneapi-2022.3.0.8767/include
+prepend-path    LIBRARY_PATH         ${hpcc_modules}/netcdf-c/4.9.0_oneapi-2022.3.0.8767/lib
 prepend-path    LD_LIBRARY_PATH      ${hpcc_modules}/netcdf-c/4.9.0_oneapi-2022.3.0.8767/lib
 prepend-path    MANPATH              ${hpcc_modules}/netcdf-c/4.9.0_oneapi-2022.3.0.8767/share/man
