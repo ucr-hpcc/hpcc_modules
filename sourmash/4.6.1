@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## sourmash modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tsourmash - Adds sourmash your path"
+}
+
+module-whatis	"sourmash-4.6.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Load miniconda
+module load miniconda3
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/sourmash/4.6.1;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
