@@ -8,8 +8,8 @@ proc ModulesHelp { } {
         puts stderr "\tncbi_datasets - Adds datasets to your path"
 }
 
-module-whatis   "ncbi_datasets-14.7.0"
+module-whatis   "ncbi_datasets-14.10.0"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
-prepend-path    PATH            ${hpcc_modules}/ncbi_datasets/14.7.0/bin
+prepend-path    PATH            ${hpcc_modules}/ncbi_datasets/14.10.0/bin
