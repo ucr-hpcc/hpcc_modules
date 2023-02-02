@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## RAiSD modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds RAiSD to your path"
+}
+
+module-whatis   "RAiSD-v2.9"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/raisd/v2.9/bin
