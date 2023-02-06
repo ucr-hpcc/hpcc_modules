@@ -27,8 +27,9 @@ if { [module-info mode load] || [module-info mode switch2] } {
 
 
 if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3;"
     puts stdout "conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##\")) ';"
-    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/funannotate/1.8/env;"
+    puts stdout "conda activate ${hpcc_modules}/funannotate/1.8/env;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda config --set env_prompt '({default_env}) ';"
     puts stdout "conda deactivate;"
