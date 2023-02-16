@@ -7,7 +7,8 @@ Download the following perl libraries
 
 Install libraries, making sure to update PERL5LIB env variable to installed location
 
-- Load neccessary modules:
+Load neccessary modules:
+
 - trinity-rnaseq/2.14.0
 - transdecoder/5.5.0
 - ncbi-blast/2.13.0+
