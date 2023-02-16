@@ -1,9 +1,9 @@
-Installed `trinotate` from source  [ [URL] (https://github.com/Trinotate/Trinotate/releases)]
+## Installed `trinotate` from source  [ [URL] (https://github.com/Trinotate/Trinotate/releases) ]
 
 Download the following perl libraries
 
-> DBD-SQLite-1.72 [ [URL] (https://metacpan.org/pod/DBD::SQLite) ]
-> DBI-1.643 [ [URL] (https://metacpan.org/dist/DBI)]
+> DBD-SQLite-1.72 [ [URL](https://metacpan.org/pod/DBD::SQLite) ]
+> DBI-1.643 [ [URL](https://metacpan.org/dist/DBI) ]
 
 Install libraries, makign sure to update PERL5LIB env variable to installed location
 
