@@ -1,4 +1,4 @@
-## Installed `trinotate` from source  [ [URL] (https://github.com/Trinotate/Trinotate/releases) ]
+## Installed `trinotate` from source  [ [URL](https://github.com/Trinotate/Trinotate/releases) ]
 
 Download the following perl libraries
 
@@ -15,4 +15,4 @@ Install libraries, makign sure to update PERL5LIB env variable to installed loca
 - signalp/4.1c
 - tmhmm/2.0c
 
-Follow instructions on Github [ [here](https://github.com/Trinotate/Trinotate/wiki/Software-installation-and-data-required) ] to complete installation
+Follow instructions on Github [here](https://github.com/Trinotate/Trinotate/wiki/Software-installation-and-data-required) to complete installation
