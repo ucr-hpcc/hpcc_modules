@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## sRNAscanner modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds sRNAscanner to your path"
+}
+
+module-whatis   "srnascanner-latest"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Setup PATHs
+prepend-path    PATH            $hpcc_modules/srnascanner/latest/bin
