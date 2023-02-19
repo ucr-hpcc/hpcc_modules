@@ -1,0 +1,72 @@
+#%Module1.0#####################################################################
+##
+## gaussian modulefile (vullevlab)
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tgcc- Adds gaussian to your path"
+}
+
+module-whatis   "gaussian-16-vullevlab"
+
+module-forbid --not-group vullevlab --message "This software module is restricted to Prof. Vullev's lab." gaussian/16_vullevlab
+
+set     hpcc_modules    $::env(HPCC_MODULES)
+set     g16root         /bigdata/vullevlab/shared/gaussian
+set     gauss_exedir    ${g16root}/g16/bsd:${g16root}/g16
+set     gv_dir          ${g16root}/gv
+
+# Note: this is a translation of g16.profile to environment module
+# Some parts are omitted if they don't apply to us
+
+setenv  g16root     ${g16root}
+
+if { [getenv SCRATCH] == "" } {
+    setenv  GAUSS_SCRDIR    /scratch
+} else {
+    setenv  GAUSS_SCRDIR    [getenv SCRATCH]
+}
+
+setenv  GAUSS_EXEDIR    $gauss_exedir
+setenv  GAUSS_LEXEDIR   ${g16root}/g16/linda-exe
+setenv  GAUSS_ARCHDIR   ${g16root}/g16/arch
+setenv  GAUSS_BSDDIR    ${g16root}/g16/bsd
+setenv  GV_DIR          ${g16root}/gv
+setenv  GAUSS_LFLAGS2   "--LindaOptions -s 10000000"
+
+set-alias   gv  ${g16root}/gv/gview.sh
+
+append-path     PATH        $gauss_exedir
+append-path     PERLLIB     $gauss_exedir
+append-path     PYTHONPATH  $gauss_exedir
+
+setenv  _DSM_BARRIER    SHM
+
+prepend-path    LD_LIBRARY64_PATH   ${g16root}/gv/lib
+prepend-path    LD_LIBRARY64_PATH   $gauss_exedir
+
+append-path     LD_LIBRARY_PATH     ${gv_dir}/lib
+prepend-path    LD_LIBRARY_PATH     $gauss_exedir
+
+setenv  G16BASIS    ${g16root}/g16/basis
+
+set-alias   sl  ${g16root}/g16/tests/searchlog.csh
+
+setenv  PGI_TERM    "trace,abort"
+
+if { [module-info mode load] } {
+    puts    stdout  "ulimit -c 0"
+    puts    stdout  "ulimit -d hard"
+    puts    stdout  "ulimit -f hard"
+    puts    stdout  "ulimit -l hard"
+    puts    stdout  "ulimit -m hard"
+    puts    stdout  "ulimit -n hard"
+    puts    stdout  "ulimit -s hard"
+    puts    stdout  "ulimit -t hard"
+    puts    stdout  "ulimit -u hard"
+} elseif { [module-info mode unload] } {
+    puts    stderr  "The gaussian module modified your session's ulimits. They can't be restored without making unsafe assumptions."
+    puts    stderr  "If you were relying on ulimits to constrain your session, you should quit this session instead."
+    puts    stderr  "(Most users don't need to worry. If your scripts don't have any ulimit commands, you're safe.)"
+}
