@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## FastQ Screen modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds FastQ Screen to your path"
+}
+
+module-whatis   "fastq-screen-v0.15.2"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Deps for bismark
+module load bowtie2 hisat2 samtools
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/fastq-screen/v0.15.2/
+
