@@ -8,12 +8,12 @@ proc ModulesHelp { } {
         puts stderr "\tgcc- Adds gaussian to your path"
 }
 
-module-whatis   "gaussian-16-vullevlab-sse4"
+module-whatis   "gaussian-16-vullevlab-avx2"
 
-module-forbid --not-group vullevlab --message "This software module is restricted to Prof. Vullev's lab." gaussian/16_vullevlab_SSE4
+module-forbid --not-group vullevlab --message "This software module is restricted to Prof. Vullev's lab." gaussian/16_vullevlab_AVX2
 
 set     hpcc_modules    $::env(HPCC_MODULES)
-set     g16root         /bigdata/vullevlab/shared/gaussian_sse4
+set     g16root         /bigdata/vullevlab/shared/gaussian_avx2
 set     gauss_exedir    ${g16root}/g16/bsd:${g16root}/g16
 set     gv_dir          ${g16root}/gv
 

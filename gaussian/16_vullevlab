@@ -65,6 +65,9 @@ if { [module-info mode load] } {
     puts    stdout  "ulimit -s hard"
     puts    stdout  "ulimit -t hard"
     puts    stdout  "ulimit -u hard"
+    puts    stderr  "This module has been replaced by gaussian/16_vullevlab_AVX2."
+    puts    stderr  "It will continue to work for now, but will be removed soon."
+    puts    stderr  "Please update your workflow accordingly."
 } elseif { [module-info mode unload] } {
     puts    stderr  "The gaussian module modified your session's ulimits. They can't be restored without making unsafe assumptions."
     puts    stderr  "If you were relying on ulimits to constrain your session, you should reapply those ulimits if necessary."
