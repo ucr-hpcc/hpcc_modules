@@ -8,13 +8,13 @@ proc ModulesHelp { } {
         puts stderr "\tgcc- Adds gaussian to your path"
 }
 
-module-whatis   "gaussian-16-vullevlab"
+module-whatis   "gaussian-16-vullevlab-sse4"
 
 module-forbid --not-group vullevlab --message "This software module is restricted to Prof. Vullev's lab." gaussian/16_vullevlab
 
 set     hpcc_modules    $::env(HPCC_MODULES)
 set     g16root         /bigdata/vullevlab/shared/gaussian
-set     gauss_exedir    ${g16root}/g16/bsd:${g16root}/g16
+set     gauss_exedir    ${g16root}/g16_sse4/bsd:${g16root}/g16_sse4
 set     gv_dir          ${g16root}/gv
 
 # Note: this is a translation of g16.profile to environment module
@@ -29,9 +29,9 @@ if { [getenv SCRATCH] == "" } {
 }
 
 setenv  GAUSS_EXEDIR    $gauss_exedir
-setenv  GAUSS_LEXEDIR   ${g16root}/g16/linda-exe
-setenv  GAUSS_ARCHDIR   ${g16root}/g16/arch
-setenv  GAUSS_BSDDIR    ${g16root}/g16/bsd
+setenv  GAUSS_LEXEDIR   ${g16root}/g16_sse4/linda-exe
+setenv  GAUSS_ARCHDIR   ${g16root}/g16_sse4/arch
+setenv  GAUSS_BSDDIR    ${g16root}/g16_sse4/bsd
 setenv  GV_DIR          ${g16root}/gv
 setenv  GAUSS_LFLAGS2   "--LindaOptions -s 10000000"
 
@@ -49,9 +49,9 @@ prepend-path    LD_LIBRARY64_PATH   $gauss_exedir
 append-path     LD_LIBRARY_PATH     ${gv_dir}/lib
 prepend-path    LD_LIBRARY_PATH     $gauss_exedir
 
-setenv  G16BASIS    ${g16root}/g16/basis
+setenv  G16BASIS    ${g16root}/g16_sse4/basis
 
-set-alias   sl  ${g16root}/g16/tests/searchlog.csh
+set-alias   sl  ${g16root}/g16_sse4/tests/searchlog.csh
 
 setenv  PGI_TERM    "trace,abort"
 
