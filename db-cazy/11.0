@@ -12,6 +12,6 @@ module-whatis	"db-cazy-11.0"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
-setenv      CAZY_FOLDER	/srv/projects/db/CAZY/CAZyDB/v11.0/db
-setenv      CAZY_DB	/srv/projects/db/CAZY/CAZyDB/v11.0/db/dbCAN.txt
+setenv      CAZY_FOLDER	/srv/projects/db/CAZY/CAZyDB/v11.0
+setenv      CAZY_DB	/srv/projects/db/CAZY/CAZyDB/v11.0/dbCAN.txt
 
