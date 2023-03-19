@@ -11,6 +11,7 @@ proc ModulesHelp { } {
 module-whatis	"run_dbcan-4.0"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
+module load miniconda3;
 
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module unload anaconda3 miniconda2; module load miniconda3; conda config --set env_prompt '(\$(echo -n {default_env} | perl -p -e \"s#.+pkgs/##\")) '; source activate ${hpcc_modules}/run_dbcan/4.0;"
