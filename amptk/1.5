@@ -18,5 +18,5 @@ module load fasttree
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo -n {default_env} |  perl -p -e \"s#.+pkgs/##\")); conda activate ${hpcc_modules}/amptk/1.5;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
-    puts stdout "conda deactivate;"
+    puts stdout "conda config --set env_prompt '({default_env}) '; conda deactivate;"
 }
