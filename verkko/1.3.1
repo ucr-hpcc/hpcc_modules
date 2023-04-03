@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## verkko modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tverkko - Adds verkko to your path"
+}
+
+module-whatis	"verkko-1.3.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Get user
+set      user            [module-info username]
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##\")) ';"
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/verkko/1.3.1;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda config --set env_prompt '({default_env}) ';"
+    puts stdout "conda deactivate;"
+}
