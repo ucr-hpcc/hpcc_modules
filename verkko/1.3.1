@@ -16,9 +16,7 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 set      user            [module-info username]
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##\")) ';"
-    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/verkko/1.3.1;"
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate ${hpcc_modules}/verkko/1.3.1;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
-    puts stdout "conda config --set env_prompt '({default_env}) ';"
-    puts stdout "conda deactivate;"
+    puts stdout "conda config --set env_prompt '({default_env}) '; conda deactivate;"
 }
