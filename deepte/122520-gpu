@@ -21,4 +21,4 @@ if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "conda config --set env_prompt '({default_env}) '; conda deactivate;"
 }
 
-set DEEPTE_DB /srv/projects/db/DeepTE
+setenv DEEPTE_DB /srv/projects/db/DeepTE
