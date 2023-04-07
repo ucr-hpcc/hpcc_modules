@@ -14,7 +14,7 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 
 # Load miniconda
 module load miniconda3
-
+module load cuda/11.7
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module load miniconda3; conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate ${hpcc_modules}/deepte/122520-gpu/env;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
