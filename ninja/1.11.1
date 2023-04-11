@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## ninja modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tninja - Adds ninja build tool to your path"
+}
+
+module-whatis	"ninja-1.11.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/ninja/1.11.1/bin
+
