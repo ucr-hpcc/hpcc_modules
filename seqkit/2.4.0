@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tseqkit- Adds seqkit to your path"
 }
 
-module-watis	"seqkit-2.4.0"
+module-whatis	"seqkit-2.4.0"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
