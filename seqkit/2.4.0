@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## seqkit modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tseqkit- Adds seqkit to your path"
+}
+
+module-watis	"seqkit-2.4.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/seqkit/2.4.0/bin
+
