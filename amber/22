@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## cutadapt modulefile
+#
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tamber - Adds amber to your path"
+}
+
+module-whatis	"amber-22"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load miniconda3
+
+# Amber has a shell script to set all the variables needed
+source /opt/linux/rocky/8.x/x86_64/pkgs/amber/amber22/amber.sh
+
+
