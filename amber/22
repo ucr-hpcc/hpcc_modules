@@ -15,9 +15,9 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 
 module load miniconda3
 
-prepend-path    AMBERHOME       ${hpcc_modules}/amber/amber22/
-prepend-path	PATH		$AMBERHOME
-prepend-path	LD_LIBRARY_PATH	$AMBERHOME/lib
-prepend-path	PERL5LIB	$AMBERHOME/lib/perl
-prepend-path	PYTHONPATH	$AMBERHOME/lib/python3.10/site-packages
-prepend-path	QUICK_BASIS	$AMBERHOME/AmberTools/src/quick/basis
+setenv		AMBERHOME       ${hpcc_modules}/amber/amber22/
+prepend-path	PATH		${AMBERHOME}
+prepend-path	LD_LIBRARY_PATH	${AMBERHOME}/lib
+prepend-path	PERL5LIB	${AMBERHOME}/lib/perl
+prepend-path	PYTHONPATH	${AMBERHOME}/lib/python3.10/site-packages
+prepend-path	QUICK_BASIS	${AMBERHOME}/AmberTools/src/quick/basis
