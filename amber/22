@@ -15,7 +15,9 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 
 module load miniconda3
 
-# Amber has a shell script to set all the variables needed
-source /opt/linux/rocky/8.x/x86_64/pkgs/amber/amber22/amber.sh
-
-
+prepend-path    AMBERHOME       ${hpcc_modules}/amber/amber22/
+prepend-path	PATH		$AMBERHOME
+prepend-path	LD_LIBRARY_PATH	$AMBERHOME/lib
+prepend-path	PERL5LIB	$AMBERHOME/lib/perl
+prepend-path	PYTHONPATH	$AMBERHOME/lib/python3.10/site-packages
+prepend-path	QUICK_BASIS	$AMBERHOME/AmberTools/src/quick/basis
