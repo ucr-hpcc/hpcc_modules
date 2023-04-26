@@ -17,7 +17,7 @@ module load miniconda3
 
 set		amber_home      ${hpcc_modules}/amber/amber22/
 prepend-path    AMBERHOME       ${amber_home}
-prepend-path	PATH		${amber_home}
+prepend-path	PATH		${amber_home}/bin
 prepend-path	LD_LIBRARY_PATH	${amber_home}/lib
 prepend-path	PERL5LIB	${amber_home}/lib/perl
 prepend-path	PYTHONPATH	${amber_home}/lib/python3.10/site-packages
