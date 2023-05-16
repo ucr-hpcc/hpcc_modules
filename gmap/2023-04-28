@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## gmap modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tgmap - Adds gmap,gsnap to your path"
+}
+
+module-whatis	"gmap-2023-04-28"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/gmap/2023-04-28/bin
+
