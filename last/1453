@@ -8,10 +8,10 @@ proc ModulesHelp { } {
         puts stderr "\tlast - Adds last to your path"
 }
 
-module-whatis	"last-1352"
+module-whatis	"last-1453"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
-prepend-path    PATH            ${hpcc_modules}/last/1352/build
-prepend-path    PATH            ${hpcc_modules}/last/1352/bin
+prepend-path    PATH            ${hpcc_modules}/last/1453/build
+prepend-path    PATH            ${hpcc_modules}/last/1453/bin
 
