@@ -56,9 +56,15 @@ md5sum -c interproscan-5.48-83.0-64-bit.tar.gz.md5
 mv interproscan-5.48-83.0 5.48-83.0
 ```
 
-# go into the folder and 
+# Create Symlinks in `bin` 
 Create symlinks to third-party binaries in the bin/ folder - usually these are symlinks to installs on our system
-Packages: SignalP, Phobius, TMHMM
+Packages: SignalP, TMHMM
+Use a previous version for reference
+
+
+# Create Symlinks in `data`
+Create symlinks to data in the `data/` folder.
+Packages: TMHMM
 Use a previous version for reference
 
 Need to also run this after downloading and unpacking to index databases
