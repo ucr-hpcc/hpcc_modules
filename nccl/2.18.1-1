@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## nccl modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds nccl to your path"
+}
+
+module-whatis   "nccl-2.18.1-1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    INCLUDE_PATH    ${hpcc_modules}/nccl/2.18.1-1/include
+prepend-path    LIBRARY_PATH    ${hpcc_modules}/nccl/2.18.1-1/lib
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/nccl/2.18.1-1/lib
