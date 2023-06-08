@@ -11,10 +11,10 @@ proc ModulesHelp { } {
 module-whatis	"AAFTF-0.4.1"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
-
 # Load miniconda
 module load miniconda3
 module load samtools
+module load singularity
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo -n {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate ${hpcc_modules}/AAFTF/0.4.0;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
