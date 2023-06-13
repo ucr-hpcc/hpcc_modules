@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## subread modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tsubread - Adds subread,featureCounts to your path"
+}
+
+module-whatis   "subread-2.0.6"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/subread/2.0.6/bin
+
