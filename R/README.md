@@ -8,10 +8,11 @@ srun -p batch --mem=20gb --cpus-per-task=10 --time=1-00:00:00 --pty bash -l
 
 Go to source directory, download R source and extract it:
 ```bash
-cd /opt/linux/centos/7.x/x86_64/src/R 
-wget https://cran.r-project.org/src/base/R-4/R-4.1.1.tar.gz
-tar -xf R-4.1.1.tar.gz
-cd R-4.1.1
+cd /opt/linux/centos/8.x/x86_64/src/r/R
+# cd /opt/linux/centos/7.x/x86_64/src/R 
+wget https://cran.r-project.org/src/base/R-4/R-4.3.0.tar.gz
+tar -xf R-4.3.0.tar.gz
+cd R-4.3.0
 ```
 
 Copy over previous install script, be sure to update the install path:
