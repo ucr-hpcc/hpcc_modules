@@ -6,7 +6,7 @@ Then access a compute node:
 srun -p batch --mem=20gb --cpus-per-task=10 --time=1-00:00:00 --pty bash -l
 ```
 
-Go to source directory, download R source and extract it:
+Go to source directory, download the source of the latest R release version from the CRAN site [here](https://cran.r-project.org/src/base/).
 ```bash
 cd /opt/linux/centos/8.x/x86_64/src/r/R
 # cd /opt/linux/centos/7.x/x86_64/src/R 
