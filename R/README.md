@@ -69,22 +69,20 @@ BiocManager::install(version = "3.17")
 Update all/some/none? [a/s/n]: a # Update all packages
 ```
 
-### Check Bioconductor version
+#### Check Bioconductor version
 ```r
 BiocManager::version() # This should return 3.17 for current release
 ```
 
-### Install Bioconductor core packages
+#### Install Bioconductor core packages
 ```r
 BiocManager::install(c("GenomicFeatures", "AnnotationDbi")) 
 ```
 
-### Install all previous packages you saved above under pkgs
+#### Install all previous packages you saved above under pkgs
 ```r
 pkgs <- readLines("/rhome/tgirke/pkgs_4.2.2")
 BiocManager::install(pkgs)
-w
-
 ```
 
 ### Packages
