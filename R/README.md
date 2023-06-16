@@ -86,6 +86,10 @@ missing <- pkgs[!pkgs %in% pkgs2] # Return names of packages that failed to inst
 BiocManager::install(missing) # Install those missing packages
 ```
 
+***
+ThG: upated until here. The following sections may need to be revised.
+***
+
 ### Packages
 #### Base
 Install all pckages that exist in previous version of R.
