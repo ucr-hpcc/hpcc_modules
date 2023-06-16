@@ -44,7 +44,7 @@ fi [[ $? -eq 0 ]]; then
 fi
 ```
 
-After R is installed copy the following code into a file called `$R_INSTALL_DIR/lib64/R/etc/Rprofile.site`:
+After R is installed copy the following code into a file called `/opt/linux/rocky/8.x/x86_64/pkgs/R/4.3.0/lib64/R/etc/Rprofile.site`:
 
 ```R
 local({
@@ -65,7 +65,7 @@ Install the latest compatible version of Bioconductor as pkgadmin and with the c
 From within R run the following:
 ```r
 install.packages("BiocManager")
-BiocManager::install(version = "3.14")
+BiocManager::install(version = "3.17")
 Update all/some/none? [a/s/n]: a # Update all packages
 ```
 
