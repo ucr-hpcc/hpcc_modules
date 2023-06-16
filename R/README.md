@@ -18,7 +18,7 @@ cd R-4.3.0
 Copy over previous install script, be sure to update the install path:
 ```bash
 cp ../R-4.2.2/hpcc_install.sh .
-vim hpcc_configure.sh
+vim hpcc_install.sh
 ## R_VER=4.3.0 ## Update the R version!
 ```
 The `hpcc_configure.sh` script should have simliar code as the following:
