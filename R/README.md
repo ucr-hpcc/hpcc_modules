@@ -92,7 +92,10 @@ writeLines(pkgs, "~/pkgs_4.2.2")
 q() 
 ```
 (2) Attempt to install new packages
-```r
+```
+module unload R
+module load R/4.3.0
+R
 pkgs <- readLines("~/pkgs_4.2.2") # change write location as needed
 BiocManager::install(pkgs)
 ```
