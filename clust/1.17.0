@@ -21,6 +21,6 @@ if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module load miniconda3; conda deactivate;"
 }
 
-# RStudio need PATH to be explicitly set
+# Path required by R and RStudio
 prepend-path    PATH    ${hpcc_modules}/clust/1.17.0/env/bin/
 
