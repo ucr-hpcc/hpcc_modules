@@ -75,7 +75,7 @@ pkgs <- rownames(installed.packages())
 writeLines(pkgs, "/rhome/tgirke/pkgs_4.2.2") 
 q() 
 ```
-(2) Run as pkgadmin
+(2) Run as pkgadmin from within new R version with modules from above loaded
 ```r
 pkgs <- readLines("/rhome/tgirke/pkgs_4.2.2")
 BiocManager::install(pkgs)
