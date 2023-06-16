@@ -101,7 +101,7 @@ q()
 pkgs <- readLines("/rhome/tgirke/pkgs_4.2.2")
 BiocManager::install(pkgs)
 ```
-(3) Often some packages my not install and need debugging. To find out which ones need extra work do:
+(3) Often some packages may not install and need debugging. To find out which ones need extra work do:
 ```r
 pkgs2 <- rownames(installed.packages())
 missing <- pkgs[!pkgs %in% pkgs2] # Return names of packages that failed to install
