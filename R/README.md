@@ -288,13 +288,7 @@ Modify paths in the following files:
 /etc/rstudio/profiles # Pro Version Only
 ```
 
-And lastly, and most important link the librarys to `lib64` since modifying `LD_LIBRARY_PATH` inside of RStudio server is not easily done:
-
-```
-ln -s /opt/linux/centos/7.x/x86_64/pkgs/R/4.0.3_gcc-8.3.0/lib64/R/lib/* /lib64/
-```
-
-Untested method, but it may be possible to just add paths like so:
+And lastly, update the librarys for inside of RStudio:
 
 ```bash
 sudo nano /etc/RStudio/rserver.conf
