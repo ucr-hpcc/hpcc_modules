@@ -80,9 +80,24 @@ BiocManager::install(c("GenomicFeatures", "AnnotationDbi"))
 ```
 
 #### Install all previous packages you saved above under pkgs
+(1) Run as user
+```r
+module load R/4.2.2 # To get list of old packages
+R
+pkgs <- rownames(installed.packages()) 
+writeLines(pkgs, "/rhome/tgirke/pkgs_4.2.2") 
+q() 
+```
+(2) Run as pkgadmin🚡
 ```r
 pkgs <- readLines("/rhome/tgirke/pkgs_4.2.2")
 BiocManager::install(pkgs)
+```
+(3) Often some packages my not install and need debugging. To find out which ones need extra work do:
+```r
+pkgs2 <- rownames(installed.packages())
+missing <- pkgs[!pkgs %in% pkgs2] # Return names of packages that failed to install
+BiocManager::install(missing) # Install those missing packages
 ```
 
 ### Packages
