@@ -21,7 +21,7 @@ cp ../R-4.2.2/hpcc_install.sh .
 vim hpcc_install.sh
 ## R_VER=4.3.0 ## Update the R version!
 ```
-The `hpcc_configure.sh` script should have simliar code as the following:
+The `hpcc_install.sh` script should have simliar code as the following:
 ```bash
 ./configure \
 --prefix /opt/linux/centos/7.x/x86_64/pkgs/R/4.1.1 \
