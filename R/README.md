@@ -4,6 +4,7 @@
 First, become pkgadmin (sudo or ssh keys). Then access a compute node.
 
 ```bash
+sudo su - pkgadmin
 srun --x11 --partition=girkelab --mem=20gb --cpus-per-task 1 --ntasks 10 --time 48:00:00 --pty bash -l # change partition as needed
 # -> assigned node was i04 on 15Jun2023  
 ```
@@ -53,6 +54,7 @@ Install the latest compatible version of Bioconductor as pkgadmin and with the c
 
 ```sh
 sudo su - pkgadmin
+srun -p batch --mem=20gb --cpus-per-task 1 --ntasks 10 --time 48:00:00 --pty bash -l # change partition as needed
 module purge
 module load java
 module load gcc/9.2.1
@@ -79,17 +81,19 @@ BiocManager::install(c("GenomicFeatures", "AnnotationDbi"))
 ```
 
 #### Install all packages from previous R version
-(1) Run as user
+Be sure to be logged in as `pkgadmin` with the srun session started under `pkgadmin` (required for proper environment setup)
+
+(1) Get existing packages
 ```r
 module load R/4.2.2 # To get list of old packages
 R
 pkgs <- rownames(installed.packages()) 
-writeLines(pkgs, "/rhome/tgirke/pkgs_4.2.2") 
+writeLines(pkgs, "~/pkgs_4.2.2") 
 q() 
 ```
-(2) Run as pkgadmin from within new R version with modules from above loaded
+(2) Attempt to install new packages
 ```r
-pkgs <- readLines("/rhome/tgirke/pkgs_4.2.2") # change write location as needed
+pkgs <- readLines("~/pkgs_4.2.2") # change write location as needed
 BiocManager::install(pkgs)
 ```
 (3) Often some packages may not install and need debugging. To find out which ones need extra work do:
@@ -103,41 +107,7 @@ BiocManager::install(missing) # Install those missing packages
 ThG: upated until here. The following sections may need to be revised.
 ***
 
-### Packages
-#### Base
-Install all pckages that exist in previous version of R.
-First, become pkgadmin (sudo or ssh keys).
-Then access compute node and run the following:
-```bash
-srun -p batch --mem=20gb --cpus-per-task=10 --time=1-00:00:00 --pty bash -l
 
-module load R/4.1.0_gcc-8.3.0 # To get list of old packages
-R
-```
-
-```r
-pkgs <- rownames(installed.packages())
-writeLines(pkgs, "/tmp/pkgs")
-q()
-```
-
-```bash
-module switch R/4.1.1_gcc-8.3.0
-R
-```
-
-```r
-pkgs <- readLines("/tmp/pkgs")
-BiocManager::install(pkgs) # will take some time...
-```
-
-Double check what is still missing and load/install dependencies to resolve issues:
-```r
-pkgs2 <- rownames(installed.packages())
-missing <- pkgs[!pkgs %in% pkgs2] # Return names of packages that failed to install
-BiocManager::install(missing) # Install those missing packages
-q()
-```
 Some packages may require additional RPMs to be installed or modules to load.
 Additionally, some packages may only exist from a GitHub repo and cannot be installed with the above method (ie. `RenvModule` and `RenvCheck` are here: `https://github.com/jdhayes/`).
 
