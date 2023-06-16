@@ -88,7 +88,7 @@ q()
 ```
 (2) Run as pkgadmin from within new R version with modules from above loaded
 ```r
-pkgs <- readLines("/rhome/tgirke/pkgs_4.2.2")
+pkgs <- readLines("/rhome/tgirke/pkgs_4.2.2") # change write location as needed
 BiocManager::install(pkgs)
 ```
 (3) Often some packages may not install and need debugging. To find out which ones need extra work do:
