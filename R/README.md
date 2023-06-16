@@ -35,7 +35,7 @@ local({
 
 This is used to set options to allow RStudio Server to plot graphs.
 
-### Add to module list
+### Add new R version to module list
 Following assumes that this [GitHub](https://github.com/ucr-hpcc/hpcc_modules) repos has been cloned to `$MyLoc` on the cluster.
 
 ```sh
