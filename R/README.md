@@ -65,7 +65,7 @@ Install the latest compatible version of Bioconductor as pkgadmin and with the c
 From within R run the following:
 ```r
 install.packages("BiocManager")
-BiocManager::install(version = "3.14")
+BiocManager::install(version = "3.17")
 Update all/some/none? [a/s/n]: a # Update all packages
 ```
 
