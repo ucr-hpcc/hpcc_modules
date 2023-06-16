@@ -8,17 +8,18 @@ srun -p batch --mem=20gb --cpus-per-task=10 --time=1-00:00:00 --pty bash -l
 
 Go to source directory, download R source and extract it:
 ```bash
-cd /opt/linux/centos/7.x/x86_64/src/R 
-wget https://cran.r-project.org/src/base/R-4/R-4.1.1.tar.gz
-tar -xf R-4.1.1.tar.gz
-cd R-4.1.1
+cd /opt/linux/centos/8.x/x86_64/src/r/R
+# cd /opt/linux/centos/7.x/x86_64/src/R 
+wget https://cran.r-project.org/src/base/R-4/R-4.3.0.tar.gz
+tar -xf R-4.3.0.tar.gz
+cd R-4.3.0
 ```
 
 Copy over previous install script, be sure to update the install path:
 ```bash
-cp ../R-4.1.0/hpcc_configure.sh .
-vim hpcc_configure.sh
-## R_VER=4.1.1 ## Update the R version!
+cp ../R-4.2.2/hpcc_install.sh .
+vim hpcc_install.sh
+## R_VER=4.3.0 ## Update the R version!
 ```
 The `hpcc_configure.sh` script should have simliar code as the following:
 ```bash
@@ -43,7 +44,7 @@ fi [[ $? -eq 0 ]]; then
 fi
 ```
 
-After R is installed copy the following code into a file called `$R_INSTALL_DIR/lib64/R/etc/Rprofile.site`:
+After R is installed copy the following code into a file called `/opt/linux/rocky/8.x/x86_64/pkgs/R/4.3.0/lib64/R/etc/Rprofile.site`:
 
 ```R
 local({
