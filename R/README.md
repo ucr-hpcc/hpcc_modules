@@ -1,9 +1,10 @@
 ## Install
 ### R
-First, become pkgadmin (sudo or ssh keys).
-Then access a compute node:
+
+First, become pkgadmin (sudo or ssh keys). Then access a compute node.
+
 ```bash
-srun -p batch --mem=20gb --cpus-per-task=10 --time=1-00:00:00 --pty bash -l
+srun --x11 --partition=girkelab --mem=20gb --cpus-per-task 1 --ntasks 10 --time 48:00:00 --pty bash -l
 ```
 
 Go to source directory, download the source of the latest R release version from the CRAN [here](https://cran.r-project.org/src/base/).
