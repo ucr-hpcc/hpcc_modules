@@ -58,7 +58,15 @@ local({
 This is used to set options to allow RStudio Server to plot graphs.
 
 ### Add to module list
-The next step is to create a new module file, like this [example](https://github.com/ucr-hpcc/hpcc_modules/blob/master/R/4.1.0_gcc-8.3.0), and push it to the GitHub Repo.
+Following assumes that this [GitHub](https://github.com/ucr-hpcc/hpcc_modules) repos has been cloned to `$MyLoc` on the cluster.
+
+```sh
+cd $MyLoc/hpcc_modules/R # ThG's MyLoc is MyLoc=~/bigdata/hpcc
+git pull
+cp 4.2.2 4.3.0
+vim 4.3.0 # change everything to 4.3.0 in this file
+git add 4.3.0; git commit -am "4.3.0"; git push
+```
 
 ### Bioconductor packages
 Install the latest compatible version of Bioconductor as pkgadmin and with the correct version of R via module load.
