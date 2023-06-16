@@ -65,7 +65,7 @@ BiocManager::version() # This should return 3.17 for current release
 BiocManager::install(c("GenomicFeatures", "AnnotationDbi")) 
 ```
 
-#### Install all previous packages you saved above under pkgs
+#### Install all packages from previous R version
 (1) Run as user
 ```r
 module load R/4.2.2 # To get list of old packages
