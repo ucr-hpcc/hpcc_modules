@@ -48,8 +48,19 @@ git add 4.3.0; git commit -am "4.3.0"; git push
 ```
 
 ### Bioconductor packages
-Install the latest compatible version of Bioconductor as pkgadmin and with the correct version of R via module load.
+Install the latest compatible version of Bioconductor as pkgadmin and with the correct version of R loaded.
+
+```sh
+sudo su - pkgadmin
+module purge
+module load java
+module load gcc/9.2.1
+module load R/4.3.0
+R
+```
+
 From within R run the following:
+
 ```r
 install.packages("BiocManager")
 BiocManager::install(version = "3.17")
