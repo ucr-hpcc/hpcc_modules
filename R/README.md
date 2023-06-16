@@ -15,11 +15,11 @@ tar -xf R-4.3.0.tar.gz
 cd R-4.3.0
 ```
 
-Copy over previous [hpcc_install.sh](https://github.com/ucr-hpcc/hpcc_modules/blob/main/R/hpcc_install.sh) script. In the below be sure to update the install path.
+Copy over previous [hpcc_install.sh](https://github.com/ucr-hpcc/hpcc_modules/blob/main/R/hpcc_install.sh) script and update the R version specified in the file. 
+
 ```bash
 cp ../R-4.2.2/hpcc_install.sh .
-vim hpcc_install.sh
-## R_VER=4.3.0 ## Update the R version!
+vim hpcc_install.sh # Update R version under R_VER=4.3.0!
 ```
 
 After R is installed copy the following code into a file called `/opt/linux/rocky/8.x/x86_64/pkgs/R/4.3.0/lib64/R/etc/Rprofile.site`:
