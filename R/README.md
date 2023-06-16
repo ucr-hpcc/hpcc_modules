@@ -57,7 +57,7 @@ local({
 
 This is used to set options to allow RStudio Server to plot graphs.
 
-## Add Module
+## Add to module list
 The next step is to create a new module file, like this [example](https://github.com/ucr-hpcc/hpcc_modules/blob/master/R/4.1.0_gcc-8.3.0), and push it to the GitHub Repo.
 
 ### Bioconductor
@@ -88,7 +88,7 @@ pkgs <- rownames(installed.packages())
 writeLines(pkgs, "/rhome/tgirke/pkgs_4.2.2") 
 q() 
 ```
-(2) Run as pkgadmin🚡
+(2) Run as pkgadmin
 ```r
 pkgs <- readLines("/rhome/tgirke/pkgs_4.2.2")
 BiocManager::install(pkgs)
