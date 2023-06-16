@@ -57,10 +57,10 @@ local({
 
 This is used to set options to allow RStudio Server to plot graphs.
 
-## Add to module list
+### Add to module list
 The next step is to create a new module file, like this [example](https://github.com/ucr-hpcc/hpcc_modules/blob/master/R/4.1.0_gcc-8.3.0), and push it to the GitHub Repo.
 
-### Bioconductor
+### Bioconductor packages
 Install the latest compatible version of Bioconductor as pkgadmin and with the correct version of R via module load.
 From within R run the following:
 ```r
