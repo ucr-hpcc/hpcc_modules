@@ -100,6 +100,9 @@ pkgs <- readLines("~/pkgs_4.2.2") # change write location as needed
 BiocManager::install(pkgs)
 ```
 (3) Often some packages may not install and need debugging. To find out which ones need extra work do:
+
+**NOTE:** Some packages will fail to install even after multiple attempts, this is somewhat expected as some packages require special attention. Install packages from the `Special Packages` section below, then circle back here.
+
 ```r
 pkgs2 <- rownames(installed.packages())
 missing <- pkgs[!pkgs %in% pkgs2] # Return names of packages that failed to install
@@ -110,9 +113,19 @@ BiocManager::install(missing) # Install those missing packages
 ThG: upated until here. The following sections may need to be revised.
 ***
 
+### Special Packages
 
 Some packages may require additional RPMs to be installed or modules to load.
 Additionally, some packages may only exist from a GitHub repo and cannot be installed with the above method (ie. `RenvModule` and `RenvCheck` are here: `https://github.com/jdhayes/`).
+
+#### av
+
+Download the latest version from Cran
+
+```sh
+wget https://ftp.osuosl.org/pub/cran/src/contrib/av_0.8.3.tar.gz
+R CMD INSTALL --configure-vars='INCLUDE_DIR=/opt/linux/rocky/8.x/x86_64/pkgs/ffmpeg/5.0/include LIB_DIR=/opt/linux/rocky/8.x/x86_64/pkgs/ffmpeg/5.0/lib' av_0.8.3.tar.gz
+```
 
 #### RenvModule
 
@@ -123,26 +136,11 @@ library(devtools)
 install_github("jdhayes/RenvModule")
 ```
 
-#### RGeos
-
-The package `RGeos` may requires the `geos` headers, which are installed under:
-
-```
-/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/include/
-```
-
-Loading the module should allow R to find the above path:
-
-```r
-module('load','geos/3.7.1')
-BiocManager::install('rgeos')
-```
-
 #### rJava
 Set paths in order to install `rJava` (ie. LD_LIBRARY_PATH=/path/to/libjvm.so):
 
 ```bash
-module load java/8
+module load java
 R CMD javareconf
 ```
 
@@ -151,12 +149,6 @@ BiocManager::install('rJava')
 ```
 
 #### RPostgreSQL
-
-Install additional header file `libpq-fe.h` for `RPostgreSQL` to install correctly:
-
-```bash
-yum install postgresql-devel
-```
 
 ```r
 install.packages("RPostgreSQL")
@@ -184,13 +176,14 @@ openbabel-lib=/opt/linux/centos/7.x/x86_64/pkgs/openbabel/2.3.2/lib' ChemmineOB_
 Download latest Rmpi version using wget. Make sure you have the proper R version loaded and then run the following:
 
 ```bash
-wget https://cran.r-project.org/src/contrib/Rmpi_0.6-9.tar.gz```
+wget https://cran.r-project.org/src/contrib/Rmpi_0.6-9.tar.gz
 ```
 
 Then install it like so:
 
 ```bash
-R CMD INSTALL Rmpi_0.6-9.tar.gz --configure-args=--with-mpi=/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/
+module load openmpi
+R CMD INSTALL Rmpi_0.6-9.tar.gz --configure-args='--with-mpi=/opt/linux/rocky/8.x/x86_64/pkgs/openmpi/4.1.2_slurm-23.02.2_mpi1-compat'
 ```
 
 #### Install ChipSeek
@@ -237,8 +230,8 @@ install.packages('SpatialEpi')
 sudo yum install mpfr-devel
 ```
 
-```
-install.packages(Rmpfr)
+```r
+install.packages("Rmpfr")
 ```
 
 #### Install clusterSim
@@ -248,7 +241,7 @@ sudo yum install mesa-libGLU-devel
 ```
 
 ```r
-install.packages(clusterSim)
+install.packages("clusterSim")
 ```
 
 #### Misc Packages
@@ -265,8 +258,8 @@ install_github("duncantl/RGoogleDocs")
 install_github("jalvesaq/VimCom")
 install_github("cran/setwidth")
 install_github("jalvesaq/colorout")
-install_github("cran/Geneland")
-install_github('Sage-Bionetworks/rSynapseClient', ref='develop')
+#install_github("cran/Geneland")
+#install_github('Sage-Bionetworks/rSynapseClient', ref='develop')
 ```
 
 __Direct URL__
