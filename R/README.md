@@ -166,9 +166,8 @@ Then access a compute node and run the following:
 srun --p batch --mem=10gb --ntasks=10 --time=1-00:00:00 --pty bash -l
 
 module load openbabel
-wget www.bioconductor.org/packages/release/bioc/src/contrib/ChemmineOB_1.16.0.tar.gz
-R CMD INSTALL --configure-args='--with-openbabel-include=/opt/linux/centos/7.x/x86_64/pkgs/openbabel/2.3.2/include/openbabel-2.0 --with-
-openbabel-lib=/opt/linux/centos/7.x/x86_64/pkgs/openbabel/2.3.2/lib' ChemmineOB_1.16.0.tar.gz
+wget https://bioconductor.org/packages/release/bioc/src/contrib/ChemmineOB_1.38.0.tar.gz
+R CMD INSTALL --configure-args='--with-openbabel-include=/opt/linux/centos/8.x/x86_64/pkgs/openbabel/3.1.1/include/openbabel3 --with-openbabel-lib=/opt/linux/centos/8.x/x86_64/pkgs/openbabel/3.1.1/lib/openbabel/3.1.0/' ChemmineOB_1.38.0.tar.gz
 ```
 
 #### Install Rmpi
