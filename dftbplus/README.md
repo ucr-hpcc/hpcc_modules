@@ -13,9 +13,7 @@ tar xvf dftbplus-22.2.tar.xz
 
 ```
 module purge
-module load openmpi
-module load oneapi
-module load compiler
+module load mpich slurm
 
 cd dftbplus-22.2
 ```
@@ -35,18 +33,8 @@ vim config.cmake
 
 ### Configure
 
-It is probably wise to install both the Intel and GNU toolchain, for more optimization potential when available.
-
-#### Intel Specific Config
-
 ```
-FC=mpiifort cmake -DSCALAPACK_LIBRARY=/opt/linux/rocky/8.x/x86_64/pkgs/scalapack/2.2.0_mpiifort/lib/libscalapack.a -DCMAKE_INSTALL_PREFIX=$HPCC_MODULES/dftbplus/22.2_intel -DTOOLCHAIN=intel -B _build .
-```
-
-#### GNU Specific Config
-
-```
-FC=mpiifort cmake -DSCALAPACK_LIBRARY=/opt/linux/rocky/8.x/x86_64/pkgs/scalapack/2.2.0_mpiifort/lib/libscalapack.a -DCMAKE_INSTALL_PREFIX=$HPCC_MODULES/dftbplus/22.2 -DTOOLCHAIN=gnu -B _build .
+FC=mpifort cmake -DSCALAPACK_LIBRARY=/opt/linux/rocky/8.x/x86_64/pkgs/scalapack/2.2.0_gcc-9.2.1/lib/libscalapack.a -DCMAKE_INSTALL_PREFIX=$HPCC_MODULES/dftbplus/22.2 -DTOOLCHAIN=gnu -B _build .
 ```
 
 ### Build
