@@ -109,23 +109,10 @@ missing <- pkgs[!pkgs %in% pkgs2] # Return names of packages that failed to inst
 BiocManager::install(missing) # Install those missing packages
 ```
 
-***
-ThG: upated until here. The following sections may need to be revised.
-***
-
 ### Special Packages
 
 Some packages may require additional RPMs to be installed or modules to load.
 Additionally, some packages may only exist from a GitHub repo and cannot be installed with the above method (ie. `RenvModule` and `RenvCheck` are here: `https://github.com/jdhayes/`).
-
-#### av
-
-Download the latest version from Cran
-
-```sh
-wget https://ftp.osuosl.org/pub/cran/src/contrib/av_0.8.3.tar.gz
-R CMD INSTALL --configure-vars='INCLUDE_DIR=/opt/linux/rocky/8.x/x86_64/pkgs/ffmpeg/5.0/include LIB_DIR=/opt/linux/rocky/8.x/x86_64/pkgs/ffmpeg/5.0/lib' av_0.8.3.tar.gz
-```
 
 #### RenvModule
 
@@ -244,6 +231,15 @@ sudo yum install mesa-libGLU-devel
 install.packages("clusterSim")
 ```
 
+#### av
+
+Download the latest version from Cran
+
+```sh
+wget https://ftp.osuosl.org/pub/cran/src/contrib/av_0.8.3.tar.gz
+R CMD INSTALL --configure-vars='INCLUDE_DIR=/opt/linux/rocky/8.x/x86_64/pkgs/ffmpeg/5.0/include LIB_DIR=/opt/linux/rocky/8.x/x86_64/pkgs/ffmpeg/5.0/lib' av_0.8.3.tar.gz
+```
+
 #### Misc Packages
 
 __GitHub__
@@ -268,13 +264,6 @@ __Direct URL__
 install.packages("http://hartleys.github.io/QoRTs/QoRTs_LATEST.tar.gz",repos=NULL,type="source")
 ```
 
-__Bioconductor__
-
-```
-BiocManager::install("tgirke/longevityDrugs", build_vignettes=FALSE, dependencies=FALSE)
-BiocManager::install("tgirke/longevityTools", build_vignettes=FALSE, dependencies=FALSE)
-```
-
 ### Upgrading R in RStudio Server
 
 Modify paths in the following files:
@@ -284,7 +273,7 @@ Modify paths in the following files:
 /etc/rstudio/profiles # Pro Version Only
 ```
 
-And lastly, update the librarys for inside of RStudio:
+And lastly, update the libraries for inside of RStudio:
 
 ```bash
 sudo nano /etc/RStudio/rserver.conf
