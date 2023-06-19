@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## lastz modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tlastz - Adds lastz to your path"
+}
+
+module-whatis	"lastz-1.04.22"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/lastz/1.04.22/bin
+prepend-path    PATH            ${hpcc_modules}/lastz/1.04.22/tools
+
