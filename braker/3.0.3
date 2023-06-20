@@ -18,5 +18,5 @@ if { [module-info mode load] || [module-info mode switch2] } {
 	puts stdout "module unload anaconda3 miniconda2; module load miniconda3; conda config --set env_prompt '({default_env}) '; conda deactivate;"
 }
 
-prepend-path	PATH	${hpcc_modules}/braker/3.0.3/ProtHint-2.6.0/bin
-
+prepend-path	PATH	${hpcc_modules}/braker/3.0.3/ProtHint-2.6.0/bin:${hpcc_modules}/genemarkESET/4.71_lic
+setenv          GENEMARK_PATH   ${hpcc_modules}/genemarkESET/4.71_lic
