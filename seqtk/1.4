@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## seqtk modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tseqtk - Adds seqtk to your path"
+}
+
+module-whatis	"seqtk-1.4"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH    ${hpcc_modules}/seqtk/1.4/bin
+
