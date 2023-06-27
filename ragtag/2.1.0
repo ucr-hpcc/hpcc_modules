@@ -16,9 +16,9 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 module load miniconda3
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/ragtag/2.1.0;"
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo -n {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate ${hpcc_modules}/ragtag/2.1.0;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
-    puts stdout "conda deactivate;"
+    puts stdout "conda config --set env_prompt '({default_env}) '; conda deactivate;"
 }
 
 module load unimap
