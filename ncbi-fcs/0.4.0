@@ -8,15 +8,15 @@ proc ModulesHelp { } {
         puts stderr "\tncbi-fcs - Adds ncbi-fcs and fcs-gcs for genome assembly contamination and vector screening to your path"
 }
 
-module-whatis	"ncbi-fcs-4.0"
+module-whatis	"ncbi-fcs-0.4.0"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
 module load singularity
 
-setenv FCS_DEFAULT_IMAGE=${hpcc_modules}/ncbi-fcs/4.0/img/fcs-gx.sif
-setenv FCS_VEC_IMAGE=${hpcc_modules}/ncbi-fcs/4.0/img/fcs-singularity.sif
-setenv FCS_GCX_DB=/srv/projects/db/ncbi-fcs/4.0/gcx-all
+setenv FCS_DEFAULT_IMAGE=${hpcc_modules}/ncbi-fcs/0.4.0/img/fcs-gx.sif
+setenv FCS_VEC_IMAGE=${hpcc_modules}/ncbi-fcs/0.4.0/img/fcs-singularity.sif
+setenv FCS_GCX_DB=/srv/projects/db/ncbi-fcs/0.4.0/gxdb
 
-prepend-path    PATH            ${hpcc_modules}/ncbi-fcs/4.0/bin
+prepend-path    PATH            ${hpcc_modules}/ncbi-fcs/0.4.0/bin
 
