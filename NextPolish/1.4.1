@@ -1,0 +1,15 @@
+#%Module1.0#####################################################################
+##
+## NextPolish modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tNextPolish - Adds nextPolish to your path"
+}
+
+module-whatis	"NextPolish-1.4.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/NextPolish/1.4.0:${hpcc_modules}/NextPolish/1.4.0/bin
