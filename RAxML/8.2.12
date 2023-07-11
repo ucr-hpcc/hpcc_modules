@@ -9,6 +9,7 @@ proc ModulesHelp { } {
 }
 
 module-whatis	"RAxML-8.2.12"
+module-info alias raxml
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
