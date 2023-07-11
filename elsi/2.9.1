@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## ELSI modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds ELSI to your path"
+}
+
+module-whatis   "ELSI-2.9.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Setup PATHs
+prepend-path    CPATH           ${hpcc_modules}/elsi/2.9.1/include
+prepend-path    LIBRARY_PATH    ${hpcc_modules}/elsi/2.9.1/lib
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/elsi/2.9.1/lib
+
