@@ -16,7 +16,7 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 set      user            [module-info username]
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda config --set env_prompt '((echo {default_env} | perl -p -e \"s#.+pkgs/##; s#/env##;\")) ';conda activate ${hpcc_modules}/veba/1.0.0/envs/VEBA-cluster_env;"
+    puts stdout "module load miniconda3; conda config --set env_prompt '($(echo {default_env} | perl -p -e \"s#.+pkgs/##; s#/env##;\")) ';conda activate ${hpcc_modules}/veba/1.0.0/envs/VEBA-cluster_env;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
