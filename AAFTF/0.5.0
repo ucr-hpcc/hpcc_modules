@@ -20,7 +20,7 @@ module load NextPolish
 module load singularity
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo -n {default_env} |  perl -p -e \"s/${hpcc_modules}//; s/\/?env(s)?//;\")) '; conda activate ${hpcc_modules}/AAFTF/0.5.0;"
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/AAFTF/0.5.0;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
 	puts stdout "module unload anaconda3 miniconda2; module load miniconda3; conda config --set env_prompt '({default_env}) '; conda deactivate;"
 }
