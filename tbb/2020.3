@@ -20,7 +20,7 @@ setenv	TBB_ROOT	${hpcc_modules}/tbb/2020.3/tbb
 setenv  TBB_INCLUDE ${hpcc_modules}/tbb/2020.3/tbb/include
 setenv  TBB_LIBRARY ${hpcc_modules}/tbb/2020.3/tbb/lib
 
-prepend-path	PKG_CONFIG_PATH	${hpcc_modules}/tbb/2020.3/lib:${hpcc_modules}/tbb/2020.3/tbb/lib/pkgconfig
-prepend-path	CPATH		${hpcc_modules}/tbb/2020.3/lib:${hpcc_modules}/tbb/2020.3/tbb/include
+#prepend-path	PKG_CONFIG_PATH	${hpcc_modules}/tbb/2020.3/tbb/lib:${hpcc_modules}/tbb/2020.3/tbb/lib/pkgconfig
+prepend-path	CPATH		${hpcc_modules}/tbb/2020.3/tbb/lib/intel64/gcc4.8:${hpcc_modules}/tbb/2020.3/tbb/include
 prepend-path	LD_LIBRARY_PATH	   ${hpcc_modules}/tbb/2020.3/tbb/lib:${hpcc_modules}/tbb/2020.3/tbb/lib/intel64/gcc4.8
 prepend-path	LIBRARY_PATH	   ${hpcc_modules}/tbb/2020.3/tbb/lib:${hpcc_modules}/tbb/2020.3/tbb/lib/intel64/gcc4.8
