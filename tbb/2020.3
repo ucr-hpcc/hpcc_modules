@@ -12,12 +12,15 @@ module-whatis	"tbb-2020.3"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
-setenv	TBB_PATH_LIB	${hpcc_modules}/tbb/2020.3/tbb/lib/intel64/gcc4.8
+setenv	TBB_PATH_LIB	${hpcc_modules}/tbb/2020.3/tbb/lib
 setenv	TBB_PATH_INCLUDES	${hpcc_modules}/tbb/2020.3/tbb/include
 setenv	TBB_INCLUDE_DIRS	${hpcc_modules}/tbb/2020.3/tbb/include:${hpcc_modules}/tbb/2020.3/pstl/include
 setenv	TBBROOT	${hpcc_modules}/tbb/2020.3/tbb
+setenv	TBB_ROOT	${hpcc_modules}/tbb/2020.3/tbb
+setenv  TBB_INCLUDE ${hpcc_modules}/tbb/2020.3/tbb/include
+setenv  TBB_LIBRARY ${hpcc_modules}/tbb/2020.3/tbb/lib
 
 prepend-path	PKG_CONFIG_PATH	${hpcc_modules}/tbb/2020.3/lib:${hpcc_modules}/tbb/2020.3/tbb/lib/pkgconfig
 prepend-path	CPATH		${hpcc_modules}/tbb/2020.3/lib:${hpcc_modules}/tbb/2020.3/tbb/include
-prepend-path	LD_LIBRARY_PATH	   ${hpcc_modules}/tbb/2020.3/tbb/lib/intel64/gcc4.8
-prepend-path	LIBRARY_PATH	   ${hpcc_modules}/tbb/2020.3/tbb/lib/intel64/gcc4.8
+prepend-path	LD_LIBRARY_PATH	   ${hpcc_modules}/tbb/2020.3/tbb/lib:${hpcc_modules}/tbb/2020.3/tbb/lib/intel64/gcc4.8
+prepend-path	LIBRARY_PATH	   ${hpcc_modules}/tbb/2020.3/tbb/lib:${hpcc_modules}/tbb/2020.3/tbb/lib/intel64/gcc4.8
