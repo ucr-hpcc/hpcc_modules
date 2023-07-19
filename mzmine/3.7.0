@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## mzmine modulefile
+#
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tmzmine - Adds mzmine to your path"
+}
+
+module-whatis	"mzmine-3.7.0"
+
+module load java
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/mzmine/3.7.0/bin
