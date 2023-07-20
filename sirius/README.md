@@ -1,2 +1,1 @@
-installed via conda (conda-forge) as 
-conda create -p ... -c conda-forge sirius-ms
+Installed from linux package https://github.com/boecker-lab/sirius - depends on java

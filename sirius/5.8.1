@@ -12,9 +12,8 @@ proc ModulesHelp { } {
 module-whatis	"sirius-5.8.1"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
-if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate ${hpcc_modules}/sirius/5.8.1;"
-} elseif { [module-info mode remove] && ![module-info mode switch3] } {
-    puts stdout "conda config --set env_prompt '({default_env}) '; conda deactivate;"
-}
+module load java
+
+prepend-path    PATH            ${hpcc_modules}/sirius/5.8.1/bin
+
 
