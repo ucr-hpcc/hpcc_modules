@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## IBM ILOG CPLEX Optimization Studio modulefile
+#
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tcplex-studio - Adds IBM cplex studio tools to your path"
+}
+
+module-whatis	"cplex-studio-22.1.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/cplex-studio/22.1.1/cplex/bin:${hpcc_modules}/cplex-studio/22.1.1/cpoptimizer/bin
+prepend-path    PATH            ${hpcc_modules}/cplex-studio/22.1.1/opl/bin
+
+setenv	CPLEX_HOME ${hpcc_modules}/cplex-studio/22.1.1
+
