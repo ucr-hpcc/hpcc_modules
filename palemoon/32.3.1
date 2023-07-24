@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## palemoon modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tpalemoon - Adds palemoon to your path"
+}
+
+module-whatis	"palemoon-32.3.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/palemoon/32.3.1
+
