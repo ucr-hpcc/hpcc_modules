@@ -15,8 +15,8 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 # Load miniconda
 module load miniconda3
 #module load samtools
-module load masurca
-module load NextPolish
+#module load masurca
+#module load NextPolish
 module load singularity
 
 if { [module-info mode load] || [module-info mode switch2] } {
