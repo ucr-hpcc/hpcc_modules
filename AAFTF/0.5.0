@@ -14,7 +14,7 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 
 # Load miniconda
 module load miniconda3
-module load samtools
+#module load samtools
 module load masurca
 module load NextPolish
 module load singularity
