@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## DFTB+ modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds DFTB+ to your path"
+}
+
+module-whatis   "DFTBplus-23.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/dftbplus/23.1/bin
+prepend-path    C_INCLUDE_PATH  ${hpcc_modules}/dftbplus/23.1/include
+prepend-path    CPLUS_INCLUDE_PATH ${hpcc_modules}/dftbplus/23.1/include
+prepend-path    LIBRARY_PATH    ${hpcc_modules}/dftbplus/23.1/lib64
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/dftbplus/23.1/lib64
+
