@@ -13,7 +13,8 @@ module load slurm/23.02.2
 vim config.cmake # Set WITH_MPI to TRUE and (optionally) TEST_MPI_PROCS and TEST_OMP_THREADS to 2
 FC=mpifort CC=mpicc cmake -DCMAKE_PREFIX_PATH="/opt/linux/rocky/8.x/x86_64/pkgs/scalapack/2.2.0" -DCMAKE_INSTALL_PREFIX=$HPCC_MODULES/dftbplus/23.1 -B _build .
 cmake --build _build -- -j $(nproc)
-cd _build
+pushd _build
 ctest -j4
+popd
 cmake --install _build
 ```
