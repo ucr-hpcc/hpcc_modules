@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## metaphor modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tmetaphor - Adds metaphor to your path"
+}
+
+module-whatis	"metaphor-1.7.7"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo -n {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate ${hpcc_modules}/metaphor/1.7.7;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda config --set env_prompt '({default_env}) '; conda deactivate;"
+}
+
