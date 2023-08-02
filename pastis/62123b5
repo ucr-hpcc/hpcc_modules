@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## pastis modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tpastis- Adds pastis to your path"
+}
+
+module-whatis	"pastis-62123b5"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load mpich
+prepend-path    PATH            ${hpcc_modules}/pastis/62123b5/bin
+
