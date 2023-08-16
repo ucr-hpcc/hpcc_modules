@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## veryfasttree modulefile
+#
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tverfasttree - Adds VeryFastTree to your path"
+}
+
+module-whatis	"veryfasttree-4.0.2"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/veryfasttree/4.0.2/bin
+
