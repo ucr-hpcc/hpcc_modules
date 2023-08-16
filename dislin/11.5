@@ -1,0 +1,28 @@
+#%Module1.0#####################################################################
+##
+## DISLIN modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds DISLIN to your path"
+}
+
+module-whatis   "DISLIN-11.5"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/dislin/11.5/bin
+prepend-path    LIBRARY_PATH    ${hpcc_modules}/dislin/11.5/
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/dislin/11.5/:${hpcc_modules}/dislin/11.5/tcl
+
+# Language Specific
+prepend-path    PERL5LIB        ${hpcc_modules}/dislin/11.5/perl
+prepend-path    PYTHONPATH      ${hpcc_modules}/dislin/11.5/python
+prepend-path    CLASSPATH       ${hpcc_modules}/dislin/11.5/java
+prepend-path    RUBYLIB         ${hpcc_modules}/dislin/11.5/ruby
+prepend-path    JULIA_LOAD_PATH ${hpcc_modules}/dislin/11.5/julia
+prepend-path    GOPATH          ${hpcc_modules}/dislin/11.5/go
+setenv          GCO_LDGLAGS     -L${hpcc_modules}/dislin/11.5
+
