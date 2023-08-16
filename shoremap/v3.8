@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## SHOREmap modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds SHOREmap to your path"
+}
+
+module-whatis   "SHOREmap-v3.8"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load dislin
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/shoremap/v3.8/
+
