@@ -5,7 +5,7 @@
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\tfasttree - Adds fasttree to your path"
+        puts stderr "\tfasttree - Adds FastTree and FastTreeMP to your path"
 }
 
 module-whatis	"fasttree-2.1.11"
