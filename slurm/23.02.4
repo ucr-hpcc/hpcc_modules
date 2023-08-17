@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## SLURM modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds SLURM to your path"
+}
+
+module-whatis   "slurm-23.02.4"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/slurm/23.02.4/bin:${hpcc_modules}/slurm/23.02.4/sbin
+prepend-path    MANPATH         ${hpcc_modules}/slurm/23.02.4/share/man
+prepend-path    C_INCLUDE_PATH  ${hpcc_modules}/slurm/23.02.4/include
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/slurm/23.02.4/lib
+
+# Slurm 20.11+ switched to steps being "--exclusive", srun waits for new resources.
+# To allow srun to use current allocation set overlap.
+setenv          SLURM_OVERLAP    1
+
