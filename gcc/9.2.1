@@ -10,10 +10,19 @@ proc ModulesHelp { } {
 
 module-whatis	"gcc-9.2.1"
 
-#source-sh /opt/rh/gcc-toolset-9/enable bash
-if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "source /opt/rh/gcc-toolset-9/enable;"
-} elseif { [module-info mode remove] && ![module-info mode switch3] } {
-    puts stdout "echo 'Cannot Unload gcc';"
-}
+set   hpcc_modules  $::env(HPCC_MODULES)
+
+prepend-path  INFOPATH  /opt/rh/gcc-toolset-9/root/usr/share/info
+prepend-path  MANPATH   /opt/rh/gcc-toolset-9/root/usr/share/man
+prepend-path  PATH      /opt/rh/gcc-toolset-9/root/usr/bin
+setenv        PCP_DIR   /opt/rh/gcc-toolset-9/root
+prepend-path  LD_LIBRARY_PATH /opt/rh/gcc-toolset-9/root/usr/lib64:/opt/rh/gcc-toolset-9/root/usr/lib64/lib:/opt/rh/gcc-toolset-9/root/usr/lib64/dyninst
+prepend-path  PKG_CONFIG_PATH /opt/rh/gcc-toolset-9/root/usr/lib64/pkgconfig
+
+##source-sh /opt/rh/gcc-toolset-9/enable bash    
+#if { [module-info mode load] || [module-info mode switch2] } {    
+#    puts stdout "source /opt/rh/gcc-toolset-9/enable;"    
+#} elseif { [module-info mode remove] && ![module-info mode switch3] } {    
+#    puts stdout "echo 'Cannot Unload gcc';"    
+#}
 
