@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## nf-core modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tnf-core - Adds nf-core tools to your path"
+}
+
+module-whatis	"nf-core-2.9"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load nextflow
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate ${hpcc_modules}/nf-core/2.9;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda config --set env_prompt '({default_env}) '; conda deactivate;"
+}
