@@ -1,2 +1,2 @@
 #%Module3.2.9#################################################
-set     ModulesVersion     "4.0.1_gcc-9.2.1"
+set     ModulesVersion     "4.0.1_gcc-9.2.1_slurm23"
