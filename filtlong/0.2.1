@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## filtlong modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tfiltlong- Adds filtlong to your path"
+}
+
+module-whatis	"filtlong-0.2.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/filtlong/0.2.1/bin:${hpcc_modules}/filtlong/0.2.1/scripts
+
