@@ -254,6 +254,7 @@ install_github("duncantl/RGoogleDocs")
 install_github("jalvesaq/VimCom")
 install_github("cran/setwidth")
 install_github("jalvesaq/colorout")
+install_github("gabrielrvsc/BooST")
 #install_github("cran/Geneland")
 #install_github('Sage-Bionetworks/rSynapseClient', ref='develop')
 ```
