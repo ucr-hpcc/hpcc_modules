@@ -12,6 +12,7 @@ module-whatis   "MetaHipMer-v2.1.0.2"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
+module load upc++/2023.3.0-gpu
 module load cuda/12.1
 
 # Setup PATHs
