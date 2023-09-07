@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## ncbi-rmblast modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tncbi-rmblast - Adds ncbi-rmblast to your path"
+}
+
+module-whatis	"ncbi-rmblast-2.14.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path PATH ${hpcc_modules}/ncbi-rmblast/2.14.0/bin
+
