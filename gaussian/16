@@ -22,7 +22,7 @@ set shell [module-info shell]
 
 if { [module-info mode load] || [module-info mode switch2] } {
     if { $shell == "bash" } {
-        puts stdout "PATH=${hpcc_modules}/gaussian/16/${vreg}:\$PATH; source ${hpcc_modules}/gaussian/16/${vreg}/bsd/g16.profile;"
+        puts stdout "PATH=${hpcc_modules}/gaussian/16/${vreg}:\$PATH; source ${hpcc_modules}/gaussian/16/${vreg}/bsd/g16.profile; GAUSS_EXEDIR=${hpcc_modules}/gaussian/16/${vreg};"
     }
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
         puts stdout ""
