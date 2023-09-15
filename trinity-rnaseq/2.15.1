@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\ttrinity-rnaseq - Adds trinity-rnaseq to your path"
 }
 
-module-whatis	"trinity-rnaseq-2.14.0"
+module-whatis	"trinity-rnaseq-2.15.1"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
@@ -19,9 +19,9 @@ module load bowtie2
 module load salmon
 module load java
 
-prepend-path    PATH            ${hpcc_modules}/trinity-rnaseq/2.14.0
-prepend-path    PATH            ${hpcc_modules}/trinity-rnaseq/2.14.0/util
-prepend-path    PATH            ${hpcc_modules}/trinity-rnaseq/2.14.0/util/misc
-setenv          TRINITY_HOME    ${hpcc_modules}/trinity-rnaseq/2.14.0
-setenv          TRINITYHOME     ${hpcc_modules}/trinity-rnaseq/2.14.0
+prepend-path    PATH            ${hpcc_modules}/trinity-rnaseq/2.15.1
+prepend-path    PATH            ${hpcc_modules}/trinity-rnaseq/2.15.1/util
+prepend-path    PATH            ${hpcc_modules}/trinity-rnaseq/2.15.1/util/misc
+setenv          TRINITY_HOME    ${hpcc_modules}/trinity-rnaseq/2.15.1
+setenv          TRINITYHOME     ${hpcc_modules}/trinity-rnaseq/2.15.1
 
