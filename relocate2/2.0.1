@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## relocate2 modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\trelocate2- Adds relocate to your path"
+}
+
+module-whatis	"relocate2-2.0.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Load miniconda
+module load miniconda3
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/relocate2/2.0.1;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
