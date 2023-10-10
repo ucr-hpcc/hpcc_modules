@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## bclconvert modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tbclconvert - Adds bclconvert to your path"
+}
+
+module-whatis	"bclconvert-4.1.7"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH   		${hpcc_modules}/bclconvert/4.1.7/bin
+
