@@ -18,6 +18,7 @@ prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/matlab/R2021b/bin/glnxa64
 prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/matlab/R2021b/extern/bin/glnxa64
 prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/matlab/R2021b/sys/os/glnxa64
 setenv          LM_LICENSE_FILE   "27000@matlab"
+setenv          MLM_LICENSE_FILE  "27000@matlab"
 
 # Adds parallel cluster integration scripts
 append-path     PATH              ${hpcc_modules}/matlab/support_pkgs/matlab_parallel_server/bin
