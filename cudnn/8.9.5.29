@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## cuDNN modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tcuDNN - Adds cuda cuDNN 6 to your path"
+}
+
+module-whatis	"cuDNN-8.9.5.29"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+set      modules_dir     $::env(MODULES_DIR)
+
+# for Tcl script use only
+set	version		8.9.5.29
+set	prefix		${modules_dir}/${version}
+set	exec_prefix	${prefix}
+set	datarootdir	${prefix}/share
+
+prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/cudnn/8.9.5.29/lib
+
