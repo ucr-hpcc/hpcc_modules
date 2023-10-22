@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tsignalp- Adds signalp to your path"
 }
 
-module-whatis	"signalp-6.0g-gpu"
+module-whatis	"signalp-6.0h-gpu"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
@@ -16,7 +16,7 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 module load miniconda3
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/signalp/6.0g-gpu/env;"
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/signalp/6.0h-gpu/env;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
