@@ -16,7 +16,7 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 module load miniconda3
 
 if { [module-info mode load] || [module-info mode switch2] } {
- puts stdout "module load miniconda3;  conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##; s#/envs##\")) ' conda activate ${hpcc_modules}/signalp/6.0g-gpu/env;"
+ puts stdout "module load miniconda3;  conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##; s#/envs##\")) '; conda activate ${hpcc_modules}/signalp/6.0g-gpu/env;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
