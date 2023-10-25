@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## edta modulefile
+#
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tedta - Adds EDTA.pl for LTR and TE annotation to your path"
+}
+
+module-whatis	"edta-2.1.0-fix"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load slurm-drmaa
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo -n {default_env} | perl -p -e \"s#.+pkgs/##; s#/env##\")) '; conda activate ${hpcc_modules}/edta/2.1.0-fix;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+prepend-path    PATH	${hpcc_modules}/edta/2.1.0-fix/EDTA
