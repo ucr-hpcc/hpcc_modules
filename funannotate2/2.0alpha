@@ -1,0 +1,39 @@
+#%Module1.0#####################################################################
+##
+## funannotate modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tfunannotate - Adds funannotate to your path"
+}
+
+module-whatis	"funannotate2-2.0alpha"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Get user
+set      user            [module-info username]
+
+module load phobius
+# Create symlink for genemark key file
+if { [module-info mode load] || [module-info mode switch2] } {
+    if { ![file exists /rhome/${user}/.gm_key] } {
+        puts stdout "ln -s ${hpcc_modules}/genemarkESET/4.71_lic/gm_key /rhome/${user}/.gm_key"
+    }
+}
+
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate ${hpcc_modules}/funannotate/2.0alpha;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda config --set env_prompt '({default_env}) '; conda deactivate;"
+}
+
+# add genemark but not its environment - expect those to be installed in funannotate env
+prepend-path    PATH            ${hpcc_modules}/genemarkESET/4.71_lic
+setenv          GENEMARK_PATH   ${hpcc_modules}/genemarkESET/4.71_lic
+setenv 		FUNANNOTATE_DB	/srv/projects/db/funannotate/1.8
+setenv		TRINITYHOME	${hpcc_modules}/funannotate/1.8/env/opt/trinity-2.8.5
+setenv		EVM_HOME	${hpcc_modules}/funannotate/1.8/env/opt/evidencemodeler-1.1.1
+setenv		EGGNOG_DATA_DIR	/srv/projects/db/eggNOG/LATEST
