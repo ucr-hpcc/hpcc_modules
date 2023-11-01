@@ -1,0 +1,27 @@
+#%Module1.0#####################################################################
+##
+## autometa modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tautometa - Adds autometa pipeline to your path"
+}
+
+module-whatis	"autometa-2.2.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+#  this will load python3
+
+# Set character encoding
+setenv LC_ALL en_US.utf-8
+setenv LANG en_US.utf-8
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module unload anaconda3 miniconda2; module load miniconda3; source activate ${hpcc_modules}/autometa/2.2.1/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "module unload anaconda3 miniconda2; module load miniconda3; conda deactivate;"
+}
+
+# NOTE the DB is configured to be /srv/projects/db/autometa/2.0
