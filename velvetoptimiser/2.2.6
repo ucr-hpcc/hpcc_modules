@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## velvetoptimiser modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tvelvetoptimiser - Adds velvetoptimiser to your path"
+}
+
+module-whatis	"velvetoptimiser-2.2.6"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Load miniconda
+module load miniconda3
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/velvetoptimiser/2.2.6;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
