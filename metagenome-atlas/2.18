@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## metagenome-atlas modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tmetagenome-atlas - Adds metagenome-atlas to your path"
+}
+
+module-whatis	"metagenome-atlas-2.18"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate ${hpcc_modules}/metagenome-atlas/2.18;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda config --set env_prompt '({default_env}) '; conda deactivate;"
+}
