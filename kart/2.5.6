@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## kart modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tkart - Adds kart to your path"
+}
+
+module-whatis	"kart-2.5.6"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH        ${hpcc_modules}/kart/2.5.6
+
