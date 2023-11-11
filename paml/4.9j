@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## paml modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tpaml - Adds codeml and related tools to your path"
+}
+
+module-whatis	"paml-4.9j"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/paml/4.9j/bin
+
