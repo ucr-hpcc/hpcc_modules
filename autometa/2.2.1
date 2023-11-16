@@ -19,6 +19,7 @@ setenv LC_ALL en_US.utf-8
 setenv LANG en_US.utf-8
 
 module load bwa
+module load bwa-mem2
 module load kart
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module load miniconda3; conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; source activate ${hpcc_modules}/autometa/2.2.1/env;"
