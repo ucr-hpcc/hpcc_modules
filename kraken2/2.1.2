@@ -12,5 +12,6 @@ module-whatis	"kraken2-2.1.2"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
+module load ncbi-blast
 prepend-path    PATH            ${hpcc_modules}/kraken2/2.1.2
 setenv	KRAKEN2_DB_PATH	/srv/projects/db/kraken2
