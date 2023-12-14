@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tbusco- Adds busco to your path"
 }
 
-module-whatis	"busco-5.4.4"
+module-whatis	"busco-5.5.0"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
@@ -16,10 +16,9 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 module load miniconda3
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate ${hpcc_modules}/busco/5.4.4;"
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate ${hpcc_modules}/busco/5.5.0;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda config --set env_prompt '({default_env}) '; conda deactivate;"
 }
 
 setenv           BUSCO_LINEAGES      /srv/projects/db/BUSCO/v10
-#prepend-path     PATH                ${hpcc_modules}/busco/5.4.4/bin
