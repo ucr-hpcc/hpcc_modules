@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## sim modulefile
+#
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tslim - Adds slim to your path"
+}
+
+module-whatis	"slim-4.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/slim/4.1/bin
