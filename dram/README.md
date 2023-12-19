@@ -18,7 +18,7 @@ Install using conda:
 
 ```bash
 module load miniconda3
-conda create -n ~/bigdata/pkgs/dram/1.3.4 -c conda-forge -c bioconda dram
+conda create -n ~/bigdata/pkgs/dram/1.4.6 -c conda-forge -c bioconda dram
 ```
 
 ## Database
@@ -35,7 +35,7 @@ rsync -rvP /srv/projects/db/DRAM/ ~/bigdata/DRAM_data
 After your database is sync'ed then you need to update your `CONFIG` to point to the new database locations:
 
 ```bash
-vim ~/bigdata/pkgs/dram/1.3.4/lib/python3.9/site-packages/mag_annotator/CONFIG
+vim ~/bigdata/pkgs/dram/1.4.6/lib/python3.9/site-packages/mag_annotator/CONFIG
 ```
 
 Be sure to update each path and version number of each entry.
@@ -45,7 +45,7 @@ Be sure to update each path and version number of each entry.
 At this point, everything should be installed, just actiate conda and run `DRAM-setup.py print_config` to test and make sure all the paths look good:
 
 ```bash
-conda activate ~/bigdata/pkgs/dram/1.3.4
+conda activate ~/bigdata/pkgs/dram/1.4.6
 DRAM-setup.py print_config
 ```
 
