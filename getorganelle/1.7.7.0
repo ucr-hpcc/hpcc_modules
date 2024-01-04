@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## getorganelle modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tgetorganelle - Adds getorganelle to your path"
+}
+
+module-whatis	"getorganelle-1.7.7.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Get user
+set      user            [module-info username]
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/getorganelle/1.7.7.0;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
