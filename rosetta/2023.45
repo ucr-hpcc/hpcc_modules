@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## Rosetta modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds Rosetta to your path"
+}
+
+module-whatis   "rosetta-2023.45"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Setup PATHs
+setenv          ROSETTA3        ${hpcc_modules}/rosetta/2023.45
+prepend-path    PATH            ${hpcc_modules}/rosetta/2023.45/bin
+
+
