@@ -21,7 +21,7 @@ module load phobius
 # Create symlink for genemark key file
 if { [module-info mode load] || [module-info mode switch2] } {
     if { ![file exists /rhome/${user}/.gm_key] } {
-        puts stdout "ln -s ${hpcc_modules}/genemarkESET/4.71_lic/gm_key /rhome/${user}/.gm_key"
+        puts stdout "ln -s ${hpcc_modules}/genemarkESET/4.71_lic/gm_key /rhome/${user}/.gm_key;"
     }
 }
 
