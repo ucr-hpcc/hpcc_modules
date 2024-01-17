@@ -13,6 +13,7 @@ module-whatis	"mitohifi-3.2"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
+module load ncbi-blast
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module load miniconda3; conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate ${hpcc_modules}/MitoHiFi/3.2/env;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
