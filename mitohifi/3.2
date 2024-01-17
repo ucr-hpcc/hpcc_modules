@@ -18,4 +18,4 @@ if { [module-info mode load] || [module-info mode switch2] } {
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda config --set env_prompt '({default_env}) '; conda deactivate;"
 }
-prepend-path    PATH	${hpcc_modules}/mitohifi/3.2/MitoHiFi/src
+prepend-path    PATH	${hpcc_modules}/MitoHiFi/3.2/MitoHiFi/src
