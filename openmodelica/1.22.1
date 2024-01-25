@@ -1,0 +1,29 @@
+#%Module1.0#####################################################################
+##
+## OpenModelica modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tOpenModelica- Adds OpenModelica to your path"
+}
+
+module-whatis	"OpenModelica-1.22.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Load miniconda
+module load miniconda3 java hdf5 openscenegraph
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate ${hpcc_modules}/openmodelica/1.22.1/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
+prepend-path    PATH            ${hpcc_modules}/openmodelica/1.22.1/bin
+prepend-path    MANPATH         ${hpcc_modules}/openmodelica/1.22.1/share/man
+prepend-path    CPATH           ${hpcc_modules}/openmodelica/1.22.1/include
+prepend-path    LIBRARY_PATH    ${hpcc_modules}/openmodelica/1.22.1/lib:${hpcc_modules}/openmodelica/1.22.1/lib64:${hpcc_modules}/openmodelica/1.22.1/env/lib
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/openmodelica/1.22.1/lib:${hpcc_modules}/openmodelica/1.22.1/lib64:${hpcc_modules}/openmodelica/1.22.1/env/lib
+
