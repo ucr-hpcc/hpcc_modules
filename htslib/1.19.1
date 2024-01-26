@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## htslib modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\thtslib- Adds htslib to your path"
+}
+
+module-whatis	"htslib-1.19.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load libdeflate/1.17
+
+prepend-path    PATH            ${hpcc_modules}/htslib/1.19.1/bin
+prepend-path    MANPATH         ${hpcc_modules}/htslib/1.19.1/share/man
+prepend-path    LIBRARY_PATH    ${hpcc_modules}/htslib/1.19.1/lib
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/htslib/1.19.1/lib
+prepend-path    CPATH           ${hpcc_modules}/htslib/1.19.1/include
+

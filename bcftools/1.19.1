@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## bcftools modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tbcftools- Adds bcftools to your path"
+}
+
+module-whatis	"bcftools-1.19.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load htslib/1.19.1
+
+prepend-path    PATH        ${hpcc_modules}/bcftools/1.19.1/bin
+prepend-path    MANPATH     ${hpcc_modules}/bcftools/1.19.1/share/man
+
