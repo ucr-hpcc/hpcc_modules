@@ -1,0 +1,15 @@
+#%Module1.0#####################################################################
+##
+## reckoner modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\treckoner- Adds reckoner to your path"
+}
+
+module-whatis	"reckoner-2.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/reckoner/2.1/bin
