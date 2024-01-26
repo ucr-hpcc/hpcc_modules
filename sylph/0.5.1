@@ -1,0 +1,15 @@
+#%Module1.0#####################################################################
+##
+## sylph modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tsylph- Adds sylph to your path"
+}
+
+module-whatis	"sylph-0.5.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/sylph/0.5.1/bin
