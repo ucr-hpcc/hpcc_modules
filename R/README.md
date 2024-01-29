@@ -256,6 +256,7 @@ install_github("cran/setwidth")
 install_github("jalvesaq/colorout")
 install_github("gabrielrvsc/BooST")
 install_github("keleslab/BandNorm")
+install_github('xuranw/MuSiC')
 #install_github("cran/Geneland")
 #install_github('Sage-Bionetworks/rSynapseClient', ref='develop')
 ```
