@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## ssu-align modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tssu-align - Adds ssu-align enabled apps to your path"
+}
+
+module-whatis	"ssu-align-0.1.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/ssu-align/0.1.1/bin
+
