@@ -259,12 +259,22 @@ install_github("keleslab/BandNorm")
 install_github('xuranw/MuSiC')
 #install_github("cran/Geneland")
 #install_github('Sage-Bionetworks/rSynapseClient', ref='develop')
+install_github("satijalab/seurat-data")
+install_github("satijalab/azimuth")
+install_github("satijalab/seurat-wrappers")
 ```
 
 __Direct URL__
 
 ```r
 install.packages("http://hartleys.github.io/QoRTs/QoRTs_LATEST.tar.gz",repos=NULL,type="source")
+```
+
+__Misc__
+
+```r
+setRepositories(ind = 1:3, addURLs = c('https://satijalab.r-universe.dev', 'https://bnprks.r-universe.dev/'))
+install.packages(c("BPCells", "presto", "glmGamPoi"))
 ```
 
 ### Upgrading R in RStudio Server
