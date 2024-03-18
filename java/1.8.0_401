@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## Java modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds Java to your path"
+}
+
+module-whatis   "java-1.8.0_401"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path     PATH             ${hpcc_modules}/java/1.8.0_401/bin
+prepend-path     LD_LIBRARY_PATH  ${hpcc_modules}/java/1.8.0_401/lib
+prepend-path     MANPATH          ${hpcc_modules}/java/1.8.0_401/man
+setenv           JAVA_HOME        ${hpcc_modules}/java/1.8.0_401
+
