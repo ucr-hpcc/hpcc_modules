@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## spades modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tspades - Adds spades to your path"
+}
+
+module-whatis	"spades-3.15.5"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/spades/3.15.5/bin
+
