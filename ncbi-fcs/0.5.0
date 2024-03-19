@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## ncbi fcs modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tncbi-fcs - Adds ncbi-fcs and fcs-gcs for genome assembly contamination and vector screening to your path"
+}
+
+module-whatis	"ncbi-fcs-0.5.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load miniconda3
+setenv FCS_GCX_DB=/srv/projects/db/ncbi-fcs/0.4.0/gxdb
+
+prepend-path    PATH            ${hpcc_modules}/ncbi-fcs/0.5.0/bin:${hpcc_modules}/ncbi-fcs/0.5.0/scripts
+
