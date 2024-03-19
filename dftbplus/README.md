@@ -18,3 +18,9 @@ ctest -j4
 popd
 cmake --install _build
 ```
+## Future Thoughts
+
+For future compilations, might be a good idea to compile with the following options:
+- BUILD_SHARED_LIBS
+- ENABLE_DYNAMIC_LOADING
+- WITH_PYTHON
