@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## comsol modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tgurobi - Adds COMSOL Multiphysics to your path"
+}
+
+module-whatis   "comsol-6.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module-forbid --not-group comsol --message "COMSOL is provided by BCOE. Please contact HPCC support to gain access." comsol
+
+prepend-path    PATH                    ${hpcc_modules}/comsol/6.1/comsol61/multiphysics/bin
