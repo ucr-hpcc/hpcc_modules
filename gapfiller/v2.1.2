@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## gapfiller modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tgapfiller - Adds gapfiller to your path"
+}
+
+module-whatis	"gapfiller-v2.1.2"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Load miniconda
+module load miniconda3
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate --stack ${hpcc_modules}/gapfiller/v2.1.2;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
