@@ -1,0 +1,18 @@
+#%Module1.0#####################################################################
+##
+## cp2k modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tcp2k- Adds cp2k to your path"
+}
+
+module-whatis	"cp2k-2024.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load gcc/12
+
+prepend-path  PATH        ${hpcc_modules}/cp2k/2024.1/bin
+
