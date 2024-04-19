@@ -263,6 +263,7 @@ install_github("satijalab/seurat-data")
 install_github("satijalab/azimuth")
 install_github("satijalab/seurat-wrappers")
 install_github('tavareshugo/windowscanr')
+install_github('hms-dbmi/spp')
 ```
 
 __Direct URL__
