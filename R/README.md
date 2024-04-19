@@ -262,6 +262,7 @@ install_github('xuranw/MuSiC')
 install_github("satijalab/seurat-data")
 install_github("satijalab/azimuth")
 install_github("satijalab/seurat-wrappers")
+install_github('tavareshugo/windowscanr')
 ```
 
 __Direct URL__
