@@ -1,0 +1,53 @@
+#%Module1.0
+
+# Copyright (c) 2023 NVIDIA CORPORATION.  All rights reserved.
+#
+# NVIDIA CORPORATION and its licensors retain all intellectual property
+# and proprietary rights in and to this software, related documentation
+# and any modifications thereto.  Any use, reproduction, disclosure or
+# distribution of this software and related documentation without an express
+# license agreement from NVIDIA CORPORATION is strictly prohibited.
+
+conflict nvhpc
+conflict nvhpc-nompi
+conflict nvhpc-byo-compiler
+conflict nvhpc-hpcx
+conflict nvhpc-openmpi3
+
+set nvhome /opt/linux/rocky/8.x/x86_64/pkgs/nvhpc/24.3
+set target Linux_x86_64
+set version 24.3
+
+set nvcudadir $nvhome/$target/$version/cuda
+set nvcompdir $nvhome/$target/$version/compilers
+set nvmathdir $nvhome/$target/$version/math_libs
+set nvcommdir $nvhome/$target/$version/comm_libs
+
+setenv NVHPC $nvhome
+setenv NVHPC_ROOT $nvhome/$target/$version
+setenv CC $nvcompdir/bin/nvc
+setenv CXX $nvcompdir/bin/nvc++
+setenv FC $nvcompdir/bin/nvfortran
+setenv F90 $nvcompdir/bin/nvfortran
+setenv F77 $nvcompdir/bin/nvfortran
+setenv CPP cpp
+
+prepend-path PATH $nvcudadir/bin
+prepend-path PATH $nvcompdir/bin
+prepend-path PATH $nvcommdir/mpi/bin
+prepend-path PATH $nvcompdir/extras/qd/bin
+
+prepend-path LD_LIBRARY_PATH $nvcudadir/lib64
+prepend-path LD_LIBRARY_PATH $nvcudadir/extras/CUPTI/lib64
+prepend-path LD_LIBRARY_PATH $nvcompdir/extras/qd/lib
+prepend-path LD_LIBRARY_PATH $nvcompdir/lib
+prepend-path LD_LIBRARY_PATH $nvmathdir/lib64
+prepend-path LD_LIBRARY_PATH $nvcommdir/nccl/lib
+prepend-path LD_LIBRARY_PATH $nvcommdir/nvshmem/lib
+
+prepend-path CPATH $nvmathdir/include
+prepend-path CPATH $nvcommdir/nccl/include
+prepend-path CPATH $nvcommdir/nvshmem/include
+prepend-path CPATH $nvcompdir/extras/qd/include/qd
+
+prepend-path MANPATH $nvcompdir/man
