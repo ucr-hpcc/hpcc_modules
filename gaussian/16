@@ -10,6 +10,11 @@ proc ModulesHelp { } {
 
 module-whatis	"Gaussian-16"
 
+set msg {You must be a part of the 'gaussian' group to use this software.
+If you are a UCR-affiliated user, please contact support about getting access.}
+
+module-forbid --not-group gaussian --message $msg guassian/16
+
 set      hpcc_modules    $::env(HPCC_MODULES)
 
 if { [info exists ::env(SLURM_JOB_PARTITION)] } {

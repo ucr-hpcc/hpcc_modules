@@ -12,6 +12,11 @@ module-whatis	"Gaussian-16_AVX2"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
+set msg {You must be a part of the 'gaussian' group to use this software.
+If you are a UCR-affiliated user, please contact support about getting access.}
+
+module-forbid --not-group gaussian --message $msg gaussian/16_AVX2
+
 set shell [module-info shell]
 
 if { [module-info mode load] || [module-info mode switch2] } {

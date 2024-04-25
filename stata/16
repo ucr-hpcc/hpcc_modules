@@ -10,6 +10,11 @@ proc ModulesHelp { } {
 
 module-whatis	"stata-16"
 
+set msg {You must be a part of the 'stata' group to use this software.
+If you are a UCR-affiliated user, please contact support about getting access.}
+
+module-forbid --not-group stata --message $msg stata/16
+
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      modules_dir     $::env(MODULES_DIR)
 
