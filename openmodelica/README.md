@@ -19,8 +19,10 @@ I used a Conda environment to store the dependencies of qt and qtwebkit
 ```
 conda create -p $HPCC_MODULES/openmodelica/1.22.1/env
 conda activate $HPCC_MODULES/openmodelica/1.22.1/env
-mamba install -c conda-forge qt qtwebkit   # Mamba solves the environment quicker
+mamba install -c conda-forge qt qtwebkit python=3.8   # Mamba solves the environment quicker
 ```
+
+> Python 3.8 is for some libraries people use. If in the future people need other versions of python, I imagine we can create multiple OpenModelica modules, each with their own Python versions.
 
 Compile it! I needed to help nudge cmake to use the correct gcc, g++, and gfortran binaries provided from gcc/12
 ```
@@ -29,3 +31,4 @@ cmake --build build_cmake --parallel $(nproc) --target install
 ```
 
 Godspeed Soldier.
+
