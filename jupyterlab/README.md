@@ -7,6 +7,8 @@ Use miniconda to install jupyterlab under individual directory:
 ```bash
 module load miniconda3
 conda create --prefix $HPCC_MODULES/jupyterlab/3.3.1 -c conda-forge jupyterlab=3.3.1
+conda activate $HPCC_MODULES/jupyterlab/3.3.1
+conda install -c conda-forge bash_kernel
 ```
 
 ## Module
