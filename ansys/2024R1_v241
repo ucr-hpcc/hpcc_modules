@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## ansys modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tansys - Adds Ansys Fluid Structures to your path"
+}
+
+module-whatis   "ansys-2024R1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module-forbid --not-group ansys --message "Please contact HPCC support to gain access to Ansys Fluid Structures." ansys
+
+prepend-path    PATH    ${hpcc_modules}/ansys/2024R1/ansys_inc/v241/CFX/bin:${hpcc_modules}/ansys/2024R1/ansys_inc/v241/fluent/bin:${hpcc_modules}/ansys/2024R1/ansys_inc/v241/fensapice/bin
