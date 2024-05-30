@@ -16,3 +16,7 @@ module load singularity
 
 prepend-path    PATH                   ${hpcc_modules}/deepvariant/1.6.1/
 setenv          DEEPVARIANT_SING       ${hpcc_modules}/deepvariant/1.6.1/deepvariant_1.6.1.sif
+
+if {[regexp "^gpu.*$" [uname nodename]]} {
+  puts stdout "echo Consider using the GPU version: \'module load deepvariant/1.6.1-gpu\';"
+}
