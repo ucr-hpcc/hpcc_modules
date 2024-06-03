@@ -1,0 +1,18 @@
+#%Module1.0#####################################################################
+##
+## Octopus modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds Octopus to your path"
+}
+
+module-whatis   "Octopus-0.7.4"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load java htslib/1.19.1
+
+prepend-path    PATH            ${hpcc_modules}/octopus/0.7.4/bin
+
