@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## ncbi table2asn conversion tools modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tncbi-table2asn - Adds new ncbi table to asn processing tools (eg table2asn) to your path"
+}
+
+module-whatis	"ncbi-table2asn"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/ncbi-table2asn/2023-09-26
+
