@@ -1,0 +1,27 @@
+#%Module1.0#####################################################################
+##
+## MATLAB modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tMATLAB- Adds MATLAB to your path"
+}
+
+module-whatis	"MATLAB-R2024a"
+
+set msg {You must be a part of the 'matlab' group to use this software.
+If you are a UCR-affiliated user, please contact support about getting access.}
+
+module-forbid --not-group matlab --message $msg matlab/R2024a
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH              ${hpcc_modules}/matlab/R2024a/bin
+prepend-path    PATH              ${hpcc_modules}/matlab/R2024a/bin/glnxa64
+prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/matlab/R2024a/bin/glnxa64
+prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/matlab/R2024a/extern/bin/glnxa64
+prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/matlab/R2024a/sys/os/glnxa64
+setenv          LM_LICENSE_FILE   "27000@matlab"
+setenv          MLM_LICENSE_FILE  "27000@matlab"
+
