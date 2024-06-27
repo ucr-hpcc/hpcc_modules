@@ -9,7 +9,7 @@
     b. When installed correctly, users **should not** need to log in with a mathworks account.
 
 
-#OLD INFO
+# OLD INFO BELOW
 
 ---
 
