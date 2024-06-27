@@ -1,5 +1,18 @@
 # Matlab
 
+1. Submit a Software Request ticket to ITS for Matlab. Should get a "license.lic" file.
+2. Will need to install, on the `matlab` license server, the matlab license manager
+    a. https://www.mathworks.com/help/install/ug/install-license-manager-on-license-server.html
+    b. Will need to use X11 forwarding as all of matlab is graphical
+4. On the server, install matlab as a client\
+    a. https://www.mathworks.com/help/install/ug/install-products-on-client-machines.html
+    b. When installed correctly, users **should not** need to log in with a mathworks account.
+
+
+#OLD INFO
+
+---
+
 ## License
 
 ### File
