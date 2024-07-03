@@ -7,6 +7,7 @@
 4. On the server, install matlab as a client\
     1. https://www.mathworks.com/help/install/ug/install-products-on-client-machines.html
     2. When installed correctly, users **should not** need to log in with a mathworks account.
+    3. To correctly get it to use the license server, remove all files from the `licenses` directory of the install
 
 
 # OLD INFO BELOW
