@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## GATK modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tgatk - Adds gatk to your path"
+}
+
+module-whatis	"gatk-4.6.0.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load java
+
+setenv  GATKDIR     ${hpcc_modules}/gatk/4.6.0.0
+setenv  GATK        ${hpcc_modules}/gatk/4.6.0.0/gatk-package-4.6.0.0-local.jar
+
+prepend-path    PATH        ${hpcc_modules}/gatk/4.6.0.0
+
+setenv          GATKDIR     ${hpcc_modules}/gatk/4.6.0.0
+
