@@ -12,5 +12,6 @@ module-whatis	"libyaml-0.2.5"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
-prepend-path    LD_LIBRARY_PATH	  ${hpcc_modules}/libyaml/0.2.5/
 
+prepend-path    LD_LIBRARY_PATH	  ${hpcc_modules}/libyaml/0.2.5/lib
+prepend-path    INCLUDE_PATH	${hpcc_modules}/libyaml/0.2.5/include
