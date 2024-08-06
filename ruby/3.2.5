@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## Ruby modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tRuby - Adds Ruby 3.2.5 to your path"
+}
+
+module-whatis	"ruby-3.2.5"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH   	        ${hpcc_modules}/ruby/3.2.5/bin:${hpcc_modules}/ruby/3.2.5/lib/ruby/3.2.5/bin
+prepend-path    INCLUDE_PATH    ${hpcc_modules}/ruby/3.2.5/include
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/ruby/3.2.5/lib
+prepend-path    MANPATH         ${hpcc_modules}/ruby/3.2.5/share/man
+prepend-path	GEM_HOME        ${hpcc_modules}/ruby/3.2.5/lib/ruby/2.5.0/
+
