@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## libyaml modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tlibyaml - Adds libyaml apps and libraries to your path"
+}
+
+module-whatis	"libyaml-0.2.5"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    LD_LIBRARY_PATH	  ${hpcc_modules}/libyaml/0.2.5/
+
