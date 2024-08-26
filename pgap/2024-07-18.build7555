@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## pgap modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds pgap to your path"
+}
+
+module-whatis   "pgap-2024-07-18.build7555"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# pgap runs in singularity
+module load singularity
+
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/pgap/2024-07-18.build7555
+setenv          PGAP_INPUT_DIR  ${hpcc_modules}/pgap/2024-07-18.build7555/pgap
+
