@@ -18,4 +18,4 @@ prepend-path    PATH    ${hpcc_modules}/tcoffee/13.45.65/bin:${hpcc_modules}/tco
 setenv MAX_N_PID_4_TCOFFEE 100000000
 setenv PLUGINS_4_TCOFFEE ${hpcc_modules}/tcoffee/13.45.65/plugins/linux
 prepend-path PERL5LIB	${hpcc_modules}/tcoffee/13.45.65/perl/lib/perl5
-setenv TEMPDIR $SCRATCH
+setenv TEMPDIR $::env(SCRATCH)
