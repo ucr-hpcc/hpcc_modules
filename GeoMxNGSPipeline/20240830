@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## GeoMxNGSPipeline modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds GeoMxNGSPipeline to your path"
+}
+
+module-whatis   "GeoMxNGSPipeline-20240830"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/GeoMxNGSPipeline/20240830/bin
+
