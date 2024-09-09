@@ -17,7 +17,7 @@ if { [info exists ::env(SLURM_JOB_PARTITION)] } {
     set      partition     ""
 }
 
-if { $partition == "batch" || $partition == "stajichlab" } {
+if { $partition == "batch" } {
     prepend-path    PATH        ${hpcc_modules}/mmseqs2/13-45111/bin
 } else {
     prepend-path    PATH   		${hpcc_modules}/mmseqs2/13-45111-avx2/bin
