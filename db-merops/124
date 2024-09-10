@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## merops database modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tdb-merops - Sets pfam database path to MEROPS_DB environment variable"
+}
+
+module-whatis	"db-merops-124"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+setenv      MEROPS_DB	    /srv/projects/db/MEROPS/124
+
