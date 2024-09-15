@@ -22,6 +22,7 @@ module load diamond
 module load MMseqs2/13-45111
 module load muscle
 module load fasttree
+module load mafft
 
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module load miniconda3;  conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate ${hpcc_modules}/orthofinder/2.5.5/env;"
