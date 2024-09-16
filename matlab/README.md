@@ -6,8 +6,9 @@
     2. Will need to use X11 forwarding as all of matlab is graphical
 4. On the server, install matlab as a client\
     1. https://www.mathworks.com/help/install/ug/install-products-on-client-machines.html
-    2. When installed correctly, users **should not** need to log in with a mathworks account.
-    3. To correctly get it to use the license server, remove all files from the `licenses` directory of the install
+    2. I found that running the installer, signing in, the using the dropdown selecting the Offline Install, downloading it, then installing from the offline installer works best.
+    3. When installed correctly, users **should not** need to log in with a mathworks account.
+    4. To correctly get it to use the license server, remove all files from the `licenses` directory of the install
 
 
 # OLD INFO BELOW
