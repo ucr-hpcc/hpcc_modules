@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## gubbins modulefile
+#
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tgubbins - Adds gubbins (via conda) to your path"
+}
+
+module-whatis	"gubbins-3.3.5"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load miniconda3
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate --stack ${hpcc_modules}/gubbins/3.3.5/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "module load miniconda3; conda deactivate;"
+}
+
