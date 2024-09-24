@@ -264,6 +264,7 @@ install_github("satijalab/azimuth")
 install_github("satijalab/seurat-wrappers")
 install_github('tavareshugo/windowscanr')
 install_github('hms-dbmi/spp')
+install_github("jinworks/CellChat")
 ```
 
 __Direct URL__
