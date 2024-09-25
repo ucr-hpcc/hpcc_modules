@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## db-basta modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tdb-basta - Sets basta database path to BASTA_DB environment variable"
+}
+
+module-whatis	"db-basta"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+setenv          BASTA_DB	    /srv/projects/db/BASTA/20240924
+
