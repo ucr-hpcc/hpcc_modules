@@ -1,0 +1,38 @@
+#%Module1.0#####################################################################
+##
+## MATLAB modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tMATLAB- Adds MATLAB to your path"
+}
+
+module-whatis	"MATLAB-R2024b"
+
+set msg {You must be a part of the 'matlab' group to use this software.
+If you are a UCR-affiliated user, please contact support about getting access.}
+
+module-forbid --not-group matlab --message $msg matlab/R2024b
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+if { [info exists ::env(SLURM_JOB_PARTITION)] } {
+  set partition $::env(SLURM_JOB_PARTITION)
+} else {
+  set partition ""
+}
+
+if { [module-info mode load] && $partition == "batch" } {
+  puts stderr "MATLAB R2024b has known incompatibilities on nodes in the batch partition."
+  puts stderr "Please use matlab/R2021a on batch partition nodes, or consider using a different partition for matlab/R2024b."
+}
+
+prepend-path    PATH              ${hpcc_modules}/matlab/R2024b/bin
+prepend-path    PATH              ${hpcc_modules}/matlab/R2024b/bin/glnxa64
+prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/matlab/R2024b/bin/glnxa64
+prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/matlab/R2024b/extern/bin/glnxa64
+prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/matlab/R2024b/sys/os/glnxa64
+setenv          LM_LICENSE_FILE   "27000@matlab"
+setenv          MLM_LICENSE_FILE  "27000@matlab"
+
