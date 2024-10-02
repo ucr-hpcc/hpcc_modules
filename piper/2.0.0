@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## piper modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds piper to your path"
+}
+
+module-whatis   "piper-2.0.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/piper/2.0.0
+
