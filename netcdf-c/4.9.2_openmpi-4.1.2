@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## netcdf-c modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tnetcdf-c - Adds netcdf to your path"
+}
+
+module-whatis   "netcdf-4.9.2_openmpi-4.1.2"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH                 ${hpcc_modules}/netcdf-c/4.9.2_openmpi-4.1.2/bin
+prepend-path    INCLUDE_PATH         ${hpcc_modules}/netcdf-c/4.9.2_openmpi-4.1.2/include
+prepend-path    C_INCLUDE_PATH       ${hpcc_modules}/netcdf-c/4.9.2_openmpi-4.1.2/include
+prepend-path    CPLUS_INCLUDE_PATH   ${hpcc_modules}/netcdf-c/4.9.2_openmpi-4.1.2/include
+prepend-path    LD_LIBRARY_PATH      ${hpcc_modules}/netcdf-c/4.9.2_openmpi-4.1.2/lib
+prepend-path    MANPATH              ${hpcc_modules}/netcdf-c/4.9.2_openmpi-4.1.2/share/man
