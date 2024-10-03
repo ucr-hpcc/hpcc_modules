@@ -18,10 +18,11 @@ set      user            [module-info username]
 module load    CodingQuarry
 #module load PASA
 module load phobius
+module load signalp
 # Create symlink for genemark key file
 if { [module-info mode load] || [module-info mode switch2] } {
     if { ![file exists /rhome/${user}/.gm_key] } {
-        puts stdout "ln -s ${hpcc_modules}/genemarkESET/4.71_lic/gm_key /rhome/${user}/.gm_key;"
+        puts stdout "ln -s ${hpcc_modules}/genemarkESET/4.72_lic/gm_key /rhome/${user}/.gm_key;"
     }
 }
 
@@ -33,8 +34,8 @@ if { [module-info mode load] || [module-info mode switch2] } {
 }
 
 # add genemark but not its environment - expect those to be installed in funannotate env
-prepend-path    PATH            ${hpcc_modules}/genemarkESET/4.71_lic
-setenv          GENEMARK_PATH   ${hpcc_modules}/genemarkESET/4.71_lic
+prepend-path    PATH            ${hpcc_modules}/genemarkESET/4.72_lic
+setenv          GENEMARK_PATH   ${hpcc_modules}/genemarkESET/4.72_lic
 setenv 		FUNANNOTATE_DB	/srv/projects/db/funannotate/1.8
 setenv		TRINITYHOME	${hpcc_modules}/funannotate/1.8.x/opt/trinity-2.8.5
 setenv		EVM_HOME	${hpcc_modules}/funannotate/1.8.x/opt/evidencemodeler-1.1.1
