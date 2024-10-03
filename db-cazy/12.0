@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## CAZY database modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tdb-cazy Sets cazy database path to CAZY_DB environment variable"
+}
+
+module-whatis	"db-cazy-12.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+setenv      CAZY_FOLDER	/srv/projects/db/CAZY/CAZyDB/v12.0
+setenv      CAZY_DB	/srv/projects/db/CAZY/CAZyDB/v12.0/dbCAN.txt
+
