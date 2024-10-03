@@ -1,0 +1,36 @@
+#%Module1.0#####################################################################
+##
+## genemarkESET modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tgenemarkESET - Adds GeneMark-ES/ET 4.65 to your path"
+}
+
+module-whatis	"genemarkESET-4.72_lic"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Get user
+set      user            [module-info username]
+
+# Create symlink
+if { [module-info mode load] || [module-info mode switch2] } {
+    if { ![file exists /rhome/${user}/.gm_key] } {
+        puts stdout "ln -s ${hpcc_modules}/genemarkESET/4.72_lic/gm_key /rhome/${user}/.gm_key;"
+    }
+}
+
+module load miniconda3
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/genemarkESET/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
+# Set vars
+prepend-path    PATH            ${hpcc_modules}/genemarkESET/4.72_lic
+setenv          GENEMARK_PATH   ${hpcc_modules}/genemarkESET/4.72_lic
+
