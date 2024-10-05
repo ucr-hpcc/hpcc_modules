@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## taxonkit modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\ttaxonkit- Adds taxonkit to your path"
+}
+
+module-whatis	"taxonkit-0.17.90"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/taxonkit/0.17.0/bin
+
+
