@@ -20,4 +20,5 @@ prepend-path    CPATH           ${hpcc_modules}/sumo/1.20.0/include
 prepend-path    C_INCLUDE_PATH  ${hpcc_modules}/sumo/1.20.0/include
 prepend-path    LIBRARY_PATH    ${hpcc_modules}/sumo/1.20.0/lib64
 prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/sumo/1.20.0/lib64
+prepend-path    SUMO_HOME       ${hpcc_modules}/sumo/1.20.0/
 
