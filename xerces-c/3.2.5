@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## Xerces-c modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds Xerces-c to your path"
+}
+
+module-whatis   "Xerces-c-3.2.5"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/xerces-c/3.2.5/bin
+prepend-path    CPATH           ${hpcc_modules}/xerces-c/3.2.5/include
+prepend-path    C_INCLUDE_PATH  ${hpcc_modules}/xerces-c/3.2.5/include
+prepend-path    LIBRARY_PATH    ${hpcc_modules}/xerces-c/3.2.5/lib
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/xerces-c/3.2.5/lib
+
