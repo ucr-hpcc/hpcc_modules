@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## dorado modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tdorado- Adds dorado to your path"
+}
+
+module-whatis	"dorado-0.8.2"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load pod5
+module load cuda/12
+prepend-path    PATH            ${hpcc_modules}/dorado/0.8.2/bin
+prepend-path    LD_LIBRARY_PATH	${hpcc_modules}/dorado/0.8.2/lib
+
