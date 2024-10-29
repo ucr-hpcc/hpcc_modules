@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## genemarkETP modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tgenemarkETP - Adds GeneMark-ES/ET 4.65 to your path"
+}
+
+module-whatis	"genemarkETP-1.02"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load miniconda3
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate --stack ${hpcc_modules}/genemarkETP/1.02/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
+prepend-path  PATH  ${hpcc_modules}/genemarkETP/1.02/bin:${hpcc_modules}/genemarkETP/1.02/tools
+
