@@ -66,13 +66,13 @@ From within R run the following:
 
 ```r
 install.packages("BiocManager")
-BiocManager::install(version = "3.17")
+BiocManager::install(version = "X.XX") # Check https://www.bioconductor.org/install/ for latest version
 Update all/some/none? [a/s/n]: a # Update all packages
 ```
 
 #### Check Bioconductor version
 ```r
-BiocManager::version() # This should return 3.17 for current release
+BiocManager::version() # This should return the latest version
 ```
 
 #### Install Bioconductor core packages
