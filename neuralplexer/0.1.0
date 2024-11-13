@@ -21,3 +21,5 @@ if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "conda deactivate;"
 }
 
+prepend-path    NP_MODELS    ${hpcc_modules}/neuralplexer/0.1.0/models
+
