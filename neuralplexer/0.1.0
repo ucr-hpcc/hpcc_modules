@@ -13,7 +13,7 @@ module-whatis	"neuralplexer-0.1.0"
 set      hpcc_modules    $::env(HPCC_MODULES)
 
 # Load miniconda
-module load miniconda3
+module load miniconda3 cuda/11.7
 
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module load miniconda3; conda activate --stack ${hpcc_modules}/neuralplexer/0.1.0/env;"
