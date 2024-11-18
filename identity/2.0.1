@@ -1,0 +1,15 @@
+#%Module1.0#####################################################################
+##
+## itdenity modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tidentity - Adds identity to your path"
+}
+module-whatis	"identity-2.0.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/identity/2.0.1
+
