@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## alphafold modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\talphafold- Adds alphafold to your path"
+}
+
+module-whatis	"alphafold-3.0.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load singularity
+
+prepend-path    PATH                   ${hpcc_modules}/alphafold/3.0.0/
+setenv          ALPHAFOLD_SING         ${hpcc_modules}/alphafold/3.0.0/alphafold.sif
+setenv          DATABASES_DIR          /bigdata/operations/pkgadmin/srv/projects/db
+setenv          ALPHAFOLD_DB           /bigdata/operations/pkgadmin/srv/projects/db/alphafold/3.0.0

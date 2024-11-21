@@ -1,3 +1,11 @@
+# Version 3
+
+Built using Docker on personal machine, then generated .sif file and uploaded to cluster.
+Used steps from here:
+https://github.com/google-deepmind/alphafold3/blob/main/docs/installation.md#running-using-singularity-instead-of-docker
+
+# Version 2
+
 Built singularity image on ubuntu system
 with directions from here 
 https://www.rbvi.ucsf.edu/chimerax/data/singularity-apr2022/afsingularity.html
