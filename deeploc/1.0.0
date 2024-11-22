@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## deeploc modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tdeeploc- Adds deeploc to your path"
+}
+
+module-whatis	"deeploc-1.0.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Load miniconda
+module load miniconda3
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/deeploc/1.0.0/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
