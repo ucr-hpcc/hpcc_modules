@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## circos modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tcircos - Adds circos to your path"
+}
+
+module-whatis	"circos-0.69.9"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Load miniconda
+module load miniconda3
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate --stack ${hpcc_modules}/circos/0.69.9/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
