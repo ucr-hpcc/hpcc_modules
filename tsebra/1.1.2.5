@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## tsebra modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds tsebra to your path"
+}
+
+module-whatis   "tsebra-1.1.2.5"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/tsebra/1.1.2.5/bin
+
