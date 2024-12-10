@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## itsxpress modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\titsxpress - Adds itsxpress to your path"
+}
+
+module-whatis	"itsxpress-2.1.3"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/itsxpress/2.1.3;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
