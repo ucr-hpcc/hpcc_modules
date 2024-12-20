@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## duma modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tduma - Adds duma packages to your path"
+}
+
+module-whatis	"duma-0.2.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/duma/0.2.0/bin
+
