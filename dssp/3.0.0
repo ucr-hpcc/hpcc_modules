@@ -14,8 +14,11 @@ module-whatis	"dssp-3.0.0"
 set      hpcc_modules    $::env(HPCC_MODULES)
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/dssp/3.0.0;"
+    puts stdout "module load miniconda3; conda activate --stack ${hpcc_modules}/dssp/3.0.0;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
+
+# For gromacs
+prepend-path    DSSP  ${hpcc_modules}/dssp/3.0.0/bin/dssp
 
