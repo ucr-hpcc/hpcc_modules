@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## gmx_mmpbsa modulefile
+#
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tgmx_mmpbsa - Adds gmx_mmpbsa (via conda) to your path"
+}
+
+module-whatis	"gmx_mmpbsa-1.6.4"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load miniconda3
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate --stack ${hpcc_modules}/gmx_mmpbsa/1.6.4/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "module load miniconda3; conda deactivate;"
+}
+
