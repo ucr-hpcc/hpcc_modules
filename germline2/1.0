@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## germline2 modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds germline2 to your path"
+}
+
+module-whatis   "germline2-1.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/germline2/1.0/bin
+
