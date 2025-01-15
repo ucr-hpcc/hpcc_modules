@@ -9,14 +9,14 @@ proc ModulesHelp { } {
         puts stderr "\tcutadapt - Adds cutadapt (via conda) to your path"
 }
 
-module-whatis	"cutadapt-5.0.0"
+module-whatis	"cutadapt-5.0"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
 module load miniconda3
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda activate --stack ${hpcc_modules}/cutadapt/5.0.0/env;"
+    puts stdout "module load miniconda3; conda activate --stack ${hpcc_modules}/cutadapt/5.0/env;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "module load miniconda3; conda deactivate;"
 }
