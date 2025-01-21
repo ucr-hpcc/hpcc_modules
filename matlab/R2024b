@@ -25,7 +25,7 @@ if { [info exists ::env(SLURM_JOB_PARTITION)] } {
 
 if { [module-info mode load] && $partition == "batch" } {
   puts stderr "MATLAB R2024b has known incompatibilities on nodes in the batch partition."
-  puts stderr "Please use matlab/R2021a on batch partition nodes, or consider using a different partition for matlab/R2024b."
+  puts stderr "Please use version R2021a on batch partition nodes, or consider using a different partition for matlab/R2024b."
 }
 
 prepend-path    PATH              ${hpcc_modules}/matlab/R2024b/bin
