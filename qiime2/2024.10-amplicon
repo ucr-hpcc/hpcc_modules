@@ -11,10 +11,11 @@ proc ModulesHelp { } {
 module-whatis	"qiime2-2024.10-amplicon"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
-
+module load miniconda3
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate ${hpcc_modules}/qiime2/2024.10-amplicon;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
 
+export QIIMEDB=/srv/projects/db/UNITE/qiime
