@@ -266,6 +266,7 @@ install_github('tavareshugo/windowscanr')
 install_github('hms-dbmi/spp')
 install_github("jinworks/CellChat")
 install_github("jtlovell/GENESPACE")
+install_github("jtlovell/DEEPSPACE")
 ```
 
 __Direct URL__
