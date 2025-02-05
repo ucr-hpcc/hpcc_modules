@@ -265,6 +265,7 @@ install_github("satijalab/seurat-wrappers")
 install_github('tavareshugo/windowscanr')
 install_github('hms-dbmi/spp')
 install_github("jinworks/CellChat")
+install_github("jtlovell/GENESPACE")
 ```
 
 __Direct URL__
