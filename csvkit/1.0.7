@@ -13,7 +13,7 @@ module-whatis	"csvkit-1.0.7"
 set      hpcc_modules    $::env(HPCC_MODULES)
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/csvkit/1.0.7;"
+    puts stdout "module load miniconda3; conda activate --stack ${hpcc_modules}/csvkit/1.0.7;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
