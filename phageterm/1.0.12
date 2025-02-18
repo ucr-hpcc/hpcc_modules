@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## phageterm modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tphageterm - Adds phageterm to your path"
+}
+
+module-whatis	"phageterm-1.0.12"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate --stack ${hpcc_modules}/phageterm/1.0.12/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
+prepend-path  PATH  $hpcc_modules/phageterm/1.0.12
+
