@@ -1,0 +1,18 @@
+#%Module1.0#####################################################################
+##
+## OpenFOAM modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tOpenFOAM - Adds openfoam singularity wrapper to your path"
+}
+
+module-whatis	"openfoam-2312"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load singularity-ce
+
+prepend-path    PATH              ${hpcc_modules}/openfoam/2312
+setenv          OPENFOAM_SING      ${hpcc_modules}/openfoam/2312/openfoam2312.sif
