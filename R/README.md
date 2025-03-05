@@ -267,6 +267,7 @@ install_github('hms-dbmi/spp')
 install_github("jinworks/CellChat")
 install_github("jtlovell/GENESPACE")
 install_github("jtlovell/DEEPSPACE")
+install_github("jeffsocal/tidyproteomics")
 ```
 
 __Direct URL__
