@@ -12,8 +12,8 @@ module-whatis	"interproscan-5.73-104.0"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
-prepend-path    PATH            ${hpcc_modules}/iprscan/5.72-103.0
-prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/iprscan/5.72-103.0/lib
+prepend-path    PATH            ${hpcc_modules}/iprscan/5.73-104.0
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/iprscan/5.73-104.0/lib
 
 module load miniconda3
 module load signalp/4.1c
