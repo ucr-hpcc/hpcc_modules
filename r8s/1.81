@@ -1,0 +1,15 @@
+#%Module1.0#####################################################################
+##
+## r8s modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tr8s - Adds r8s to your path"
+}
+
+module-whatis	"r8s-1.81"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path	PATH	${hpcc_modules}/r8s/1.81/bin
