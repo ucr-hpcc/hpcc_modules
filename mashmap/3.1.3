@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## mashmap modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tmashmapmap- Adds mash to your path"
+}
+
+module-whatis	"mashmap-3.1.3"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/mashmap/3.1.3/bin
+
