@@ -13,16 +13,12 @@ module-whatis	"AAFTF-0.5.0"
 set      hpcc_modules    $::env(HPCC_MODULES)
 
 # Load miniconda
-module load miniconda3
-#module load samtools
-#module load masurca
-#module load NextPolish
 module load singularity
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/AAFTF/0.5.0;"
+    puts stdout "module load miniconda3; --set env_prompt '(\$(echo {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate ${hpcc_modules}/AAFTF/0.5.0;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
-	puts stdout "module unload anaconda3 miniconda2; module load miniconda3; conda config --set env_prompt '({default_env}) '; conda deactivate;"
+	puts stdout "module load miniconda3; conda config --set env_prompt '({default_env}) '; conda deactivate;"
 }
 
 setenv	AAFTF_DB	/srv/projects/db/AAFTF_DB
