@@ -19,7 +19,7 @@ if { [info exists ::env(SLURM_JOB_PARTITION)] } {
 
 if { $partition == "batch" } {
     prepend-path    PATH        ${hpcc_modules}/mmseqs2/17-b804f/bin
-} elseif { $partion == "gpu" } {
+} elseif { $partition == "gpu" } {
     prepend-path    PATH   		${hpcc_modules}/mmseqs2/17-b804f-gpu/bin
 } else { 
     prepend-path    PATH   		${hpcc_modules}/mmseqs2/17-b804f-avx2/bin
