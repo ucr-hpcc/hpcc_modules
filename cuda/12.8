@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## cuda modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tcuda - Adds cuda version 12.8 to your path"
+}
+
+module-whatis	"cuda-12.8"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH              /opt/linux/centos/8.x/x86_64/pkgs/cuda/12.8/bin:/opt/linux/centos/8.x/x86_64/pkgs/cuda/12.8/nvvm/bin
+prepend-path    LD_LIBRARY_PATH   /opt/linux/centos/8.x/x86_64/pkgs/cuda/12.8/lib64:/opt/linux/centos/8.x/x86_64/pkgs/cuda/12.8/nvvm/lib64:/opt/linux/centos/8.x/x86_64/pkgs/cuda/12.8/targets/x86_64-linux/lib/
+setenv          CUDA_HOME         /opt/linux/centos/8.x/x86_64/pkgs/cuda/12.8
+setenv          CUDA_PATH         /opt/linux/centos/8.x/x86_64/pkgs/cuda/12.8
+
