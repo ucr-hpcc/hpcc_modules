@@ -21,5 +21,5 @@ if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "conda config --set env_prompt '({default_env}) '; conda deactivate;"
 }
 
-prepend-path	PATH	${hpcc_modules/aiupred/2.x/AIUPred
+prepend-path	PATH	${hpcc_modules}/aiupred/2.x/AIUPred
 
