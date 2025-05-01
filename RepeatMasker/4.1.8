@@ -1,0 +1,31 @@
+#%Module1.0#####################################################################
+##
+## RepeatMasker modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tRepeatMasker - Adds RepeatMasker to your path"
+}
+
+module-whatis	"RepeatMasker-4.1.8"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load ncbi-rmblast/2.14.0
+module load trf
+module load hmmer/3
+module load kent-tools
+module load phred-phrap-consed
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3;"
+    puts stdout "conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##\")) ';conda activate --stack ${hpcc_modules}/RepeatMasker/4.1.8/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda config --set env_prompt '({default_env}) ';"
+    puts stdout "conda deactivate;"
+}
+
+prepend-path    PATH  	${hpcc_modules}/RepeatMasker/4.1.8
+prepend-path    PATH    ${hpcc_modules}/RepeatMasker/4.1.8/util
+prepend-path	PERL5LIB	${hpcc_modules}/RepeatMasker/4.1.8
