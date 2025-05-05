@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## interproscan modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tinterproscan - Adds interproscan to your path"
+}
+
+module-whatis	"interproscan-5.74-105.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/iprscan/5.74-105.0
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/iprscan/5.74-105.0/lib
+
+module load miniconda3
+module load signalp/4.1c
+module load tmhmm/2.0c
+module load java
+
