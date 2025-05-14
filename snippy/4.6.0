@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## snippy modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tsnippy - Adds snippy to your path"
+}
+
+module-whatis	"snippy-4.6.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate --stack ${hpcc_modules}/snippy/4.6.0/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
