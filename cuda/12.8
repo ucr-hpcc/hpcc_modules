@@ -12,10 +12,10 @@ module-whatis	"cuda-12.8"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
-prepend-path    PATH              /opt/linux/centos/8.x/x86_64/pkgs/cuda/12.8/bin:/opt/linux/centos/8.x/x86_64/pkgs/cuda/12.8/nvvm/bin
-prepend-path    LD_LIBRARY_PATH   /opt/linux/centos/8.x/x86_64/pkgs/cuda/12.8/lib64:/opt/linux/centos/8.x/x86_64/pkgs/cuda/12.8/nvvm/lib64:/opt/linux/centos/8.x/x86_64/pkgs/cuda/12.8/targets/x86_64-linux/lib:/opt/linux/centos/8.x/x86_64/pkgs/cuda/12.8/extras/CUPTI/lib64
-prepend-path    LIBRARY_PATH      /opt/linux/centos/8.x/x86_64/pkgs/cuda/12.8/lib64:/opt/linux/centos/8.x/x86_64/pkgs/cuda/12.8/nvvm/lib64:/opt/linux/centos/8.x/x86_64/pkgs/cuda/12.8/targets/x86_64-linux/lib:/opt/linux/centos/8.x/x86_64/pkgs/cuda/12.8/extras/CUPTI/lib64
-prepend-path    C_INCLUDE_PATH    /opt/linux/centos/8.x/x86_64/pkgs/cuda/12.8/extras/CUPTI/include
-setenv          CUDA_HOME         /opt/linux/centos/8.x/x86_64/pkgs/cuda/12.8
-setenv          CUDA_PATH         /opt/linux/centos/8.x/x86_64/pkgs/cuda/12.8
+prepend-path    PATH              ${hpcc_modules}/cuda/12.8/bin:${hpcc_modules}/cuda/12.8/nvvm/bin
+prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/cuda/12.8/lib64:${hpcc_modules}/cuda/12.8/nvvm/lib64:${hpcc_modules}/cuda/12.8/targets/x86_64-linux/lib:${hpcc_modules}/cuda/12.8/extras/CUPTI/lib64
+prepend-path    LIBRARY_PATH      ${hpcc_modules}/cuda/12.8/lib64:${hpcc_modules}/cuda/12.8/nvvm/lib64:${hpcc_modules}/cuda/12.8/targets/x86_64-linux/lib:${hpcc_modules}/cuda/12.8/extras/CUPTI/lib64
+prepend-path    C_INCLUDE_PATH    ${hpcc_modules}/cuda/12.8/extras/CUPTI/include:${hpcc_modules}/cuda/12.8/targets/x86_64-linux/include
+setenv          CUDA_HOME         ${hpcc_modules}/cuda/12.8
+setenv          CUDA_PATH         ${hpcc_modules}/cuda/12.8
 
