@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tete3- Adds ete3 to your path"
 }
 
-module-whatis	"ete3-3.1.2"
+module-whatis	"ete3-3.1.3"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
@@ -16,7 +16,7 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 module load miniconda3
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/ete3/3.1.2;"
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate --stack ${hpcc_modules}/ete3/3.1.3;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
