@@ -1,0 +1,18 @@
+#%Module1.0#####################################################################
+##
+## vcftools modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tvcftools - Adds vcftools to your path"
+}
+
+module-whatis	"vcftools-0.1.17"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/vcftools/0.1.17/bin
+prepend-path    MANPATH		${hpcc_modules}/vcftools/0.1.17/share/man
+#prepend-path    PERL5LIB	${hpcc_modules}/vcftools/0.1.17/lib/perl5/site_perl
+
