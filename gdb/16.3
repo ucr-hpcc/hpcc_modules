@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## gdb modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tgdb- Adds gdb to your path"
+}
+
+module-whatis	"gdb-16.3"
+
+set   hpcc_modules  $::env(HPCC_MODULES)
+
+prepend-path  INFOPATH  ${hpcc_modules}/gdb/16.3/share/info
+prepend-path  MANPATH   ${hpcc_modules}/gdb/16.3/share/man
+prepend-path  INCLUDE_PATH   ${hpcc_modules}/gdb/16.3/include
+prepend-path  LD_LIBRARY_PATH ${hpcc_modules}/gdb/16.3/lib
+prepend-path  PATH  ${hpcc_modules}/gdb/16.3/bin
+
