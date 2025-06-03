@@ -21,5 +21,5 @@ if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "conda deactivate;"
 }
 
-prepend-path  PATH  ${hpcc_modules}/plasmidverify/1/env
+prepend-path  PATH  ${hpcc_modules}/plasmidverify/1/bin
 
