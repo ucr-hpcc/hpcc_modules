@@ -12,7 +12,7 @@ module-whatis   "arpack-ng-3.9.1_MKL_ILP64"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
-module load oneapi/
+module load oneapi
 
 prepend-path    CPATH            ${hpcc_modules}/arpack-ng/3.9.1_MKL_ILP64/include
 prepend-path    C_INCLUDE_PATH   ${hpcc_modules}/arpack-ng/3.9.1_MKL_ILP64/include
