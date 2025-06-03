@@ -2,6 +2,8 @@
 
 Download the latest version from:
 https://posit.co/download/rstudio-server/
+or
+https://docs.posit.co/previous-versions/rstudio.html
 
 ```bash
 cd $HPCC_MODULES/../src/r/rstudio-server
