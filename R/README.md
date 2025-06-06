@@ -268,6 +268,7 @@ install_github("jinworks/CellChat")
 install_github("jtlovell/GENESPACE")
 install_github("jtlovell/DEEPSPACE")
 install_github("jeffsocal/tidyproteomics")
+install_github('rajarshi/chemblr/package')
 ```
 
 __Direct URL__
