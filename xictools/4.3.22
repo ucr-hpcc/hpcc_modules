@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## xictools modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds xictools to your path"
+}
+
+module-whatis   "xictools-4.3.22"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/xictools/4.3.22/xictools/bin
+
