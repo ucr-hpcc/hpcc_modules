@@ -1,5 +1,7 @@
 # Qiime2
 
+Shotgun metagenome env renamed moshpit
+
 ## Environment File
 
 Get environment file from Qiime website:
