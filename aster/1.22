@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## aster modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\taster - Adds astral astral-pro and other gene tree coalescence/reconcilliation tools to your path"
+
+}
+
+module-whatis	"aster-1.22"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/aster/1.22/bin
+
