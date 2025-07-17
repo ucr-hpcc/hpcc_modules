@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## kb-python modulefile
+#
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tkb-python - adds kb-python to your path"
+}
+
+module-whatis	"kb-python-0.29.5"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/kb-python/0.29.5/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
