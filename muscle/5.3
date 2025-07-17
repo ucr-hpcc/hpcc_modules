@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## muscle modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tmuscle - Adds muscle to your path"
+}
+
+module-whatis	"muscle-5.3"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/muscle/5.3/bin
+
