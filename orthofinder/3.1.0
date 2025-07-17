@@ -1,0 +1,34 @@
+#%Module1.0#####################################################################
+##
+## orthofinder modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\torthofinder- Adds orthofinder to your path"
+}
+
+module-whatis	"orthofinder-3.1.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load iqtree
+module load ncbi-blast
+#module load mcl #
+module load fastme
+module load raxml-ng
+module load raxml
+module load diamond
+module load MMseqs2/13-45111
+module load muscle
+module load fasttree
+module load mafft
+module load aster
+module load famsa
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3;  conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate --stack ${hpcc_modules}/orthofinder/3.1.0/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
