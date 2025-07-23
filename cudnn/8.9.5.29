@@ -20,4 +20,7 @@ set	exec_prefix	${prefix}
 set	datarootdir	${prefix}/share
 
 prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/cudnn/8.9.5.29/lib
+prepend-path    LIBRARY_PATH   ${hpcc_modules}/cudnn/8.9.5.29/lib
+prepend-path    C_INCLUDE_PATH   ${hpcc_modules}/cudnn/8.9.5.29/lib
+prepend-path    CPATH   ${hpcc_modules}/cudnn/8.9.5.29/lib
 
