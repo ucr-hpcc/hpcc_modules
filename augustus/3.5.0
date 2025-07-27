@@ -13,7 +13,7 @@ module-whatis	"augustus-3.5.0"
 set      hpcc_modules    $::env(HPCC_MODULES)
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate ${hpcc_modules}/augustus/3.5.0/env;"
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate --stack ${hpcc_modules}/augustus/3.5.0/env;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
 	puts stdout "module unload anaconda3 miniconda2; module load miniconda3; conda config --set env_prompt '({default_env}) '; conda deactivate;"
 }
