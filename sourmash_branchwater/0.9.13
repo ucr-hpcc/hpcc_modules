@@ -13,7 +13,7 @@ module-whatis	"sourmash_branchwater-0.9.13"
 set      hpcc_modules    $::env(HPCC_MODULES)
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/sourmash/0.9.13;"
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/sourmash_branchwater/0.9.13;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
