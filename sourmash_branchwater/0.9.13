@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## sourmash modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tsourmash_branchwater - Adds sourmash branchwater plugin your path"
+}
+
+module-whatis	"sourmash_branchwater-0.9.13"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/sourmash/0.9.13;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
