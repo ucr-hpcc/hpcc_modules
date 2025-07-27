@@ -8,15 +8,12 @@ proc ModulesHelp { } {
         puts stderr "\tsourmash - Adds sourmash your path"
 }
 
-module-whatis	"sourmash-4.6.1"
+module-whatis	"sourmash-4.9.3"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
-# Load miniconda
-module load miniconda3
-
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/sourmash/4.6.1;"
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/sourmash/4.9;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
