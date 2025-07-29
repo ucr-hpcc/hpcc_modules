@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## AAFTF modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tAAFTF - Adds AAFTF to your path"
+}
+
+module-whatis	"AAFTF-0.6.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate --stack ${hpcc_modules}/AAFTF/0.6.0;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+	puts stdout "module load miniconda3; conda config --set env_prompt '({default_env}) '; conda deactivate;"
+}
+
+setenv	AAFTF_DB	/srv/projects/db/AAFTF_DB
+
