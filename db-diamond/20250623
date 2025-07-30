@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## db-diamond modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tdb-diamond - Sets Diamond database path to DIAMOND_DB environment variable"
+}
+
+module-whatis	"db-diamond-20250623"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+setenv      DIAMOND_DB	    /srv/projects/db/ncbi/diamond/20250623
+
