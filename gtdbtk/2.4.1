@@ -1,0 +1,29 @@
+#%Module1.0#####################################################################
+##
+## GTDB-Tk modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tGTDB-Tk - Adds gtdb-tk to your path"
+}
+
+module-whatis	"gtdbtk-2.4.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Set character encoding
+setenv LC_ALL en_US.utf-8
+setenv LANG en_US.utf-8
+
+module load fastani
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module unload anaconda3 miniconda2; module load miniconda3; conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; source activate ${hpcc_modules}/gtdbtk/2.4.1;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "module unload anaconda3 miniconda2; module load miniconda3; conda deactivate;"
+}
+# this variable is also probably already set by this 
+# conda env config vars set GTDBTK_DATA_PATH="/srv/projects/db/gtdbtk/216"
+#
+#setenv 	GTDBTK_DATA_PATH	/srv/projects/db/gtdbtk/226
