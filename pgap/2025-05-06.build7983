@@ -1,0 +1,32 @@
+#%Module1.0#####################################################################
+##
+## pgap modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds pgap to your path"
+}
+
+module-whatis   "pgap-2025-05-06.build7983"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# pgap runs in singularity
+module load singularity
+
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/pgap/2025-05-06.build7983
+setenv          PGAP_INPUT_DIR  ${hpcc_modules}/pgap/2025-05-06.build7983/pgap
+
+# run ulimit -n 8192
+setenv          PGAP_ULIMIT     8192
+
+if { [module-info mode load] } {
+    puts    stdout  "ulimit -n 8192"
+} elseif { [module-info mode unload] } {
+    puts    stderr  "The pgap module modified your session's ulimits. They can't be restored without making unsafe assumptions."
+    puts    stderr  "If you were relying on ulimits to constrain your session, you should reapply those ulimits if necessary."
+    puts    stderr  "(Most users don't need to worry. If your scripts don't have any ulimit commands, you're safe.)"
+}
