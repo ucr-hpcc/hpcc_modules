@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## code-server modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds code-server to your path"
+}
+
+module-whatis   "code-server-4.102.3"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/code-server/4.102.3/bin
+prepend-path    LIBRARY_PATH    ${hpcc_modules}/code-server/4.102.3/lib
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/code-server/4.102.3/lib
+
