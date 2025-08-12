@@ -5,10 +5,10 @@
 proc ModulesHelp { } {
         global version prefix
 
-        puts stderr "\t - Adds gperftools to your path"
+        puts stderr "\t - Adds libseccomp to your path"
 }
 
-module-whatis   "gperftools-2.17"
+module-whatis   "libseccomp-2.6.0"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
