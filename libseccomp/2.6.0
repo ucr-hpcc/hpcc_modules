@@ -17,4 +17,5 @@ prepend-path    LD_LIBRARY_PATH    ${hpcc_modules}/libseccomp/2.6.0/lib
 prepend-path    LIBRARY_PATH       ${hpcc_modules}/libseccomp/2.6.0/lib
 prepend-path    PATH		   ${hpcc_modules}/libseccomp/2.6.0/bin
 prepend-path    MANPATH		   ${hpcc_modules}/libseccomp/2.6.0/share/man
+prepend-path	PKG_CONFIG_PATH	   ${hpcc_modules}/libseccomp/2.6.0/lib/pkgconfig
 
