@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## gperftools modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds gperftools to your path"
+}
+
+module-whatis   "gperftools-2.17"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/R/4.5.0/bin
+prepend-path    LIBRARY_PATH    ${hpcc_modules}/gperftools/2.17/lib
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/gperftools/2.17/lib
+
