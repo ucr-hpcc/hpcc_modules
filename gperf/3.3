@@ -1,0 +1,18 @@
+#%Module1.0#####################################################################
+##
+## gperf modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds gperf to your path"
+}
+
+module-whatis   "gperf-3.3"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/gperf/3.3/bin
+prepend-path    MANPATH		${hpcc_modules}/gperf/3.3/share/man
+
