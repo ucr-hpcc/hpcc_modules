@@ -13,7 +13,7 @@ module-whatis   "pgap-2025-05-06.build7983"
 set      hpcc_modules    $::env(HPCC_MODULES)
 
 # pgap runs in singularity
-module load singularity
+module load singularity/4.3.2
 
 
 # Setup PATHs
