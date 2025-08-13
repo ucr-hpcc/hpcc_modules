@@ -1,2 +1,2 @@
 #%Module3.2.9#################################################
-set     ModulesVersion     "4.1.2_slurm-23.02.2_mpi1-compat"
+set     ModulesVersion     "4.1.2_slurm-24.11.1_mpi1-compat"
