@@ -8,15 +8,15 @@ proc ModulesHelp { } {
         puts stderr "\topenmpi - openmpi compiled against slurm and with MPI1 compatibility enabled"
 }
 
-module-whatis   "openmpi-4.1.2_slurm-24.11.1_mpi1-compat"
+module-whatis   "openmpi-4.1.2_slurm-24.11.1"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
-prepend-path    PATH             ${hpcc_modules}/openmpi/4.1.2_slurm-24.11.1_mpi1-compat/bin
-prepend-path    CPATH            ${hpcc_modules}/openmpi/4.1.2_slurm-24.11.1_mpi1-compat/include
-prepend-path    LIBRARY_PATH     ${hpcc_modules}/openmpi/4.1.2_slurm-24.11.1_mpi1-compat/lib
-prepend-path    LD_LIBRARY_PATH  ${hpcc_modules}/openmpi/4.1.2_slurm-24.11.1_mpi1-compat/lib:${hpcc_modules}/openmpi/4.1.2_slurm-24.11.1_mpi1-compat/lib/openmpi
-prepend-path    MANPATH          ${hpcc_modules}/openmpi/4.1.2_slurm-24.11.1_mpi1-compat/share/man
+prepend-path    PATH             ${hpcc_modules}/openmpi/4.1.2_slurm-24.11.1/bin
+prepend-path    CPATH            ${hpcc_modules}/openmpi/4.1.2_slurm-24.11.1/include
+prepend-path    LIBRARY_PATH     ${hpcc_modules}/openmpi/4.1.2_slurm-24.11.1/lib
+prepend-path    LD_LIBRARY_PATH  ${hpcc_modules}/openmpi/4.1.2_slurm-24.11.1/lib:${hpcc_modules}/openmpi/4.1.2_slurm-24.11.1/lib/openmpi
+prepend-path    MANPATH          ${hpcc_modules}/openmpi/4.1.2_slurm-24.11.1/share/man
 
 # Pre-loading this is causing compilation and linking warnings, best to keep it only where it is needed (ie. Maker)
 #setenv          LD_PRELOAD       ${hpcc_modules}/openmpi/4.0.1-slurm-19.05.0/lib/libmpi.so
