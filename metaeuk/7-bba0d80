@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## metaeuk modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tmetaeuk- Adds metaeuk to your path"
+}
+
+module-whatis	"metaeuk-7-bba0d80"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH            ${hpcc_modules}/metaeuk/bba0d80/bin
+
