@@ -1,0 +1,18 @@
+#%Module1.0#####################################################################
+##
+## bwa modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tbwa - Adds bwa to your path"
+}
+
+module-whatis	"bwa-0.7.17"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH        ${hpcc_modules}/bwa/0.7.19/bin
+prepend-path    PATH        ${hpcc_modules}/bwa/0.7.19/bwakit
+prepend-path    MANPATH     ${hpcc_modules}/bwa/0.7.19/share/man
+
