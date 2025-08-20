@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## eigen modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds eigen to your path"
+}
+
+module-whatis   "eigen-3.4.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Setup PATHs
+prepend-path    CPATH           ${hpcc_modules}/eigen/3.4.0/include
+prepend-path    LIBRARY_PATH    ${hpcc_modules}/eigen/3.4.0/lib
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/eigen/3.4.0/lib
+
