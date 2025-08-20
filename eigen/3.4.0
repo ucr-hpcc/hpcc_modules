@@ -16,4 +16,5 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 prepend-path    CPATH           ${hpcc_modules}/eigen/3.4.0/include
 prepend-path    LIBRARY_PATH    ${hpcc_modules}/eigen/3.4.0/lib
 prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/eigen/3.4.0/lib
+prepend-path    EIGEN_ROOT      ${hpcc_modules}/eigen/3.4.0/
 
