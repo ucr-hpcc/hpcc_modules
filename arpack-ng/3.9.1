@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## arpack-ng modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tarpack-ng - arpack-ng"
+}
+
+module-whatis   "arpack-ng-3.9.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load oneapi
+
+prepend-path    CPATH            ${hpcc_modules}/arpack-ng/3.9.1/include
+prepend-path    C_INCLUDE_PATH   ${hpcc_modules}/arpack-ng/3.9.1/include
+prepend-path    LIBRARY_PATH     ${hpcc_modules}/arpack-ng/3.9.1/lib
+prepend-path    LD_LIBRARY_PATH  ${hpcc_modules}/arpack-ng/3.9.1/lib
+
