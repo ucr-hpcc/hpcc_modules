@@ -22,4 +22,5 @@ prepend-path    MANPATH         ${hpcc_modules}/precice/3.2.0/share/man
 prepend-path    CPATH           ${hpcc_modules}/precice/3.2.0/include
 prepend-path    LIBRARY_PATH    ${hpcc_modules}/precice/3.2.0/lib64
 prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/precice/3.2.0/lib64
+prepend-path    PKG_CONFIG_PATH ${hpcc_modules}/precice/3.2.0/lib64/pkgconfig
 
