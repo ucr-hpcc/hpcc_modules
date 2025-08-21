@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## yaml-cpp modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tyaml-cpp - yaml-cpp"
+}
+
+module-whatis   "yaml-cpp-0.6.2"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    CPATH            ${hpcc_modules}/yaml-cpp/0.6.2/include
+prepend-path    C_INCLUDE_PATH   ${hpcc_modules}/yaml-cpp/0.6.2/include
+prepend-path    LIBRARY_PATH     ${hpcc_modules}/yaml-cpp/0.6.2/lib
+prepend-path    LD_LIBRARY_PATH  ${hpcc_modules}/yaml-cpp/0.6.2/lib
+
