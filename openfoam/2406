@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## openfoam modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\topenfoam- Adds openfoam to your path"
+}
+
+module-whatis	"openfoam-2406"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "source ${hpcc_modules}/openfoam/2406/etc/bashrc"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "Cannot unload OpenFOAM"
+}
+
