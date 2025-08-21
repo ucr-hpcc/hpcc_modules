@@ -1,0 +1,18 @@
+#%Module1.0#####################################################################
+##
+## calculix modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tcalculix - calculix"
+}
+
+module-whatis   "calculix-2.20"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load boost pmix gcc/12 precice yaml-cpp
+
+prepend-path    PATH            ${hpcc_modules}/calculix/2.20/bin
+
