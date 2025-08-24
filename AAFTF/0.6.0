@@ -9,7 +9,7 @@ proc ModulesHelp { } {
 }
 
 module-whatis	"AAFTF-0.6.0"
-
+module load singularity
 set      hpcc_modules    $::env(HPCC_MODULES)
 
 if { [module-info mode load] || [module-info mode switch2] } {
