@@ -8,20 +8,17 @@ proc ModulesHelp { } {
         puts stderr "\tmedaka- Adds medaka to your path"
 }
 
-module-whatis	"medaka-2.0.1"
+module-whatis	"medaka-2.1.1"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
 # Load miniconda
 module load miniconda3
 module load cuda/12.8
-module load samtools
-module load minimap2
 module load bwa
-module load bcftools
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo -n {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate --stack ${hpcc_modules}/medaka/2.0.1-gpu;"
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo -n {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate --stack ${hpcc_modules}/medaka/2.1.1-gpu;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda config --set env_prompt '({default_env}) '; conda deactivate;"
 }
