@@ -33,7 +33,5 @@ if { [module-info mode load] || [module-info mode switch2] } {
 # add genemark but not its environment - expect those to be installed in funannotate env
 prepend-path    PATH            ${hpcc_modules}/genemarkESET/4.71_lic
 setenv          GENEMARK_PATH   ${hpcc_modules}/genemarkESET/4.71_lic
-setenv 		FUNANNOTATE_DB	/srv/projects/db/funannotate/1.8
-setenv		TRINITYHOME	${hpcc_modules}/funannotate/1.8/env/opt/trinity-2.8.5
-setenv		EVM_HOME	${hpcc_modules}/funannotate/1.8/env/opt/evidencemodeler-1.1.1
+setenv 		FUNANNOTATE2_DB	/bigdata/stajichlab/shared/lib/funannotate2_db/
 setenv		EGGNOG_DATA_DIR	/srv/projects/db/eggNOG/LATEST
