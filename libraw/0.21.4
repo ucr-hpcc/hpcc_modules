@@ -1,0 +1,18 @@
+#%Module1.0#####################################################################
+##
+## libraw modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tlibraw - Adds libraw to your path"
+}
+
+module-whatis	"libraw-0.21.4"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/libraw/0.21.4/lib
+prepend-path    INCLUDE_PATH      ${hpcc_modules}/libraw/0.21.4/include
+prepend-path    PATH	${hpcc_modules}/libraw/0.21.4/bin
+

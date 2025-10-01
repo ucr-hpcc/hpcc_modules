@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## imagemagick modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\timagemagick - Adds imagemagick to your path"
+}
+
+module-whatis	"imagemagick-7.1.2"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load libraw
+prepend-path    LD_LIBRARY_PATH   ${hpcc_modules}/imagemagick/7.1.2/lib
+prepend-path    INCLUDE_PATH      ${hpcc_modules}/imagemagick/7.1.2/include
+prepend-path    PATH	${hpcc_modules}/imagemagick/7.1.2/bin
+
