@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## kaiju modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tkaiju - Adds kaiju to your path"
+}
+
+module-whatis	"kaiju-1.10.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH        ${hpcc_modules}/kaiju/1.10.1/bin
+
