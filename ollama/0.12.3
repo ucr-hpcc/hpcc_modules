@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## Ollama modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds Ollama to your path"
+}
+
+module-whatis   "Ollama - 0.12.3"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/ollama/0.12.3/bin
+prepend-path    LIBRARY_PATH    ${hpcc_modules}/ollama/0.12.3/lib
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/ollama/0.12.3/lib
+
