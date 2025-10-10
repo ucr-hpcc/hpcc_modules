@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## UNITE database modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tdb-unite Sets UNITE ITS database path to UNITEDB and QIIMEDB variables"
+}
+
+module-whatis	"db-unite-10.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+setenv      UNITEDB	/srv/projects/db/UNITE/v10.0
+setenv      QIIMEDB	/srv/projects/db/UNITE/qiime/2025-02-19
+
