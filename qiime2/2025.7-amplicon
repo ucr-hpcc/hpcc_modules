@@ -17,4 +17,4 @@ if { [module-info mode load] || [module-info mode switch2] } {
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda deactivate;"
 }
-setenv QIIMEDB /srv/projects/db/UNITE/qiime
+setenv QIIMEDB /srv/projects/db/UNITE/qiime/current
