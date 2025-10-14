@@ -14,8 +14,6 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 
 # Load miniconda
 module load miniconda3
-module load cuda/12.8
-module load bwa
 
 if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo -n {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate --stack ${hpcc_modules}/medaka/2.1.1;"
