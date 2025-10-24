@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tjbrowse2- Adds jbrowse2 to your path"
 }
 
-module-whatis	"jbrowse2-3.65.0"
+module-whatis	"jbrowse2-3.6.5"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
@@ -16,7 +16,7 @@ set      hpcc_modules    $::env(HPCC_MODULES)
 module load miniconda3
 
 if { [module-info mode load] || [module-info mode switch2] } {
-    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate --stack ${hpcc_modules}/jbrowse2/3.65.0;"
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(dirname {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate --stack ${hpcc_modules}/jbrowse2/3.6.5;"
 } elseif { [module-info mode remove] && ![module-info mode switch3] } {
     puts stdout "conda config --set env_prompt '({default_env}) '; conda deactivate;"
 }
