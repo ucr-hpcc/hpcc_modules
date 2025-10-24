@@ -269,6 +269,10 @@ install_github("jtlovell/GENESPACE")
 install_github("jtlovell/DEEPSPACE")
 install_github("jeffsocal/tidyproteomics")
 install_github('rajarshi/chemblr/package')
+install_github('thomasp85/FindMyFriends')
+install_github('thomasp85/PanVizGenerator')
+install_github("bogind/easycsv")
+install_github('LucaAnholt/PanViz')
 ```
 
 __Direct URL__
