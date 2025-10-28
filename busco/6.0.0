@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## busco modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tbusco- Adds busco to your path"
+}
+
+module-whatis	"busco-6.0.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Load miniconda
+module load miniconda3
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo -n {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate --stack ${hpcc_modules}/busco/6.0.0;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda config --set env_prompt '({default_env}) '; conda deactivate;"
+}
+
+setenv           BUSCO_LINEAGES      /srv/projects/db/BUSCO/v10
