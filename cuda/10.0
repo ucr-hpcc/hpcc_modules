@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## cuda modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tcuda - Adds cuda version 10.0 to your path"
+}
+
+module-whatis	"cuda-10.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH              /opt/linux/rhel/8.x/x86_64/pkgs/cuda/10.0/bin:/opt/linux/rhel/8.x/x86_64/pkgs/cuda/10.0/nvvm/bin
+prepend-path    LD_LIBRARY_PATH   /opt/linux/rhel/8.x/x86_64/pkgs/cuda/10.0/lib64:/opt/linux/rhel/8.x/x86_64/pkgs/cuda/10.0/nvvm/lib64:/opt/linux/rhel/8.x/x86_64/pkgs/cuda/10.0/targets/x86_64-linux/lib/
+setenv          CUDA_HOME         /opt/linux/rhel/8.x/x86_64/pkgs/cuda/10.0
+setenv          CUDA_PATH         /opt/linux/rhel/8.x/x86_64/pkgs/cuda/10.0
+
