@@ -1,0 +1,25 @@
+#%Module1.0#####################################################################
+##
+## spack modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds spack-installed modules to your path"
+}
+
+module-whatis   "spack-latest"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+set      spack_root      /opt/linux/rocky/8.x/x86_64/spack
+
+if { [module-info mode load] } {
+  puts stderr "You're loading an experimental module."
+  puts stderr "This module is not for the spack package itself."
+  puts stderr "This module makes packages installed using 'spack' available to use."
+  puts stderr "Spack-installed packages are currently unstable, don't depend on them for any critical workflows."
+}
+
+# Setup PATHs
+prepend-path    MODULEPATH            ${spack_root}/share/spack/modules
+
