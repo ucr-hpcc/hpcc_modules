@@ -273,6 +273,8 @@ install_github('thomasp85/FindMyFriends')
 install_github('thomasp85/PanVizGenerator')
 install_github("bogind/easycsv")
 install_github('LucaAnholt/PanViz')
+install_github("bnprks/BPCells/r")
+install_github('cole-trapnell-lab/monocle3')
 ```
 
 __Direct URL__
