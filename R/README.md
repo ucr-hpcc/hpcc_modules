@@ -291,19 +291,9 @@ setRepositories(ind = 1:3, addURLs = c('https://satijalab.r-universe.dev', 'http
 install.packages(c("BPCells", "presto", "glmGamPoi"))
 ```
 
-### Upgrading R in RStudio Server
+### Upgrading R on OnDemand
 
-Modify paths in the following files:
-
-```
-/etc/rstudio/rserver.conf
-/etc/rstudio/profiles # Pro Version Only
-```
-
-And lastly, update the libraries for inside of RStudio:
-
-```bash
-sudo nano /etc/RStudio/rserver.conf
-## rsession-ld-library-path=/opt/linux/centos/7.x/x86_64/pkgs/R/4.0.3_gcc-8.3.0/lib64/R/lib
+Add the new version to the list of versions:
+https://github.com/ucr-hpcc/bc_rstudio/blob/main/form.yml\
 sudo rstudio-server restart
 ```
