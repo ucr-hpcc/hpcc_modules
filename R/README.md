@@ -294,6 +294,4 @@ install.packages(c("BPCells", "presto", "glmGamPoi"))
 ### Upgrading R on OnDemand
 
 Add the new version to the list of versions:
-https://github.com/ucr-hpcc/bc_rstudio/blob/main/form.yml\
-sudo rstudio-server restart
-```
+https://github.com/ucr-hpcc/bc_rstudio/blob/main/form.yml
