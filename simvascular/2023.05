@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## SimVascular modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds SimVascular to your path"
+}
+
+module-whatis   "simvascular-2023.05"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load singularity
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/simvascular/2023.05/bin
+
