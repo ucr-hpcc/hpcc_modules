@@ -12,6 +12,7 @@ module-whatis   "oneapi-2025.3.0.381"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
+setenv          ONEAPI_ROOT           ${hpcc_modules}/oneapi/2025.3.0.381
 prepend-path    MODULEPATH            ${hpcc_modules}/oneapi/2025.3.0.381/modulefiles
 
 module load vtune ccl mkl dnnl intel_ipp_intel64 mpi dpct advisor dev-utilities dal intel_ippcp_intel64 compiler
