@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## SMOKE modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds SMOKE to your path"
+}
+
+module-whatis   "smoke-5.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/smoke/5.1/bin
+
