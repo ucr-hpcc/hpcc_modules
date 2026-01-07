@@ -276,6 +276,7 @@ install_github('LucaAnholt/PanViz')
 install_github("bnprks/BPCells/r")
 install_github('cole-trapnell-lab/monocle3')
 install_github("PhanstielLab/bedtoolsr")
+install_github("fbertran/bigPCAcpp")
 ```
 
 __Direct URL__
