@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## WRF modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds WRF to your path"
+}
+
+module-whatis   "WRF-4.7.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load gcc/12.2.0 netcdf-c netcdf-fortran openmpi
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/wrf/4.7.1/bin
+prepend-path    CPATH           ${hpcc_modules}/wrf/4.7.1/include
+prepend-path    LIBRARY_PATH    ${hpcc_modules}/wrf/4.7.1/lib
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/wrf/4.7.1/lib
+
