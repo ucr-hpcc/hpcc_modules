@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## wps modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds WPS to your path"
+}
+
+module-whatis   "WPS-4.6.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load wrf gcc/12.2.0
+
+# Setup PATHs
+prepend-path    PATH            ${hpcc_modules}/wps/4.6.0/bin
+prepend-path    LIBRARY_PATH    ${hpcc_modules}/wps/4.6.0/lib
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/wps/4.6.0/lib
+
