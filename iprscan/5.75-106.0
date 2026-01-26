@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tinterproscan - Adds interproscan to your path"
 }
 
-module-whatis	"interproscan-5.74-106.0"
+module-whatis	"interproscan-5.75-106.0"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
