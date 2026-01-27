@@ -1,0 +1,15 @@
+#%Module1.0#####################################################################
+##
+## pfam database modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tdb-pfam - Sets pfam database path to PFAM_DB environment variable"
+}
+
+module-whatis	"db-pfam-Pfam-38.2"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+setenv      PFAM_DB	    /srv/projects/db/pfam/2026-01-27-Pfam38.2
