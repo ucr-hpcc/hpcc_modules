@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## earlgrey modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tearlgrey - Adds earlgrey to your path"
+}
+
+module-whatis	"earlgrey-7.0.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Get user
+set      user            [module-info username]
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo -n {default_env} | perl -p -e \"s#.+pkgs/##; s#/env##\")) '; conda activate --stack ${hpcc_modules}/earlgrey/7.0.1/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda config --set env_prompt '({default_env}) '; conda deactivate;"
+}
+
