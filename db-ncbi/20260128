@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## db-ncbi modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tdb-ncbi - Sets ncbi database path to NCBI_DB environment variable"
+}
+
+module-whatis	"db-ncbi"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+setenv          NCBI_DB	    /srv/projects/db/ncbi/preformatted/20260128
+prepend-path    BLASTDB	    /srv/projects/db/ncbi/preformatted/20260128
+
