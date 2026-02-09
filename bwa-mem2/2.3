@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## bwa-mem2 modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tbwa-mem2 - Adds bwa-mem2 to your path"
+}
+
+module-whatis	"bwa-mem2-2.3"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    PATH        ${hpcc_modules}/bwa-mem2/2.3
+
