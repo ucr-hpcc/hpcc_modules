@@ -1,0 +1,18 @@
+#%Module1.0#####################################################################
+##
+## rust modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\trust - Adds rust compiler to your path"
+}
+
+module-whatis	"rust-1.93.1"
+
+set   hpcc_modules  $::env(HPCC_MODULES)
+
+prepend-path  MANPATH   ${hpcc_modules}/rust/1.93.1/share/man
+prepend-path  LD_LIBRARY_PATH ${hpcc_modules}/rust/1.93.1/lib
+prepend-path  PATH  ${hpcc_modules}/rust/1.93.1/bin
+
