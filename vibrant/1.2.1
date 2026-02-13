@@ -1,0 +1,25 @@
+#%Module1.0#####################################################################
+##
+## vibrant modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tvibrant- Adds vibrant to your path"
+}
+
+module-whatis	"vibrant-1.2.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Load miniconda
+module load miniconda3
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo -n {default_env} | perl -p -e \"s#.+pkgs/##\")) '; conda activate --stack ${hpcc_modules}/vibrant/1.2.1/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
+setenv VIBRANT_DATA_PATH /srv/projects/db/vibrant/1.2.1
+
