@@ -12,5 +12,5 @@ module-whatis	"ncbi-asn_tools"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
-prepend-path    PATH            ${hpcc_modules}/ncbi-asn_tools/2025-05-15
+prepend-path    PATH            ${hpcc_modules}/ncbi-asn_tools/2025-09-15
 
