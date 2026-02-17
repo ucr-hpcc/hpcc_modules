@@ -1,0 +1,26 @@
+#%Module1.0#####################################################################
+##
+## egapx modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tegapx- Adds egapx to your path"
+}
+
+module-whatis	"egapx-0.5.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Load miniconda
+module load miniconda3
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo -n {default_env} | perl -p -e \"s#.+pkgs/##\")) '; conda activate --stack ${hpcc_modules}/egapx/0.5.0/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
+prepend-path  PATH  ${hpcc_modules}/egapx/0.5.0/ui
+setenv  EGAPX_EXAMPLE ${hpcc_modules}/egapx/0.5.0/examples
+
