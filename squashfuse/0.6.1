@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## squashfuse modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\t - Adds squashfuse tools to your path"
+}
+
+module-whatis   "squashfuse - 0.6.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load fuse/3
+
+# Setup PATHs
+prepend-path    LD_LIBRARY_PATH    ${hpcc_modules}/squashfuse/0.6.1/lib
+prepend-path    LIBRARY_PATH       ${hpcc_modules}/squashfuse/0.6.1/lib
+prepend-path    PATH		   ${hpcc_modules}/squashfuse/0.6.1/bin
+prepend-path    MANPATH		   ${hpcc_modules}/squashfuse/0.6.1/share/man
+prepend-path	PKG_CONFIG_PATH	   ${hpcc_modules}/squashfuse/0.6.1/lib64/pkgconfig
+prepend-path    INCLUDE_PATH    ${hpcc_modules}/squashfuse/0.6.1/include
+
