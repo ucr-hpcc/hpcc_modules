@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## libsrtp modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tlibsrtp - Adds libyaml apps and libraries to your path"
+}
+
+module-whatis	"libsrtp-2.8.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+
+prepend-path    LD_LIBRARY_PATH	  ${hpcc_modules}/libsrtp/2.8.0/lib
+prepend-path    LIBRARY_PATH	${hpcc_modules}/libsrtp/2.8.0/lib
+prepend-path    INCLUDE_PATH	${hpcc_modules}/libsrtp/2.8.0/include
+prepend-path    C_INCLUDE_PATH	${hpcc_modules}/libsrtp/2.8.0/include
+prepend-path    CPLUS_INCLUDE_PATH	${hpcc_modules}/libsrtp/2.8.0/include
