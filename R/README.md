@@ -277,6 +277,7 @@ install_github("bnprks/BPCells/r")
 install_github('cole-trapnell-lab/monocle3')
 install_github("PhanstielLab/bedtoolsr")
 install_github("fbertran/bigPCAcpp")
+install_github("jbisanz/qiime2R")
 ```
 
 __Direct URL__
