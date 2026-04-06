@@ -278,6 +278,7 @@ install_github('cole-trapnell-lab/monocle3')
 install_github("PhanstielLab/bedtoolsr")
 install_github("fbertran/bigPCAcpp")
 install_github("jbisanz/qiime2R")
+install_github("mkdiro-o/phylobar")
 ```
 
 __Direct URL__
