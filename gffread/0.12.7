@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## gffread modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tgffread - Adds gffread to your path"
+}
+
+module-whatis	"gffread-0.12.7"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+
+prepend-path    PATH	  ${hpcc_modules}/gffread/0.12.7/bin
