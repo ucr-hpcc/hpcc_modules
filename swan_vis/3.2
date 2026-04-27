@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## swan_vis modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tswan_vis- Adds swan_vis to your path"
+}
+
+module-whatis	"swan_vis-3.2"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+module load miniconda3
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda config --set env_prompt '(\$(echo {default_env} |  perl -p -e \"s#.+pkgs/##\")) '; conda activate ${hpcc_modules}/swan_vis/3.2/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
