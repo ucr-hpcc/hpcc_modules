@@ -17,7 +17,7 @@ conflict R
 
 # Deps for various R packages
 # No module for gdal and geos, these are now installed as RPMs
-module load java texlive pandoc workspace/scratch
+module load java texlive pandoc workspace/scratch gcc/12
 
 # Setup PATHs
 prepend-path    PATH            ${hpcc_modules}/R/4.6.0/bin
