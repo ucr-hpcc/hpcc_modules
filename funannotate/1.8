@@ -19,6 +19,7 @@ module load    CodingQuarry
 #module load PASA
 module load phobius
 module load signalp
+module load ncbi-table2asn
 # Create symlink for genemark key file
 if { [module-info mode load] || [module-info mode switch2] } {
     if { ![file exists /rhome/${user}/.gm_key] } {
