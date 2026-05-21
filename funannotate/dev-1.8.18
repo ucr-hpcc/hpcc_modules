@@ -22,7 +22,9 @@ if { [module-info mode load] || [module-info mode switch2] } {
 }
 
 module load pixi
-eval $(pixi shell-hook)
+pushd /opt/linux/rocky/8.x/x86_64/pkgs/funannotate/1.8.18
+eval $(pixi shell-hook --as-is)
+popd
 # add genemark but not its environment - expect those to be installed in funannotate env
 
 prepend-path    PATH            ${hpcc_modules}/genemarkESET/4.72_lic
