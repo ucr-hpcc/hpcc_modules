@@ -8,12 +8,12 @@ proc ModulesHelp { } {
         puts stderr "\tnextflow - Adds nextflow to your path"
 }
 
-module-whatis	"nextflow-26.04.1"
+module-whatis	"nextflow-26.04.2"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
 module load java
 module load singularity
 prepend-path    PATH            ${hpcc_modules}/nextflow/bin
-setenv          NXF_VER         26.04.1
+setenv          NXF_VER         26.04.2
 
