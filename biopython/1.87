@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## biopython modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tbiopython - Adds biopython modules to your path"
+}
+
+module-whatis	"biopython-1.87"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# exploring pixi instead
+puts stdout "source ${hpcc_modules}/biopython/1.87/activate.sh"
