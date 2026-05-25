@@ -21,7 +21,6 @@ if { [module-info mode load] || [module-info mode switch2] } {
     }
 }
 
-module load pixi
 puts stdout "source ${hpcc_modules}/funannotate/1.8.18/activate.sh"
 
 # will need to set some env variables
