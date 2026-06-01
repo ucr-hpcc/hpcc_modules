@@ -13,5 +13,7 @@ module-whatis   "apptianer-1.4.5"
 set      hpcc_modules    $::env(HPCC_MODULES)
 
 module load libseccomp fuse squashfuse gocryptfs
-setenv          APPTAINER_BINDPATH    /bigdata
+# Setting the bindpath causes problems when building. Should be a conscious effort by users to mount
+# directories anyways, eg. '--bind /bigdata:/bigdata'
+#setenv          APPTAINER_BINDPATH    /bigdata
 prepend-path    PATH                    ${hpcc_modules}/apptainer/1.4.5/bin
