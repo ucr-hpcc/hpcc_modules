@@ -1,0 +1,28 @@
+#%Module1.0#####################################################################
+##
+## earlGrey modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tearlgrey - Adds earlGrey pipeline to your path"
+}
+
+module-whatis	"earlgrey-7.2.6"
+module load pixi
+set     hpcc_modules    $::env(HPCC_MODULES)
+set 	pixi_env "${hpcc_modules}/earlgrey/7.2.6/.pixi/envs/default"
+set 	pixi_root "${hpcc_modules}/earlgrey/7.2.6"
+set	pixi_name "earlgrey"
+set	proj_version "7.2.6"
+
+setenv PIXI_PROJECT_NAME "${pixi_name}"
+setenv PIXI_PROJECT_VERSION ${proj_version}
+setenv PIXI_PROJECT_MANIFEST "${pixi_root}/pixi.toml"
+setenv CONDA_DEFAULT_ENV "${pixi_name}/${proj_version}"
+setenv PIXI_PROMPT "${pixi_name}/${proj_version}"
+prepend-path PATH "${pixi_env}/bin"
+prepend-path LD_LIBRARY_PATH "${pixi_env}/lib"
+setenv CONDA_PREFIX "${pixi_env}"
+setenv PIXI_PROJECT_ROOT "${pixi_root}"
+
