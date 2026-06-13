@@ -9,8 +9,20 @@ proc ModulesHelp { } {
 }
 
 module-whatis	"biopython-1.87"
+module load pixi
+set     hpcc_modules    $::env(HPCC_MODULES)
+set 	pixi_env "${hpcc_modules}/biopython/1.87/.pixi/envs/default"
+set 	pixi_root "${hpcc_modules}/biopython/1.87"
+set	pixi_name "biopython"
+set	proj_version "1.87"
 
-set      hpcc_modules    $::env(HPCC_MODULES)
+setenv PIXI_PROJECT_NAME "${pixi_name}"
+setenv PIXI_PROJECT_VERSION 0.1.0
+setenv PIXI_PROJECT_MANIFEST "${pixi_root}/pixi.toml"
+setenv CONDA_DEFAULT_ENV "${pixi_name}/${proj_version}"
+setenv PIXI_PROMPT "${pixi_name}/${proj_version}"
+prepend-path PATH "${pixi_env}/bin"
+prepend-path LD_LIBRARY_PATH "${pixi_env}/lib"
+setenv CONDA_PREFIX "${pixi_env}"
+setenv PIXI_PROJECT_ROOT "${pixi_root}"
 
-# exploring pixi instead
-puts stdout "source ${hpcc_modules}/biopython/1.87/activate.sh"
