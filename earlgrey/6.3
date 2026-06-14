@@ -3,12 +3,14 @@
 ## earlgrey modulefile
 ##
 proc ModulesHelp { } {
-        global version prefix
-
-        puts stderr "\tearlgrey - Adds earlgrey to your path"
+        puts stderr "\tearlGrey 6.3.3 - RepeatAnnotation and classification pipeline"
+        puts stderr "\thttps://github.com/TobyBaril/EarlGrey"
 }
 
 module-whatis	"earlgrey-6.3.3"
+
+# only one earlgrey version at a time
+conflict earlgrey
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
