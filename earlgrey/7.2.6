@@ -20,6 +20,9 @@ setenv PIXI_PROJECT_NAME "${pixi_name}"
 setenv PIXI_PROJECT_VERSION ${proj_version}
 setenv PIXI_PROJECT_MANIFEST "${pixi_root}/pixi.toml"
 setenv CONDA_DEFAULT_ENV "${pixi_name}/${proj_version}"
+prepend-path	PERL5LIB	"${pixi_env}/share/RepeatMasker"
+prepend-path	PERL5LIB	"${pixi_env}/share/RepeatModeler"
+
 setenv PIXI_PROMPT "${pixi_name}/${proj_version}"
 prepend-path PATH "${pixi_env}/bin"
 prepend-path LD_LIBRARY_PATH "${pixi_env}/lib"
