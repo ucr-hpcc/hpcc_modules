@@ -3,13 +3,20 @@
 ## earlGrey modulefile
 ##
 proc ModulesHelp { } {
-        global version prefix
+        global proj_version
 
-        puts stderr "\tearlgrey - Adds earlGrey pipeline to your path"
+        puts stderr "\tearlGrey ${proj_version} - RepeatAnnotation and classification pipeline"
+        puts stderr "\thttps://github.com/TobyBaril/EarlGrey"
 }
 
 module-whatis	"earlgrey-7.2.6"
-module load pixi
+
+# only one earlgrey version at a time
+conflict earlgrey
+
+# pixi provides the runtime; auto_handling is on, so this auto-loads/unloads it
+prereq pixi
+
 set     hpcc_modules    $::env(HPCC_MODULES)
 set 	pixi_env "${hpcc_modules}/earlgrey/7.2.6/.pixi/envs/default"
 set 	pixi_root "${hpcc_modules}/earlgrey/7.2.6"
@@ -20,8 +27,8 @@ setenv PIXI_PROJECT_NAME "${pixi_name}"
 setenv PIXI_PROJECT_VERSION ${proj_version}
 setenv PIXI_PROJECT_MANIFEST "${pixi_root}/pixi.toml"
 setenv CONDA_DEFAULT_ENV "${pixi_name}/${proj_version}"
-prepend-path	PERL5LIB	"${pixi_env}/share/RepeatMasker"
-prepend-path	PERL5LIB	"${pixi_env}/share/RepeatModeler"
+prepend-path PERL5LIB "${pixi_env}/share/RepeatMasker"
+prepend-path PERL5LIB "${pixi_env}/share/RepeatModeler"
 
 setenv PIXI_PROMPT "${pixi_name}/${proj_version}"
 prepend-path PATH "${pixi_env}/bin"
