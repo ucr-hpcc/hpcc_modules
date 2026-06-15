@@ -3,13 +3,20 @@
 ## biopython modulefile
 ##
 proc ModulesHelp { } {
-        global version prefix
+        global proj_version
 
-        puts stderr "\tbiopython - Adds biopython modules to your path"
+        puts stderr "\tbiopython ${proj_version} - Biopython tools for computational biology"
+        puts stderr "\thttps://biopython.org"
 }
 
 module-whatis	"biopython-1.87"
-module load pixi
+
+# only one biopython version at a time
+conflict biopython
+
+# pixi provides the runtime; auto_handling is on, so this auto-loads/unloads it
+prereq pixi
+
 set     hpcc_modules    $::env(HPCC_MODULES)
 set 	pixi_env "${hpcc_modules}/biopython/1.87/.pixi/envs/default"
 set 	pixi_root "${hpcc_modules}/biopython/1.87"
