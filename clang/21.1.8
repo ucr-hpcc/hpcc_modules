@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## clang modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+        puts stderr "\tclang - Adds clang/LLVM to your path"
+}
+
+module-whatis   "clang-21.1.8"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+prepend-path    MANPATH         ${hpcc_modules}/clang/21.1.8/share/man
+prepend-path    LD_LIBRARY_PATH ${hpcc_modules}/clang/21.1.8/lib
+prepend-path    PATH            ${hpcc_modules}/clang/21.1.8/bin
