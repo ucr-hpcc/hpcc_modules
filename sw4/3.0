@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## sw4 modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+        puts stderr "\tsw4 - Adds sw4 to your path"
+}
+
+module-whatis   "sw4-3.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load gcc/11.5.0
+
+prepend-path    PATH            ${hpcc_modules}/sw4/3.0/bin
