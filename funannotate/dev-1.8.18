@@ -44,3 +44,7 @@ prepend-path PATH "${pixi_env}/bin"
 prepend-path LD_LIBRARY_PATH "${pixi_env}/lib"
 setenv CONDA_PREFIX "${pixi_env}"
 setenv PIXI_PROJECT_ROOT "${pixi_root}"
+
+setenv 		FUNANNOTATE_DB	/srv/projects/db/funannotate/1.8
+setenv		TRINITYHOME	"${pixi_env}/bin"
+setenv		EVM_HOME	"${pixi_env}/opt/evidencemodeler-1.1.1"
