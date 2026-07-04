@@ -1,0 +1,51 @@
+#%Module1.0#####################################################################
+##
+## funannotate modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tfunannotate - Adds funannotate to your path"
+}
+
+module-whatis	"funannotate-1.9.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+# Get user
+set      user            [module-info username]
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    if { ![file exists /rhome/${user}/.gm_key] } {
+        puts stdout "ln -s ${hpcc_modules}/genemarkESET/4.72_lic/gm_key /rhome/${user}/.gm_key;"
+    }
+}
+
+# will need to set some env variables
+# add genemark but not its environment - expect those to be installed in funannotate env
+
+prepend-path    PATH            ${hpcc_modules}/genemarkESET/4.72_lic
+setenv          GENEMARK_PATH   ${hpcc_modules}/genemarkESET/4.72_lic
+setenv          FUNANNOTATE_DB  /srv/projects/db/funannotate/1.8
+setenv          EGGNOG_DATA_DIR /srv/projects/db/eggNOG/LATEST
+
+set     hpcc_modules    $::env(HPCC_MODULES)
+set 	pixi_env "${hpcc_modules}/funannotate/1.9/.pixi/envs/default"
+set 	pixi_root "${hpcc_modules}/funannotate/1.9"
+set	pixi_name "funannotate"
+set	proj_version "1.9.0"
+
+setenv PIXI_PROJECT_NAME "${pixi_name}"
+setenv PIXI_PROJECT_VERSION "${proj_version}"
+setenv PIXI_PROJECT_MANIFEST "${pixi_root}/pixi.toml"
+setenv CONDA_DEFAULT_ENV "${pixi_name}/${proj_version}"
+setenv PIXI_PROMPT "${pixi_name}/${proj_version}"
+prepend-path PATH "${pixi_env}/bin"
+prepend-path LD_LIBRARY_PATH "${pixi_env}/lib"
+setenv CONDA_PREFIX "${pixi_env}"
+setenv PIXI_PROJECT_ROOT "${pixi_root}"
+
+setenv 		FUNANNOTATE_DB	/srv/projects/db/funannotate/1.8
+setenv		TRINITYHOME	"${pixi_env}/bin"
+setenv		EVM_HOME	"${pixi_env}/opt/evm"
+setenv		PASAHOME	"${pixi_env}/opt/pasa"
