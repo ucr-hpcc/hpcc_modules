@@ -48,3 +48,4 @@ setenv PIXI_PROJECT_ROOT "${pixi_root}"
 setenv 		FUNANNOTATE_DB	/srv/projects/db/funannotate/1.8
 setenv		TRINITYHOME	"${pixi_env}/bin"
 setenv		EVM_HOME	"${pixi_env}/opt/evidencemodeler-1.1.1"
+setenv		PASAHOME	"${pixi_env}/opt/pasa-2.5.3"
