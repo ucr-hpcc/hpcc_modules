@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## claude-science modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tclaude-science- Adds claude-science to your path"
+}
+
+module-whatis	"claude-science-0.1.18-dev"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load bubblewrap socat
+
+prepend-path    PATH	${hpcc_modules}/claude-science/0.1.18-dev/bin
