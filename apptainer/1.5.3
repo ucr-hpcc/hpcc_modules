@@ -8,11 +8,11 @@ proc ModulesHelp { } {
         puts stderr "\tapptainer - Adds apptainer to your path"
 }
 
-module-whatis   "apptianer-1.5.3"
+module-whatis   "apptainer-1.5.3"
 
 set      hpcc_modules    $::env(HPCC_MODULES)
 
-module load libseccomp fuse gocryptfs
+module load libseccomp fuse squashfuse gocryptfs
 # Setting the bindpath causes problems when building. Should be a conscious effort by users to mount
 # directories anyways, eg. '--bind /bigdata:/bigdata'
 #setenv          APPTAINER_BINDPATH    /bigdata
