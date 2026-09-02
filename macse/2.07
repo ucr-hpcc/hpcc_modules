@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## macse modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tmacse - Sets MACSE JAR path in your environment"
+}
+
+module-whatis	"macse-2.07"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load java
+
+setenv          MACSE           ${hpcc_modules}/macse/2.07/macse_v2.07.jar
+
+if { [module-info mode load] } {
+  puts stderr "MACSE is a java program, run it with:"
+  puts stderr "  java -jar \$MACSE -prog <subprogram> <options>"
+  puts stderr "Run 'java -jar \$MACSE -help' to list the available subprograms."
+}
