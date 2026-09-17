@@ -1,0 +1,35 @@
+#%Module
+
+# NOTE: Generated with sh-to-mod:
+# export FREESURFER_HOME=$HPCC_MODULES/freesurfer/8.2.0
+# module sh-to-mod bash $HPCC_MODULES/freesurfer/8.2.0/SetUpFreeSurfer.sh
+
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tfreesurver - Adds freesurfer to your path"
+}
+
+module-whatis "freesurfer-8.2.0"
+
+prepend-path	PATH /opt/linux/rocky/8.x/x86_64/pkgs/freesurfer/8.2.0/bin /opt/linux/rocky/8.x/x86_64/pkgs/freesurfer/8.2.0/fsfast/bin /opt/linux/rocky/8.x/x86_64/pkgs/freesurfer/8.2.0/tktools /opt/linux/rocky/8.x/x86_64/pkgs/freesurfer/8.2.0/mni/bin
+set-function	func_setup_fspython_path {
+    export PATH="${FREESURFER_FSPYTHON}/bin:${PATH}";
+    export FREESURFER_HOME_FSPYTHON="${FREESURFER_FSPYTHON}"}
+setenv		FIX_VERTEX_AREA {}
+setenv		FMRI_ANALYSIS_DIR /opt/linux/rocky/8.x/x86_64/pkgs/freesurfer/8.2.0/fsfast
+setenv		FREESURFER /opt/linux/rocky/8.x/x86_64/pkgs/freesurfer/8.2.0
+setenv		FREESURFER_HOME_FSPYTHON /opt/linux/rocky/8.x/x86_64/pkgs/freesurfer/8.2.0
+setenv		FS_OVERRIDE 0
+setenv		FSF_OUTPUT_FORMAT nii.gz
+setenv		FSFAST_HOME /opt/linux/rocky/8.x/x86_64/pkgs/freesurfer/8.2.0/fsfast
+setenv		FUNCTIONALS_DIR /opt/linux/rocky/8.x/x86_64/pkgs/freesurfer/8.2.0/sessions
+setenv		LOCAL_DIR /opt/linux/rocky/8.x/x86_64/pkgs/freesurfer/8.2.0/local
+setenv		MINC_BIN_DIR /opt/linux/rocky/8.x/x86_64/pkgs/freesurfer/8.2.0/mni/bin
+setenv		MINC_LIB_DIR /opt/linux/rocky/8.x/x86_64/pkgs/freesurfer/8.2.0/mni/lib
+setenv		MNI_DATAPATH /opt/linux/rocky/8.x/x86_64/pkgs/freesurfer/8.2.0/mni/data
+setenv		MNI_DIR /opt/linux/rocky/8.x/x86_64/pkgs/freesurfer/8.2.0/mni
+setenv		MNI_PERL5LIB /opt/linux/rocky/8.x/x86_64/pkgs/freesurfer/8.2.0/mni/share/perl5
+setenv		OS Linux
+setenv		PERL5LIB /opt/linux/rocky/8.x/x86_64/pkgs/freesurfer/8.2.0/mni/share/perl5
+setenv		SUBJECTS_DIR /opt/linux/rocky/8.x/x86_64/pkgs/freesurfer/8.2.0/subjects
