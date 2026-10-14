@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## openfoam-org modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\topenfoam-org - Adds OpenFOAM (openfoam.org) 14 to your path"
+}
+
+module-whatis	"openfoam-org-14"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+set      foam_dir        ${hpcc_modules}/openfoam-org/14/OpenFOAM-14
+
+module load openmpi/4.1.2_slurm-24.11.1_mpi1-compat
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "source ${foam_dir}/etc/bashrc;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "source ${foam_dir}/etc/config.sh/unset;"
+}
