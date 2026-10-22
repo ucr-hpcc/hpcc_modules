@@ -1,0 +1,25 @@
+#%Module1.0#####################################################################
+##
+## cadence modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tcadence - Adds Cadence to your path"
+}
+
+module-whatis   "cadence-25.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+set      cdsroot         ${hpcc_modules}/cadence/25.1
+
+module-forbid --not-group cadence --message "Please contact HPCC support to gain access to Cadence." cadence
+
+setenv          CDSROOT                 ${cdsroot}
+setenv          CDS_INST_DIR            ${cdsroot}
+setenv          CDS_LIC_FILE            5280@cadence.engr.ucr.edu
+
+prepend-path    PATH                    ${cdsroot}/bin
+prepend-path    PATH                    ${cdsroot}/tools/bin
+prepend-path    LD_LIBRARY_PATH         ${cdsroot}/tools/lib
+prepend-path    LD_LIBRARY_PATH         ${cdsroot}/tools/lib64
