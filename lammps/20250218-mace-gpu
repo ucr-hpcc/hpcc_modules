@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## lammps modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tlammps - Adds lammps (MACE, gpu) to your path"
+}
+
+module-whatis	"lammps-20250218-mace-gpu"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+set      prefix          ${hpcc_modules}/lammps/20250218-mace-gpu
+
+module load oneapi/2022.3.0.8767
+module load cuda/12.1
+
+prepend-path  PATH               ${prefix}/bin
+prepend-path  LD_LIBRARY_PATH    ${prefix}/libtorch-gpu/lib
+prepend-path  CMAKE_PREFIX_PATH  ${prefix}/libtorch-gpu
+prepend-path  MANPATH            ${prefix}/share/man
+
+setenv        LAMMPS_POTENTIALS  ${prefix}/share/lammps/potentials
