@@ -1,0 +1,25 @@
+#%Module1.0#####################################################################
+##
+## lammps modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tlammps - Adds lammps to your path"
+}
+
+module-whatis	"lammps-20260930.1"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load gcc/12
+module load cuda/12.8
+module load miniconda3
+
+prepend-path  PATH        ${hpcc_modules}/lammps/20260930.1/bin
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate ${hpcc_modules}/lammps/20260930.1/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
