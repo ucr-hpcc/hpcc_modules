@@ -18,3 +18,5 @@ if { [module-info mode load] || [module-info mode switch2] } {
     puts stdout "conda deactivate;"
 }
 setenv BOLTZ_CACHE /srv/projects/db/boltz
+# Keep ~/.local site-packages (e.g. a newer numpy) from shadowing the env's pinned versions
+setenv PYTHONNOUSERSITE 1
