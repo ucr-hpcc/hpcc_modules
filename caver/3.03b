@@ -1,0 +1,33 @@
+#%Module1.0#####################################################################
+##
+## caver modulefile
+##
+proc ModulesHelp { } {
+        puts stderr "\tcaver 3.03b - tunnel/channel analysis in protein structures (Java)"
+        puts stderr ""
+        puts stderr "\tRun:   caver -pdb <pdb_dir> -conf <config.txt> -out <out_dir>"
+        puts stderr "\tRaw:   java -Xmx8g -cp \$CAVER_HOME/lib -jar \$CAVER_JAR -home \$CAVER_HOME ..."
+        puts stderr "\tHeap:  set CAVER_MEM (e.g. 8g); default = SLURM mem - 1 GB, else 4g"
+        puts stderr "\tConfig template: \$CAVER_CONFIG_TEMPLATE"
+        puts stderr "\tExamples:        \$CAVER_EXAMPLES"
+}
+
+module-whatis   "caver-3.03b"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+set      caver_root      ${hpcc_modules}/caver/3.03b
+
+# Load Dependencies (tested with java/21.0.7)
+module load java/21.0.7
+
+# Set vars
+setenv          CAVER_HOME              ${caver_root}/caver
+setenv          CAVER_JAR               ${caver_root}/caver/caver.jar
+setenv          CAVER_ENV               ${caver_root}/caver/caver.jar
+setenv          CAVER_LIB               ${caver_root}/caver/lib
+setenv          CAVER_CONFIG_TEMPLATE   ${caver_root}/user_guide/config_default.txt
+setenv          CAVER_EXAMPLES          ${caver_root}/examples
+setenv          CAVER_USERGUIDE         ${caver_root}/user_guide/caver_userguide.pdf
+
+# Wrapper script 'caver' (adds -home, -cp and -Xmx)
+prepend-path    PATH                    ${caver_root}/bin
