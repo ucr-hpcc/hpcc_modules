@@ -8,7 +8,7 @@ proc ModulesHelp { } {
         puts stderr "\tfoldseek - Adds foldseek protein structure search to your path"
 }
 
-module load cuda/12.9
+module load cuda
 
 module-whatis	"foldseek-10-941cd33-gpu"
 
