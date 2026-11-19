@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## esm modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tesm - Adds esm to your path"
+}
+
+module-whatis	"esm-3.5.0"
+
+set      hpcc_modules    $::env(HPCC_MODULES)
+
+module load cuda
+
+if { [module-info mode load] || [module-info mode switch2] } {
+    puts stdout "module load miniconda3; conda activate --stack ${hpcc_modules}/esm/3.5.0/env;"
+} elseif { [module-info mode remove] && ![module-info mode switch3] } {
+    puts stdout "conda deactivate;"
+}
+
+setenv ESMFOLD2_WEIGHTS /srv/projects/db/esm/esmfold2_weights
