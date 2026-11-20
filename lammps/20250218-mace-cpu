@@ -13,7 +13,7 @@ module-whatis	"lammps-20250218-mace-cpu"
 set      hpcc_modules    $::env(HPCC_MODULES)
 set      prefix          ${hpcc_modules}/lammps/20250218-mace-cpu
 
-module load oneapi/2022.3.0.8767
+module load oneapi/2022.3.0.8767 gcc/11.5.0
 
 prepend-path  PATH               ${prefix}/bin
 prepend-path  LD_LIBRARY_PATH    ${prefix}/libtorch/lib
